@@ -1810,7 +1810,7 @@
           "name": "sounds/music/travels",
           "volume": 0.7,
           "load_on_low_memory": true,
-          "weight": 9
+          "weight": 1
         },
         {
           "name": "sounds/music/deeds",
