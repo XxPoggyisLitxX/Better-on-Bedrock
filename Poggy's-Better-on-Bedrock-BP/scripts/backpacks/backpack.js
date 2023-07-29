@@ -16,8 +16,11 @@ export const backpack = ( player, backpackId, size = 0 ) => {
 					|| item?.typeId == "better_on_bedrock:backpack_large"
 				) {
 					entityInventory.setItem( i );
-					if (inventory.emptySlotsCount == 0) player.dimension.spawnItem( item, player.location );
-					else inventory.addItem( item );
+					if (inventory.emptySlotsCount == 0) {
+						player.dimension.spawnItem( item, player.location );
+					} else {
+						inventory.addItem( item );
+					};
 				};
 			};
 		};
@@ -34,12 +37,33 @@ export const backpack = ( player, backpackId, size = 0 ) => {
 		};
 		
 		player.lastBackpackId = backpackId;
+		
 		const velocity = (new Vector( player.getVelocity().x, player.getVelocity().y, player.getVelocity().z )).length().toFixed(1);
+		const onGround = (
+			(
+				player.location.y <= 320
+				&& player.location.y > -64
+			)
+			? player.dimension.getBlock({ x: player.location.x, y: player.location.y - 0.1, z: player.location.z })?.typeId != "minecraft:air"
+			: false
+		);
+		const isRiding = ( player ) => {
+			return (
+			   player.dimension.getEntities({ location: player.location, maxDistance: 5 }).find((entity) => entity.getComponent( "minecraft:rideable" )?.getRiders().find((e) => (e instanceof Player) && e.name == player.name)) ? true : false
+			);
+		};
+		
+		world.afterEvents.itemUse.subscribe(
+			({ source: player, itemStack }) => {
+				if (itemStack.typeId == "minecraft:stick") isRiding( player );
+			},
+		);
+		
+
 		
 		if (
 		  velocity > 0
-		  || !player.isOnGround
-		  || isRiding( player )
+		  || !onGround || !isRiding( player )
 		) {
 			if ( entity ) {
 				entity.runCommand( `structure save "${backpackId}" ~-5 ~8 ~-5 ~+5 ~+5 ~+5 true disk false` );
@@ -49,7 +73,7 @@ export const backpack = ( player, backpackId, size = 0 ) => {
 			return;
 		};
 		
-		const { x, y, z } = player.getHeadLocation();
+		const { x, y, z } = player.location;
 		const [ newEntity ] = player.dimension.getEntities({ tags: [ "backpack:" + backpackId ] });
 		if ( !newEntity ) {
 			player.runCommand( `structure load "${backpackId}" ~ ~ ~` );
@@ -81,7 +105,7 @@ export const backpack = ( player, backpackId, size = 0 ) => {
 			newEntity?.teleport(
 				{
 					x,
-					y,
+					y: y + 0.5,
 					z,
 				},
 				player.dimension,
@@ -143,8 +167,11 @@ system.runInterval(
 							|| item?.typeId == "better_on_bedrock:backpack_large"
 						) {
 							entityInventory.setItem( i );
-							if (inventory.emptySlotsCount == 0) player.dimension.spawnItem( item, player.location );
-							else inventory.addItem( item );
+							if (inventory.emptySlotsCount == 0) {
+								player.dimension.spawnItem( item, player.location );
+							} else {
+								inventory.addItem( item );
+							};
 						};
 					};
 					
@@ -159,8 +186,3 @@ system.runInterval(
 );
 
 const generateSnowflake = () => ((Date.now() - 1420070400000) * Math.pow(2, 22)).toString();
-const isRiding = ( player ) => {
-	return (
-	   player.getComponent( "minecraft:riding" )?.entityRidingOn ? true : false
-	);
-};

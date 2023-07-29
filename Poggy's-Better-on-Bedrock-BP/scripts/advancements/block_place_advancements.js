@@ -13,7 +13,7 @@ import {
   } from "@minecraft/server";
   import { system } from "@minecraft/server";
   import {
-    MinecraftEntityTypes,
+    
     DynamicPropertiesDefinition,
   } from "@minecraft/server";
   import {

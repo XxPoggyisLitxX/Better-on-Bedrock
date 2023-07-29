@@ -1,15 +1,9 @@
 import { world, Vector,  ItemStack, Entity, Player, ItemEnchantsComponent, ItemTypes, EntityInventoryComponent, Block, Enchantment  } from "@minecraft/server"
 import { system } from "@minecraft/server";
-import { MinecraftEntityTypes, DynamicPropertiesDefinition } from "@minecraft/server"
+import {  DynamicPropertiesDefinition } from "@minecraft/server"
 import { ActionFormData, MessageFormData, ModalFormData } from "@minecraft/server-ui"
 
-world.afterEvents.worldInitialize.subscribe((eventData) => {
-  let playerCompShowTick = new DynamicPropertiesDefinition()
-  playerCompShowTick.defineBoolean("hardcoreDeath")
-  playerCompShowTick.defineBoolean("hardcoreOption")
-  playerCompShowTick.defineBoolean("joined")
-  eventData.propertyRegistry.registerEntityTypeDynamicProperties(playerCompShowTick, MinecraftEntityTypes["player"])
-})
+
 
 
       const DimensionNames = {
@@ -31,7 +25,7 @@ world.afterEvents.worldInitialize.subscribe((eventData) => {
               player.addTag("death")
               let entity = Dimension.spawnEntity("better_on_bedrock:player_corpse", new Vector(player.location.x, player.location.y, player.location.z));
               entity.nameTag = "Corpse of " + player.name;
-              player.runCommand(`tp @e[type=item,r=10] @e[type=better_on_bedrock:player_corpse, r=1]`)
+              player.runCommand(`tp @e[type=item,r=10] @e[type=better_on_bedrock:player_corpse, r=1`)
               //player.runCommandAsync(`sendMessageraw @s{"rawtext":[{"text": "§a${player.nameTag} §rdied at: §l§e${Math.round(player.location.x)}, ${Math.round(player.location.y)}, ${Math.round(player.location.z)},§r§f in The §a${dName}"}]}`)
               //player.sendMessage({"rawtext":[{"text": "§a" + player.nameTag + " §rdied at: §l§e" + Math.round(player.location.x) + ", " + Math.round(player.location.y) + ", " + Math.round(player.location.z) + ", §r§f in The §a " + dName}]})
               player.sendMessage({"rawtext":[{"translate": "status.playerDied", "with": [`${player.nameTag}`, `${Math.round(player.location.x)}`, `${Math.round(player.location.y)}`, `${Math.round(player.location.z)}`, `${dName}`]}]})

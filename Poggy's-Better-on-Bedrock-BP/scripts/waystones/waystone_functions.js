@@ -1,13 +1,8 @@
-import { world, system, Player, MinecraftEntityTypes, DynamicPropertiesDefinition } from '@minecraft/server'
+import { world, system, Player,  DynamicPropertiesDefinition } from '@minecraft/server'
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui'
 import { getPlayerExperienceLevel } from 'get_level_tests'
 
-world.afterEvents.worldInitialize.subscribe((eventData) => {
-   let playerCompShowTick = new DynamicPropertiesDefinition()
-   playerCompShowTick.defineBoolean("backpackCanTP")
 
-   eventData.propertyRegistry.registerEntityTypeDynamicProperties(playerCompShowTick, MinecraftEntityTypes["player"])
- })
 
  system.afterEvents.scriptEventReceive.subscribe(
    ({ id, sourceEntity })=>{

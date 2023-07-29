@@ -1,4 +1,4 @@
-import { world, system, Player, MinecraftEntityTypes, DynamicPropertiesDefinition } from '@minecraft/server'
+import { world, system, Player,  DynamicPropertiesDefinition } from '@minecraft/server'
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui'
 import { getPlayerExperienceLevel } from 'get_level_tests'
 

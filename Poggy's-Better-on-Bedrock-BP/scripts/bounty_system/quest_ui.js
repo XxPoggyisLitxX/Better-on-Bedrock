@@ -1,4 +1,4 @@
-import { world, ItemStack, MinecraftEntityTypes, DynamicPropertiesDefinition, ItemTypes } from "@minecraft/server";
+import { world, ItemStack,  DynamicPropertiesDefinition, ItemTypes } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
 
 import * as Bounties from "./constants/Bounties.js";
@@ -13,7 +13,7 @@ world.afterEvents.worldInitialize.subscribe(
         //okay
             
         propertyRegistry.registerEntityTypeDynamicProperties(
-            playerCompShowTick, MinecraftEntityTypes["player"]
+            playerCompShowTick, "minecraft:player"
         );
     },
 );

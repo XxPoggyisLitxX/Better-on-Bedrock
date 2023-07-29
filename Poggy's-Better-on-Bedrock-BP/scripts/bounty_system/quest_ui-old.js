@@ -1,4 +1,4 @@
-import { world, ItemStack, MinecraftEntityTypes, DynamicPropertiesDefinition, ItemTypes } from "@minecraft/server";
+import { world, ItemStack,  DynamicPropertiesDefinition, ItemTypes } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
 
 world.afterEvents.worldInitialize.subscribe(

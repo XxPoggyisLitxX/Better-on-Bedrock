@@ -1,5 +1,4 @@
 import { world } from "@minecraft/server";
-//
 const viewDistance = 16;
 export const toolTipt = () => {
   for (const player of world.getAllPlayers()) {

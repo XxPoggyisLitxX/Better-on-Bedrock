@@ -201,11 +201,11 @@ const quests = [
         id: Quests.MoreSouls,
         name: "More Souls",
         icon: "textures/items/trophies/soul_star",
-        locked: ( player ) => player.sendMessage( "§cYou need to complete \"More Souls\" in order to unlock this quest." ),
+        locked: ( player ) => player.sendMessage( "§cYou need to complete \"Stringy Situation\" in order to unlock this quest." ),
         info: ( player ) => {
             const form = new ActionFormData();
             form.title( "§fMore Souls" );
-            form.body( "Get 2 Souls.\n§7Rewards: 2 Diamonds and 100 XP" );
+            form.body( "Get 14 String.\n§7Rewards: 2 Diamonds and 100 XP" );
             form.button( "Ok" );
             form.show( player );
         },

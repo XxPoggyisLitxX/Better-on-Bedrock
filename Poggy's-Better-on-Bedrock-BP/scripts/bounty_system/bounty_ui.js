@@ -2,7 +2,7 @@
 //Hey dark <3
 //Love u <3
 
-import { world, ItemStack, MinecraftEntityTypes, DynamicPropertiesDefinition, ItemTypes } from "@minecraft/server";
+import { world, ItemStack,  DynamicPropertiesDefinition, ItemTypes } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
 import "./quest_tiers/time_to_mine/quest_list.js";
 
@@ -34,7 +34,7 @@ world.afterEvents.worldInitialize.subscribe(
         playerCompShowTick.defineString( "quests6", 110 );
         
         propertyRegistry.registerEntityTypeDynamicProperties(
-            playerCompShowTick, MinecraftEntityTypes["player"]
+            playerCompShowTick,  "minecraft:player"
         );
     },
 );

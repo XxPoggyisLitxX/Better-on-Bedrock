@@ -220,7 +220,7 @@ const quests = [
         info: ( player ) => {
             const form = new ActionFormData();
             form.title( "§fOre Collector" );
-            form.body( "Get 1 Ore Block.\nRewards: Efficiency 5 Iron Pickaxe and 250 XP" );
+            form.body( "Get All Ore Blocks.\nRewards: Efficiency 5 Iron Pickaxe and 250 XP" );
             form.button( "Ok" );
             form.show( player );
         },
@@ -228,7 +228,7 @@ const quests = [
             const savedQuests = JSON.parse(player.getDynamicProperty( "quests2" ));
             const form = new ActionFormData()
             form.title("Start Quest?")
-            form.body("Get 1 Ore Block.\nRewards: Efficiency 5 Iron Pickaxe and 250 XP")
+            form.body("Get Get All Ore Blocks.\nRewards: Efficiency 5 Iron Pickaxe and 250 XP")
             form.button("Start Quest!")
             form.button("Cancel")
             form.show( player ).then(

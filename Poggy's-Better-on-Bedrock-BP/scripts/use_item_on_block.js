@@ -1,6 +1,6 @@
 import { world,  ItemStack, Entity, ItemEnchantsComponent, ItemTypes, EntityInventoryComponent, Block, Enchantment,  } from "@minecraft/server"
 import { system } from "@minecraft/server";
-import { MinecraftEntityTypes, DynamicPropertiesDefinition } from "@minecraft/server"
+import {  DynamicPropertiesDefinition } from "@minecraft/server"
 import { ActionFormData, MessageFormData, ModalFormData } from "@minecraft/server-ui"
 
 world.beforeEvents.itemUseOn.subscribe((use) => {
