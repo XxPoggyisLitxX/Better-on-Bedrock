@@ -1,13 +1,13 @@
 {
     "format_version": 2,
     "header": {
-        "name": "Poggy's Better on Bedrock v1.0.2.5 [BP]",
+        "name": "Poggy's Better on Bedrock v1.0.2.5.1 [BP]",
         "description": "Overhauling Minecraft with amazing content!",
         "uuid": "dd44c71b-7ea0-4c11-b633-5963db73d475",
         "version": [
             1,
             0,
-            18
+            20
         ],
         "min_engine_version": [
             1,
