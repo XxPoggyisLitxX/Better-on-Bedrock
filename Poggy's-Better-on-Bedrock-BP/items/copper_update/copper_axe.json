@@ -53,6 +53,7 @@
         }
       },
       "minecraft:digger": {
+        "use_efficiency": true,
         "destroy_speeds": [
             {
                 "block": "nether_wart_block",
