@@ -1,0 +1,60 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:wand_iceologer_iceblock",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"height": 0.5,
+				"width": 1
+			},
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+            "minecraft:projectile": {
+                "destroy_on_hurt": true,
+                "gravity": 0.01,
+                "on_hit": {
+                    "definition_event": {
+                        "event_trigger": {
+                            "event": "explode",
+                            "target": "self"
+                        }
+                    }
+                },
+                "power": 2
+            }
+		},
+		"component_groups": {
+			"explode": {
+				"minecraft:explode": {
+					"breaks_blocks": false,
+					"causes_fire": false,
+					"fuse_lit": true,
+					"max_resistance": 0,
+					"power": 3
+				}
+			}
+		},
+		"events": {
+			"explode": {
+				"add": {
+					"component_groups": [
+						"explode"
+					]
+				}
+			}
+		}
+	}
+}

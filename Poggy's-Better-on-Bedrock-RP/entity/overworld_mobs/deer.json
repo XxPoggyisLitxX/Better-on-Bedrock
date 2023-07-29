@@ -1,0 +1,48 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:deer",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_enchant"
+			},
+			"textures": {
+				"default": "textures/entity/deer",
+				"doe": "textures/entity/deer",
+				"enchanted": "textures/misc/enchanted_entity_glint_white_TESTED"
+			},
+			"animations": {
+				"basic": "controller.animation.deer.all",
+				"move": "animation.deer.move",
+				"idle": "animation.deer.idle",
+                "eat": "animation.deer.eat",
+				"baby": "animation.deer.baby_transform",
+				"look_at_player": "animation.common.look_at_target"
+			},
+			"scripts": {
+				"animate": [
+					"basic",
+					{"baby": "q.is_baby"},
+					"look_at_player"
+				]
+			},
+			"geometry": {
+				"default": "geometry.deer",
+				"doe": "geometry.doe"
+			},
+			"render_controllers": [
+				{
+					"controller.render.deer": "(q.is_on_ground || !q.is_on_ground) && (q.variant == 3 || q.variant == 2)"
+				},
+				{
+					"controller.render.enchant": "q.variant == 1"
+				}
+			],
+			"spawn_egg": {
+				"base_color": "#b5b5a0",
+				"overlay_color": "#9c9171"
+			}
+		}
+	}
+}

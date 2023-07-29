@@ -1,0 +1,51 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:cow",
+      "min_engine_version": "1.8.0",
+      "materials": { "default": "entity_alphatest",
+      "enchanted": "entity_enchant"
+       },
+      "textures": {
+        "eight": "textures/entity/cow/cow",
+        "one": "textures/entity/mc_game_mobs/passive/albino_cow",
+        "two": "textures/entity/mc_game_mobs/passive/cookie_cow",
+        "three": "textures/entity/pinto-cow",
+        "four": "textures/entity/dairy-cow",
+        "five": "textures/entity/mc_game_mobs/passive/sunset_cow",
+        "six": "textures/entity/mc_game_mobs/passive/wooly_cow",
+        "seven": "textures/entity/mc_game_mobs/passive/ashen_cow",
+        "enchanted": "textures/misc/enchanted_entity_glint_white"
+      },
+      "geometry": {
+        "default": "geometry.cow.v1.8"
+      },
+      "animations": {
+        "setup": "animation.cow.setup",
+        "walk": "animation.quadruped.walk",
+        "look_at_target": "animation.common.look_at_target",
+        "baby_transform": "animation.cow.baby_transform"
+      },
+      "scripts": {
+        "animate": [
+          "setup",
+          { "walk": "query.modified_move_speed" },
+          "look_at_target",
+          { "baby_transform": "query.is_baby" }
+        ]
+      },
+      "render_controllers": [ 
+      {
+        "controller.render.cow": "q.is_on_ground || !q.is_on_ground"
+      },
+      {
+        "controller.render.enchanted_cow": "q.variant == 9"
+      } ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 1
+      }
+    }
+  }
+}

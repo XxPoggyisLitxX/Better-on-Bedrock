@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:fire_wisp",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/fire_wisp"
+			},
+			"geometry": {
+				"default": "geometry.fire_wisp"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#f7d341",
+				"overlay_color": "#9088c4"
+			}
+		}
+	}
+}

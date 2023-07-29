@@ -1,0 +1,18 @@
+{
+	"ui_defs": [
+		"ui/npc_interact_screen.json",
+		"ui/hud_screen.json",
+		"ui/poggy/custom_npcs_main.json",
+		"ui/poggy/npc_screens/bottom_action_screen.json",
+		"ui/poggy/npc_screens/custom_npcs_common.json",
+		"ui/poggy/npc_screens/fullscreen_menu_screen.json", // WIP
+		"ui/poggy/npc_screens/scroll_box_screen.json",
+		"ui/poggy/npc_screens/teacher_screen.json",
+		"ui/poggy/npc_screens/vanilla_screen.json",
+				"ui/long_form_custom_1.json",
+				"ui/long_form_custom_2.json",
+				"ui/custom_form_custom_1.json",
+				"ui/bg.json"
+		
+	]
+}

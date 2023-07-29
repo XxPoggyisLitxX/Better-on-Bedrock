@@ -1,0 +1,189 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.raccoon.dig": {
+			"loop": true,
+			"bones": {
+				"RightFntLeg": {
+					"rotation": ["-math.cos(q.anim_time * 1000) * 32", 0, 0]
+				},
+				"LeftFntLeg": {
+					"rotation": ["math.cos(q.anim_time * 1000) * 32", 0, 0]
+				},
+				"Tail": {
+					"rotation": [35, "math.cos(q.anim_time * 750) * 32", 0]
+				},
+				"Head": {
+					"rotation": ["40 + math.cos(q.anim_time * 1000) * 10", 0, 0]
+				}
+			}
+		},
+		"animation.racoon.digging_loot": {
+			"loop": true,
+			"bones": {
+				"Head": {
+					"rotation": ["42.5 + -math.cos(q.anim_time * 1000) * 7", 0, 0]
+				},
+				"leftLeg": {
+					"rotation": ["-math.cos(q.anim_time * 1000) * 15", "math.cos(q.anim_time * 1000) * 15", "-math.cos(q.anim_time * 1000) * 15"]
+				},
+				"rightLeg": {
+					"rotation": ["math.cos(q.anim_time * 1000) * 15", "-math.cos(q.anim_time * 1000) * 15", "math.cos(q.anim_time * 1000) * 15"]
+				},
+				"Tail": {
+					"rotation": [32.5, "math.cos(q.anim_time * 1150) * 15", 0]
+				},
+				"bone": {
+					"rotation": [0, 0, 0]
+				},
+				"RightFntLeg": {
+					"rotation": ["-math.cos(Q.anim_time * 1000) * 32", 0, 0]
+				},
+				"LeftFntLeg": {
+					"rotation": ["math.cos(Q.anim_time * 1000) * 32", 0, 0]
+				}
+			}
+		},
+		"animation.racoon.digging_loot_dirt": {
+			"loop": true,
+			"animation_length": 0.6,
+			"sound_effects": {
+				"0.0": {
+					"effect": "gravel"
+				},
+				"0.3": {
+					"effect": "gravel"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "dirt",
+					"locator": "held_item"
+				},
+				"0.1": {
+					"effect": "dirt",
+					"locator": "held_item"
+				},
+				"0.2": {
+					"effect": "dirt",
+					"locator": "held_item"
+				},
+				"0.3": {
+					"effect": "dirt",
+					"locator": "held_item"
+				},
+				"0.4": {
+					"effect": "dirt",
+					"locator": "held_item"
+				},
+				"0.5": {
+					"effect": "dirt",
+					"locator": "held_item"
+				},
+				"0.6": {
+					"effect": "dirt",
+					"locator": "held_item"
+				}
+			}
+		},
+		"animation.racoon.idle": {
+			"loop": true,
+			"animation_length": 5.20833,
+			"bones": {
+				"leftLeg": {
+					"rotation": ["math.cos(q.anim_time * 250) * 50", 0, 0]
+				},
+				"rightLeg": {
+					"rotation": ["-math.cos(q.anim_time * 250) * 50", 0, 0]
+				},
+				"leftBackLeg": {
+					"rotation": ["-math.cos(q.anim_time * 250) * 50", 0, 0]
+				},
+				"rightBackLeg": {
+					"rotation": ["math.cos(q.anim_time * 250) * 50", 0, 0]
+				},
+				"Tail": {
+					"rotation": {
+						"3.5417": [17.5, "0-math.cos(q.anim_time * 150) * 15", 0],
+						"3.625": [18.59375, "-24.4825-math.cos(q.anim_time * 150) * 15", -3.28071],
+						"3.7083": [17.28046, "14.5696-math.cos(q.anim_time * 150) * 15", 8.15014],
+						"3.7917": [17.5, "-10.4003-math.cos(q.anim_time * 150) * 15", 0],
+						"3.875": [18.59375, "-24.4825-math.cos(q.anim_time * 150) * 15", -3.28071],
+						"3.9583": [17.28046, "14.5696-math.cos(q.anim_time * 150) * 15", 8.15014],
+						"4.0417": [17.5, "-10.4003-math.cos(q.anim_time * 150) * 15", 0]
+					}
+				}
+			}
+		},
+		"animation.racoon.lay": {
+			"loop": true,
+			"bones": {
+				"Head": {
+					"rotation": ["17.7138 + -math.cos(q.anim_time * 32) * 2", 62.10182, 6.40746]
+				},
+				"Body": {
+					"position": [0, -3, 0]
+				},
+				"leftLeg": {
+					"rotation": [-90, 12.5, 0],
+					"position": [0, -3, 0]
+				},
+				"rightLeg": {
+					"rotation": [-90, 47.5, 0],
+					"position": [0, -3, 0]
+				},
+				"leftBackLeg": {
+					"rotation": [-90, 40, 0],
+					"position": [0, -2.5, 0]
+				},
+				"rightBackLeg": {
+					"rotation": [-90, 37.5, 0],
+					"position": [0, -2.5, 0]
+				},
+				"Tail": {
+					"rotation": [0, "-47.5 + -math.cos(q.anim_time * 32) * 5", 0]
+				},
+				"RightFntLeg": {
+					"rotation": [-87.5, 0, 0]
+				},
+				"LeftFntLeg": {
+					"rotation": [-90, 0, 0]
+				},
+				"RightBckLeg": {
+					"rotation": [-90, 0, 0]
+				},
+				"LeftBckLeg": {
+					"rotation": [-90, 0, 0]
+				}
+			}
+		},
+		"animation.raccoon.baby_transform": {
+			"loop": true,
+			"bones": {
+				"Head": {
+					"scale": 2
+				}
+			}
+		},
+		"animation.racoon.walk": {
+			"loop": true,
+			"bones": {
+				"Tail": {
+					"rotation": ["-math.cos(q.anim_time * 150) * 3", "math.cos(q.anim_time * 250) * 7", 0]
+				},
+				"RightFntLeg": {
+					"rotation": ["0-math.cos(q.anim_time * 450) * 50", 0, 0]
+				},
+				"LeftFntLeg": {
+					"rotation": ["math.cos(q.anim_time * 450) * 50", 0, 0]
+				},
+				"RightBckLeg": {
+					"rotation": ["math.cos(q.anim_time * 450) * 50", 0, 0]
+				},
+				"LeftBckLeg": {
+					"rotation": ["0-math.cos(q.anim_time * 450) * 50", 0, 0]
+				}
+			}
+		}
+	}
+}

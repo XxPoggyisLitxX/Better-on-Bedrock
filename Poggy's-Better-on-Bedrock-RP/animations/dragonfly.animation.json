@@ -1,0 +1,22 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.model.dragonfly": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [0, 0, "math.cos(q.anim_time * 2500) * 16"]
+				},
+				"rightwing_bone2": {
+					"rotation": [0, 0, "-math.cos(q.anim_time * 2500) * 16"]
+				},
+				"leftwing_bone": {
+					"rotation": [0, 0, "-math.cos(q.anim_time * 2500) * 16"]
+				},
+				"leftwing_bone2": {
+					"rotation": [0, 0, "math.cos(q.anim_time * 2500) * 16"]
+				}
+			}
+		}
+	}
+}

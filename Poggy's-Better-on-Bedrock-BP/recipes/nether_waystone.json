@@ -1,0 +1,33 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:nether_waystone"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#E#",
+            " g ",
+            "iii"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:blaze_powder"
+            },
+            "E": {
+                "item": "minecraft:ender_pearl"
+            },
+            "g": {
+                "item": "minecraft:gold_ingot"
+            },
+            "i": {
+                "item": "minecraft:iron_ingot"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:nether_waystone"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+      "description": {
+        "identifier": "better_on_bedrock:enchanted_book",
+        "materials": {
+          "default": "entity_alphatest"
+        },
+        "textures": {
+          "default": "textures/entity/enchanter"
+        },
+        "geometry": {
+          "default": "geometry.enchanted_book"
+        },
+        "animations": {
+          "default": "animation.enchanted_book"
+        },
+        "particle_effects": {
+            "enchanted_book_summon_mob": "better_on_bedrock:ich_projectile_trail"
+        },
+        "scripts": {
+          "animate": [
+            "default"
+          ]
+        },
+        "render_controllers": [ "controller.render.default" ]
+      }
+    }
+  }
+  

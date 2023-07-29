@@ -1,0 +1,84 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:enchant_bench",
+			"is_experimental": true,
+
+		"properties": {
+				"wiki:rotation": [2, 3, 4, 5]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('wiki:rotation') == 2",
+				"components": {
+					"minecraft:rotation": [0, 0, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:rotation') == 3",
+				"components": {
+					"minecraft:rotation": [0, 180, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:rotation') == 4",
+				"components": {
+					"minecraft:rotation": [0, 90, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:rotation') == 5",
+				"components": {
+					"minecraft:rotation": [0, 270, 0]
+				}
+			}
+		],
+		"components": {
+			//Basic components
+			"minecraft:destructible_by_mining":{
+				"seconds_to_destroy": 1
+			},
+			"tag:wood": {},
+			"minecraft:on_player_placing": {
+				"event": "wiki:set_rotation"
+			},
+			"minecraft:geometry": "geometry.enchant_table",
+            "minecraft:on_interact": {
+                "event": "null",
+                "target": "other"
+            },
+			"minecraft:pick_collision":{
+				"origin":[
+				   -8,
+				   0,
+				   -8
+				],
+				"size":[
+				   16,
+				   12,
+				   16
+				]
+			 },
+			        "minecraft:creative_category": {
+          "category": "construction",
+          "group": "construction"
+      },
+			"minecraft:material_instances": {
+                "*": {
+					"texture": "miner_bench",
+					"render_method": "opaque"
+				}
+			}
+		},
+		"events": {
+		
+			"wiki:set_rotation": {
+				"set_block_property": {
+					"wiki:rotation": "(query.cardinal_facing_2d)"
+				}
+			}
+		}
+	}
+}

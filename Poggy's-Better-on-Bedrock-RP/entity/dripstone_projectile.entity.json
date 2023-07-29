@@ -1,0 +1,18 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:dripstone_projectile",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/dripstone_projectile"
+			},
+			"geometry": {
+				"default": "geometry.dripstone_projectile"
+			},
+			"render_controllers": ["controller.render.default"]
+		}
+	}
+}

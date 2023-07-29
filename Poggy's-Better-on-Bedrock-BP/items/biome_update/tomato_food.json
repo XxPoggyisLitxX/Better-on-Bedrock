@@ -1,0 +1,30 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:tomato_seed",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.crop"
+			},
+			"minecraft:block_placer": {
+				"block": "better_on_bedrock:tomato_crop"
+			},
+			"minecraft:max_stack_size": 64,
+			"minecraft:hand_equipped": false,
+			"minecraft:foil": false,
+            "minecraft:food": {
+				"nutrition": 1,
+				"saturation_modifier": "low",
+				"can_always_eat": false
+			},
+            "minecraft:use_duration": 1.6,
+            "minecraft:use_animation": "eat",
+			"minecraft:icon": {
+				"texture": "tomato_seed"
+			}
+		}
+	}
+}

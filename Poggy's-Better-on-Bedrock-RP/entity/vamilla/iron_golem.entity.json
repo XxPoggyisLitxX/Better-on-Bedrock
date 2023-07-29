@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:iron_golem",
+      "materials": { "default": "iron_golem", "enchanted": "entity_enchant" },
+      "textures": {
+        "default": "textures/entity/iron_golem",
+        "enchanted": "textures/misc/enchanted_entity_glint_white"
+      },
+      "geometry": {
+        "default": "geometry.irongolem"
+      },
+      "animations": {
+        "walk": "animation.iron_golem.walk",
+        "move": "animation.iron_golem.move",
+        "attack": "animation.iron_golem.attack",
+        "flower": "animation.iron_golem.flower",
+        "look_at_target": "animation.common.look_at_target",
+        "move": "controller.animation.iron_golem.move",
+        "arm": "controller.animation.iron_golem.arm_movement"
+      },
+      "render_controllers": [ {"controller.render.iron_golem": "q.is_on_ground || !q.is_on_ground"},
+      {
+        "controller.render.enchanted_golem": "q.variant == 1"
+      }
+    ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:stardust_leggings",
+			"category": "equipment"
+		},
+		"components": {
+			// Boots category
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.boots"
+			},
+			"minecraft:icon": {
+				"texture": "stardust_leggings"
+			},
+			"minecraft:display_name": {
+				"value": "item.better_on_bedrock:stardust_leggings"
+			},
+			"minecraft:max_stack_size": 1,
+			// Enchantable Feet
+			"minecraft:enchantable": {
+				"value": 10,
+				"slot": "armor_legs"
+			},
+			"minecraft:armor": {
+				"texture_type": "none",
+				"protection": 11
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "equip",
+					"target": "self"
+				}
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": ["better_on_bedrock:stardust_ingot"],
+						"repair_amount": 50
+					}
+				]
+			},
+			// Feet slot
+			"minecraft:wearable": {
+				"dispensable": true,
+				"slot": "slot.armor.legs"
+			},
+			"minecraft:durability": {
+				"max_durability": 1222
+			}
+		}
+	}
+}

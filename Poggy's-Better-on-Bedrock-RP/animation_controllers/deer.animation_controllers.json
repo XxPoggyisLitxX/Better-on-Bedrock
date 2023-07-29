@@ -1,0 +1,33 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.deer.all": {
+			"states": {
+				"default": {
+					"animations": ["idle"],
+					"transitions": [
+						{"eat": "query.mark_variant == 1"},
+						{"walk": "q.modified_move_speed >= 0.05"}
+					],
+					"blend_transition": 0.2
+				},
+				"eat": {
+					"animations": ["eat"],
+					"transitions": [
+						{"default": "q.modified_move_speed < 0.05 && !query.mark_variant == 1"},
+						{"walk": "q.modified_move_speed >= 0.05"}
+					],
+					"blend_transition": 0.3
+				},
+				"walk": {
+					"animations": ["move"],
+					"transitions": [
+						{"default": "q.modified_move_speed < 0.05 && !query.mark_variant == 1"},
+						{"eat": "query.mark_variant == 1"}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		}
+	}
+}

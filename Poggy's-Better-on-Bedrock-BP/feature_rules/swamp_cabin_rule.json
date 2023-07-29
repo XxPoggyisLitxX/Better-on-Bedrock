@@ -1,0 +1,33 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:swamp_cabin_rule",
+        "places_feature": "minecraft:swamp_cabin"
+      },
+      "conditions": {
+        "placement_pass": "after_surface_pass",
+        "minecraft:biome_filter": [
+          {
+            "all_of": [
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "swamp"
+                  }
+                ]
+              }
+            ]
+      },
+      "distribution": {
+        "scatter_chance": {
+          "numerator": 1,
+          "denominator": 5000
+        },
+        "iterations": 1,
+        "x": 1,
+        "y": "query.heightmap(variable.worldx, variable.worldz) + - 1",
+        "z": 1
+      }
+    }
+  }

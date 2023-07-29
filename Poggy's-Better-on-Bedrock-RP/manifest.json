@@ -1,0 +1,42 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Poggy's Better on Bedrock v1.0.2.5 [RP]",
+    "description": "Overhauling Minecraft with amaizing content!",
+      "uuid": "6beeed7b-c315-485a-8f5d-93504f789fe5",
+      "version": [
+          1,
+          0,
+          18
+      ],
+      "min_engine_version": [
+          1,
+          19,
+          50
+      ]
+  },
+  "modules": [
+      {
+          "type": "resources",
+          "uuid": "3e70576a-0352-4ddd-9b19-2110b8f3f25c",
+          "version": [
+              1,
+              0,
+              0
+          ]
+      }
+  ],
+  "subpacks":[
+  {
+    "folder_name": "wawla",
+    "name": "WAWLA Top Left",
+    "memory_tier": 1
+  },
+  {
+    "folder_name": "wawla2",
+    "name": "WAWLA Top Centre",
+    "memory_tier": 2
+  }
+],
+  "dependencies": []
+}

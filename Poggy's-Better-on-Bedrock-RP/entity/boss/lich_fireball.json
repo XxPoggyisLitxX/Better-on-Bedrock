@@ -1,0 +1,31 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+      "description": {
+        "identifier": "better_on_bedrock:lich_fireball",
+        "materials": {
+          "default": "fireball"
+        },
+        "textures": {
+          "default": "textures/entity/lichball"
+        },
+        "geometry": {
+          "default": "geometry.fireball"
+        },
+        "animations": {
+          "face_player": "animation.lich.billboard"
+        },
+        "particle_effects": {
+            "lich_projectile_trail": "better_on_bedrock:ich_projectile_trail"
+        },
+        "scripts": {
+          "scale": "2.0",
+          "animate": [
+            "face_player"
+          ]
+        },
+        "render_controllers": [ "controller.render.fireball" ]
+      }
+    }
+  }
+  

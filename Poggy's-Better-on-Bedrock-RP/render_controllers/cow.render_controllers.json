@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.cow": {
+      "arrays": {
+        "textures": {
+          "array.skins": [
+            "Texture.one",
+            "Texture.two",
+            "Texture.three",
+            "Texture.four",
+            "Texture.five",
+            "Texture.six",
+            "Texture.seven",
+            "Texture.eight"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.skins[query.variant]" ]
+    }
+  }
+}

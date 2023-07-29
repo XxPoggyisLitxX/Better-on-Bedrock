@@ -1,0 +1,1 @@
+execute if entity @p[r=6] at @p run summon better_on_bedrock:dripstone_projectile ~ ~4 ~

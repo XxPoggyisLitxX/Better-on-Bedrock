@@ -1,0 +1,21 @@
+{
+
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:waypoint_marker",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": false,
+			"minecraft:cooldown":{
+				"category": "marker",
+				"duration": 30
+			},
+			"minecraft:icon": {
+				"texture": "waypoint_marker"
+			}
+		}
+		}
+	}

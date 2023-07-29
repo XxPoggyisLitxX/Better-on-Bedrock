@@ -1,0 +1,308 @@
+{
+	"format_version":"1.16.100",
+	"minecraft:block":{
+	   "description":{
+		  "identifier":"better_on_bedrock:healthy_carrot_crop",
+		  "properties":{
+			 "better_on_bedrock:growth_stage":[
+				0,
+				1,
+				2,
+				3
+			 ]
+		  }
+	   },
+	   "components":{
+		"minecraft:destructible_by_mining": {
+			"seconds_to_destroy": 0.2
+		  },
+		  "minecraft:on_interact": {
+			"condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:bone_meal')",
+			"event": "increase_growth",
+			"target": "self"
+		  },
+		    "minecraft:queued_ticking": {
+          "looping": true, //true or false
+          "interval_range": [0.1, 0.1], //required
+          "on_tick": {
+              "event": "my:event", //required
+              "target": "block"
+          }
+      },
+		  "minecraft:map_color":"#FFFFFF",
+		  "minecraft:explosion_resistance":0.0,
+		  "minecraft:block_light_absorption":0.0,
+		  "minecraft:block_light_emission":0.0,
+		  "minecraft:pick_collision":{
+			 "origin":[
+				-4,
+				0,
+				-4
+			 ],
+			 "size":[
+				8,
+				6,
+				8
+			 ]
+		  },
+          "minecraft:loot":"loot_tables/blocks/empty.json",
+		  "minecraft:geometry": "geometry.crop_model_like_wheat",
+		  "minecraft:material_instances":{
+			 "*":{
+				"texture":"healthy_carrot_stage_0",
+				"render_method":"alpha_test"
+			 }
+		  },
+		  "minecraft:entity_collision":false,
+		  "minecraft:random_ticking":{
+			 "on_tick":{
+				"event":"grow",
+				"target":"self"
+			 }
+		  },
+		  "minecraft:placement_filter":{
+			 "conditions":[
+				{
+				   "block_filter":[
+					  "farmland"
+				   ],
+				   "allowed_faces":[
+					  "up"
+				   ]
+				}
+			 ]
+		  }
+	   },
+	   "permutations":[
+		  {
+			 "condition":"query.block_property('better_on_bedrock:growth_stage') == 0",
+			 "components":{
+				"minecraft:placement_filter":{
+					"conditions":[
+					   {
+						  "block_filter":[
+							 "farmland"
+						  ],
+						  "allowed_faces":[
+							 "up"
+						  ]
+					   }
+					]
+				 },
+				"minecraft:pick_collision":{
+				   "origin":[
+					  -6,
+					  0,
+					  -6
+				   ],
+				   "size":[
+					  10,
+					  9,
+					  10
+				   ]
+				},
+				"minecraft:material_instances":{
+				   "*":{
+					  "texture":"healthy_carrot_stage_0",
+					  "render_method":"alpha_test"
+				   }
+				}
+			 }
+		  },
+		  {
+			 "condition":"query.block_property('better_on_bedrock:growth_stage') == 1",
+			 "components":{
+				"minecraft:placement_filter":{
+					"conditions":[
+					   {
+                        "block_filter":[
+                            "farmland"
+                         ],
+						  "allowed_faces":[
+							 "up"
+						  ]
+					   }
+					]
+				 },
+				"minecraft:pick_collision":{
+				   "origin":[
+					  -6,
+					  0,
+					  -6
+				   ],
+				   "size":[
+					  10,
+					  9,
+					  10
+				   ]
+				},
+				"minecraft:material_instances":{
+				   "*":{
+					  "texture":"healthy_carrot_stage_1",
+					  "render_method":"alpha_test"
+				   }
+				}
+			 }
+		  },
+		  {
+			 "condition":"query.block_property('better_on_bedrock:growth_stage') == 2",
+			 "components":{
+				"minecraft:placement_filter":{
+					"conditions":[
+					   {
+                        "block_filter":[
+                            "farmland"
+                         ],
+						  "allowed_faces":[
+							 "up"
+						  ]
+					   }
+					]
+				 },
+				"minecraft:pick_collision":{
+				   "origin":[
+					  -6,
+					  0,
+					  -6
+				   ],
+				   "size":[
+					  10,
+					  9,
+					  10
+				   ]
+				},
+				"minecraft:material_instances":{
+				   "*":{
+					  "texture":"healthy_carrot_stage_2",
+					  "render_method":"alpha_test"
+				   }
+				}
+			 }
+		  },
+		  {
+			 "condition":"query.block_property('better_on_bedrock:growth_stage') == 3",
+			 "components":{
+				"minecraft:placement_filter":{
+					"conditions":[
+					   {
+                        "block_filter":[
+                            "farmland"
+                         ],
+						  "allowed_faces":[
+							 "up"
+						  ]
+					   }
+					]
+				 },
+				"minecraft:pick_collision":{
+				   "origin":[
+					  -6,
+					  0,
+					  -6
+				   ],
+				   "size":[
+					  10,
+					  9,
+					  10
+				   ]
+				},
+				"minecraft:material_instances":{
+				   "*":{
+					  "texture":"healthy_carrot_stage_3",
+					  "render_method":"alpha_test"
+				   }
+				},
+				"minecraft:loot":"loot_tables/blocks/healthy_carrot.json"
+			 }
+		  }
+	   ],
+	   "events":{
+		"my:event": {
+			"set_block_at_pos": {
+			  "block_type": "minecraft:farmland",
+			  "block_offset": [0, -1, 0]
+			}
+		  },
+		  "grow_ticking":{
+			 "spawn_loot":{
+				"table":"loot_tables/blocks/grape_half.json"
+			 },
+			 "play_sound":{
+				"sound":"block.sweet_berry_bush.pick",
+				"target":"self"
+			 },
+			 "set_block_property":{
+				"better_on_bedrock:growth_stage":"1"
+			 }
+		  },
+		  "grow_tickings":{
+			 "spawn_loot":{
+				"table":"loot_tables/blocks/grape.json"
+			 },
+			 "play_sound":{
+				"sound":"block.sweet_berry_bush.pick",
+				"target":"self"
+			 },
+			 "set_block_property":{
+				"better_on_bedrock:growth_stage":"1"
+			 }
+		  },
+		  "block_event":{
+			 "damage":{
+				"type":"magic",
+				"target":"self",
+				"amount":4
+			 }
+		  },
+		  "step:off":{
+			 "run_command":{
+				"command":[
+				   
+				]
+			 }
+		  },
+		  "grow":{
+			 "randomize":[
+				{
+				   "weight":1
+				},
+				{
+				   "weight":1,
+				   "set_block_property":{
+					  "better_on_bedrock:growth_stage":"(query.block_property('better_on_bedrock:growth_stage')<3) ? query.block_property('better_on_bedrock:growth_stage') + 1 : 3"
+				   }
+				}
+			 ]
+		  },
+		  "dry":{
+			 "run_command":{
+				"command":[
+				   "damage @p[r=0.6] 1 none"
+				]
+			 }
+		  },
+		  "increase_growth": {
+			"set_block_property": {
+				"better_on_bedrock:growth_stage":"(query.block_property('better_on_bedrock:growth_stage')<3) ? query.block_property('better_on_bedrock:growth_stage') + 1 : 3"
+			},
+			"run_command": {
+				"command": ["particle better_on_bedrock:crop ~ ~0.3 ~", "clear @p minecraft:bone_meal 0 1"]
+			}
+		  },
+		  "remove:block":{
+			 "run_command":{
+				"command":[
+				   
+				]
+			 }
+		  },
+		  "fall:on":{
+			 "run_command":{
+				"command":[
+				   
+				]
+			 }
+		  }
+	   }
+	}
+ }

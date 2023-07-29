@@ -1,0 +1,86 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:2",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:collision_box": {
+				"height": 0.5,
+				"width": 1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 100,
+				"maximum": 100
+			},
+			
+			"minecraft:push_through": {
+				"value": 1
+			}
+		},
+		"component_groups": {
+			"timer": {
+				"minecraft:timer": {
+					"time": 2,
+					"looping": false,
+					"time_down_event": {
+						"event": "explode",
+						"target": "self"
+					}
+				}
+			},
+			"explode": {
+				"minecraft:explode": {
+					"breaks_blocks": false,
+					"causes_fire": false,
+					"destroy_affected_by_griefing": false,
+					"fire_affected_by_griefing": false,
+					"fuse_lit": true,
+					"max_resistance": 0,
+					"power": 2
+				}
+			}
+		},
+		"events": {
+			"explode":{
+
+						"add": {
+							"component_groups": [
+								"explode"
+							]
+						}
+			},
+			"minecraft:entity_spawned": {
+				
+						"sequence": [
+							{
+								"add": {
+									"component_groups": [
+										"timer"
+									]
+								}
+							}
+						]
+			}
+		}
+	}
+}

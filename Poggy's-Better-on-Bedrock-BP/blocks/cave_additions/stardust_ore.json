@@ -1,0 +1,36 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:stardust_ore",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.oreBlocks",
+				"is_hidden_in_commands": false
+			},
+			"is_experimental": true
+		},
+		"components": {
+            "minecraft:destructible_by_mining":{
+                "seconds_to_destroy": 10
+            },
+
+            "minecraft:loot": "loot_tables/ores/stardust_ore.json",
+//			"minecraft:on_player_destroyed": {
+//				"condition": "q.is_item_name_any(quipment slot name, slot index, item)",
+//				"event": "spawn_proper_loot",
+//				"target": "self"
+//			},
+			//Basic components
+			"minecraft:unit_cube": {},
+			"tag:stone": {},
+            "minecraft:display_name": "tile.better_on_bedrock:stardust_ore",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "stardust_ore",
+					"render_method": "opaque"
+				}
+			}
+		}
+	}
+}

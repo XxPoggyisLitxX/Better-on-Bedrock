@@ -1,0 +1,14 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+      "description": {
+        "identifier": "minecraft:palm_tree_variation_3"
+      },
+      "structure_name": "mystructure:palm_tree_3",
+      "adjustment_radius": 8,
+      "facing_direction": "random",
+      "constraints": {
+        "grounded": {}
+      }
+    }
+  }

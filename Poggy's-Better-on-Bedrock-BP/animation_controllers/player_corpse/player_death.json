@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+"controller.animation.poggy.player_death": {
+			
+    "initial_state":"player_alive",
+   "states": {
+       "player_alive":{
+           "transitions":[{ "spawn_corpse": "q.is_alive" }]
+         },
+         "spawn_corpse":{
+           "on_entry": [
+         "/tp @e[type=item, r=8] @e[type=better_on_bedrock:player_corpse, r=8]"
+        
+        ],
+            "transitions": [{"player_alive":"q.mark_variant == 1"}]
+         }
+   }
+         }
+        }
+    }

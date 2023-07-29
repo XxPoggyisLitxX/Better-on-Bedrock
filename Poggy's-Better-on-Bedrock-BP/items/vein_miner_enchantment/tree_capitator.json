@@ -1,0 +1,21 @@
+{
+
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:tree_cap_book",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+            "minecraft:foil": true,
+            "minecraft:display_name": {
+                "value": "§eEnchanted Book§f\n§7Tree Capitator I\n§o§aIncludes Efficiency I"
+            },
+			"minecraft:hand_equipped": false,
+			"minecraft:icon": {
+				"texture": "enchanted_book"
+			}
+		}
+		}
+	}

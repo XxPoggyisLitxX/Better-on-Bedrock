@@ -1,0 +1,14 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+      "description": {
+        "identifier": "minecraft:taiga_tree_tall_3"
+      },
+      "structure_name": "mystructure:taiga_tree_tall_3",
+      "adjustment_radius": 8,
+      "facing_direction": "random",
+      "constraints": {
+        "grounded": {}
+      }
+    }
+  }

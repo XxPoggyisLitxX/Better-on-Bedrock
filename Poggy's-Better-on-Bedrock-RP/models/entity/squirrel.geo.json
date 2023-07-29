@@ -1,0 +1,70 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.squirrel",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "Body",
+					"pivot": [0, 5, 2],
+					"cubes": [
+						{"origin": [-3, 3, -4], "size": [6, 5, 10], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Tail",
+					"parent": "Body",
+					"pivot": [0, 6, 6],
+					"cubes": [
+						{"origin": [-1, 4, 6], "size": [2, 7, 7], "inflate": 0.5, "uv": [0, 16]}
+					]
+				},
+				{
+					"name": "Head",
+					"parent": "Body",
+					"pivot": [1, 5, -4],
+					"cubes": [
+						{"origin": [-2.5, 4, -9], "size": [5, 4, 5], "uv": [19, 16]},
+						{"origin": [0.3, 8, -5], "size": [2, 2.4, 1], "uv": [0, 16]},
+						{"origin": [-2.3, 8, -5], "size": [2, 2.4, 1], "uv": [0, 6]}
+					]
+				},
+				{
+					"name": "Right_Rear_Leg",
+					"pivot": [-2, 5, 4],
+					"cubes": [
+						{"origin": [-3.1, 0, 2.8], "size": [2, 5, 3], "uv": [19, 26]}
+					]
+				},
+				{
+					"name": "Left_Rear_Leg",
+					"pivot": [2, 5, 4],
+					"cubes": [
+						{"origin": [1.1, 0, 2.8], "size": [2, 5, 3], "uv": [23, 0]}
+					]
+				},
+				{
+					"name": "Right_Front_Leg",
+					"pivot": [-2, 3, -3],
+					"cubes": [
+						{"origin": [-3, 0, -3.8], "size": [2, 3, 2], "uv": [30, 26]}
+					]
+				},
+				{
+					"name": "Left_Front_Leg",
+					"pivot": [2, 3, -3],
+					"cubes": [
+						{"origin": [1, 0, -3.8], "size": [2, 3, 2], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

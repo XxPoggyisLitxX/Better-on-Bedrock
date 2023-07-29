@@ -1,0 +1,131 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.wraith",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0, 0, 1],
+					"cubes": [
+						{
+							"origin": [-0.5, 6, -1.5],
+							"size": [1, 12, 1],
+							"uv": [44, 32]
+						},
+						{
+							"origin": [-3, 15.05, -4.5],
+							"size": [6, 1, 4],
+							"uv": [42, 3]
+						},
+						{
+							"origin": [-3, 13.05, -4.5],
+							"size": [6, 1, 4],
+							"uv": [42, 3]
+						}
+					],
+					"locators": {
+						"flames": [0, 13, 0]
+					}
+				},
+				{
+					"name": "robe",
+					"parent": "body",
+					"pivot": [0, 0, -1],
+					"cubes": [
+						{
+							"origin": [-4, 0.05, -2],
+							"size": [8, 19, 4],
+							"uv": [20, 16]
+						}
+					]
+				},
+				{
+					"name": "rightRobe",
+					"parent": "body",
+					"pivot": [-6, 15, 0],
+					"cubes": [
+						{
+							"origin": [-8.05, 6.05, -2],
+							"size": [4, 12, 4],
+							"uv": [4, 16],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [-6, 15, 0],
+					"cubes": [
+						{
+							"origin": [-6.5, 4.5, -0.5],
+							"size": [1, 12, 1],
+							"uv": [44, 32]
+						}
+					]
+				},
+				{
+					"name": "leftRobe",
+					"parent": "body",
+					"pivot": [6, 15, 0],
+					"cubes": [
+						{
+							"origin": [4.05, 6.05, -2],
+							"size": [4, 12, 4],
+							"uv": [44, 16]
+						}
+					]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [6, 15, 0],
+					"cubes": [
+						{
+							"origin": [5.5, 5, -0.5],
+							"size": [1, 12, 1],
+							"uv": [44, 32]
+						}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 18, -1],
+					"cubes": [
+						{
+							"origin": [-3.025, 24.55, -3.75],
+							"size": [6.05, 1, 6],
+							"uv": [26, 8]
+						},
+						{
+							"origin": [-3, 18, -4],
+							"size": [6, 7, 6],
+							"uv": [2, 2]
+						}
+					]
+				},
+				{
+					"name": "hood",
+					"parent": "body",
+					"pivot": [0, 18, -1],
+					"cubes": [
+						{
+							"origin": [-4.025, 13.8, -5],
+							"size": [8.05, 12, 8],
+							"uv": [12, 40]
+						}
+					]
+				}
+			]
+		}
+	]
+}

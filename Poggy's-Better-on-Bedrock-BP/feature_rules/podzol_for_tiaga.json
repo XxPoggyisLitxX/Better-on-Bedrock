@@ -1,0 +1,41 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:podzol_for_tiaga",
+        "places_feature": "minecraft:optional_podzol_feature"
+      },
+      "conditions": {
+        "placement_pass": "surface_pass",
+        "minecraft:biome_filter": [
+          {
+            "any_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "taiga"
+              }
+            ]
+          }
+        ]
+      },
+      "distribution": {
+        "iterations": 18,
+        "x": {
+          "distribution": "uniform",
+          "extent": [
+            0,
+            15
+          ]
+        },
+        "y": "query.heightmap(v.worldx, v.worldz)",
+        "z": {
+          "distribution": "uniform",
+          "extent": [
+            0,
+            15
+          ]
+        }
+      }
+    }
+  }

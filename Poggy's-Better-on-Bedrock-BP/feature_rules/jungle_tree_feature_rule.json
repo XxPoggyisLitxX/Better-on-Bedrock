@@ -1,0 +1,41 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:jungle_tree_feature_rule",
+        "places_feature": "better_on_bedrock:jungle_tree_variation"
+      },
+      "conditions": {
+        "placement_pass": "surface_pass",
+        "minecraft:biome_filter": [
+          {
+            "all_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "jungle_base"
+              }
+            ]
+          }
+        ]
+      },
+      "distribution": {
+        "iterations": 4.5,
+        "x": {
+          "distribution": "uniform",
+          "extent": [
+            0,
+            15
+          ]
+        },
+        "y": "query.heightmap(v.worldx, v.worldz)",
+        "z": {
+          "distribution": "uniform",
+          "extent": [
+            0,
+            15
+          ]
+        }
+      }
+    }
+  }

@@ -1,0 +1,34 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:stardust_ingot"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#N#",
+            "SGS",
+            "SSS"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:diamond"
+            },
+            "S": {
+                "item": "better_on_bedrock:stardust"
+            },
+            "G": {
+                "item": "minecraft:gold_ingot"
+            },
+            "N": {
+                "item": "minecraft:netherite_ingot"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:stardust_ingot",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "minecraft:beef_patty_raw"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+          "pattern": [
+            "bd"
+          ],
+          "key": {
+            "b": {
+              "item": "minecraft:beef"
+            },
+            "d": {
+              "item": "better_on_bedrock:dagger"
+            }
+          },
+        "result": [
+            { "item": "better_on_bedrock:beef_patty_raw" },
+            { "item": "better_on_bedrock:dagger", "data": 25 }
+          ]
+    }
+}

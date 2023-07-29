@@ -1,0 +1,14 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+      "description": {
+        "identifier": "minecraft:plains_tree_bee"
+      },
+      "structure_name": "mystructure:plains_tree_bee",
+      "adjustment_radius": 8,
+      "facing_direction": "random",
+      "constraints": {
+        "grounded": {}
+      }
+    }
+  }

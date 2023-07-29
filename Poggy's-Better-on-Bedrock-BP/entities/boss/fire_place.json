@@ -1,0 +1,390 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:fire_place",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+            "minecraft:experience_reward": {
+                "on_death": 2000
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/lich.json"
+            },
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:health": {
+				"value": 375,
+				"max": 375
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+             "minecraft:navigation.float": {	
+          "can_path_over_water": true	
+        },
+        "minecraft:variant": {
+            "value": 4
+        },
+        "minecraft:movement.basic": {
+        },
+        "minecraft:jump.static": {
+        },
+        "minecraft:behavior.float": {
+          "priority": 0
+        },
+        "minecraft:knockback_resistance": {
+            "value": 1
+        },
+        "minecraft:movement": {
+            "value": 0.02
+          },
+                "minecraft:flying_speed": {
+                    "value": 0.02
+                },
+        "minecraft:behavior.float_wander": {
+          "xz_dist": 2,
+          "y_dist": 0,
+          "y_offset": 0,
+          "random_reselect": false,
+          "priority": 1
+        },
+        "minecraft:can_fly": {
+        },
+        "minecraft:boss": {
+            "hud_range": 64,
+            "name": "§5Lich",
+            "should_darken_sky": true
+        },
+        "minecraft:behavior.follow_target_captain": {
+            "follow_distance": 9,
+            "within_radius": 555
+        },
+        "minecraft:follow_range": {
+            "value": 375,
+            "max": 375
+        },
+        "minecraft:behavior.follow_mob": {
+            "search_range": 555,
+            "stop_distance": 2
+        },
+        "minecraft:collision_box": {
+            "height": 3,
+            "width": 1.3
+        },
+
+        "minecraft:timer": {
+            "time": 1,
+            "looping": false,
+            "time_down_event": {
+                "event": "random_attack",
+                "target": "self"
+            }
+        }
+
+		},
+        "component_groups": {
+            "fireball": {
+                "minecraft:timer": {
+                    "time": 12,
+                    "looping": true,
+                    "time_down_event": {
+                        "event": "add_phantom",
+                        "target": "self"
+                    }
+                },
+                "minecraft:behavior.nearest_attackable_target": {
+                    "priority": 2,
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "any_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "snowgolem"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "irongolem"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "wandering_trader"
+                                    }
+                                ]
+                            },
+                            "max_dist": 555
+                        },
+                        {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "villager"
+                                    },
+                                    {
+                                        "test": "has_component",
+                                        "subject": "other",
+                                        "operator": "!=",
+                                        "value": "minecraft:is_baby"
+                                    }
+                                ]
+                            },
+                            "max_dist": 555
+                        }
+                    ],
+                    "must_see": false
+                },
+                "minecraft:behavior.ranged_attack": {
+                    "attack_interval_min": 3,
+                    "burst_shots": 1,
+                    "attack_interval_max": 4,
+                    "charge_charged_trigger": 1,
+                    "charge_shoot_trigger": 1,
+                    "attack_radius": 555
+                  },
+                  "minecraft:variant": {
+                    "value": 4
+                  },
+                "minecraft:shooter": {
+                    "def": "better_on_bedrock:lich_fireball"
+                }
+            },
+            "small_fireball": {
+                "minecraft:timer": {
+                    "time": 12,
+                    "looping": true,
+                    "time_down_event": {
+                        "event": "add_fireball",
+                        "target": "self"
+                    }
+                },
+                "minecraft:behavior.nearest_attackable_target": {
+                    "priority": 2,
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "any_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "snowgolem"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "irongolem"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "wandering_trader"
+                                    }
+                                ]
+                            },
+                            "max_dist": 555
+                        },
+                        {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "villager"
+                                    },
+                                    {
+                                        "test": "has_component",
+                                        "subject": "other",
+                                        "operator": "!=",
+                                        "value": "minecraft:is_baby"
+                                    }
+                                ]
+                            },
+                            "max_dist": 555
+                        }
+                    ],
+                    "must_see": false
+                },
+                "minecraft:behavior.ranged_attack": {
+                    "attack_interval_min": 0.2,
+                    "burst_shots": 16,
+                    "attack_interval_max": 0.5,
+                    "charge_charged_trigger": 0.2,
+                    "charge_shoot_trigger": 0.2,
+                    "burst_interval": 0.2,
+                    "attack_radius": 555
+                  },
+                  "minecraft:variant": {
+                    "value": 4
+                  },
+                "minecraft:shooter": {
+                    "def": "better_on_bedrock:lich_small_fireball"
+                }
+            },
+            "phantom":{
+                "minecraft:variant": {
+                    "value": 0
+                },
+                "minecraft:timer": {
+                    "time": 2,
+                    "looping": true,
+                    "time_down_event": {
+                        "event": "add_random_fireall_attack",
+                        "target": "self"
+                    }
+                },
+                "minecraft:behavior.summon_entity": {
+                    "priority": 2,
+                    "summon_choices": [
+                        {
+                            "min_activation_range": 0,
+                            "max_activation_range": 24,
+                            "cooldown_time": 0.1,
+                            "weight": 8,
+                            "cast_duration": 1.6,
+                            "particle_color": "#FF664D59",
+                            "start_sound_event": "cast.spell",
+                            "sequence": [
+                                {
+                                    "shape": "circle",
+                                    "target": "self",
+                                    "base_delay": 1.6,
+                                    "num_entities_spawned": 4,
+                                    "entity_type": "minecraft:phantom",
+                                    "summon_cap": 8,
+                                    "summon_cap_radius": 16,
+                                    "size": 3,
+                                    
+                                    "sound_event": "prepare.summon"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "events": {
+            "add_phantom": {
+                "add": {
+                    "component_groups": [
+                        "phantom"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "fireball"
+                    ]
+                }
+            },
+            "add_fireball": {
+                "add": {
+                    "component_groups": [
+                        "fireball"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "phantom",
+                        "small_fireball"
+                    ]
+                }
+            },
+            "add_random_fireall_attack": {
+                "randomize": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "fireball"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "phantom"
+                            ]
+                        },
+                        "weight": 5
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "small_fireball"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "fireball"
+                            ]
+                        },
+                        "weight": 5
+                    }
+                ]
+            },
+            "random_attack": {
+                "randomize": [
+                    {
+                        "add": {
+                        "component_groups": [
+                                "fireball"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "phantom"
+                            ]
+                        },
+                        "weight": 5
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                    "fireball"
+                                ]
+                            },
+                            "remove": {
+                                "component_groups": [
+                                    "phantom"
+                                ]
+                            },
+						
+                        "weight": 5
+					},
+                    {
+                        "add": {
+                            "component_groups": [
+                                "phantom"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "fireball"
+                            ]
+                        },
+                        "weight": 5
+                    }
+                ]
+            }
+        }
+	}
+}

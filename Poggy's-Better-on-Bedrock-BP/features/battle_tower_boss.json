@@ -1,0 +1,14 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+      "description": {
+        "identifier": "better_on_bedrock:battle_tower_boss"
+      },
+      "structure_name": "mystructure:battle_tower_boss",
+      "adjustment_radius": 8,
+      "facing_direction": "random",
+      "constraints": {
+        "grounded": {}
+      }
+    }
+  }

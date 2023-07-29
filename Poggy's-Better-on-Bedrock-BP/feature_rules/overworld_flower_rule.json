@@ -1,0 +1,70 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:overworld_flower_rule",
+        "places_feature": "better_on_bedrock:overworld_flower_random_feature"
+      },
+      "conditions": {
+        "placement_pass": "surface_pass",
+        "minecraft:biome_filter": {
+            "any_of": [
+                {
+                    "test": "has_biome_tag",
+                    "value": "jungle"
+                },
+                {
+                    "test": "has_biome_tag",
+                    "value": "taiga"
+                },
+                {
+                    "test": "has_biome_tag",
+                    "value": "swamp"
+                },
+                {
+                    "test": "has_biome_tag",
+                    "value": "birch"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "extreme_hills"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "meadow"
+            },
+            {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "custom_vanilla_forrest"
+            },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "flower_forest"
+            }
+            ]
+        }
+      },
+      "distribution": {
+        "iterations": 0,
+        "x": {
+          "distribution": "uniform",
+          "extent": [
+            0,
+            15
+          ]
+        },
+        "y": "query.heightmap(v.worldx, v.worldz)",
+        "z": {
+          "distribution": "uniform",
+          "extent": [
+            0,
+            15
+          ]
+        }
+      }
+    }
+  }

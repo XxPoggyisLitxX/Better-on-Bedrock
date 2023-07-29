@@ -1,0 +1,58 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:willager_projecile",
+			"runtime_identifier": "minecraft:fireball",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:collision_box": {
+				"height": 2,
+				"width": 2
+			},
+			"minecraft:projectile": {
+				"crit_particle_on_hurt": true,
+				"destroy_on_hurt": true,
+				"gravity": 0.15,
+				"knockback": true,
+				"offset": [
+					0,
+					7,
+					0
+				],
+				"power": 1.3,
+				"on_hit": {
+					"impact_damage": {
+						"damage": 3
+					}
+				}
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:explode": {
+				"breaks_blocks": false,
+				"causes_fire": false,
+				"destroy_affected_by_griefing": true,
+				"fire_affected_by_griefing": true,
+				"fuse_lit": true,
+				"max_resistance": 0,
+				"power": 2
+			},
+			"minecraft:health": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:push_through": {
+				"value": 1
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "pog:basic_scroll"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "/P/",
+            "P P",
+            "/P/"
+        ],
+        "key": {
+            "/": {
+                "item": "minecraft:stick"
+            },
+            "P": {
+                "item": "minecraft:paper"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:basic_scroll",
+            "count": 1
+        }
+    }
+}

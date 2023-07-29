@@ -1,0 +1,31 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:waystone_marker"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#g#",
+            "gEg",
+            "#g#"
+        ],
+        "key": {
+            "#": {
+                "item": "better_on_bedrock:ender_tear"
+            },
+            "g": {
+                "item": "minecraft:gold_ingot"
+            },
+            "E": {
+                "item": "minecraft:ender_pearl"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:waypoint_marker",
+            "count": 1
+        }
+    }
+}

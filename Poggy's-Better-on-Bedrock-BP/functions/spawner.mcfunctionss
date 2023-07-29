@@ -1,0 +1,23 @@
+scoreboard objectives add spgen dummy spgen
+scoreboard players random @s spgen 0 19
+execute @s[scores={spgen=0}] ~ ~ ~ structure load zombie ~ ~ ~
+execute @s[scores={spgen=1}] ~ ~ ~ structure load zombie ~ ~ ~
+execute @s[scores={spgen=2}] ~ ~ ~ structure load skeleton ~ ~ ~
+execute @s[scores={spgen=3}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=4}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=5}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=6}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=7}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=8}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=9}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=10}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=11}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=12}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=13}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=14}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=15}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=16}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=17}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=18}] ~ ~ ~ setblock ~ ~ ~ air
+execute @s[scores={spgen=19}] ~ ~ ~ setblock ~ ~ ~ air
+event entity @s elektrika:despawn

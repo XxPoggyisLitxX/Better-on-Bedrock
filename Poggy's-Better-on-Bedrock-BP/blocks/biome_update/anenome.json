@@ -1,0 +1,49 @@
+{
+	"format_version": "1.19.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:anenome"
+		},
+		"components": {
+			"minecraft:collision_box": false,
+			"minecraft:loot": "loot_tables/blocks/flowers/anenome.json",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": ["up"],
+						"block_filter": ["grass", "dirt"]
+					}
+				]
+			},
+			"minecraft:selection_box":{
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					9,
+					8
+				]
+			},
+			"minecraft:geometry": "geometry.big_sprout",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "anenome",
+					"render_method": "alpha_test",
+					"ambient_occlusion": true,
+					"face_dimming": false
+				}
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:map_color": "#32a852"
+		}
+	}
+}

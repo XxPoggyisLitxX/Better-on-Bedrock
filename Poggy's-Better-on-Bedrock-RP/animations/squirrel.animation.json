@@ -1,0 +1,53 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.squirrel.idle": {
+			"loop": true,
+			"bones": {
+				"Body": {
+					"rotation": [0, 0, 0]
+				},
+				"Tail": {
+					"rotation": [45, "math.cos(q.anim_time * 500) * 12", 0]
+				},
+				"Head": {
+					"rotation": ["-15+math.cos(q.anim_time * 123) * 3", 0, 0]
+				},
+				"Right_Front_Leg": {
+					"position": [0, 0, 1]
+				},
+				"Left_Front_Leg": {
+					"position": [0, 0, 1]
+				}
+			}
+		},
+		"animation.squirrel.run": {
+			"loop": true,
+			"bones": {
+				"Tail": {
+					"rotation": [27.5, "-math.cos(q.anim_time * 500) *25", 0]
+				},
+				"Right_Rear_Leg": {
+					"rotation": ["math.cos(q.anim_time * 500) *25", 0, 0]
+				},
+				"Left_Rear_Leg": {
+					"rotation": ["-math.cos(q.anim_time * 500) *25", 0, 0]
+				},
+				"Right_Front_Leg": {
+					"rotation": ["-math.cos(q.anim_time * 500) *25", 0, 0]
+				},
+				"Left_Front_Leg": {
+					"rotation": ["math.cos(q.anim_time * 500) *25", 0, 0]
+				}
+			}
+		},
+		"animation.squirrel.baby_transform": {
+			"loop": true,
+			"bones": {
+				"Head": {
+					"scale": 2
+				}
+			}
+		}
+	}
+}

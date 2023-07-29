@@ -1,0 +1,40 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:willager_clone",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/willager"
+			},
+			"geometry": {
+				"default": "geometry.geometry.willager"
+			},
+			"scripts": {
+				"scale": "0.9375",
+				"animate": [
+				  "controller_general",
+				  "controller_move"
+				]
+			  },
+			  "animations": {
+				"general": "animation.willager.idle",
+				"casting": "animation.willager.casting",
+				"look_at_target": "animation.common.look_at_target",
+				"move": "animation.willager.walk",
+				"controller_general": "controller.animation.willager.general",
+				"controller_move": "controller.animation.villager.move"
+			  },
+			  "particle_effects": {
+				"spell": "minecraft:evoker_spell"
+			  },
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#9e71ae",
+				"overlay_color": "#dfeba1"
+			}
+		}
+	}
+}

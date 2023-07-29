@@ -1,0 +1,31 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "better_on_bedrock:nether_biome_features/big_end_bloom_scatter"
+		},
+
+		"places_feature": "better_on_bedrock:nether_biome_features/big_end_bloom_snap",
+
+		"scatter_chance": {
+			"numerator": 1,
+			"denominator": 32
+		},
+		"iterations": "v.flower_patch.size = math.random_integer(6, 14); return math.random_integer(math.pow(v.flower_patch.size, 2) / 4, math.pow(v.flower_patch.size, 2) / 3);",
+
+		"project_input_to_floor": true,
+		"x": {
+			"distribution": "fixed_grid",
+			"extent": [0, 15]
+		},
+		"z": {
+			"distribution": "fixed_grid",
+			"extent": [0, 15]
+		},
+		"y": {
+			"distribution": "uniform",
+			"extent": [16, 100]
+		}
+	}
+}

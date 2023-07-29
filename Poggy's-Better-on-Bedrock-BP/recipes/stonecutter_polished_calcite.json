@@ -1,0 +1,21 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "better_on_bedrock:stonecutter_polished_calcite"
+        },
+        "tags": [
+            "stonecutter"
+        ],
+        "priority": 0,
+        "ingredients": [
+            {
+                "item": "minecraft:calcite"
+            }
+        ],
+        "result": {
+            "item": "better_on_bedrock:polished_calcite",
+            "count": 1
+        }
+    }
+}

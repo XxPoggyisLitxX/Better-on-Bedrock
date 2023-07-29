@@ -1,0 +1,63 @@
+{
+	"format_version": "1.10.0",
+	"geometry.player.armor.hat": {
+		"texturewidth": 128,
+		"textureheight": 128,
+		"visible_bounds_width": 2,
+		"visible_bounds_height": 4,
+		"visible_bounds_offset": [0, 2, 0],
+		"bones": [
+			{
+				"name": "waist",
+				"pivot": [0, 12, 0]
+			},
+			{
+				"name": "body",
+				"parent": "waist",
+				"pivot": [0, 24, 0]
+			},
+			{
+				"name": "head",
+				"parent": "body",
+				"pivot": [0, 25, 0]
+			},
+			{
+				"name": "hat",
+				"parent": "head",
+				"pivot": [0, 28, 0],
+				"cubes": [
+					{"origin": [-4.25, 32, -4.25], "size": [8.5, 10, 8.5], "uv": [41, 7]},
+					{"origin": [-6, 33, -6], "size": [12, 2, 12], "uv": [0, 0]},
+					{"origin": [-6, 32, -6], "size": [12, 1, 12], "uv": [0, 15]}
+				]
+			},
+			{
+				"name": "rightArm",
+				"parent": "body",
+				"pivot": [-5, 22, 0]
+			},
+			{
+				"name": "rightItem",
+				"parent": "rightArm",
+				"pivot": [-6, 15, 1]
+			},
+			{
+				"name": "leftArm",
+				"parent": "body",
+				"pivot": [5, 22, 0],
+				"mirror": true
+			},
+			{
+				"name": "rightLeg",
+				"parent": "body",
+				"pivot": [-1.9, 12, 0]
+			},
+			{
+				"name": "leftLeg",
+				"parent": "body",
+				"pivot": [1.9, 12, 0],
+				"mirror": true
+			}
+		]
+	}
+}

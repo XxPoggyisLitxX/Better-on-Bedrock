@@ -1,0 +1,52 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:goblin_house_feature_rule",
+        "places_feature": "better_on_bedrock:goblin_house"
+      },
+      "conditions": {
+        "placement_pass": "after_surface_pass",
+        "minecraft:biome_filter": {
+          "any_of": [
+            {
+              "test": "has_biome_tag",
+              "value": "plains"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "forest"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "custom_vanilla_forrest"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "new_hills"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "birch_forest"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "taiga"
+            }
+          ]
+        }
+      },
+      "distribution": {
+        "scatter_chance": {
+          "numerator": 1,
+          "denominator": 2400
+        },
+        "iterations": 1,
+  
+        "x": 0,
+        "z": 0,
+        "y": "query.heightmap(variable.worldx, variable.worldz) - 2"
+      }
+    }
+  }
+  

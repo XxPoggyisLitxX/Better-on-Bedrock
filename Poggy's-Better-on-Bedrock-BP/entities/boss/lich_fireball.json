@@ -1,0 +1,74 @@
+{
+    "format_version": "1.12.0",
+   "minecraft:entity": {
+    "description": {
+      "identifier": "better_on_bedrock:lich_fireball",
+      "runtime_identifier": "minecraft:snowball",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+  
+   "component_groups": {
+   "minecraft:exploding": {
+    "minecraft:explode": {
+     "fuse_length": 0,
+     "fuse_lit": true,
+     "power": 2,
+     "causes_fire": false,
+     "breaks_blocks": false,
+     "fire_affected_by_griefing": true,
+     "destroy_affected_by_griefing": true
+    }
+   }
+  },
+
+  "components": {
+   "minecraft:collision_box": {
+    "width": 0.31,
+    "height": 0.31
+   },
+   "minecraft:projectile": {
+    
+    "on_hit": {
+     "definition_event": {
+      "affect_projectile": true,
+      "event_trigger": {
+            "event": "minecraft:explode",
+            "target": "self"
+      }
+     }
+    },
+    "power": 4,
+    "gravity": 0.05,
+    "inertia": 1,
+    "angle_offset": 0,
+    "liquid_inertia": 1,
+    "uncertainty_base": 0,
+    "uncertainty_multiplier": 0,
+    "mob_effect": {
+      "effect": "slowness"
+    },
+    "anchor": 1,
+    "offset": [ 0, -0.1, 0 ],
+    "reflect_on_hurt": true,
+    "catch_fire": false
+   },
+   "minecraft:physics": {
+   },
+   "minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+   }
+  },
+  "events": {
+   "minecraft:explode": {
+    "add": {
+     "component_groups": [
+      "minecraft:exploding"
+     ]
+    }
+   }
+  }
+ }
+}

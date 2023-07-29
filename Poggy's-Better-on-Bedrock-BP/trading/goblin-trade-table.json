@@ -1,0 +1,422 @@
+{
+   "tiers": [
+      {
+         "total_exp_required": 0,
+         "groups": [
+            {
+               "trades": [
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:emerald",
+                           "quantity": 4,
+                           "price_multiplier": 0.05
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:golden_apple",
+                           "quantity": 3
+                        }
+                     ],
+                     "trader_exp": 1,
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:gold_ingot",
+                           "quantity": 6
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "better_on_bedrock:vein_miner_book",
+                           "quantity": 1
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:gold_ingot",
+                           "quantity": 6
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "better_on_bedrock:tree_cap_book",
+                           "quantity": 1
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:ancient_debris",
+                           "quantity": 1
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:netherite_scrap",
+                           "quantity": 2
+                        }
+                     ],
+                     "max_uses": 1,
+                     "weight": 10,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:diamond",
+                           "quantity": 9
+                        },
+                        {
+                           "item": "minecraft:gold_block",
+                           "quantity": 2
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:netherite_ingot",
+                           "quantity": 2
+                        }
+                     ],
+                     "max_uses": 1,
+                     "weight": 10,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:copper_ingot",
+                           "quantity": 4
+                        },
+                        {
+                           "item": "minecraft:gold_nugget",
+                           "quantity": 4
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:gold_ingot",
+                           "quantity": 4
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:iron_ingot",
+                           "quantity": 4
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "better_on_bedrock:iron_pickaxe",
+                           "quantity": 1,
+                           "functions": [
+                              {
+                                 "function": "specific_enchants",
+                                 "enchants": [
+                                    {
+                                       "id": "unbreaking",
+                                       "level": 1
+                                    },
+                                    {
+                                       "id": "efficiency",
+                                       "level": 2
+                                    },
+                                    {
+                                       "id": "fortune",
+                                       "level": 3
+                                    }
+                                 ]
+                              }
+                           ]
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:diamond",
+                           "quantity": 12
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:golden_apple",
+                           "quantity": 12
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:carrot",
+                           "quantity": 12
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:golden_carrot",
+                           "quantity": 6
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:emerald",
+                           "quantity": 1
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:name_tag",
+                           "quantity": 2
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:gold_ingot",
+                           "quantity": 3
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:iron_ingot",
+                           "quantity": 5
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:coal",
+                           "quantity": 32
+                        },
+                        {
+                           "item": "minecraft:charcoal",
+                           "quantity": 32
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:diamond",
+                           "quantity": 2
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:bread",
+                           "quantity": 4
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:cooked_beef",
+                           "quantity": 4
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:netherite_hoe",
+                           "quantity": 1
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:lapis_lazuli",
+                           "quantity": 32
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true,
+                     "weight": 4
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:copper_ingot",
+                           "quantity": 12
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:emerald",
+                           "quantity": 12
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:tallgrass",
+                           "quantity": 7
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:apple",
+                           "quantity": 4
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:furnace",
+                           "quantity": 1
+                        },
+                        {
+                           "item": "minecraft:iron_ingot",
+                           "quantity": 1
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:blast_furnace",
+                           "quantity": 1
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:emerald",
+                           "quantity": 8
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:map",
+                           "quantity": 1,
+                           "functions": [
+                              {
+                                 "function": "set_name",
+                                 "name": "§r§fStronhold Map"
+                              },
+                              {
+                                 "function": "set_lore",
+                                 "lore": [
+                                    "§r§fA map to guide you to a Stonghold"
+                                 ]
+                              },
+                              {
+                                 "function": "exploration_map",
+                                 "destination": "stronghold"
+                               }
+                           ]
+                        }
+                     ],
+                     "max_uses": -1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:emerald",
+                           "quantity": 8
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:map",
+                           "quantity": 1,
+                           "functions": [
+                              {
+                                 "function": "set_name",
+                                 "name": "§r§fVillage Map"
+                              },
+                              {
+                                 "function": "set_lore",
+                                 "lore": [
+                                    "§r§fA map to guide you to a Village"
+                                 ]
+                              },
+                              {
+                                 "function": "exploration_map",
+                                 "destination": "village"
+                               }
+                           ]
+                        }
+                     ],
+                     "max_uses": -1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "minecraft:emerald",
+                           "quantity": 8
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "minecraft:map",
+                           "quantity": 1,
+                           "functions": [
+                              {
+                                 "function": "set_name",
+                                 "name": "§r§fRuins Map"
+                              },
+                              {
+                                 "function": "set_lore",
+                                 "lore": [
+                                    "§r§fA map to guide you to some Ruins"
+                                 ]
+                              },
+                              {
+                                 "function": "exploration_map",
+                                 "destination": "ruins"
+                               }
+                           ]
+                        }
+                     ],
+                     "max_uses": -1,
+                     "reward_exp": true
+                  }
+               ],
+               "num_to_select": 8
+            }
+         ]
+      }
+   ]
+}

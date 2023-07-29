@@ -1,0 +1,55 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.deer.move": {
+			"loop": true,
+			"bones": {
+				"Right_Front_Leg": {
+					"rotation": ["math.cos(q.anim_time * 455) * 50", 0, 0]
+				},
+				"Right_Rear_Leg": {
+					"rotation": ["-math.cos(q.anim_time * 455) * 50", 0, 0]
+				},
+				"Left_Rear_Leg": {
+					"rotation": ["math.cos(q.anim_time * 455) * 50", 0, 0]
+				},
+				"Left_Front_Leg": {
+					"rotation": ["-math.cos(q.anim_time * 455) * 50", 0, 0]
+				},
+				"Tail": {
+					"rotation": [0, "math.cos(q.anim_time * 455) * 12", 0]
+				}
+			}
+		},
+		"animation.deer.idle": {
+			"loop": true,
+			"bones": {
+				"Tail": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [0, "math.cos(q.anim_time * 455) * 7", 0]
+				}
+			}
+		},
+		"animation.deer.eat": {
+			"animation_length": 3.04167,
+			"bones": {
+				"Neck": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": ["127.5 + math.cos(q.anim_time * 1233) * 7", 0, 0]
+					}
+				}
+			}
+		},
+		"animation.deer.baby_transform": {
+			"loop": true,
+			"bones": {
+				"Head": {
+					"scale": 2
+				}
+			}
+		}
+	}
+}

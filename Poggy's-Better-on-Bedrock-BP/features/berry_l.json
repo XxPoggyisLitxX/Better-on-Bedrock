@@ -1,0 +1,18 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "better_on_bedrock:berry_l"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "pa:pog_berry_scatter_feature",
+				"condition": "query.noise(v.type == 5) < 1"
+			}
+		],
+
+		"early_out_scheme": "placement_success"
+	}
+}

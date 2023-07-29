@@ -1,0 +1,16 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:sequence_feature": {
+		"description": {
+			"identifier": "better_on_bedrock:test_pillager_camp_svatter"
+		},
+
+		"features": [
+			"better_on_bedrock:test_pillager_camp",
+      "better_on_bedrock:test_pillager_camp",
+      "better_on_bedrock:test_pillager_camp",
+      "better_on_bedrock:test_pillager_camp"
+		]
+	}
+}

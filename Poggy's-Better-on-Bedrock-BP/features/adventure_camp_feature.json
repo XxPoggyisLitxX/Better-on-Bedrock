@@ -1,0 +1,14 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+      "description": {
+        "identifier": "better_on_bedrock:adventure_camp_feature"
+      },
+      "structure_name": "mystructure:adventurer_camp",
+      "adjustment_radius": 15,
+      "facing_direction": "south",
+      "constraints": {
+        "grounded": {}
+      }
+    }
+  }

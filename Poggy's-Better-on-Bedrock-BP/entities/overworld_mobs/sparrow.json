@@ -1,0 +1,333 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:entity": {
+      "description": {
+        "identifier": "better_on_bedrock:sparrow",
+        "is_spawnable": true,
+        "is_summonable": true,
+        "is_experimental": false
+      },
+  
+  
+      "components": {
+        
+          "minecraft:health": {
+            "value": 6,
+            "max": 6
+          }
+          
+      },
+      "events": {
+        "minecraft:entity_spawned": {
+            "add": {
+                "component_groups": [
+                    "default"
+                ]
+            },
+            "randomize": [
+                {
+                    "add": {
+                        "component_groups": [
+                            "skin_1",
+                            "default"
+                        ]
+                    },
+                    "weight": 5
+                },
+                {
+                    "add": {
+                        "component_groups": [
+                            "skin_2",
+                            "default"
+                        ]
+                    },
+                    "weight": 5
+                },
+                {
+                    "add": {
+                        "component_groups": [
+                            "skin_3",
+                            "default"
+                        ]
+                    },
+                    "weight": 5
+                },
+                {
+                    "add": {
+                        "component_groups": [
+                            "skin_4",
+                            "default"
+                        ]
+                    },
+                    "weight": 5
+                },
+                {
+                    "add": {
+                        "component_groups": [
+                            "skin_5",
+                            "default"
+                        ]
+                    },
+                    "weight": 5
+                },
+                {
+                    "add": {
+                        "component_groups": [
+                            "skin_6",
+                            "default"
+                        ]
+                    },
+                    "weight": 5
+                },
+                {
+                    "add": {
+                        "component_groups": [
+                            "skin_7",
+                            "default"
+                        ]
+                    },
+                    "weight": 5
+                },
+                {
+                    "add": {
+                        "component_groups": [
+                            "skin_8",
+                            "default"
+                        ]
+                    },
+                    "weight": 5
+                },
+                {
+                    "add": {
+                        "component_groups": [
+                            "skin_9",
+                            "default"
+                        ]
+                    },
+                    "weight": 5
+                },
+                {
+                    "add": {
+                        "component_groups": [
+                            "skin_10",
+                            "default"
+                        ]
+                    },
+                    "weight": 5
+                }
+            ]
+        },
+        "fly": {
+            "add": {
+                "component_groups": [
+                    "fly"
+                ]
+            },
+            "remove": {
+                "component_groups": [
+                    "default"
+                ]
+            }
+        },
+        "default": {
+            "add": {
+                "component_groups": [
+                    "default"
+                ]
+            },
+            "remove": {
+                "component_groups": [
+                    "fly"
+                ]
+            }
+        }
+      },
+      "component_groups": {
+        "skin_1":{
+            "minecraft:variant": {
+                "value": 1
+            }
+        },
+        "skin_2":{
+            "minecraft:variant": {
+                "value": 2
+            }
+        },
+        "skin_3":{
+            "minecraft:variant": {
+                "value": 3
+            }
+        },
+        "skin_4":{
+            "minecraft:variant": {
+                "value": 4
+            }
+        },
+        "skin_5":{
+            "minecraft:variant": {
+                "value": 5
+            }
+        },
+        "skin_6":{
+            "minecraft:variant": {
+                "value": 6
+            }
+        },
+        "skin_7":{
+            "minecraft:variant": {
+                "value": 7
+            }
+        },
+        "skin_8":{
+            "minecraft:variant": {
+                "value": 8
+            }
+        },
+        "skin_9":{
+            "minecraft:variant": {
+                "value": 9
+            }
+        },
+        "skin_10":{
+            "minecraft:variant": {
+                "value": 10
+            }
+        },
+
+        "default": {
+            "minecraft:movement": {
+                "value": 0.4
+              },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                  "cause": "fall",
+                  "deals_damage": false
+                }
+              },
+              "minecraft:jump.static": {
+              },
+              "minecraft:can_fly": {
+              },
+              "minecraft:navigation.fly": {
+                "can_path_over_water": true
+              },
+              "minecraft:movement.fly": {
+              },
+              "minecraft:physics": {
+              },
+              "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+              },
+              "minecraft:behavior.float": {
+                "priority": 0
+              },
+              "minecraft:behavior.look_at_player": {
+                "priority": 1,
+                "look_distance": 8.0
+              },
+            "minecraft:breathable": {
+                "total_supply": 15,
+                "suffocate_time": 0
+              },
+              "minecraft:collision_box": {
+                "width": 0.5,
+                "height": 1
+              },
+              "minecraft:nameable": {
+              },
+              "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                  {
+                    "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+                    "cause": "lava",
+                    "damage_per_tick": 4
+                  }
+                ]
+              },
+            "minecraft:behavior.random_fly": {
+                "priority": 2,
+                "xz_dist": 15,
+                "y_dist": 1,
+                "y_offset": 0,
+                "speed_multiplier": 1.0,
+                "can_land_on_trees": true,
+                "avoid_damage_blocks": true
+              },
+              "minecraft:behavior.follow_mob": {
+                "priority": 3,
+                "speed_multiplier": 1.0,
+                "stop_distance": 3,
+                "search_range": 20
+              }
+        },
+        "fly": {
+            "minecraft:movement": {
+                "value": 0.4
+              },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                  "cause": "fall",
+                  "deals_damage": false
+                }
+              },
+              "minecraft:jump.static": {
+              },
+              "minecraft:can_fly": {
+              },
+              "minecraft:navigation.fly": {
+                "can_path_over_water": true
+              },
+              "minecraft:movement.fly": {
+              },
+              "minecraft:physics": {
+              },
+              "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+              },
+              "minecraft:behavior.float": {
+                "priority": 0
+              },
+              "minecraft:behavior.look_at_player": {
+                "priority": 1,
+                "look_distance": 8.0
+              },
+            "minecraft:breathable": {
+                "total_supply": 15,
+                "suffocate_time": 0
+              },
+              "minecraft:collision_box": {
+                "width": 0.5,
+                "height": 1
+              },
+              "minecraft:nameable": {
+              },
+              "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                  {
+                    "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+                    "cause": "lava",
+                    "damage_per_tick": 4
+                  }
+                ]
+              },
+            "minecraft:behavior.random_fly": {
+                "priority": 2,
+                "xz_dist": 15,
+                "y_dist": 1,
+                "y_offset": 0,
+                "speed_multiplier": 1.0,
+                "can_land_on_trees": true,
+                "avoid_damage_blocks": true
+              },
+              "minecraft:behavior.follow_mob": {
+                "priority": 3,
+                "speed_multiplier": 1.0,
+                "stop_distance": 3,
+                "search_range": 20
+              }
+        }
+      }
+    }
+}

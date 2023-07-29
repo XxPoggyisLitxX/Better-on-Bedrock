@@ -1,0 +1,1 @@
+execute as @p run scriptevent bob:test2

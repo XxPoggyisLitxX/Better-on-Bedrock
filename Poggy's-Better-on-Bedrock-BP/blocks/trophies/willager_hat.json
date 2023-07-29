@@ -1,0 +1,33 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:willager_hat",
+			"is_experimental": true
+		},
+		"components": {
+            "minecraft:destructible_by_mining":{
+                "seconds_to_destroy": 1
+            },
+            "minecraft:loot": "loot_tables/blocks/trophies/willager_hat.json",
+			//Basic components
+      "minecraft:collision_box": {
+        "origin": [-6, 0, -6],
+        "size": [12, 13, 12]
+      },
+      "minecraft:selection_box":{
+        "origin": [-6, 0, -6],
+        "size": [12, 13, 12]
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:light_emission": 0,
+      "minecraft:geometry": "geometry.willager_hat_trophy",
+			"minecraft:material_instances":{
+				"*": {
+					"texture": "willager_hat_trophy",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

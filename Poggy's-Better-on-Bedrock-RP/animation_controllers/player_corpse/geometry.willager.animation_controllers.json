@@ -1,0 +1,37 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.geometry.willager": {
+			"states": {
+				"default": {
+					"animations": ["general"],
+					"transitions": [
+						{"default": "q.modified_move_speed > 0.05"},
+						{"casting": "q.is_casting"}
+					],
+					"blend_transition": 0.2
+				},
+				"walking": {
+					"animations": ["move"],
+					"transitions": [
+						{"default": "q.modified_move_speed < 0.05"},
+						{"casting": "q.is_casting"}
+					],
+					"blend_transition": 0.2
+				},
+				"casting": {
+					"animations": ["casting"],
+					"particle_effects": [
+						{
+							"effect": ""
+						}
+					],
+					"transitions": [
+						{"default": "!q.is_casting"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:lost_guardian_helmet",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:hand_equipped": false,
+			"minecraft:icon": {
+				"texture": "lost_guardian_helmet"
+			}
+		}
+		}
+	}

@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:baby_ghast",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/baby_ghast"
+			},
+			"geometry": {
+				"default": "geometry.baby_ghast"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#6324a0",
+				"overlay_color": "#d0ee55"
+			}
+		}
+	}
+}

@@ -1,0 +1,134 @@
+{
+   "tiers": [
+      {
+         "total_exp_required": 0,
+         "groups": [
+            {
+               "num_to_select": 5,
+               "trades": [
+                  {
+                     "wants": [
+                        {
+                           "item": "better_on_bedrock:default_rune",
+                           "quantity": 1
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "better_on_bedrock:staff",
+                           "quantity": 1,
+                           "functions": [
+                              {
+                                 "function": "set_lore",
+                                 "lore": [
+                                    "§r§8A staff that shoots magic.\n§r§8Has No Extra benifits\n§r§81 Second Cooldown"
+                                 ]
+                              }
+                           ]
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "better_on_bedrock:rune_of_vitality",
+                           "quantity": 1
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "better_on_bedrock:staff_of_vitality",
+                           "quantity": 1,
+                           "functions": [
+                              {
+                                 "function": "set_lore",
+                                 "lore": [
+                                    "§r§aGives regeneration for 30 seconds."
+                                 ]
+                              }
+                           ]
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "better_on_bedrock:rune_of_strength",
+                           "quantity": 1
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "better_on_bedrock:staff_of_strength",
+                           "quantity": 1,
+                           "functions": [
+                              {
+                                 "function": "set_lore",
+                                 "lore": [
+                                    "§r§aShoots a burst of flames that deals 6 damage."
+                                 ]
+                              }
+                           ]
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                  {
+                     "wants": [
+                        {
+                           "item": "better_on_bedrock:rune_of_the_seas",
+                           "quantity": 1
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "better_on_bedrock:staff_of_the_seas",
+                           "quantity": 1,
+                           "functions": [
+                              {
+                                 "function": "set_lore",
+                                 "lore": [
+                                    "§r§aShoots the Iceologer Iceblock"
+                                 ]
+                              }
+                           ]
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  },
+                    {
+                     "wants": [
+                        {
+                           "item": "better_on_bedrock:rune_of_protection",
+                           "quantity": 1
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "better_on_bedrock:staff_of_protection",
+                           "quantity": 1,
+                           "functions": [
+                              {
+                                 "function": "set_lore",
+                                 "lore": [
+                                    "§r§aShoots the Lich Fireball"
+                                 ]
+                              }
+                           ]
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

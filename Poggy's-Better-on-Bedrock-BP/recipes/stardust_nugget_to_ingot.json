@@ -1,0 +1,15 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_furnace": {
+      "description": {
+      "identifier": "minecraft:stardust_nugget_to_ingot"
+      },
+  
+      
+      "tags": ["furnace", "blast_furnace"],
+      "input": "better_on_bedrock:stardust_nugget",
+      "output": "better_on_bedrock:stardust"
+    }
+    
+  }
+  

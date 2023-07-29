@@ -1,0 +1,51 @@
+{
+	"format_version": "1.19.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:custom_tall_plant_top",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.flower"
+			}
+		},
+		"components": {
+			"tag:custom_tall_plant_top": {},
+			"minecraft:loot": "loot_tables/blocks/loot_tables/empty.json",
+			"minecraft:collision_box": false,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": ["up"],
+						"block_filter": ["custom_tall_plant"]
+					}
+				]
+			},
+			"minecraft:selection_box":{
+				"origin": [
+					-3,
+					0,
+					-3
+				],
+				"size": [
+					6,
+					16,
+					6
+				]
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 30
+			},
+			"minecraft:geometry": "geometry.dead_tall_grass_top",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "dead_tall_grass_top",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:map_color": "#7d7d7d"
+		}
+	}
+}

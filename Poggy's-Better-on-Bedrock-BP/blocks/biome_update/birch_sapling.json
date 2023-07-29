@@ -1,0 +1,137 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+      "description": {
+        "identifier": "better_on_bedrock:birch_sapling"
+      },
+      "components": {
+        "minecraft:destructible_by_mining":{
+            "seconds_to_destroy": 0
+        },
+        "minecraft:geometry": "geometry.cross_crop",
+  "minecraft:light_dampening": 0,
+  "minecraft:light_emission": 0,
+  "minecraft:collision_box": false,
+  "minecraft:pick_collision":{
+    "origin":[
+     -6,
+     0,
+     -6
+    ],
+    "size":[
+     12,
+     8,
+     12
+    ]
+   },
+   "minecraft:on_interact": {
+    "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:bone_meal')",
+    "event": "place_custom_birch_tree",
+    "target": "self"
+   },
+  "minecraft:loot": "loot_tables/blocks/empty.json",
+  "minecraft:placement_filter": {
+    "conditions": [
+     {
+        "allowed_faces": ["up"],
+        "block_filter": [
+            "minecraft:farmland"
+        ]
+     }
+    ]
+  },
+        "minecraft:material_instances": {
+          "*": {
+            "texture": "birch_sapling",
+            "render_method": "alpha_test"
+        }
+      },
+      "minecraft:random_ticking": {
+        "on_tick":{
+            "event": "place_custom_birch_tree",
+            "target": "self"
+			 }
+
+      }
+    },
+    "events": {
+        "place_custom_birch_tree": {
+            "randomize": [
+                {
+                    "run_command": {
+                        "command": ["structure load birch_tree_1 ~-3 ~ ~-3"]
+                    },
+                    "weight": 5
+                },
+                {
+                    "run_command": {
+                        "command": ["structure load birch_tree_1 ~-3 ~ ~-3"]
+                    },
+                    "weight": 5
+                },
+                {
+                    "run_command": {
+                        "command": ["structure load birch_tree_3 ~-3 ~ ~-3"]
+                    },
+                    "weight": 5
+                },//90_degrees
+                {
+                    "run_command": {
+                        "command": ["structure load birch_tree_1 ~-3 ~ ~-3 90_degrees"]
+                    },
+                    "weight": 5
+                },
+                {
+                    "run_command": {
+                        "command": ["structure load birch_tree_1 ~-3 ~ ~-3 90_degrees"]
+                    },
+                    "weight": 5
+                },
+                {
+                    "run_command": {
+                        "command": ["structure load birch_tree_3 ~-3 ~ ~-3 90_degrees"]
+                    },
+                    "weight": 5
+                }, //180
+                {
+                    "run_command": {
+                        "command": ["structure load birch_tree_1 ~-2 ~ ~-3 180_degrees"]
+                    },
+                    "weight": 5
+                },
+                {
+                    "run_command": {
+                        "command": ["structure load birch_tree_1 ~-2 ~ ~-3 180_degrees"]
+                    },
+                    "weight": 5
+                },
+                {
+                    "run_command": {
+                        "command": ["structure load birch_tree_3 ~-2 ~ ~-3 180_degrees"]
+                    },
+                    "weight": 5
+                }, //360
+                {
+                    "run_command": {
+                        "command": ["structure load birch_tree_1 ~-3 ~ ~-2 270_degrees"]
+                    },
+                    "weight": 5
+                },
+                {
+                    "run_command": {
+                        "command": ["structure load birch_tree_1 ~-3 ~ ~-2 270_degrees"]
+                    },
+                    "weight": 5
+                },
+                {
+                    "run_command": {
+                        "command": ["structure load birch_tree_3 ~-3 ~ ~-2 270_degrees"]
+                    },
+                    "weight": 5
+                }
+            ]
+        }
+       
+    }
+  }
+}

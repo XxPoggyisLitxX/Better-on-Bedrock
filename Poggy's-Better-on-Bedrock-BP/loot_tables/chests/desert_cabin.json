@@ -1,0 +1,59 @@
+{
+    "pools": [
+      {
+        "rolls": 6,
+        "bonus_rolls": 0,
+        "entries": [
+          {
+            "type": "item",
+            "quality": 5,
+            "name": "minecraft:emerald"
+          },
+          {
+            "type": "item",
+            "quality": 2,
+            "name": "minecraft:coal_block"
+          },
+          {
+            "type": "item",
+            "quality": 1,
+            "name": "minecraft:lava_bucket",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "name": "better_on_bedrock:unactivated_default_rune",
+            "weight": 1
+          },
+          {
+            "type": "item",
+            "name": "minecraft:iron_ingot",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 2,
+                  "max": 2
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "name": "minecraft:beef"
+          },
+          {
+            "type": "item",
+            "weight": 3,
+            "name": "better_on_bedrock:tomato_seed"
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,32 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "pog:lich_scroll"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "/P/",
+            "PSP",
+            "/P/"
+        ],
+        "key": {
+            "/": {
+                "item": "minecraft:stick"
+            },
+            "P": {
+                "item": "minecraft:paper"
+            },
+            "S": {
+                "item": "minecraft:skull",
+                "data": 1
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:scroll_of_the_plains",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:raw_mutton_chops"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+          "pattern": [
+            "bd"
+          ],
+          "key": {
+            "b": {
+              "item": "minecraft:mutton"
+            },
+            "d": {
+              "item": "better_on_bedrock:dagger"
+            }
+          },
+        "result": [
+            { "item": "better_on_bedrock:raw_mutton_chops" },
+            { "item": "better_on_bedrock:dagger", "data": 25 }
+          ]
+    }
+}

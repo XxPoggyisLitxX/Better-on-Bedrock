@@ -1,0 +1,93 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.enchanter.moves": {
+			"states": {
+				"default": {
+					"animations": ["idle"],
+					"transitions": [
+						{"attack": "variable.attack_time >= 0.01"},
+						{"walk": "q.modified_move_speed >= 0.05"},
+						{"ranged_attack": "query.variant == 1"}
+					]
+				},
+				"attack": {
+					"animations": ["attack"],
+					"transitions": [
+						{"default": "q.modified_move_speed <= 0.05 && query.variant == 0"},
+						{"walk": "q.modified_move_speed >= 0.05"},
+						{"ranged_attack": "query.variant == 1"}
+					]
+				},
+				"walk": {
+					"animations": ["walk"],
+					
+					"transitions": [
+						{"default": "q.modified_move_speed <= 0.05 && query.variant == 0"},
+						{"attack": "variable.attack_time >= 0.01"},
+						{"ranged_attack": "query.variant == 1"}
+					]
+				},
+				"ranged_attack": {
+					"blend_transition": 0.2,
+					"animations": ["enchant"],
+					"transitions": [
+						{"default": "q.modified_move_speed <= 0.05 && query.variant == 0"},
+						{"attack": "variable.attack_time >= 0.01"},
+						{"walk": "q.modified_move_speed >= 0.05"}
+					]
+				}
+			}
+		},
+		"controller.animation.enchanter.new": {
+			"states": {
+				"default": {
+					"animations": ["idle"],
+					"transitions": [
+						{"spawn_books": "q.is_casting"},
+						{"spawn_big_book": "q.variant == 1"},
+						{"walk": "q.modified_move_speed >= 0.05"},
+						{"shoot_small_books": "q.is_charged == true"}
+					],
+					"blend_transition": 0.2
+				},
+				"spawn_books": {
+					"animations": ["enchant"],
+					"transitions": [
+						{"default": "!q.is_casting || q.variant == 1 || q.is_charged == false || q.modified_move_speed <= 0.05"},
+						{"spawn_big_book": "q.variant == 1"},
+						{"walk": "q.modified_move_speed >= 0.05"},
+						{"shoot_small_books": "q.is_charged == true"}
+					]
+				},
+				"spawn_big_book": {
+					"animations": ["enchant"],
+					"transitions": [
+						{"default": "!q.is_casting || q.variant == 1 || q.is_charged == false || q.modified_move_speed <= 0.05"},
+						{"spawn_books": "q.is_casting"},
+						{"walk": "q.modified_move_speed >= 0.05"},
+						{"shoot_small_books": "q.is_charged == true"}
+					]
+				},
+				"walk": {
+					"animations": ["walk"],
+					"transitions": [
+						{"default": "!q.is_casting || q.variant == 1 || q.is_charged == false || q.modified_move_speed <= 0.05"},
+						{"spawn_books": "q.is_casting"},
+						{"spawn_big_book": "q.variant == 1"},
+						{"shoot_small_books": "q.is_charged == true"}
+					]
+				},
+				"shoot_small_books": {
+					"animations": ["attack"],
+					"transitions": [
+						{"default": "!q.is_casting || q.variant == 1 || q.is_charged == false || q.modified_move_speed <= 0.05"},
+						{"spawn_books": "q.is_casting"},
+						{"spawn_big_book": "q.variant == 1"},
+						{"walk": "q.modified_move_speed >= 0.05"}
+					]
+				}
+			}
+		}
+	}
+}

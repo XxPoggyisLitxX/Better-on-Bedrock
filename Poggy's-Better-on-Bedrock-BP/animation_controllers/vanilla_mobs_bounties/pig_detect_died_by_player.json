@@ -1,0 +1,20 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+"controller.animation.pig_died_by_player": {
+			
+    "initial_state":"not_dead",
+   "states": {
+       "not_dead":{
+           "transitions":[{ "died_by_player": "q.last_hit_by_player == 1 && !q.is_alive" }]
+         },
+         "died_by_player":{
+           "on_entry":[
+            "/scoreboard players add @p[r=8] pig_quest 1"
+            ],
+            "transitions": [{"not_dead":"q.last_hit_by_player == 0 && q.is_alive"}]
+         }
+   }
+         }
+    }
+  }

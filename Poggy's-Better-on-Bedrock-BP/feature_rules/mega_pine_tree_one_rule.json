@@ -1,0 +1,42 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:mega_pine_tree_one_rule",
+        "places_feature": "better_on_bedrock:mega_pine_tree_one"
+      },
+      "conditions": {
+        "placement_pass": "surface_pass",
+        "minecraft:biome_filter": [
+            {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "taiga"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "mega"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "!=",
+                "value": "mutated"
+              }
+        ]
+      },
+      "distribution": {
+        "iterations": 1,
+        "coordinate_eval_order": "zxy",
+        "x": {
+            "extent": [0, 16],
+            "distribution": "uniform"
+        },
+        "y": "query.heightmap(variable.worldx, variable.worldz)",
+        "z": {
+            "extent": [0, 16],
+            "distribution": "uniform"
+        }
+      }
+    }
+  }

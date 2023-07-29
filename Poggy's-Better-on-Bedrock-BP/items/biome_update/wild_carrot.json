@@ -1,0 +1,27 @@
+{
+
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:wild_carrot_food",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 32,
+			"minecraft:hand_equipped": false,
+            "minecraft:food": {
+				"nutrition": 3,
+				"saturation_modifier": "normal",
+				"can_always_eat": false
+			},
+			"minecraft:block_placer": {
+				"block": "better_on_bedrock:healthy_carrot_crop"
+			},
+			"minecraft:use_animation": "eat",	
+            "minecraft:use_duration": 1.6,
+			"minecraft:icon": {
+				"texture": "wild_carrot"
+			}
+		}
+	}
+}

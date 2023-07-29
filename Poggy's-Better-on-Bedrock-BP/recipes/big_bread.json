@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:big_bread"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "  D",
+            " D ",
+            "D  "
+        ],
+        "key": {
+            "D": {
+                "item": "minecraft:bread"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:baguete",
+            "count": 1
+        }
+    }
+}

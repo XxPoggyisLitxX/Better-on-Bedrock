@@ -1,0 +1,18 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+"controller.animation.poggy.coal": {
+			
+    "initial_state":"coal_done",
+   "states": {
+       "coal_done":{
+           "transitions":[{ "coal": "q.mark_variant==1"}]
+         },
+         "coal":{
+             "animations": ["anim coal"],
+            "transitions": [{"coal_done":"q.mark_variant==0"}]
+         }
+   }
+         }
+        }
+    }

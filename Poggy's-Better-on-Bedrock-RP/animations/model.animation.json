@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.model.nfly": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [0, 0, "-80 -math.cos(q.anim_time * 1000) * 10"]
+				},
+				"bone2": {
+					"rotation": [0, 0, "80+math.cos(q.anim_time * 1000) * 10"],
+					"position": [0, 0, 0]
+				},
+				"bone3": {
+					"rotation": [-12.5, 0, 0]
+				},
+				"bone4": {
+					"rotation": [15, 0, 0]
+				}
+			}
+		}
+	}
+}

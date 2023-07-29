@@ -1,0 +1,35 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "better_on_bedrock:overworld_flower_random_feature"
+		},
+		"features": [
+			[
+				"minecraft:overworld_flower_1", //Podzol dirt weighs 3
+				5
+			],
+			[
+				"minecraft:overworld_flower_2", //Cobblestone weighs 2
+				5
+			],
+            [
+				"minecraft:overworld_flower_3", //Podzol dirt weighs 3
+				5
+			],
+			[
+				"minecraft:overworld_flower_4", //Cobblestone weighs 2
+				5
+			],
+            [
+				"minecraft:overworld_flower_5", //Podzol dirt weighs 3
+				5
+			],
+			[
+				"minecraft:overworld_flower_6", //Cobblestone weighs 2
+				5
+			]
+			//better_on_bedrock:overworld_flower_7
+		]
+	}
+}

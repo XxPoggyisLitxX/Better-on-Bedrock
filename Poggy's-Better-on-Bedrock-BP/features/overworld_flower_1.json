@@ -1,0 +1,14 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+      "description": {
+        "identifier": "minecraft:overworld_flower_1"
+      },
+      "structure_name": "mystructure:overworld_tall_flower_1",
+      "adjustment_radius": 8,
+      "facing_direction": "random",
+      "constraints": {
+        "grounded": {}
+      }
+    }
+  }

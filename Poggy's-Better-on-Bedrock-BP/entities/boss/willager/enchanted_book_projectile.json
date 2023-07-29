@@ -1,0 +1,44 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:enchanted_book_projectile",
+			"is_spawnable": true,
+            "runtime_identifier": "minecraft:snowball",
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+            "minecraft:projectile": {
+                "on_hit": {
+                    "impact_damage": {
+                      "damage": 6,
+                      "knockback": true,
+                      "catch_fire": false,
+                      "semi_random_diff_damage": false
+                    }
+                },
+                "power": 3,
+                "gravity": 0.05,
+                "inertia": 1,
+                "liquid_inertia": 1,
+                "uncertainty_base": 0,
+                "uncertainty_multiplier": 0,
+                "anchor": 1,
+                "offset": [ 0, -0.1, 0 ],
+                "reflect_on_hurt": false,
+                "catch_fire": false
+               },
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:push_through": {
+				"value": 1
+			}
+		}
+        }
+    }

@@ -1,0 +1,57 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:dummy_chest",
+			"is_experimental": true
+		},
+		"components": {
+			//Basic components
+			"minecraft:destructible_by_mining":{
+				"seconds_to_destroy": 2
+			},
+			"minecraft:geometry": "geometry.dummy_chest",
+            "minecraft:on_interact": {
+                "event": "locked",
+                "target": "self"
+            },
+			"minecraft:selection_box":{
+				"origin":[
+				   -8,
+				   0,
+				   -8
+				],
+				"size":[
+				   16,
+				   16,
+				   16
+				]
+			 },
+			        "minecraft:creative_category": {
+          "category": "construction",
+          "group": "construction"
+      },
+			"minecraft:material_instances": {
+                "dummy_chest_top":{
+                    "texture": "dummy_chest_top",
+					"render_method": "alpha_test"
+                },
+				"dummy_chest_side":{
+                    "texture": "dummy_chest_side",
+					"render_method": "alpha_test"
+                },
+				"dummy_chest_front":{
+                    "texture": "dummy_chest_front",
+					"render_method": "alpha_test"
+                }
+			}
+		},
+        "events": {
+          "locked": {
+            "run_command": {
+                "command": ["title @p title §", "title @p subtitle Chest is locked", "summon better_on_bedrock:willager ~ ~ ~", "structure load willager_loot_box ~ ~ ~"]
+            }
+          }  
+        }
+	}
+}

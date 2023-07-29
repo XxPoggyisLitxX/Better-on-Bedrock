@@ -1,0 +1,23 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "better_on_bedrock:dripstone_mossy"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "result": {
+            "item": "better_on_bedrock:dripstone_mossy",
+            "count": 1
+        },
+        "ingredients": [
+            {
+                "item": "minecraft:dripstone_block"
+            },
+            {
+                "item": "minecraft:vine"
+            }
+        ]
+    }
+}

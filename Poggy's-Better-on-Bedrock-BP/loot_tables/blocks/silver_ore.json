@@ -1,0 +1,41 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"conditions": [
+                {
+                    "condition": "match_tool",
+                    "item": "better_on_bedrock:iron_pickaxe",
+                    "count": 1,
+                    "enchantments": [
+                        {
+                            "fortune": {
+                                "level": 1
+                            }
+                        }
+                    ]
+                }
+            ],
+			"entries": [
+				{
+					"type": "item",
+					"name": "better_on_bedrock:silver_nugget",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 3
+							}
+						}
+					]
+				}
+
+			]
+
+		}
+
+	]
+
+}

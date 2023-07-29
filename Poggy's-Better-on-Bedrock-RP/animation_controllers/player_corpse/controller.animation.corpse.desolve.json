@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.corpse.desolve": {
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {
+                            "desolve": "q.mark_variant == 1"
+                        }
+                    ]
+                },
+
+                "desolve":{
+                    "animations": [
+                        "desolve"
+                    ]
+                }
+            }
+        }
+    }
+}

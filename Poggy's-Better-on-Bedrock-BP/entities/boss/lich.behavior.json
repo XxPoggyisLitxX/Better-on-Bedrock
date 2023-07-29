@@ -1,0 +1,455 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:lich",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"animations": {
+				"ac": "controller.animation.poggy.lich_half_health"
+			},
+			"scripts": {
+				"animate": [
+					"ac"
+				]
+			},
+			"is_experimental": false
+		},
+		"events": {
+			"better_on_bedrock:summon_flame": {
+				"randomize": [
+					{
+						"add": {
+							"component_groups": [
+								"better_on_bedrock:summon_flame"
+							]
+						},
+						"weight": 20
+					},
+					
+					{
+						"add": {
+							"component_groups": [
+								"invis"
+							]
+						},
+						"weight": 2
+					},
+					{
+						"add": {
+							"component_groups": [
+								"projectile_mode"
+							]
+						},
+						"weight": 20
+					}
+					
+				]
+			},
+			"better_on_bedrock:done": {
+				"remove": {
+					"component_groups": [
+						"better_on_bedrock:summon_flame",
+						"invis",
+						"projectile_mode"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"no_variant"
+					]
+				}
+			},
+			"invis": {
+				"add": {
+					"component_groups": [
+						"invis"
+					]
+				}
+			},
+			"phase_2":{
+				"add": {
+					"component_groups": [
+						"transform"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"better_on_bedrock:summon_flame",
+						"invis",
+						"projectile_mode"
+
+					]
+				}	
+			}
+		},
+		"component_groups": {
+			"transform":{
+				"minecraft:transformation": {
+					"into": "better_on_bedrock:fire_place"
+				}
+			},
+			"projectile_mode": {
+				"minecraft:shooter": {
+					"def": "minecraft:small_fireball"
+				},
+				"minecraft:behavior.ranged_attack": {
+					"attack_interval_min": 1,
+					"burst_shots": 8,
+					"attack_interval_max": 3,
+					"attack_radius": 15
+				  },
+				  "minecraft:timer": {
+					"time": 0.5,
+					"looping": false,
+					"time_down_event": {
+						"event": "better_on_bedrock:done",
+						"target": "self"
+					}
+				}
+			},
+			"phase_two": {
+				"minecraft:health": {
+					"value": 250,
+					"max": 250
+				},
+				"minecraft:attack": {
+					"damage": 1,
+					"effect_name": "poison",
+					"effect_duration": 3
+				},
+				"minecraft:attack_damage": {
+					"value": 5
+				},
+				"minecraft:movement": {
+					"max": 0.45,
+					"value": 0.45
+				},
+				"minecraft:behavior.summon_entity": {
+					"priority": 2,
+					"summon_choices": [
+						/*{
+							"min_activation_range": 0,
+							"max_activation_range": 24,
+							"cooldown_time": 10,
+							"weight": 2,
+							"cast_duration": 1,
+							"particle_color": "#FF664D59",
+							"start_sound_event": "cast.spell",
+							"sequence": [
+								{
+									"shape": "circle",
+									"target": "self",
+									"base_delay": 1,
+									"num_entities_spawned": 5,
+									"entity_type": "minecraft:vex",
+									"summon_cap": 8,
+									"summon_cap_radius": 16,
+									"size": 1,
+									"entity_lifespan": 10,
+									"sound_event": "prepare.summon"
+								}
+							]
+						}, */
+						{
+							"min_activation_range": 0,
+							"max_activation_range": 24,
+							"cooldown_time": 1.5,
+							"weight": 20,
+							"cast_duration": 1,
+							"particle_color": "#FF664D59",
+							"start_sound_event": "cast.spell",
+							"sequence": [
+							{
+								"shape": "line",
+								"target": "target",
+								"base_delay": 0.1,
+								"delay_per_summon": 0.03,
+								"num_entities_spawned": 1,
+								"entity_type": "minecraft:lightning_bolt",
+								"size": 1,
+								"entity_lifespan": 10
+							}
+						]
+						}
+					]
+				}
+			},
+			"invis": {
+				"minecraft:variant": {
+					"value": 4
+				},
+				"minecraft:timer": {
+					"time": 20,
+					"looping": false,
+					"time_down_event": {
+						"event": "better_on_bedrock:done",
+						"target": "self"
+					}
+				},
+				"minecraft:behavior.ranged_attack": {
+                    "attack_interval_min": 1.6,
+                    "burst_shots": 1,
+                    "attack_interval_max": 3,
+                    "charge_charged_trigger": 1,
+                    "charge_shoot_trigger": 1,
+                    "attack_radius": 555
+                  },
+                "minecraft:shooter": {
+                    "def": "better_on_bedrock:lich_small_fireball"
+                }
+			},
+			"no_variant": {
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:timer": {
+					"time": 0.3,
+					"looping": false,
+					"time_down_event": {
+						"event": "better_on_bedrock:summon_flame",
+						"target": "self"
+					}
+				}
+			},
+			"better_on_bedrock:summon_flame": {
+				"minecraft:variant":{
+					"value": 1
+				},
+				"minecraft:timer": {
+					"time": 1.7,
+					"looping": false,
+					"time_down_event": {
+						"event": "better_on_bedrock:done",
+						"target": "self"
+					}
+				},
+				"minecraft:behavior.summon_entity": {
+					"priority": 2,
+					"summon_choices": [
+						{
+							"min_activation_range": 0,
+							"max_activation_range": 345,
+							"cooldown_time": 0.1,
+							"weight": 8,
+							"cast_duration": 1.6,
+							"particle_color": "#FF664D59",
+							"start_sound_event": "cast.spell",
+							"sequence": [
+								{
+									"shape": "circle",
+									"target": "target",
+									"base_delay": 1.6,
+									"num_entities_spawned": 9,
+									"entity_type": "better_on_bedrock:fire",
+									"summon_cap": 8,
+									"summon_cap_radius": 16,
+									"size": 1,
+									"entity_lifespan": 3,
+									"sound_event": "prepare.summon"
+								},
+								{
+									"shape": "circle",
+									"target": "target",
+									"base_delay": 1.6,
+									"num_entities_spawned": 9,
+									"entity_type": "better_on_bedrock:fire",
+									"summon_cap": 8,
+									"summon_cap_radius": 64,
+									"size": 3,
+									"entity_lifespan": 3,
+									"sound_event": "prepare.summon"
+								},
+								{
+									"shape": "circle",
+									"target": "target",
+									"base_delay": 1.6,
+									"num_entities_spawned": 9,
+									"entity_type": "better_on_bedrock:fire",
+									"summon_cap": 8,
+									"summon_cap_radius": 64,
+									"size": 5,
+									"entity_lifespan": 3,
+									"sound_event": "prepare.summon"
+								},
+								{
+									"shape": "circle",
+									"target": "target",
+									"base_delay": 1.6,
+									"num_entities_spawned": 9,
+									"entity_type": "better_on_bedrock:fire",
+									"summon_cap": 8,
+									"summon_cap_radius": 64,
+									"size": 7,
+									"entity_lifespan": 3,
+									"sound_event": "prepare.summon"
+								},
+								{
+									"shape": "circle",
+									"target": "target",
+									"base_delay": 1.6,
+									"num_entities_spawned": 9,
+									"entity_type": "better_on_bedrock:fire",
+									"summon_cap": 8,
+									"summon_cap_radius": 64,
+									"size": 9,
+									"entity_lifespan": 3,
+									"sound_event": "prepare.summon"
+								}
+							]
+						}
+					]
+				}
+			}
+		},
+		"components": {
+
+			
+			"minecraft:timer": {
+				"time": 0.5,
+				"looping": false,
+				"time_down_event": {
+					"event": "better_on_bedrock:summon_flame",
+					"target": "self"
+				}
+			},
+			"minecraft:health": {
+				"value": 750,
+				"max": 750
+			},
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+            "minecraft:experience_reward": {
+                "on_death": 555
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/lich.json"
+            },
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+             "minecraft:navigation.float": {	
+          "can_path_over_water": true	
+        },
+        "minecraft:variant": {
+            "value": 4
+        },
+        "minecraft:movement.basic": {
+        },
+        "minecraft:jump.static": {
+        },
+        "minecraft:behavior.float": {
+          "priority": 0
+        },
+        "minecraft:knockback_resistance": {
+            "value": 1
+        },
+        "minecraft:movement": {
+            "value": 0.02
+          },
+                "minecraft:flying_speed": {
+                    "value": 0.02
+                },
+        "minecraft:behavior.float_wander": {
+          "xz_dist": 5,
+          "y_dist": 0,
+          "y_offset": 0,
+          "random_reselect": false,
+          "priority": 1
+        },
+		"minecraft:behavior.nearest_attackable_target": {
+			"priority": 2,
+			"entity_types": [
+				{
+					"filters": {
+						"any_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "player"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "snowgolem"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "irongolem"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "wandering_trader"
+							}
+						]
+					},
+					"max_dist": 555
+				},
+				{
+					"filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "villager"
+							},
+							{
+								"test": "has_component",
+								"subject": "other",
+								"operator": "!=",
+								"value": "minecraft:is_baby"
+							}
+						]
+					},
+					"max_dist": 555
+				}
+			],
+			"must_see": false
+		},
+        "minecraft:can_fly": {
+        },
+        "minecraft:boss": {
+            "hud_range": 55,
+            "name": "§uLich",
+            "should_darken_sky": true
+        },
+        "minecraft:behavior.follow_target_captain": {
+            "follow_distance": 9,
+            "within_radius": 555
+        },
+        "minecraft:follow_range": {
+            "value": 375,
+            "max": 375
+        },
+        "minecraft:behavior.follow_mob": {
+            "search_range": 64,
+            "stop_distance": 2
+        },
+        "minecraft:collision_box": {
+            "height": 3,
+            "width": 1.3
+        },
+
+	
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fire",
+						"deals_damage": false
+					},
+					{
+						"cause": "projectile",
+						"damage_multiplier": 4
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+"controller.animation.poggy.stone": {
+			
+    "initial_state":"stone_done",
+   "states": {
+       "stone_done":{
+           "transitions":[{ "stone": "q.scoreboard('stone') == 1" }]
+         },
+         "stone":{
+             "animations": ["stone_anim"],
+           "on_entry":[
+            "/say Find stone"
+            ],
+            "transitions": [{"stone_done":"q.scoreboard('stone') == 0"}]
+         }
+   }
+         }
+        }
+    }

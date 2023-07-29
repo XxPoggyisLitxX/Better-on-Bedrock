@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:staff_projectile",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/enchanter"
+			},
+			"geometry": {
+				"default": "geometry.projectile"
+			},
+            "animations": {
+				"basic": "animation.projectile.new"
+			},
+			"scripts": {
+				"animate": [
+					"basic"
+				]
+			},
+			"particle_effects": {
+				"staff_magic": "better_on_bedrock:staff_trail"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#28136d",
+				"overlay_color": "#ee33d5"
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:snap_to_surface_feature": {
+        "description": {
+            "identifier": "better_on_bedrock:nether_biome_features/end_sprout_snap"
+        },
+        "feature_to_snap": "better_on_bedrock:nether_biome_features/end_sprout_single_feature",
+        "surface": "floor",
+        "vertical_search_range": 12
+    }
+}

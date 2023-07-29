@@ -1,0 +1,26 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:thrown_golden_spear",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/golden_spear"
+			},
+			 "animations": {
+        "move": "animation.weapon.default_thrown"
+      },
+			      "scripts": {
+        "animate": [
+          "move"
+        ]
+      },
+			"geometry": {
+				"default": "geometry.stone_spear"
+			},
+			"render_controllers": ["controller.render.default"]
+		}
+	}
+}

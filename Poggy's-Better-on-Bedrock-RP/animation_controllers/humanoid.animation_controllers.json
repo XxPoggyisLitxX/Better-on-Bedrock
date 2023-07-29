@@ -1,0 +1,23 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.humanoid.jump": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"transitions": [
+						{"jumping": "q.is_jumping"}
+					],
+					"blend_transition": 0.2
+				},
+				"jumping": {
+					"animations": ["jump"],
+					"transitions": [
+						{"idle": "!q.is_jumping"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

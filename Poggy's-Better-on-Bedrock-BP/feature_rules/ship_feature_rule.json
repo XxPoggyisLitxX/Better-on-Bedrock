@@ -1,0 +1,38 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:ship_feature_rule",
+        "places_feature": "better_on_bedrock:ship"
+      },
+      "conditions": {
+        "placement_pass": "after_surface_pass",
+        "minecraft:biome_filter": [
+          {
+            "all_of": [
+              {
+                "any_of": [
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "ocean"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "distribution": {
+        "scatter_chance": {
+          "numerator": 1,
+          "denominator": 332
+        },
+        "iterations": 1,
+  
+        "x": 1,
+        "z": 1,
+        "y": 60 //Makes the feature generate only on y62, which is Minecraft water level
+      }
+    }
+  }

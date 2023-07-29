@@ -1,0 +1,42 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "better_on_bedrock:big_end_bloom_fule",
+			"places_feature": "better_on_bedrock:big_end_bloom_scatter"
+		},
+
+		"conditions": {
+			"placement_pass": "surface_pass",
+
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "nether_wastes"
+							}
+						]
+					}
+				]
+			}
+		},
+
+		"distribution": {
+			"iterations": 5,
+
+			"x": {
+				"distribution": "uniform",
+				"extent": [0, 15]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [0, 15]
+			},
+			"y":  "(q.noise(v.worldx / 425, v.worldz / 425) + q.noise(v.worldx, v.worldz) * 0.05 > 0.2 && (math.abs(v.worldx) > 200 || math.abs(v.worldz) > 200)) ? (q.heightmap(v.worldx, v.worldz) - 1) : -1"
+		}
+	}
+}

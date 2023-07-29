@@ -1,0 +1,191 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:music_disc_mellohi",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 20,
+          "name": "minecraft:chainmail_chestplate",
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.05,
+                "max": 0.2
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 30,
+          "name": "minecraft:gold_ingot",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 40,
+          "name": "minecraft:rotten_flesh",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 40,
+          "name": "minecraft:string",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 22,
+          "name": "minecraft:iron_pickaxe",
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.05,
+                "max": 0.2
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 27,
+          "name": "minecraft:arrow",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "name": "minecraft:enchanted_golden_apple"
+        },
+        {
+          "type": "item",
+          "weight": 32,
+          "name": "minecraft:raw_iron",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 7,
+          "name": "minecraft:spyglass"
+        },
+        {
+          "type": "item",
+          "weight": 16,
+          "quality": 2,
+          "name": "minecraft:emerald"
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:skull_pottery_sherd"
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:brewer_pottery_sherd"
+        },
+        {
+          "type": "item",
+          "weight": 19,
+          "quality": 2,
+          "name": "minecraft:cherry_sapling"
+        },
+        {
+          "type": "item",
+          "weight": 13,
+          "quality": 1,
+          "name": "minecraft:diamond_helmet",
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "type": "constant",
+                "value": 0.03
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 24,
+          "quality": 1,
+          "name": "minecraft:golden_leggings",
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 0.1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

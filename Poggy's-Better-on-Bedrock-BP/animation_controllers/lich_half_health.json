@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+"controller.animation.poggy.lich_half_health": {
+			
+    "initial_state":"default",
+   "states": {
+       "default":{
+           "transitions":[{ "phase_2": "q.health <= 375" }]
+         },
+         "phase_2":{
+           "on_entry": [
+         "/event entity @e[type=better_on_bedrock:lich] phase_2"
+        
+        ],
+            "transitions": [{"default":"q.health >= 375"}]
+         }
+   }
+         }
+        }
+    }

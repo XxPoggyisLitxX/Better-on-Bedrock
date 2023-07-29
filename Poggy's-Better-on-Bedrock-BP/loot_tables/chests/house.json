@@ -1,0 +1,214 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 3,
+        "max": 8
+      },
+      "entries": [
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "name": "minecraft:gold_nugget"
+        },
+        {
+          "type": "item",
+          "weight": 6,
+          "name": "better_on_bedrock:berry_pie_slice",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "name": "better_on_bedrock:barley_seed"
+        },
+
+        {
+          "type": "item",
+          "weight": 7,
+          "name": "better_on_bedrock:onion_seed",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 7,
+          "name": "better_on_bedrock:tomato_seed",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 7,
+          "name": "better_on_bedrock:eggplant_seed",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 32,
+          "name": "minecraft:yellow_flower"
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "minecraft:set_data",
+              "data": 0
+            }
+          ],
+          "name": "minecraft:red_flower"
+        },
+        {
+          "type": "item",
+          "weight": 55,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 7
+              }
+            }
+          ],
+          "name": "minecraft:iron_ingot"
+        },
+        {
+          "type": "item",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ],
+          "name": "better_on_bedrock:custom_seeds"
+        },
+                {
+          "type": "item",
+          "weight": 86,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 7
+              }
+            }
+          ],
+          "name": "better_on_bedrock:grape_seed"
+        },
+              {
+          "type": "item",
+          "weight": 55,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ],
+          "name": "better_on_bedrock:water_can"
+        },
+        {
+          "type": "item",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ],
+          "name": "better_on_bedrock:stud_leggings"
+        },
+        {
+          "type": "item",
+          "name": "better_on_bedrock:stud_helmet"
+        },
+        {
+          "type": "item",
+          "name": "better_on_bedrock:stud_chestplate"
+        },
+        {
+          "type": "item",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ],
+          "name": "better_on_bedrock:stud_boots"
+        },
+        {
+          "type": "item",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            },
+            {
+              "function": "minecraft:set_data",
+              "data": 0
+            }
+          ],
+          "name": "better_on_bedrock:bean"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.enchanted_book",
+				"texture_width": 128,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "book",
+					"pivot": [-3.625, 13.5, -4.5],
+					"locators": {
+						"locator": [0, 0, 0]
+					}
+				},
+				{
+					"name": "cover_front",
+					"parent": "book",
+					"pivot": [-1, 1, -5.5],
+					"cubes": [
+						{"origin": [-3, 0, -1.5], "size": [7, 9, 1], "pivot": [0, 4, 0], "rotation": [-90, 0, -90], "uv": [75, 2]}
+					]
+				},
+				{
+					"name": "paper3",
+					"parent": "cover_front",
+					"pivot": [-0.4, 1, -4.75],
+					"cubes": [
+						{"origin": [-3, 1, -0.5], "size": [6, 7, 0.25], "pivot": [0, 4, 0], "rotation": [-90, 0, -90], "uv": [75, 14]}
+					]
+				},
+				{
+					"name": "paper2",
+					"parent": "cover_front",
+					"pivot": [-0.125, 1, -4.75],
+					"cubes": [
+						{"origin": [-3, 1, -0.25], "size": [6, 7, 0.25], "pivot": [0, 4, 0], "rotation": [-90, 0, -90], "uv": [75, 14]}
+					]
+				},
+				{
+					"name": "spine",
+					"parent": "book",
+					"pivot": [-3, 13.5, -5],
+					"cubes": [
+						{"origin": [-4, -0.1, -1.5], "size": [1, 9.2, 3], "pivot": [0, 4, 0], "rotation": [-90, 0, -90], "uv": [107, 0]}
+					]
+				},
+				{
+					"name": "cover_back",
+					"parent": "spine",
+					"pivot": [1, 1, -4],
+					"cubes": [
+						{"origin": [-3, 0, 0.5], "size": [7, 9, 1], "pivot": [0, 4, 0], "rotation": [-90, 0, -90], "uv": [75, 2]}
+					]
+				},
+				{
+					"name": "paper1",
+					"parent": "cover_back",
+					"pivot": [0.15, 1, -4.75],
+					"cubes": [
+						{"origin": [-3, 1, 0], "size": [6, 7, 0.25], "pivot": [0, 4, 0], "rotation": [-90, 0, -90], "uv": [75, 14]}
+					]
+				},
+				{
+					"name": "paper",
+					"parent": "cover_back",
+					"pivot": [0.4, 1, -4.75],
+					"cubes": [
+						{"origin": [-3, 1, 0.25], "size": [6, 7, 0.25], "pivot": [0, 4, 0], "rotation": [-90, 0, -90], "uv": [75, 14]}
+					]
+				}
+			]
+		}
+	]
+}

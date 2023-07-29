@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:squirrel",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/squirrel"
+			},
+			"geometry": {
+				"default": "geometry.squirrel"
+			},
+			"animations": {
+				"basic": "controller.animation.squirrel",
+				"idle": "animation.squirrel.idle",
+				"run": "animation.squirrel.run",
+				"baby": "animation.squirrel.baby_transform",
+				"look_at_target": "animation.common.goblin_look_at_target"
+			},
+			"scripts": {
+				"animate": [
+					"basic",
+					{"baby": "q.is_baby"},
+					"look_at_target"
+				]
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#246954",
+				"overlay_color": "#636946"
+			}
+		}
+	}
+}

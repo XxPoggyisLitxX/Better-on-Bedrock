@@ -1,0 +1,14 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+      "description": {
+        "identifier": "better_on_bedrock:vindicator_cooker"
+      },
+      "structure_name": "mystructure:vindicator_cooker",
+      "adjustment_radius": 15,
+      "facing_direction": "south",
+      "constraints": {
+        "grounded": {}
+      }
+    }
+  }

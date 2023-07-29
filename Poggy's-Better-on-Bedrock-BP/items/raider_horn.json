@@ -1,0 +1,40 @@
+{
+
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:netherite_ingot",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:hand_equipped": false,
+			"minecraft:icon": {
+				"texture": "raider_horn"
+			},
+            "tag:minecraft:transform_materials": {},
+            "minecraft:use_duration": 1,
+            "minecraft:food": {
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "better_on_bedrock:give_bad_omen",
+                    "target": "self"
+                }
+            }
+            
+		},
+        "events": {
+            "better_on_bedrock:give_bad_omen":{
+                "add_mob_effect": {
+                    "amplifier": 1,
+                    "duration": 320,
+                    "effect": "bad_omen",
+                    "target": "holder"
+                },
+                "run_command": {
+                    "command": ["playsound raid.horn @p ~ ~ ~"]
+                }
+            }
+        }
+		}
+	}

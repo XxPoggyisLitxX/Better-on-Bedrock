@@ -1,0 +1,45 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:fire",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "cause": "all",
+                        "deals_damage": false
+                    }
+                ]
+            },
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:health": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:scale": {
+				"value": 1.5
+			},
+			"minecraft:push_through": {
+				"value": 1
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"run_command": {
+					"command": ["setblock ~ ~ ~ fire"]
+				}
+			}
+		}
+	}
+}

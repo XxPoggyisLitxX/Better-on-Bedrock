@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:player_corpse",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/skeleton/skeleton"
+			},
+			"geometry": {
+				"default": "geometry.player_corpse",
+				"player_corpse_1": "geometry.player_corpse_1",
+				"player_corpse_2": "geometry.player_corpse_2"
+			},
+			"spawn_egg": {
+				"base_color": "#ffffff",
+				"overlay_color": "#9a9a9a"
+			},
+			"animations": {
+				"basic": "controller.animation.corpse.desolve",
+				"desolve": "animation.player_corpse.despawn"
+			},
+			"scripts": {
+				"animate": [
+					"basic"
+				]
+			},
+			"render_controllers": ["controller.render.player_corpse"],
+			"enable_attachables": true,
+			"hide_armor": false
+		}
+	}
+}

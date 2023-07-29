@@ -1,0 +1,48 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "better_on_bedrock:allum_rule",
+			"places_feature": "better_on_bedrock:allum_ore" // Identifier from the feature file
+		},
+		"conditions": {
+			"placement_pass": "underground_pass",
+			"minecraft:biome_filter": [
+				// Scatter the ore throughout the Overworld
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "overworld"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "overworld_generation"
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 9, // Placement attempts of the cluster, not the ore blocks
+			"coordinate_eval_order": "zyx",
+			"x": {
+				"distribution": "uniform",
+				"extent": [0, 16]
+			},
+			"y": {
+				"distribution": "triangle", // You can use "triangle" to make ores more common in the middle of the extent
+				"extent": [
+					0, // Minimum y level for the ore to generate
+					78 // Maximum y level for the ore to generate
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [0, 16]
+			}
+		}
+	}
+}

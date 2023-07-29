@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:granite_bricks"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "##",
+            "##"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stone",
+                "data": 2
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:granite_bricks",
+            "count": 4
+        }
+    }
+}

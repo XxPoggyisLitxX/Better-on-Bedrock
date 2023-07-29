@@ -1,0 +1,133 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:backpack",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"basic": "controller.animation.small_back_inv_check"
+			},
+			"scripts": {
+				"animate": [
+					"basic"
+				]
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {
+					"remove_child_entities": false
+				}
+			},
+			"def": {
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"operator": "!=",
+									"value": "better_on_bedrock:backpack"
+								}
+							}
+						}
+					]
+				},
+				"minecraft:inventory": {
+					"additional_slots_per_strength": 0,
+					"can_be_siphoned_from": false,
+					"container_type": "inventory",
+					"inventory_size": 18,
+					"private": false,
+					"restrict_to_owner": false
+				}
+			}
+		},
+		"events": {
+			"despawn_backpack":{
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:type_family": {
+				"family": ["backpack"]
+			},
+			"minecraft:persistent": {},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						
+						"on_interact": {
+							"filters": {
+								"test": "has_equipment",
+								"subject": "other",
+								"operator": "!=",
+								"value": "better_on_bedrock:backpack"
+							}
+						}
+					}
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:breathable": {
+				"breathes_air": true,
+				"breathes_water": true,
+				"breathes_lava": true,
+				"breathes_solids": true
+			},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": false,
+				"always_show": false
+			},
+			"minecraft:inventory": {
+				"additional_slots_per_strength": 0,
+				"can_be_siphoned_from": false,
+				"container_type": "inventory",
+				"inventory_size": 18,
+				"private": false,
+				"restrict_to_owner": false
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 0.5,
+						"height": 8,
+						"pivot": [
+							0,
+							1.5,
+							0
+						]
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 1.5,
+				"height": 8
+			},
+			"minecraft:push_through": {
+				"value": 1
+			}
+		}
+	}
+}

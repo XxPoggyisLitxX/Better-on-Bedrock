@@ -1,0 +1,1 @@
+execute if block 0 0 0 minecraft:air run setblock 0 0 0 grass

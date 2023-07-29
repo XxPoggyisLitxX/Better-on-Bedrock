@@ -1,0 +1,46 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "better_on_bedrock:new_flower_random"
+		},
+		"features": [
+			[
+				"better_on_bedrock:wildflower_singe", //Coarse dirt weighs 5
+				5
+			],
+			[
+				"better_on_bedrock:tiny_sprout_single", //Podzol dirt weighs 3
+				5
+			],
+			[
+				"better_on_bedrock:taller_grass_singe", //Cobblestone weighs 2
+				5
+			],
+            [
+				"better_on_bedrock:pink_lavender_single", //Cobblestone weighs 2
+				5
+			],
+            [
+				"better_on_bedrock:big_sprout_single", //Cobblestone weighs 2
+				5
+			],
+			[
+				"better_on_bedrock:lilax_heads_single_feature", //Cobblestone weighs 2
+				5
+			],
+			[
+				"better_on_bedrock:iris_single_feature", //Cobblestone weighs 2
+				5
+			],
+			[
+				"better_on_bedrock:hydrangea_single_feature", //Cobblestone weighs 2
+				5
+			],
+			[
+				"better_on_bedrock:anenome_single_feature", //Cobblestone weighs 2
+				5
+			]
+		]
+	}
+}

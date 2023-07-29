@@ -1,0 +1,42 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "minecraft:forest_hill_tree_random_feature"
+		},
+		"features": [
+			[
+				"minecraft:forest_hill_tree_1", //Coarse dirt weighs 5
+				5
+			],
+			[
+				"minecraft:forest_hill_tree_2", //Podzol dirt weighs 3
+				5
+			],
+			[
+				"minecraft:forest_hill_tree_3", //Cobblestone weighs 2
+				5
+			],
+            [
+				"minecraft:forest_hill_tree_4", //Coarse dirt weighs 5
+				5
+			],
+			[
+				"minecraft:forest_hill_tree_5", //Podzol dirt weighs 3
+				5
+			],
+			[
+				"minecraft:forest_hill_tree_6", //Cobblestone weighs 2
+				5
+			],
+            [
+				"minecraft:forest_hill_tree_7", //Coarse dirt weighs 5
+				5
+			],
+			[
+				"minecraft:forest_hill_tree_8", //Podzol dirt weighs 3
+				5
+			]
+		]
+	}
+}

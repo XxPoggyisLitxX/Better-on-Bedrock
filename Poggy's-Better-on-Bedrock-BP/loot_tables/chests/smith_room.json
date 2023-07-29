@@ -1,0 +1,39 @@
+{
+  "pools": [
+    {
+      "rolls": 6,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 8,
+          "name": "minecraft:coal_ore"
+        },
+        {
+          "type": "item",
+          "weight": 5,
+          "name": "minecraft:iron_ore"
+        },
+        {
+          "type": "item",
+          "weight": 5,
+          "name": "minecraft:raw_copper"
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "name": "minecraft:raw_gold"
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "name": "minecraft:raw_iron"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:diamond"
+        }
+      ]
+    }
+  ]
+}

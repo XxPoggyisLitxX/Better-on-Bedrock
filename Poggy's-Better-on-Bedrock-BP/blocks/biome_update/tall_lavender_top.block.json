@@ -1,0 +1,60 @@
+{
+	"format_version": "1.19.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:tall_lavender_top"
+		},
+		"components": {
+		"tag:tall_lavender_top": {},
+			"minecraft:loot": "loot_tables/blocks/loot_tables/empty.json",
+			"minecraft:collision_box": false,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": ["up"],
+						"block_filter": ["tall_lavender_bottom"]
+					}
+				]
+			},
+			"minecraft:selection_box":{
+				"origin": [
+					-3,
+					0,
+					-3
+				],
+				"size": [
+					6,
+					16,
+					6
+				]
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 30
+			},
+			"minecraft:geometry": "geometry.tall_lavender_top",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "tall_lavender_top",
+					"render_method": "alpha_test",
+					"ambient_occlusion": true,
+					"face_dimming": false
+				}
+			},
+			"minecraft:on_player_destroyed": {
+                "event": "air",
+                "target": "self"
+            },
+			"minecraft:map_color": "#7d7d7d"
+		},
+        "events": {
+            "air": {
+                "run_command": {
+					"command": ["setblock ~ ~-1 ~ air 0 destroy"]
+				  }
+            }
+        }
+	}
+	}

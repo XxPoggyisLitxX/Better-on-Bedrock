@@ -1,0 +1,297 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+      "description": {
+        "identifier": "better_on_bedrock:cabbage_crop",
+        "properties": {
+          "better_on_bedrock:growth_stage": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      },
+      "components": {
+        "minecraft:destructible_by_mining":{
+            "seconds_to_destroy": 0
+        },
+			"minecraft:creative_category": {
+				"category": "commands"
+			  },
+        "minecraft:friction": 0.1,
+        "minecraft:map_color": "#FFFFFF",
+        "minecraft:light_dampening": 0,
+        "minecraft:light_emission": 0,
+        "minecraft:selection_box": {
+          "origin": [
+            -4,
+            0,
+            -4
+          ],
+          "size": [
+            8,
+            8,
+            8
+          ]
+        },
+        "minecraft:on_interact": {
+          "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:bone_meal')",
+          "event": "increase_growth",
+          "target": "self"
+        },
+        "minecraft:geometry": "geometry.cross_crop",
+        "minecraft:material_instances": {
+          "*": {
+            "texture": "cabbage_stage_0",
+            "render_method": "alpha_test"
+          }
+        },
+        "minecraft:collision_box": false,
+        "minecraft:random_ticking": {
+          "on_tick": {
+            "event": "random:tick",
+            "target": "self"
+          }
+        },
+        "minecraft:queued_ticking": {
+          "looping": true, //true or false
+          "interval_range": [0.1, 0.1], //required
+          "on_tick": {
+              "event": "my:event", //required
+              "target": "block"
+          }
+      },
+        "minecraft:placement_filter": {
+          "conditions": [
+            {
+              "block_filter": [
+                "farmland",
+                "dirt"
+              ],
+              "allowed_faces": [
+                "up"
+              ]
+            }
+          ]
+        }
+      },
+      "permutations": [
+        {
+          "condition": "query.block_property('better_on_bedrock:growth_stage') == 0",
+          "components": {
+            "minecraft:loot": "loot_tables/blocks/crops/cabbage_seed.json",
+            "minecraft:placement_filter": {
+              "conditions": [
+                {
+                  "block_filter": [
+                    "farmland",
+                    "dirt"
+                  ],
+                  "allowed_faces": [
+                    "up"
+                  ]
+                }
+              ]
+            },
+        "minecraft:selection_box": {
+          "origin": [
+            -4,
+            0,
+            -4
+          ],
+          "size": [
+            8,
+            8,
+            8
+          ]
+        },
+            "minecraft:material_instances": {
+              "*": {
+                "texture": "cabbage_stage_0",
+                "render_method": "alpha_test"
+              }
+            }
+          }
+        },
+        {
+          "condition": "query.block_property('better_on_bedrock:growth_stage') == 1",
+          "components": {
+                        "minecraft:loot": "loot_tables/blocks/crops/cabbage_seed.json",
+            "minecraft:placement_filter": {
+              "conditions": [
+                {
+                  "block_filter": [
+                    "farmland",
+                    "dirt"
+                  ],
+                  "allowed_faces": [
+                    "up"
+                  ]
+                }
+              ]
+            },
+        "minecraft:selection_box": {
+          "origin": [
+            -4,
+            0,
+            -4
+          ],
+          "size": [
+            8,
+            8,
+            8
+          ]
+        },
+            "minecraft:material_instances": {
+              "*": {
+                "texture": "cabbage_stage_1",
+                "render_method": "alpha_test"
+              }
+            }
+          }
+        },
+        {
+          "condition": "query.block_property('better_on_bedrock:growth_stage') == 2",
+          "components": {
+            "minecraft:loot": "loot_tables/blocks/crops/cabbage_seed.json",
+            "minecraft:placement_filter": {
+              "conditions": [
+                {
+                  "block_filter": [
+                    "farmland",
+                    "dirt"
+                  ],
+                  "allowed_faces": [
+                    "up"
+                  ]
+                }
+              ]
+            },
+        "minecraft:selection_box": {
+          "origin": [
+            -4,
+            0,
+            -4
+          ],
+          "size": [
+            8,
+            8,
+            8
+          ]
+        },
+            "minecraft:material_instances": {
+              "*": {
+                "texture": "cabbage_stage_2",
+                "render_method": "alpha_test"
+              }
+            }
+          }
+        },
+        {
+          "condition": "query.block_property('better_on_bedrock:growth_stage') == 3",
+          "components": {
+          
+            "minecraft:placement_filter": {
+              "conditions": [
+                {
+                  "block_filter": [
+                    "farmland",
+                    "dirt"
+                  ],
+                  "allowed_faces": [
+                    "up"
+                  ]
+                }
+              ]
+            },
+        "minecraft:selection_box": {
+          "origin": [
+            -4,
+            0,
+            -4
+          ],
+          "size": [
+            8,
+            8,
+            8
+          ]
+        },
+            "minecraft:material_instances": {
+              "*": {
+                "texture": "cabbage_stage_3",
+                "render_method": "alpha_test"
+              }
+            }
+          }
+        },
+        {
+            "condition": "query.block_property('better_on_bedrock:growth_stage') == 4",
+            "components": {
+             "minecraft:loot": "loot_tables/blocks/crops/cabbage.json",
+              "minecraft:placement_filter": {
+                "conditions": [
+                  {
+                    "block_filter": [
+                      "farmland",
+                      "dirt"
+                    ],
+                    "allowed_faces": [
+                      "up"
+                    ]
+                  }
+                ]
+              },
+          "minecraft:selection_box": {
+            "origin": [
+              -4,
+              0,
+              -4
+            ],
+            "size": [
+              8,
+              8,
+              8
+            ]
+          },
+              "minecraft:material_instances": {
+                "*": {
+                  "texture": "cabbage_stage_4",
+                  "render_method": "alpha_test"
+                }
+              }
+            }
+          }
+      ],
+      "events": {
+        "increase_growth": {
+          "set_block_property": {
+            "better_on_bedrock:growth_stage": "(query.block_property('better_on_bedrock:growth_stage')<4) ? query.block_property('better_on_bedrock:growth_stage') + 1 : 4"
+          },
+          "run_command": {
+            "command": ["particle better_on_bedrock:crop ~ ~0.3 ~", "clear @p minecraft:bone_meal 0 1"]
+          }
+        },
+        "my:event": {
+          "set_block_at_pos": {
+            "block_type": "minecraft:farmland",
+            "block_offset": [0, -1, 0]
+          }
+        },
+        "random:tick": {
+          "randomize": [
+            {
+              "weight": 10
+            },
+            {
+              "set_block_property": {
+                "better_on_bedrock:growth_stage": "(query.block_property('better_on_bedrock:growth_stage')<4) ? query.block_property('better_on_bedrock:growth_stage') + 1 : 4"
+              },
+              "weight": 90
+            }
+          ]
+        }
+      }
+    }
+  }

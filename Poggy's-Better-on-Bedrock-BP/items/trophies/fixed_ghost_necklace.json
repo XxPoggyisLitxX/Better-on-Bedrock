@@ -1,0 +1,48 @@
+{
+
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:fixed_ghost_necklace",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": false,
+            "minecraft:cooldown": {
+                "category": "ghost",
+                "duration": 60
+            },
+            "minecraft:weapon": {
+                "on_hurt_entity": {
+                  "event": "dmg"
+                },
+                "on_not_hurt_entity": {
+                  "event": "dmg"
+                },
+                "on_hit_block": {
+                  "event": "dmg"
+                }
+              },
+            "minecraft:durability": {
+                "max_durability": 10,
+                "damage_chance": {
+                    "max": 1,
+                    "min": 1
+                }
+            },
+			"minecraft:icon": {
+				"texture": "fixed_ghost_necklace"
+			}
+		},
+        "events": {
+            "dmg": {
+                "damage": {
+                  "type": "none",
+                  "amount": 1,
+                  "target": "self"
+                }
+              }
+        }
+		}
+	}

@@ -1,0 +1,30 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.hollow.moves": {
+			"states": {
+				"default": {
+					"animations": ["idle"],
+					"transitions": [
+						{"summon_dripstone": "q.is_casting"},
+						{"move": "q.modified_move_speed >= 0.05"}
+					]
+				},
+				"summon_dripstone": {
+					"animations": ["summon_dripstone"],
+					"transitions": [
+						{"default": "q.modified_move_speed <= 0.05 && !q.is_casting"},
+						{"move": "q.modified_move_speed >= 0.05"}
+					]
+				},
+				"move": {
+					"animations": ["move"],
+					"transitions": [
+						{"default": "q.modified_move_speed <= 0.05 && !q.is_casting"},
+						{"summon_dripstone": "q.is_casting"}
+					]
+				}
+			}
+		}
+	}
+}

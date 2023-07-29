@@ -1,0 +1,26 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "better_on_bedrock:jungle_tree_variation"
+		},
+		"features": [
+			[
+				"minecraft:jungle_tree_1", //Coarse dirt weighs 5
+				5
+			],
+			[
+				"minecraft:jungle_tree_2", //Podzol dirt weighs 3
+				5
+			],
+			[
+				"minecraft:jungle_tree_3", //Cobblestone weighs 2
+				5
+			],
+            [
+				"minecraft:jungle_tree_bee", //Cobblestone weighs 2
+				1.3
+			]
+		]
+	}
+}

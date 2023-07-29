@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:hollow",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/hollow"
+			},
+			"geometry": {
+				"default": "geometry.hollow"
+			},
+			"animations": {
+				"basic": "controller.animation.hollow.moves",
+				"idle": "animation.hollow.idle",
+				"summon_dripstone": "animation.hollow.summon_dripstone",
+				"look_at_target": "animation.common.goblin_look_at_target",
+				"move": "animation.hollow.move"
+			},
+			"scripts": {
+				"animate": [
+					"basic",
+					"look_at_target"
+				]
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#bfb2d6",
+				"overlay_color": "#30fa97"
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "better_on_bedrock:dark_oak_tree_variation"
+		},
+		"features": [
+			[
+				"minecraft:dark_oak_tree_1", //Coarse dirt weighs 5
+				5
+			],
+			[
+				"minecraft:dark_oak_tree_2", //Podzol dirt weighs 3
+				2
+			],
+			[
+				"minecraft:dark_oak_tree_bee",
+				1.3
+			]
+		]
+	}
+}

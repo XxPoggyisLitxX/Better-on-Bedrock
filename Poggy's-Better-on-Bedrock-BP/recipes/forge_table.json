@@ -1,0 +1,26 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+      "description": {
+      "identifier": "minecraft:forge_table"
+      },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "|||",
+        " # ",
+        "###"
+      ],
+      "key": {
+        "|": {
+          "item": "better_on_bedrock:alluminum_ingot"
+        },
+        "#": {
+          "item": "better_on_bedrock:alluminum_ingot"
+        }
+      },
+      "result": [
+        { "item": "better_on_bedrock:forge_table" }
+      ]
+    }
+  }
+  

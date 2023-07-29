@@ -1,0 +1,44 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:battle_tower",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:movement": {
+				"value": 0.25
+			}
+		},
+        "events": {
+            "minecraft:entity_spawned": {
+               "randomize": [
+                {
+                    "run_command":{
+                        "command": ["structure load battle_tower ~ ~ ~", "kill @e[type=better_on_bedrock:battle_tower]"]
+                    },
+                    "weight": 10
+                },
+{
+    "run_command":{
+        "command": ["setblock ~ ~-1 ~ minecraft:wool"]
+    },
+    "weight": 90
+}
+               ]
+            }
+        }
+	}
+}

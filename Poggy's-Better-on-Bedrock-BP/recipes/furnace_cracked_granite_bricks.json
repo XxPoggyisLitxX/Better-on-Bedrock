@@ -1,0 +1,13 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "better_on_bedrock:furnace_cracked_granite_bricks"
+        },
+        "tags": [
+            "furnace"
+        ],
+        "input": "better_on_bedrock:granite_bricks",
+        "output": "better_on_bedrock:cracked_granite_bricks"
+    }
+}

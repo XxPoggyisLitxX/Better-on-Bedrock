@@ -1,0 +1,21 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.player_blow_bubbles": {
+			"states": {
+				"default": {
+					"transitions": [
+						{"fly": "q.is_sneaking"}
+					],
+                    "animations": ["no_bubbles"]
+				},
+				"fly": {
+					"animations": ["blow_bubble"],
+					"transitions": [
+						{"default": "!q.is_sneaking"}
+					]
+				}
+			}
+		}
+	}
+}

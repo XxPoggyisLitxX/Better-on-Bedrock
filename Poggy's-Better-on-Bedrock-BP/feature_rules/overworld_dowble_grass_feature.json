@@ -1,0 +1,73 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:overworld_dowble_grass_feature",
+        "places_feature": "minecraft:grass_double_plant_patch_feature"
+      },
+      "conditions": {
+        "placement_pass": "first_pass",
+        "minecraft:biome_filter": [
+            {
+              "all_of": [
+                {
+                  "any_of": [
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "==",
+                      "value": "custom_vanilla_forrest"
+                    },
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "==",
+                      "value": "taiga"
+                  },
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "extreme_hills"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "meadow"
+              },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "flower_forest"
+              },
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "birch"
+                },
+                  {
+                      "test": "has_biome_tag",
+                      "operator": "==",
+                      "value": "roofed"
+                  }
+                  ]
+                }
+              ]
+            }
+          ]
+      },
+      "distribution": {
+        "iterations": 1.5,
+        "x": {
+          "distribution": "uniform",
+          "extent": [ 0, 16 ]
+        },
+        "y": {
+          "distribution": "uniform",
+          "extent": [ 0, "query.heightmap(variable.worldx, variable.worldz) + 32" ]
+        },
+        "z": {
+          "distribution": "uniform",
+          "extent": [ 0, 16 ]
+        }
+      }
+    }
+  }
+  

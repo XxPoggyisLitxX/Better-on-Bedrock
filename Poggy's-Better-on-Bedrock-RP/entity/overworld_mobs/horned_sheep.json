@@ -1,0 +1,40 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+      "description": {
+        "identifier": "better_on_bedrock:horned_sheep",
+        "min_engine_version": "1.8.0",
+        "materials": { "default": "sheep" },
+        "textures": {
+          "sheared": "textures/entity/horned_sheep_sheared",
+          "default": "textures/entity/sheep_whool_horned"
+        },
+        "geometry": {
+          "default": "geometry.horned_sheep",
+          "sheared": "geometry.horned_sheep_wool"
+        },
+        "animations": {
+          "setup": "animation.sheep.setup",
+          "grazing": "animation.sheep.grazing",
+          "walk": "animation.horned_sheep.walk",
+          "look_at_target": "animation.common.look_at_target",
+          "baby_transform": "animation.sheep.baby_transform",
+          "move": "controller.animation.sheep.move"
+        },
+        "scripts": {
+          "animate": [
+            "setup",
+            "look_at_target",
+            "move",
+            { "baby_transform": "query.is_baby" }
+          ]
+        },
+        "render_controllers": [ "controller.render.horned_sheep" ],
+        "spawn_egg": {
+          "texture": "spawn_egg",
+          "texture_index": 3
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,51 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:chicken",
+      "min_engine_version": "1.12.0",
+      "materials": {
+        "default": "chicken",
+        "legs": "chicken_legs",
+        "enchanted": "entity_enchant"
+      },
+      "textures": {
+        "one": "textures/entity/chicken",
+        "two": "textures/entity/mc_game_mobs/passive/bronzed_chicken",
+        "three": "textures/entity/mc_game_mobs/passive/cluckshroom",
+        "four": "textures/entity/mc_game_mobs/passive/midnight_chicken",
+        "five": "textures/entity/mc_game_mobs/passive/stormy_chicken",
+        "enchanted": "textures/misc/enchanted_entity_glint_white"
+      },
+      "geometry": {
+        "default": "geometry.chicken.v1.12"
+      },
+      "animations": {
+        "move": "animation.chicken.move",
+        "general": "animation.chicken.general",
+        "look_at_target": "animation.common.look_at_target",
+        "baby_transform": "animation.chicken.baby_transform"
+      },
+      "scripts": {
+        "animate": [
+          "general",
+          { "move": "query.modified_move_speed" },
+          "look_at_target",
+          { "baby_transform": "query.is_baby" }
+        ]
+      },
+      "render_controllers": [
+      {
+        "controller.render.chicken": "q.is_on_ground || !q.is_on_ground"
+      },
+      {
+        "controller.render.enchanted_chicken": "q.variant == 6"
+      }
+    ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.no_bubbles": {
+			"loop": false,
+			"animation_length": 2,
+			"particle_effects": {
+				"0.0": {
+					"effect": "waystone",
+					"locator": "locator"
+				}
+			}
+		}
+	}
+}

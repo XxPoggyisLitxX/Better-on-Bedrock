@@ -1,0 +1,25 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:scatter_feature": {
+      "description": {
+        "identifier": "better_on_bedrock:custom_flower_hydrangea"
+      },
+      "places_feature": "better_on_bedrock:anenome_single_feature",
+      "iterations": "v.type = math.random_integer(4, 8); return 8;",
+      "x": {
+        "distribution": "gaussian",
+        "extent": [
+          0,
+          15
+        ]
+      },
+      "y": 0,
+      "z": {
+        "distribution": "gaussian",
+        "extent": [
+          0,
+          15
+        ]
+      }
+    }
+  }

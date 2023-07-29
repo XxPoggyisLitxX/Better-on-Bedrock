@@ -1,0 +1,59 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.hollow.idle": {
+			"loop": true,
+			"bones": {
+				"RightArm": {
+					"rotation": [0, 0, "math.cos(q.anim_time * 50) * 2"]
+				},
+				"LeftArm": {
+					"rotation": [0, 0, "-math.cos(q.anim_time * 50) * 2"]
+				}
+			}
+		},
+		"animation.hollow.summon_dripstone": {
+			"animation_length": 4.5,
+			"bones": {
+				"RightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-102.5, 0, 0],
+						"0.2917": [-107.5, 0, 0],
+						"1.7917": [-107.5, 0, 0],
+						"2.0": [0, 0, 0]
+					}
+				},
+				"LeftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-102.5, 0, 0],
+						"0.2917": [-107.5, 0, 0],
+						"1.7917": [-107.5, 0, 0],
+						"2.0": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.hollow.move": {
+			"loop": true,
+			"bones": {
+				"RightArm": {
+					"rotation": ["math.cos(q.anim_time * 150) * 25", 0, 0]
+				},
+				"LeftArm": {
+					"rotation": ["3 - math.cos(q.anim_time * 150) * 25", 0, 0]
+				},
+				"Head": {
+					"rotation": ["math.cos(q.anim_time * 325) * 8", 0, 0]
+				},
+				"RightLeg": {
+					"rotation": ["-math.cos(q.anim_time * 222) * 25", 0, 0]
+				},
+				"LeftLeg": {
+					"rotation": ["math.cos(q.anim_time * 222) * 25", 0, 0]
+				}
+			}
+		}
+	}
+}

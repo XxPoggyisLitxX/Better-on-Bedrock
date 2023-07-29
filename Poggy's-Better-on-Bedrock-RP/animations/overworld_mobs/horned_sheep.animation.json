@@ -1,0 +1,22 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.horned_sheep.walk": {
+			"loop": true,
+			"bones": {
+				"leg1": {
+					"rotation": ["math.cos(q.anim_time * 500) * 50", 0, 0]
+				},
+				"leg2": {
+					"rotation": ["-math.cos(q.anim_time * 500) * 50", 0, 0]
+				},
+				"leg3": {
+					"rotation": ["-math.cos(q.anim_time * 500) * 50", 0, 0]
+				},
+				"leg4": {
+					"rotation": ["math.cos(q.anim_time * 500) * 50", 0, 0]
+				}
+			}
+		}
+	}
+}

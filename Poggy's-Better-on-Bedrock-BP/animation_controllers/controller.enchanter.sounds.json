@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+"controller.animation.enchanter.sounds": {
+			
+    "initial_state":"no_sound",
+   "states": {
+       "no_sound":{
+           "transitions":[{ "sound": "q.mark_variant == 1" }]
+         },
+         "sound":{
+           "on_entry": [
+            "/playsound enchanter.enchant @p[r=12]"
+        
+        ],
+            "transitions": [{"no_sound":"q.mark_variant == 0"}]
+         }
+   }
+         }
+        }
+    }

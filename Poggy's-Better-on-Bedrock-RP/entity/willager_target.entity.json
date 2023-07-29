@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:willager_target",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/willager_target"
+			},
+			"geometry": {
+				"default": "geometry.willager_target"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#22f53c",
+				"overlay_color": "#9e5011"
+			}
+		}
+	}
+}

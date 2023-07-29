@@ -1,0 +1,115 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "better_on_bedrock:waystone",
+      "properties": {
+        "wiki:rotation": [2, 3, 4, 5]
+    }
+},
+"permutations": [
+    {
+        "condition": "query.block_property('wiki:rotation') == 2",
+        "components": {
+            "minecraft:rotation": [0, 0, 0]
+        }
+    },
+    {
+        "condition": "query.block_property('wiki:rotation') == 3",
+        "components": {
+            "minecraft:rotation": [0, 180, 0]
+        }
+    },
+    {
+        "condition": "query.block_property('wiki:rotation') == 4",
+        "components": {
+            "minecraft:rotation": [0, 90, 0]
+        }
+    },
+    {
+        "condition": "query.block_property('wiki:rotation') == 5",
+        "components": {
+            "minecraft:rotation": [0, 270, 0]
+        }
+    }
+],
+  "components": {
+    "tag:stone": {},
+
+    "minecraft:breathability": "air",
+    "minecraft:destroy_time": 30,
+    "minecraft:creative_category": {
+      "category": "construction",
+      "group": "construction"
+    },
+    "minecraft:on_player_placing": {
+        "event": "wiki:set_rotation"
+    },
+    "minecraft:geometry": "geometry.overworld_waystone.geo",
+    "minecraft:block_light_emission": 0,
+    "minecraft:block_light_filter": 0,
+    "minecraft:entity_collision": true,
+    "minecraft:pick_collision": {
+      "origin": [
+        -8,
+        0,
+        -8
+      ],
+      "size": [
+        16,
+        16,
+        16
+      ]
+    },
+    "minecraft:queued_ticking": {
+      "looping": true,
+      "on_tick": {
+        "event": "particle",
+        "target": "block"
+      },
+      "interval_range": [
+        30,
+        60
+      ]
+    },
+    "minecraft:on_interact": {
+      "event": "null",
+      "target": "self"
+    },
+    "minecraft:material_instances": {
+      "*": {
+        "texture": "waystone",
+        "render_method": "alpha_test"
+      }
+    }
+  },
+  "events": {
+    "particle": {
+      "run_command": {
+        "command": ["particle pog:waystoneparticle ~ ~0.5 ~"]
+      }
+    },
+    "null": {
+      "sequence": [
+        {
+          "run_command": {
+            "command": ["function waystoneForm"]
+          },
+          "condition": "q.is_sneaking && !q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:waypoint_marker')"
+        },
+        {
+          "run_command": {
+            "command": ["function waystoneForm2"]
+          },
+          "condition": "!q.is_sneaking && !q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:waypoint_marker')"
+        }
+      ]
+    },
+    "wiki:set_rotation": {
+        "set_block_property": {
+            "wiki:rotation": "(query.cardinal_facing_2d)"
+        }
+    }
+  }
+}
+}

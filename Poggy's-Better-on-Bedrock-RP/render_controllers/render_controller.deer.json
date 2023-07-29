@@ -1,0 +1,25 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+      "controller.render.deer": {
+        "arrays": {
+          "textures": {
+            "array.skins": [
+              "Texture.default",
+              "Texture.doe"
+            ]
+          },
+          "geometries": {
+            "Array.geo": [
+                "Geometry.default",
+                "Geometry.doe"
+              ]
+          }
+        },
+        "geometry":  "Array.geo[query.variant]",
+        "materials": [ { "*": "Material.default" } ],
+        "textures": [ "Array.skins[query.variant]" ]
+      }
+    }
+  }
+  

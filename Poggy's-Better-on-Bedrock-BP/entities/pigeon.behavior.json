@@ -1,0 +1,76 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:pigeon",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:health": {
+				"value": 10,
+				"max": 10
+			},	
+			
+			"minecraft:loot": {
+				"table": "loot_tables/entities/enchanted_mobs/enchanted_chicken.json"
+			  },
+			 "minecraft:movement": {
+        "value": 0.4
+      },
+			"minecraft:flying_speed": {
+				"value": 0.02
+			},
+			"minecraft:jump.static": {
+			},
+			"minecraft:can_fly": {
+			},
+			"minecraft:navigation.fly": {
+			  "can_path_over_water": true
+			},
+			"minecraft:behavior.float": {
+			  "priority": 0
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 1,
+				"look_distance": 8.0
+			  },
+			"minecraft:movement.fly": {
+				"max_turn": 30
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					}
+				]
+			},
+			
+			"minecraft:behavior.random_fly": {
+				"priority": 2,
+				"xz_dist": 15,
+				"y_dist": 15,
+				"y_offset": 0,
+				"speed_multiplier": 1.0,
+				"can_land_on_trees": true,
+				"avoid_damage_blocks": true
+			  },
+			"minecraft:behavior.random_stroll": {
+				"priority": 3,
+				"speed_multiplier": 0.8
+			}
+		}
+	}
+}

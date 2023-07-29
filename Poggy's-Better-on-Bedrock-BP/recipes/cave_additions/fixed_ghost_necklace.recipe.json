@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:fixed_ghost_necklace"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "priority": 16,
+        "pattern": [
+            " g ",
+            "gGg",
+            " g "
+        ],
+        "key": {
+            "g": {
+                "item": "minecraft:gold_ingot"
+            },
+            "G": {
+                "item": "better_on_bedrock:broken_ghost_necklace"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:fixed_ghost_necklace",
+            "count": 1
+        }
+    }
+}

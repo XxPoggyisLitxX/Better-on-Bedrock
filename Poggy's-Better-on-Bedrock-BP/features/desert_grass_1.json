@@ -1,0 +1,29 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:growing_plant_feature": {
+        "description": {
+            "identifier": "better_on_bedrock:desert_grass_1"
+        },
+        "age":{
+            "range_min": 2,
+            "range_max": 2
+        },
+        "allow_water": false,
+        "body_blocks": [
+            ["better_on_bedrock:tall_dead_grass", 1]
+        ],
+        "head_blocks": [
+            ["minecraft:air", 1]
+        ],
+        "minecraft:growth_direction": "up",
+        "height_distribution": [
+            [
+                {
+                    "range_min": 2,
+                    "range_max": 2
+                },
+                1
+            ]
+        ]
+    }
+}

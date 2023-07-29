@@ -1,0 +1,11 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:snap_to_surface_feature": {
+        "description": {
+            "identifier": "gg:warped_snap"
+        },
+        "feature_to_snap": "gg:warped_ground_feature",
+        "surface": "floor",
+        "vertical_search_range": 12
+    }
+}

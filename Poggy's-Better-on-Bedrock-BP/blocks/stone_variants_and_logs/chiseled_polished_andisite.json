@@ -1,0 +1,29 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:chiseled_polished_andisite",
+			"menu_category": {
+				"category": "construction"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 8
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 30
+			},
+			"tag:stone": {},
+            "minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "chiseled_polished_andisite",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:map_color": "#ffffff"
+		}
+	}
+}

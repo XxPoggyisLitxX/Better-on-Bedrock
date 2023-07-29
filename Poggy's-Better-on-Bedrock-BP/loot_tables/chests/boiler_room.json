@@ -1,0 +1,54 @@
+{
+  "pools": [
+    {
+      "rolls": 9,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 5,
+          "quality": 0,
+          "name": "minecraft:flint_and_steel"
+        },
+        {
+          "type": "item",
+          "weight": 5,
+          "name": "minecraft:lava_bucket"
+        },
+        {
+          "type": "item",
+          "weight": 6,
+          "name": "minecraft:charcoal",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 6
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:rotten_flesh"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:glowstone"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:comparator"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:redstone"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:arrow"
+        }
+      ]
+    }
+  ]
+}

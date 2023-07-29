@@ -1,0 +1,30 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:spawn_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:part2",
+        "population_control": "animal"
+      },
+      "conditions": [
+        {
+          "minecraft:spawns_on_surface": {},
+          "minecraft:brightness_filter": {
+            "min": 0,
+            "max": 7,
+            "adjust_for_weather": false
+          },
+          "minecraft:weight": {
+            "default": 87
+          },
+          "minecraft:herd": {
+            "min_size":3,
+            "max_size":4
+          },
+      
+          "minecraft:biome_filter": {
+            "test": "has_biome_tag", "operator":"==", "value": "monster"
+          }
+        }
+      ]
+    }
+  }

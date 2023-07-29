@@ -1,0 +1,23 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:diorite_brick_slab"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "better_on_bedrock:diorite_bricks"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:diorite_brick_slab",
+            "count": 4
+        }
+    }
+}

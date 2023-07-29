@@ -1,0 +1,155 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:granite_brick_slab",
+			"menu_category": {
+				"category": "construction",
+				"is_hidden_in_commands": false
+			},
+			"properties": {
+				"better_on_bedrock:type": [
+					"bottom",
+					"top",
+					"double"
+				]
+			}
+		},
+		"components": {
+			
+			
+			"minecraft:on_player_placing": {
+				"event": "up",
+				"target": "self",
+				"condition": "query.target_x_rotation<=0"
+			},
+			"minecraft:map_color": "#52221D",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 8
+			},
+			"tag:wood": {},
+			"tag:stone": {},
+			"tag:minecraft:wooden_slabs": {}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('better_on_bedrock:type') == 'bottom'",
+				"components": {
+					"minecraft:geometry": "geometry.custom_slab_bottom",
+					"minecraft:block_light_filter": 0,
+					"minecraft:on_interact": {
+						"event": "double",
+						"target": "self",
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'better_on_bedrock:granite_brick_slab')&&query.block_face==1"
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "granite_brick_slab",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('better_on_bedrock:type') == 'top'",
+				"components": {
+					"minecraft:geometry": "geometry.custom_slab_top",
+					"minecraft:block_light_filter": 0,
+					"minecraft:on_interact": {
+						"event": "double",
+						"target": "self",
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'better_on_bedrock:granite_brick_slab')&&query.block_face==0"
+					},
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "granite_brick_slab",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('better_on_bedrock:type') == 'double'",
+				"components": {
+					"minecraft:unit_cube": {},
+					"minecraft:on_player_destroyed": {
+						"event": "double_slab_loot"
+					},
+					"minecraft:block_light_filter": 15,
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "granite_brick_slab",
+							"render_method": "opaque"
+						}
+					}
+				}
+			}
+		],
+		"events": {
+			"double_slab_loot": {
+				"spawn_loot": {
+					"table": "loot_tables/blocks/granite_brick_slab_double.json"
+				}
+			},
+			"double": {
+				"set_block_property": {
+					"better_on_bedrock:type": "'double'"
+				},
+				"decrement_stack": {}
+			},
+			"up": {
+				"set_block_property": {
+					"better_on_bedrock:type": "'top'"
+				}
+			}
+		}
+	}
+}

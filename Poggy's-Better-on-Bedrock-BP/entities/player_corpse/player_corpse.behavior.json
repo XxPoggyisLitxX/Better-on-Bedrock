@@ -1,0 +1,339 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:player_corpse",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:health": {
+			  "value": 1,
+			  "max": 5
+			},
+
+			"minecraft:shareables": {
+			  "items": [
+				{
+				  "item": "minecraft:netherite_sword",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "stored_in_inventory": true,
+				  "priority": 0
+				},
+				{
+				  "item": "minecraft:diamond_sword",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "stored_in_inventory": true,
+				  "priority": 1
+				},
+				{
+				  "item": "minecraft:iron_sword",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "stored_in_inventory": true,
+				  "priority": 2
+				},
+				{
+				  "item": "minecraft:stone_sword",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "stored_in_inventory": true,
+				  "priority": 3
+				},
+				{
+				  "item": "minecraft:golden_sword",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "stored_in_inventory": true,
+				  "priority": 4
+				},
+				{
+				  "item": "minecraft:wooden_sword",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "stored_in_inventory": true,
+				  "priority": 5
+				},
+				{
+				  "item": "minecraft:netherite_helmet",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "stored_in_inventory": true,
+				  "priority": 0
+				},
+				{
+				  "item": "minecraft:diamond_helmet",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "stored_in_inventory": true,
+				  "priority": 1
+				},
+				{
+				  "item": "minecraft:iron_helmet",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "stored_in_inventory": true,
+				  "priority": 2
+				},
+				{
+				  "item": "minecraft:chainmail_helmet",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "stored_in_inventory": true,
+				  "priority": 3
+				},
+				{
+				  "item": "minecraft:golden_helmet",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "stored_in_inventory": true,
+				  "priority": 4
+				},
+				{
+				  "item": "minecraft:leather_helmet",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "stored_in_inventory": true,
+				  "priority": 5
+				},
+				{
+				  "item": "minecraft:turtle_helmet",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "stored_in_inventory": true,
+				  "priority":  6
+				},
+				{
+				  "item": "minecraft:skull:0",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 7
+				},
+				{
+				  "item": "minecraft:skull:1",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 7
+				},
+				{
+				  "item": "minecraft:carved_pumpkin",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 7
+				},
+				{
+				  "item": "minecraft:netherite_chestplate",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 0
+				},
+				{
+				  "item": "minecraft:diamond_chestplate",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 1
+				},
+				{
+				  "item": "minecraft:iron_chestplate",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 2
+				},
+				{
+				  "item": "minecraft:chainmail_chestplate",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 3
+				},
+				{
+				  "item": "minecraft:golden_chestplate",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 4
+				},
+				{
+				  "item": "minecraft:leather_chestplate",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 5
+				},
+				{
+				  "item": "minecraft:netherite_leggings",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 0
+				},
+				{
+				  "item": "minecraft:diamond_leggings",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 1
+				},
+				{
+				  "item": "minecraft:iron_leggings",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 2
+				},
+				{
+				  "item": "minecraft:chainmail_leggings",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 3
+				},
+				{
+				  "item": "minecraft:golden_leggings",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 4
+				},
+				{
+				  "item": "minecraft:leather_leggings",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 5
+				},
+				{
+				  "item": "minecraft:netherite_boots",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 0
+				},
+				{
+				  "item": "minecraft:diamond_boots",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 1
+				},
+				{
+				  "item": "minecraft:iron_boots",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 2
+				},
+				{
+				  "item": "minecraft:chainmail_boots",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 3
+				},
+				{
+				  "item": "minecraft:golden_boots",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 4
+				},
+				{
+				  "item": "minecraft:leather_boots",
+				  "want_amount": 1,
+				  "surplus_amount": 1,
+				  "priority": 5
+				}
+			  ]
+			},
+	  
+	  
+			// Zombie Behaviors
+			"minecraft:behavior.equip_item": {
+			  "priority": 2
+			},
+			"minecraft:physics": {
+			},
+			"minecraft:pushable": {
+			  "is_pushable": false,
+			  "is_pushable_by_piston": false
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+			},
+	  
+			"minecraft:item_hopper": {},
+			"minecraft:collision_box": {
+				"height": 1,
+				"width": 1
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 1.5,
+						"height": 1.5,
+						"pivot": [0, 1, 0]
+					}
+				]
+			},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": false,
+				"always_show": true
+			},
+			"minecraft:inventory": { 
+				"container_type": "inventory",
+				"inventory_size": 54,
+				"restrict_to_owner": false
+			  },
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "attack",
+						"deals_damage": false
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"transform_entity": {
+				"minecraft:mark_variant": {
+					"value": 1
+				},
+				"minecraft:timer": {
+					"time": 1.3,
+					"looping": false,
+					"time_down_event": {
+						"event": "delete_corpse",
+						"target": "self"
+					}
+				},
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"cause": "attack",
+							"deals_damage": false
+						}
+					]
+				}
+			},
+			"delete_corpse":{
+				"minecraft:transformation": {
+					"into": "minecraft:xp_orb",
+					"drop_equipment": true,
+					"preserve_equipment": false
+				}
+			}
+		},
+		"events": {
+			"delete_corpse":{
+				"add": {
+					"component_groups": [
+						"delete_corpse"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"run_command":{
+					"command": ["tp @e[type=item, r=4] @e[type=better_on_bedrock:player_corpse, r=8]"]
+				}
+			},
+			"say": {
+				"run_command":{
+					"command": ["say hello"]
+				}
+			},
+			"entity_transform": {
+				"add": {
+					"component_groups": ["transform_entity"]
+				}
+			}
+		}
+	}
+}

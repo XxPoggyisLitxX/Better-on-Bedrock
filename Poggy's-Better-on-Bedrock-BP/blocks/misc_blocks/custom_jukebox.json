@@ -1,0 +1,1108 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:custom_jukebox",
+			"menu_category": {
+				"category": "construction"
+			},
+			"properties": {
+				"better_on_bedrock:vanilla_discs":[
+					"none",
+					"13",
+                    "11",
+                    "cat",
+                    "blocks",
+                    "chirp",
+                    "far",
+                    "mellohi",
+                    "stal",
+                    "strad",
+                    "ward",
+                    "wait",
+                    "otherside",
+                    "5",
+                    "pigstep",
+                    "mall"
+				],
+                "better_on_bedrock:custom_discs": [
+                    "none",
+                    "travelers"
+                ]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'none'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+					"minecraft:on_interact": {
+
+                        "event": "play_disc",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+
+            {
+				"condition": "query.block_property('better_on_bedrock:custom_discs') == 'none'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+					"minecraft:on_interact": {
+
+                        "event": "play_disc",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == '11'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == '13'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'cat'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'blocks'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'chirp'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'far'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'mellohi'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'stal'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'ward'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'strad'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'wait'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'otherside'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == '5'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'pigstep'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+            {
+				"condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'mall'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+
+
+                        //custom discs are here
+            {
+				"condition": "query.block_property('better_on_bedrock:custom_discs') == 'travelers'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+                    "minecraft:on_interact": {
+                        "event": "end_track",
+                        "target": "self"
+                    },
+					"minecraft:material_instances": {
+                        "*": {
+                            "texture": "custom_jukebox_side",
+                            "render_method": "alpha_test"
+                        },
+                        "up": {
+                            "texture": "custom_jukebox_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+					"minecraft:map_color": "#ffffff"
+				}
+			}
+		],
+		"events": {
+			"play_disc": {
+                "sequence": [
+
+                    {
+                        "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_11')",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'11'"
+                        },
+                        "run_command":{
+                            "command": ["playsound record.11 @a[r=6]", "clear @p minecraft:music_disc_11 0 1"]
+                        }
+                },
+                {
+                    "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_13')",
+                    "set_block_property": {
+                        "better_on_bedrock:vanilla_discs": "'13'"
+                    },
+                    "run_command":{
+                        "command": ["playsound record.13 @a[r=6]", "clear @p minecraft:music_disc_13 0 1"]
+                    }
+            },
+            {
+                "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_cat')",
+                "set_block_property": {
+                    "better_on_bedrock:vanilla_discs": "'cat'"
+                },
+                "run_command":{
+                    "command": ["playsound record.cat @a[r=6]", "clear @p minecraft:music_disc_cat 0 1"]
+                }
+        },
+        {
+            "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_blocks')",
+            "set_block_property": {
+                "better_on_bedrock:vanilla_discs": "'blocks'"
+            },
+            "run_command":{
+                "command": ["playsound record.blocks @a[r=6]", "clear @p minecraft:music_disc_blocks 0 1"]
+            }
+    },
+    {
+        "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_chirp')",
+        "set_block_property": {
+            "better_on_bedrock:vanilla_discs": "'chirp'"
+        },
+        "run_command":{
+            "command": ["playsound record.chirp @a[r=6]", "clear @p minecraft:music_disc_chirp 0 1"]
+        }
+},
+{
+    "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_far')",
+    "set_block_property": {
+        "better_on_bedrock:vanilla_discs": "'far'"
+    },
+    "run_command":{
+        "command": ["playsound record.far @a[r=6]", "clear @p minecraft:music_disc_far 0 1"]
+    }
+},
+{
+    "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_mellohi')",
+    "set_block_property": {
+        "better_on_bedrock:vanilla_discs": "'mellohi'"
+    },
+    "run_command":{
+        "command": ["playsound record.mellohi @a[r=6]", "clear @p minecraft:music_disc_mellohi 0 1"]
+    }
+},
+{
+    "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_stal')",
+    "set_block_property": {
+        "better_on_bedrock:vanilla_discs": "'stal'"
+    },
+    "run_command":{
+        "command": ["playsound record.stal @a[r=6]", "clear @p minecraft:music_disc_stal 0 1"]
+    }
+},
+{
+    "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_ward')",
+    "set_block_property": {
+        "better_on_bedrock:vanilla_discs": "'ward'"
+    },
+    "run_command":{
+        "command": ["playsound record.ward @a[r=6]", "clear @p minecraft:music_disc_ward 0 1"]
+    }
+},
+{
+    "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_strad')",
+    "set_block_property": {
+        "better_on_bedrock:vanilla_discs": "'strad'"
+    },
+    "run_command":{
+        "command": ["playsound record.strad @a[r=6]", "clear @p minecraft:music_disc_strad 0 1"]
+    }
+},
+{
+    "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_wait')",
+    "set_block_property": {
+        "better_on_bedrock:vanilla_discs": "'wait'"
+    },
+    "run_command":{
+        "command": ["playsound record.wait @a[r=6]", "clear @p minecraft:music_disc_wait 0 1"]
+    }
+},
+{
+    "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_otherside')",
+    "set_block_property": {
+        "better_on_bedrock:vanilla_discs": "'otherside'"
+    },
+    "run_command":{
+        "command": ["playsound record.otherside @a[r=6]", "clear @p minecraft:music_disc_otherside 0 1"]
+    }
+},
+{
+    "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_5')",
+    "set_block_property": {
+        "better_on_bedrock:vanilla_discs": "'5'"
+    },
+    "run_command":{
+        "command": ["playsound record.5 @a[r=6]", "clear @p minecraft:music_disc_5 0 1"]
+    }
+},
+{
+    "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_pigstep')",
+    "set_block_property": {
+        "better_on_bedrock:vanilla_discs": "'pigstep'"
+    },
+    "run_command":{
+        "command": ["playsound record.pigstep @a[r=6]", "clear @p minecraft:music_disc_pigstep 0 1"]
+    }
+},
+{
+    "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:music_disc_mall')",
+    "set_block_property": {
+        "better_on_bedrock:vanilla_discs": "'mall'"
+    },
+    "run_command":{
+        "command": ["playsound record.mall @a[r=6]", "clear @p minecraft:music_disc_mall 0 1"]
+    }
+},
+                {
+                    "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:disc_travelers')",
+                    "set_block_property": {
+                        "better_on_bedrock:custom_discs": "'travelers'"
+                    },
+                    "run_command":{
+                        "command": ["playsound record.travelers @a[r=6]", "clear @p better_on_bedrock:disc_travelers 0 1"]
+                    }
+            }
+                ]
+            },
+
+            "none_state": {
+                "run_command":{
+                    "command": ["stopsound @a[r=6]"]
+                }
+            },
+            "end_track": {
+                "sequence": [
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == '11'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/11.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == '13'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/13.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'cat'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/cat.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'blocks'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/blocks.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'chirp'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/chrip.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'far'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/far.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'mellohi'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/mellohi.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'stal'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/stal.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'strad'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/strad.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'wait'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/wait.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'ward'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/ward.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'otherside'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/otherside.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == '5'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/5.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'pigstep'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/pigstep.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'mall'",
+                        "set_block_property": {
+                            "better_on_bedrock:vanilla_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/mall.json"
+                        }
+                    },
+
+                    {
+                        "condition": "query.block_property('better_on_bedrock:custom_discs') == 'travelers'",
+                        "set_block_property": {
+                            "better_on_bedrock:custom_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/travelers.json"
+                        }
+                    }
+                ]
+                
+            },
+            "break": {
+                "sequence": [
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == '11'",
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/11.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == '13'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/13.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'cat'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/cat.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'blocks'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/blocks.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'chirp'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/chrip.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'far'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/far.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'mellohi'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/mellohi.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'stal'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/stal.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'strad'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/strad.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'wait'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/wait.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'ward'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/ward.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'otherside'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/otherside.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == '5'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/5.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'pigstep'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/pigstep.json"
+                        }
+                    },
+                    {
+                        "condition": "query.block_property('better_on_bedrock:vanilla_discs') == 'mall'",
+                        
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/mall.json"
+                        }
+                    },
+
+                    {
+                        "condition": "query.block_property('better_on_bedrock:custom_discs') == 'travelers'",
+                        "set_block_property": {
+                            "better_on_bedrock:custom_discs": "'none'"
+                        },
+                        "run_command":{
+                            "command": ["stopsound @a[r=6]"]
+                        },
+                        "spawn_loot": {
+                            "table": "loot_tables/jukebox/travelers.json"
+                        }
+                    }
+                ]
+                
+            }
+		},// "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:custom_disc')",
+		"components": {
+			"minecraft:collision_box": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					16,
+					10
+				]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+            "minecraft:on_player_placing": {
+                "event": "none_state",
+                "target": "self"
+            },
+			"minecraft:selection_box":{
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					16,
+					10
+				]
+			},
+            "minecraft:on_player_destroyed": {
+                "event": "break",
+                "target": "self"
+            },
+			"minecraft:on_interact": {
+				"event": "play_disc",
+				"target": "self"
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 30
+			},
+			"tag:wood": {},
+            "minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "custom_jukebox_side",
+					"render_method": "alpha_test"
+				},
+                "up": {
+                    "texture": "custom_jukebox_top",
+					"render_method": "alpha_test"
+                }
+			},
+			"minecraft:map_color": "#ffffff"
+		}
+	}
+}

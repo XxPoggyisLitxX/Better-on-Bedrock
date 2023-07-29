@@ -1,0 +1,205 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.spear.hold_third_person": {
+			"loop": true,
+			"bones": {
+				"weapon": {
+					"rotation": [0, 0, 45],
+					"position": [1, -2, -3]
+				}
+			}
+		},
+		"animation.spear.hold_first_person": {
+			"loop": true,
+			"bones": {
+				"weapon": {
+					"rotation": [70, 60, -24],
+					"position": [0, 2, 4.5]
+				}
+			}
+		},
+		"animation.spear.charge_first_person": {
+			"loop": true,
+			"bones": {
+				"weapon": {
+					"rotation": [30, 0, 0],
+					"position": [
+						"-13 + math.sin(q.anim_time * 360*4) * 0.1 - math.clamp(q.anim_time * 6,0,5)",
+						"-9 - math.clamp(q.anim_time * 6,0,5)",
+						"-6 - math.clamp(q.anim_time * 6,0,5)"
+					]
+				}
+			}
+		},
+		"animation.trident.hold_first_person": {
+			"loop": true,
+			"bones": {
+				"weapon": {
+					"position": [-2.5, 5, 7.5],
+					"rotation": [20, 70, -60]
+				}
+			}
+		},
+		"animation.trident.charge_first_person": {
+			"loop": true,
+			"bones": {
+				"weapon": {
+					"rotation": [60, -20, 0],
+					"position": [
+						"-17.5 + math.sin(q.anim_time * 360*4) * 0.1 - math.clamp(q.anim_time * 6,0,5)",
+						"-10 + math.clamp(q.anim_time * 6,0,5)",
+						"-10 - math.clamp(q.anim_time * 6,0,5)"
+					]
+				}
+			}
+		},
+		"animation.dagger.hold_first_person": {
+			"loop": true,
+			"bones": {
+				"weapon": {
+					"position": [-5, 2.5, 3],
+					"rotation": [20, 70, -60]
+				}
+			}
+		},
+		"animation.dagger.charge_first_person": {
+			"loop": true,
+			"bones": {
+				"weapon": {
+					"rotation": [-80, -20, 0],
+					"position": [
+						"-5 + math.sin(q.anim_time * 360*4) * 0.1 - math.clamp(q.anim_time * 6,0,5)",
+						"-7.5 + math.clamp(q.anim_time * 6,0,5)",
+						"-5 - math.clamp(q.anim_time * 6,0,5)"
+					]
+				}
+			}
+		},
+		"animation.lich.default": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"position": [0, "math.cos(q.anim_time * 200) * 3", 0]
+				},
+				"shard": {
+					"rotation": ["math.abs(query.anim_time * 16) * 16", 0, 0]
+				},
+				"leftSleeve": {
+					"rotation": ["-math.cos(q.anim_time * 100) * 3", "-math.cos(q.anim_time * 125) * 10", 0]
+				},
+				"rightSleeve": {
+					"rotation": ["math.cos(q.anim_time * 100) * 3", "math.cos(q.anim_time * 125) * 10", 0]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "lich_orb_pulse",
+					"locator": "ring"
+				}
+			}
+		},
+		"animation.lich.attack_flame": {
+			"animation_length": 5.91667,
+			"bones": {
+				"leftSleeve": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 110, 0],
+						"0.2917": [0, 112.56, 0],
+						"0.3333": [0, 114.77, 0],
+						"0.375": [0, "110 + math.cos(q.anim_time * 200) * 5", "math.cos(q.anim_time * 198) * 5"],
+						"2.6667": [0, "110 + math.cos(q.anim_time * 200) * 5", 0],
+						"2.875": [0, "37.5 + math.cos(q.anim_time * 200) * 5", 0],
+						"2.9167": [0, "10 + math.cos(q.anim_time * 200) * 5", 0],
+						"3.0": [0, 0, 0]
+					}
+				},
+				"rightSleeve": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 110, 0],
+						"0.2917": [0, 112.56, 0],
+						"0.3333": [0, 114.77, 0],
+						"0.375": ["math.cos(q.anim_time * 198) * 5", "110 + math.cos(q.anim_time * 200) * 5", 0],
+						"2.6667": [0, "110 + math.cos(q.anim_time * 200) * 5", 0],
+						"2.875": [0, "37.5 + math.cos(q.anim_time * 200) * 5", 0],
+						"2.9167": [0, "10 + math.cos(q.anim_time * 200) * 5", 0],
+						"3.0": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "attack_prepare"
+				},
+				"1.5": {
+					"effect": "attack"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "lich_orb_pulse",
+					"locator": "ring"
+				}
+			}
+		},
+		"animation.lich.prepare_fireball": {
+			"loop": true,
+			"bones": {
+				"leftSleeve": {
+					"rotation": ["-135 + math.cos(q.anim_time * 1000) * 25", 0, 0]
+				},
+				"rightSleeve": {
+					"rotation": ["-135 + math.cos(q.anim_time * 1000) * 25", 0, 0]
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "puke"
+				}
+			}
+		},
+		"animation.lich.invis_mode": {
+			"animation_length": 20,
+			"bones": {
+				"body": {
+					"position": [0, 0, 0],
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.6667": [1, 1, 1],
+						"0.7917": [1, 1, 1],
+						"0.9167": [0, 0, 0],
+						"18.2917": [0, 0, 0],
+						"18.3333": [1, 1, 1]
+					}
+				},
+				"rightSleeve": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 142.5, 0],
+						"0.4583": [0, 142.5, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.6667": {
+					"effect": "teleportout"
+				},
+				"18.25": {
+					"effect": "teleportin"
+				}
+			},
+			"particle_effects": {
+				"0.6667": {
+					"effect": "lich_invis_poof",
+					"locator": "teleport"
+				},
+				"18.2917": {
+					"effect": "lich_poof_back",
+					"locator": "ring"
+				}
+			}
+		}
+	}
+}

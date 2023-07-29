@@ -1,0 +1,174 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "wiki:aut_leaves_spruce",
+			"properties": {
+				"wiki:decay_tier": [4, 3, 2, 1, 0], //the distance in blocks to find the log
+				"wiki:not_decay": [false, true], //used when placed by the player or with features
+				"wiki:solid": [false, true] //optional; makes the leaves non-transparent when surrounded
+			}
+		},
+		"events": {
+			"wiki:on_destroyed": {
+				//defines the loot for the tool
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name == 'shears'",
+						"spawn_loot": {
+							"table": "loot_tables/blocks/aut_leaves_spruce_block.json"
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name != 'shears'",
+						"spawn_loot": {
+							"table": "loot_tables/blocks/aut_leaves_spruce_loot.json"
+						}
+					}
+				]
+			},
+			"check": {
+				//checks for the log
+				"sequence": [
+					{
+						"condition": "q.block_property('wiki:not_decay') == false",
+						"set_block_property": {
+							"wiki:decay_tier": "(q.block_neighbor_has_any_tag(0,0,-1,'log') || q.block_neighbor_has_any_tag(0,0,1,'log') || q.block_neighbor_has_any_tag(-1,0,0,'log') || q.block_neighbor_has_any_tag(1,0,0,'log') || q.block_neighbor_has_any_tag(0,-1,0,'log') || q.block_neighbor_has_any_tag(0,1,0,'log')) ? 4 : ((q.block_neighbor_has_any_tag(0,0,-1,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(0,0,1,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(-1,0,0,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(1,0,0,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(0,-1,0,'wiki:decay_tier_4') || q.block_neighbor_has_any_tag(0,1,0,'wiki:decay_tier_4')) ? 3 : ( (q.block_neighbor_has_any_tag(0,0,-1,'wiki:decay_tier_3') || q.block_neighbor_has_any_tag(0,0,1,'wiki:decay_tier_3 ') || q.block_neighbor_has_any_tag(-1,0,0,'wiki:decay_tier_3') || q.block_neighbor_has_any_tag(1,0,0,'wiki:decay_tier_3') || q.block_neighbor_has_any_tag(0,-1,0,'wiki:decay_tier_3') || q.block_neighbor_has_any_tag(0,1,0,'wiki:decay_tier_3')) ? 2 : ( (q.block_neighbor_has_any_tag(0,0,-1,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(0,0,1,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(-1,0,0,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(1,0,0,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(0,-1,0,'wiki:decay_tier_2') || q.block_neighbor_has_any_tag(0,1,0,'wiki:decay_tier_2')) ? 1 : 0 ) ) )"
+						}
+					},
+					{
+						"set_block_property": {
+							"wiki:solid": "q.block_neighbor_has_any_tag(0,0,-1,'log','stone','wiki:aut_leaves_spruce') && q.block_neighbor_has_any_tag(0,0,1,'log','stone','wiki:aut_leaves_spruce') && q.block_neighbor_has_any_tag(0,1,0,'log','stone','wiki:aut_leaves_spruce') && q.block_neighbor_has_any_tag(0,-1,0,'log','stone','wiki:aut_leaves_spruce') && q.block_neighbor_has_any_tag(-1,0,0,'log','stone','wiki:aut_leaves_spruce') && q.block_neighbor_has_any_tag(1,0,0,'log','stone','wiki:aut_leaves_spruce')"
+						}
+					}
+				]
+			},
+			"wiki:stop_decay": {
+				//when placed
+				"set_block_property": {
+					"wiki:not_decay": true
+				}
+			},
+			"wiki:decay": {
+				//when decayed
+				"die": {}
+			}
+		},
+		"permutations": [ //nothing great here, just the stages.
+        {
+          "condition": "query.block_property('wiki:decay_tier') == 0",
+            "components": {
+              "minecraft:unit_cube": {},
+              "tag:wiki:decay_tier_0": {},
+              "minecraft:random_ticking": {
+                "on_tick": {
+                  "event": "wiki:decay",
+                  "target": "block"
+                }
+              }
+            }
+        },
+        {
+          "condition": "query.block_property('wiki:decay_tier') == 1",
+          "components": {
+            "minecraft:random_ticking": {
+                "on_tick": {
+                  "event": "check",
+                  "target": "block"
+                }
+              },
+            "minecraft:unit_cube": {},
+            "tag:wiki:decay_tier_1": {}
+        }
+        },
+        {
+          "condition": "query.block_property('wiki:decay_tier') == 2",
+          "components": {
+            "minecraft:random_ticking": {
+                "on_tick": {
+                  "event": "check",
+                  "target": "block"
+                }
+              },
+            "minecraft:unit_cube": {},
+            "tag:wiki:decay_tier_2": {}
+        }
+        },
+        {
+          "condition": "query.block_property('wiki:decay_tier') == 3",
+          "components": {
+            "minecraft:random_ticking": {
+                "on_tick": {
+                  "event": "check",
+                  "target": "block"
+                }
+              },
+            "minecraft:unit_cube": {},
+            "tag:wiki:decay_tier_3": {}
+        }
+        },
+        {
+          "condition": "query.block_property('wiki:decay_tier') == 4",
+          "components": {
+            "minecraft:random_ticking": {
+                "on_tick": {
+                  "event": "check",
+                  "target": "block"
+                }
+              },
+            "minecraft:unit_cube": {},
+            "tag:wiki:decay_tier_4": {}
+          }
+        },
+       {
+          "condition": "query.block_property('wiki:solid') == true",
+          "components": {
+        "minecraft:material_instances": {
+          "*": {
+            "texture": "aut_tiaga_leaves",
+            "render_method": "opaque"
+          }
+        }
+          }
+        }
+      ],
+		"components": {
+			//main components
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.leaves",
+				"category": "nature"
+			},
+			/*"minecraft:on_player_placing": {
+				"event": "wiki:stop_decay",
+				"target": "self"
+			},*/
+			"minecraft:on_player_destroyed": {
+				"event": "wiki:on_destroyed"
+				//Triggers event that spawns different loot
+			},
+			 //we need both of these to work with world generation
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "check",
+					"target": "block"
+				}
+			},
+			"tag:wiki:aut_leaves_spruce": {},
+			"minecraft:breathability": "air",
+			"minecraft:destroy_time": 0.3,
+			"minecraft:map_color": "#FFFFFF",
+			"minecraft:explosion_resistance": 1.0,
+			"minecraft:block_light_absorption": 0.0,
+            "minecraft:loot": "loot_tables/empty.json",
+			"minecraft:block_light_emission": 0.0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "aut_tiaga_leaves",
+					"render_method": "blend",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				}
+			}
+		}
+	}
+}

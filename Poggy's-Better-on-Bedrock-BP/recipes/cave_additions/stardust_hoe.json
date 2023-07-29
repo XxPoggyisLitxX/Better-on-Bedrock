@@ -1,0 +1,27 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:stardust_hoe"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "cc",
+            " s",
+            " s "
+        ],
+        "key": {
+            "c": {
+                "item": "better_on_bedrock:stardust_ingot"
+            },
+            "s": {
+                "item": "minecraft:stick"
+            }
+        },
+        "result": {
+                "item": "better_on_bedrock:stardust_hoe"
+        }
+    }
+}

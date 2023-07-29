@@ -1,0 +1,46 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:raccoon",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/raccoon"
+			},
+			"animations": {
+				"basic": "controller.animation.raccoon",
+				"walk": "animation.racoon.walk",
+				"idle": "animation.racoon.idle",
+				"lay": "animation.racoon.lay",
+				"baby": "animation.raccoon.baby_transform",
+				"look_at_target": "animation.common.look_at_target",
+				"dig": "animation.racoon.digging_loot",
+				"dirt": "animation.racoon.digging_loot_dirt"
+			},
+			"scripts": {
+				"animate": [
+					"basic",
+					{"baby": "q.is_baby"},
+					{"look_at_target": "!q.variant == 9"}
+				]
+			},
+			"particle_effects": {
+				"dirt": "minecraft:dirt"
+			},
+			"sound_effects": {
+				"gravel": "use.gravel.racoon"
+			},
+			"geometry": {
+				"default": "geometry.raccoon"
+			},
+			"enable_attachables": true,
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#616161",
+				"overlay_color": "#090909"
+			}
+		}
+	}
+}

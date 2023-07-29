@@ -1,0 +1,31 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:rose_pot",
+			"menu_category": {
+				"category": "construction"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": true,
+			"minecraft:loot": "loot_tables/blocks/hanging_pots/rose_pot.json",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 30
+			},
+			"minecraft:geometry": "geometry.deco_pot",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "rose_pot",
+					"render_method": "alpha_test",
+					"ambient_occlusion": true,
+					"face_dimming": false
+				}
+			},
+			"minecraft:map_color": "#ffffff"
+		}
+	}
+}

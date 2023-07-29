@@ -1,0 +1,70 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:alluminum_ore",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.oreBlocks",
+				"is_hidden_in_commands": false
+			},
+			"is_experimental": true
+		},
+		"components": {
+            "minecraft:destructible_by_mining":{
+                "seconds_to_destroy": 5
+            },
+
+            "minecraft:loot": "loot_tables/ores/alluminum_ore.json",
+//			"minecraft:on_player_destroyed": {
+//				"condition": "q.is_item_name_any(quipment slot name, slot index, item)",
+//				"event": "spawn_proper_loot",
+//				"target": "self"
+//			},
+			//Basic components
+			"minecraft:unit_cube": {},
+            "tag:stone": {},
+            "minecraft:display_name": "tile.better_on_bedrock:alluminum_ore",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "alluminum_ore",
+					"render_method": "opaque"
+				}
+			},
+            "minecraft:on_player_destroyed": {
+                "event": "xp",
+                "target": "self"
+            }
+		},
+        "events": {
+            "xp": {
+                "randomize": [
+                    {
+                        "run_command": {
+                            "command": ["summon minecraft:xp_orb ~ ~ ~", "summon minecraft:xp_orb ~ ~ ~","summon minecraft:xp_orb ~ ~ ~","summon minecraft:xp_orb ~ ~ ~"]
+                        },
+                        "weight": 5
+                    },
+                    {
+                        "run_command": {
+                            "command": ["summon minecraft:xp_orb ~ ~ ~", "summon minecraft:xp_orb ~ ~ ~", "summon minecraft:xp_orb ~ ~ ~"]
+                        },
+                        "weight": 5
+                    },
+                    {
+                        "run_command": {
+                            "command": ["summon minecraft:xp_orb ~ ~ ~","summon minecraft:xp_orb ~ ~ ~"]
+                        },
+                        "weight": 5
+                    },//90_degrees
+                    {
+                        "run_command": {
+                            "command": ["summon minecraft:xp_orb ~ ~ ~","summon minecraft:xp_orb ~ ~ ~","summon minecraft:xp_orb ~ ~ ~","summon minecraft:xp_orb ~ ~ ~","summon minecraft:xp_orb ~ ~ ~","summon minecraft:xp_orb ~ ~ ~","summon minecraft:xp_orb ~ ~ ~"]
+                        },
+                        "weight": 5
+                    }
+                ]
+            }
+        }
+	}
+}

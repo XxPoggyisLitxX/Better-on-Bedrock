@@ -1,0 +1,109 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pigeon",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "Body",
+					"pivot": [0, 2, 0],
+					"cubes": [
+						{
+							"origin": [-2, 2, -3],
+							"size": [4, 4, 6],
+							"uv": [0, 0]
+						}
+					]
+				},
+				{
+					"name": "Head",
+					"parent": "Body",
+					"pivot": [0, 5, -3],
+					"cubes": [
+						{
+							"origin": [-1.5, 3, -4],
+							"size": [3, 7, 3],
+							"inflate": -0.3,
+							"uv": [15, 16]
+						},
+						{
+							"origin": [-1.5, 2.5, -4],
+							"size": [3, 5, 3],
+							"uv": [24, 0]
+						},
+						{
+							"origin": [-1, 7.7, -4.7],
+							"size": [2, 1, 1],
+							"uv": [15, 0]
+						}
+					]
+				},
+				{
+					"name": "Right_Wing",
+					"parent": "Body",
+					"pivot": [0, 4, 0],
+					"cubes": [
+						{
+							"origin": [-0.29266, 1.18863, 0.11162],
+							"size": [1, 4, 6],
+							"uv": [15, 5]
+						}
+					]
+				},
+				{
+					"name": "Left_Wing",
+					"parent": "Body",
+					"pivot": [0, 4, 0],
+					"cubes": [
+						{
+							"origin": [-0.70741, 1.18863, 0.11159],
+							"size": [1, 4, 6],
+							"uv": [0, 11]
+						}
+					]
+				},
+				{
+					"name": "Tail",
+					"parent": "Body",
+					"pivot": [0, 5, 3],
+					"cubes": [
+						{
+							"origin": [-2, 5, 3],
+							"size": [4, 1, 4],
+							"uv": [0, 23]
+						}
+					]
+				},
+				{
+					"name": "Right_Leg",
+					"pivot": [0, 2, 1],
+					"cubes": [
+						{
+							"origin": [-1.5, 0, 0],
+							"size": [1, 2, 1],
+							"uv": [0, 11]
+						}
+					]
+				},
+				{
+					"name": "Left_Leg",
+					"pivot": [0, 2, 1],
+					"cubes": [
+						{
+							"origin": [0.5, 0, 0],
+							"size": [1, 2, 1],
+							"uv": [0, 0]
+						}
+					]
+				}
+			]
+		}
+	]
+}

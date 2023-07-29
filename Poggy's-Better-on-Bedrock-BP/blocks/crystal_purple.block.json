@@ -1,0 +1,27 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:crystal_purple",
+			"menu_category": {
+				"category": "none"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 30
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "crystal_purple",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:map_color": "#ffffff"
+		}
+	}
+}

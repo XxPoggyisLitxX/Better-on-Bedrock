@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:dragon_fly",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/dragon_fly"
+			},
+			"geometry": {
+				"default": "geometry.dragon_fly"
+			},
+			"animations": {
+				"basic": "animation.model.dragonfly"
+			},
+			"scripts": {
+				"animate": [
+					"basic"
+				]
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#f25c33",
+				"overlay_color": "#15d656"
+			}
+		}
+	}
+}

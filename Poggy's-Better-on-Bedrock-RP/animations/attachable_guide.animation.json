@@ -1,0 +1,24 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.steve_head.hold_first_person": {
+			"loop": true,
+			"bones": {
+				"pole": {
+					"rotation": [207.44918, -15.7958, 183.58394],
+					"position": [15, 0, 30]
+				}
+			}
+		},
+		"animation.steve_head.hold_third_person": {
+			"loop": true,
+			"bones": {
+				"pole": {
+					"rotation": [90, 0, 0],
+					"position": [-6, -14, -10],
+					"scale": [0.65, 0.65, 0.65]
+				}
+			}
+		}
+	}
+}

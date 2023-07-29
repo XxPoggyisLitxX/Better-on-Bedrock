@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:illusioner",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/illusioner"
+			},
+			"geometry": {
+				"default": "geometry.illusioner"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#45245a",
+				"overlay_color": "#5d88b4"
+			}
+		}
+	}
+}

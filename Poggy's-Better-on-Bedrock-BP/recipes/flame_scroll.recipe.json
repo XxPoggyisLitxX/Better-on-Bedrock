@@ -1,0 +1,31 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "pog:flame_scroll"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "/P/",
+            "PMP",
+            "/P/"
+        ],
+        "key": {
+            "/": {
+                "item": "minecraft:stick"
+            },
+            "P": {
+                "item": "minecraft:paper"
+            },
+            "M": {
+                "item": "minecraft:magma_cream"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:scroll_of_the_nether",
+            "count": 1
+        }
+    }
+}

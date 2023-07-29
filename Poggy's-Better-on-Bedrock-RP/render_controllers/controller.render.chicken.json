@@ -1,0 +1,22 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+      "controller.render.chicken": {
+        "arrays": {
+          "textures": {
+            "array.skins": [
+              "Texture.one",
+              "Texture.two",
+              "Texture.three",
+              "Texture.four",
+              "Texture.five"
+            ]
+          }
+        },
+        "geometry": "Geometry.default",
+        "materials": [         { "*": "Material.default" }, { "leg*": "Material.legs" } ],
+        "textures": [ "Array.skins[query.variant]" ]
+      }
+    }
+  }
+  

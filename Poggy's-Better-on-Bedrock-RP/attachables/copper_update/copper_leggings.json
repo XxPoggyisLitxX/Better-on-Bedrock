@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "better_on_bedrock:copper_leggings",
+			// Notice this is the same as before
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				// Same as before
+				"enchanted": "textures/misc/enchanted_item_glint",
+				// This one is different as we are using the legging specific texture
+				"default": "textures/models/armor/custom_legs"
+			},
+			// Tell it to use leggings geom
+			"geometry": {
+				"default": "geometry.humanoid.armor.leggings"
+			},
+			// Hide legs layer as we will be rendering over it
+			"scripts": {
+				"parent_setup": "variable.leg_layer_visible = 0.0;"
+			},
+			// Same as before
+			"render_controllers": ["controller.render.armor"]
+		}
+	}
+}

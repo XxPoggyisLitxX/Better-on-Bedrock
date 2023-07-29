@@ -1,0 +1,41 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:small_birch_for_forest",
+        "places_feature": "minecraft:birch_tree_small"
+      },
+      "conditions": {
+        "placement_pass": "surface_pass",
+        "minecraft:biome_filter": [
+          {
+            "any_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "custom_vanilla_forrest"
+              }
+            ]
+          }
+        ]
+      },
+      "distribution": {
+        "iterations": 0,
+        "x": {
+          "distribution": "uniform",
+          "extent": [
+            0,
+            15
+          ]
+        },
+        "y": "query.heightmap(v.worldx, v.worldz)",
+        "z": {
+          "distribution": "uniform",
+          "extent": [
+            0,
+            15
+          ]
+        }
+      }
+    }
+  }

@@ -1,0 +1,45 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "better_on_bedrock:bushes",
+      "places_feature": "better_on_bedrock:bushes"
+    },
+    "conditions": {
+      "placement_pass": "surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "any_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "plains"
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 0.6,
+      "scatter_chance": {
+        "numerator": 1,
+        "denominator": 100
+      },
+      "x": {
+        "distribution": "uniform",
+        "extent": [
+          0,
+          8
+        ]
+      },
+      "y": "query.heightmap(variable.worldx, variable.worldz)",
+      "z": {
+        "distribution": "uniform",
+        "extent": [
+          0,
+          8
+        ]
+      }
+    }
+  }
+}

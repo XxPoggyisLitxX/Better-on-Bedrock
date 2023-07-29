@@ -1,0 +1,77 @@
+{
+  "pools": [
+    {
+      "rolls": 10,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:hay_block"
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:wheat"
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:carrot"
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:wheat_seeds"
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:golden_horse_armor"
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:name_tag"
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "set_data",
+              "data": 5
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:lead"
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:raw_iron",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

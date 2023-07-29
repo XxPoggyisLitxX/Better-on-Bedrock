@@ -1,0 +1,14 @@
+{
+    "format_version": "1.19.50",
+    "animations": {
+        "animation.iceologer_ice_block":{
+            "loop": true,
+            "animation_length": 0.02,
+            "timeline": {
+                "0.01": [
+                "/execute if entity @e[type=better_on_bedrock:iceologer_iceblock] at @p run tp @e[type=better_on_bedrock:iceologer_iceblock] ~ ~3 ~"
+                ]
+            }
+        }
+    }
+}

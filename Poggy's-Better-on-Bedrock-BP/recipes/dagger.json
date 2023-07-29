@@ -1,0 +1,31 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:dagger"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "s",
+            "d",
+            "#"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stick"
+            },
+            "s": {
+                "item": "minecraft:cobblestone"
+            },
+            "d": {
+                "item": "minecraft:string"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:dagger",
+            "count": 1
+        }
+    }
+}

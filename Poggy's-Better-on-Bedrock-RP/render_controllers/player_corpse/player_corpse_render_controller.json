@@ -1,0 +1,25 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+      "controller.render.player_corpse": {
+        "arrays": {
+          "geometries": {
+            "array.geos": [
+              "geometry.default",
+              "geometry.player_corpse_1",
+              "geometry.player_corpse_2"
+            ]
+          },
+          "textures": {
+            "array.skins": [
+              "Texture.default"
+            ]
+          }
+        },
+        "geometry": "Array.geos[query.variant]",
+        "materials": [ { "*": "Material.default" } ],
+        "textures": [ "Array.skins[query.variant]" ]
+      }
+    }
+  }
+  

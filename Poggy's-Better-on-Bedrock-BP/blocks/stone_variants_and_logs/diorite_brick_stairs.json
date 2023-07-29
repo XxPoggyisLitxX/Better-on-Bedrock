@@ -1,0 +1,558 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:diorite_brick_stairs",
+			"properties": {
+				"better_on_bedrock:direction": [
+					0,
+					1,
+					2,
+					3
+				],
+				"better_on_bedrock:shape": [
+					"straight",
+					"inner_right",
+					"inner_left",
+					"outer_right",
+					"outer_left"
+				],
+				"better_on_bedrock:upside_down": [
+					false,
+					true
+				],
+				"better_on_bedrock:placed_bit": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			
+			"tag:stone": {},
+			"minecraft:block_light_filter": 0,
+			"minecraft:map_color": "#52221D",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 8
+			},
+			
+			"minecraft:geometry": "geometry.custom_stairs",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "diorite_brick_stairs",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:on_player_placing": {
+				"event": "direction",
+				"target": "self"
+			},
+			"minecraft:on_placed": {
+				"event": "confirm",
+				"target": "self"
+			},
+			"minecraft:queued_ticking": {
+				"looping": true,
+				"interval_range": [
+					0,
+					0
+				],
+				"on_tick": {
+					"event": "confirm",
+					"target": "self"
+				}
+			},
+			"tag:stairs": {},
+			"tag:wood": {}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('better_on_bedrock:upside_down') == false",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							8,
+							14
+						]
+					},
+					"tag:custom_stairs_up": {}
+				}
+			},
+			{
+				"condition": "query.block_property('better_on_bedrock:upside_down') == true",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							-7,
+							8,
+							-7
+						],
+						"size": [
+							14,
+							8,
+							14
+						]
+					},
+					"tag:custom_stairs_down": {}
+				}
+			},
+			{
+				"condition": "query.block_property('better_on_bedrock:shape') != 'straight'",
+				"components": {
+					"tag:custom_stairs_shape": {}
+				}
+			},
+			{
+				"condition": "query.block_property('better_on_bedrock:direction') == 0",
+				"components": {
+					"tag:custom_stairs_north": {}
+				}
+			},
+			{
+				"condition": "query.block_property('better_on_bedrock:direction') == 1",
+				"components": {
+					"tag:custom_stairs_south": {}
+				}
+			},
+			{
+				"condition": "query.block_property('better_on_bedrock:direction') == 2",
+				"components": {
+					"tag:custom_stairs_west": {}
+				}
+			},
+			{
+				"condition": "query.block_property('better_on_bedrock:direction') == 3",
+				"components": {
+					"tag:custom_stairs_east": {}
+				}
+			}
+		],
+		"events": {
+			"direction": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"better_on_bedrock:direction": "query.cardinal_facing_2d-2"
+						}
+					},
+					{
+						"condition": "query.target_x_rotation<=0",
+						"set_block_property": {
+							"better_on_bedrock:upside_down": "true"
+						}
+					}
+				]
+			},
+			"confirm": {
+				"sequence": [
+					{
+						"condition": "query.block_property('better_on_bedrock:upside_down')==false",
+						"trigger": "connect_up"
+					},
+					{
+						"condition": "query.block_property('better_on_bedrock:upside_down')==true",
+						"trigger": "connect_down"
+					}
+				]
+			},
+			"connect_up": {
+				"sequence": [
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_up')&&q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='inner_right'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_up')&&q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='inner_left'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_up')&&q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='inner_left'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_up')&&q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='inner_right'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_up')&&q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='inner_left'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_up')&&q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='inner_right'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_up')&&q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='inner_left'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_up')&&q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='inner_right'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_up')&&q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='outer_right'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_up')&&q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='outer_left'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_up')&&q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='outer_right'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_up')&&q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='outer_left'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_up')&&q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='outer_right'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_up')&&q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='outer_left'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_up')&&q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='outer_right'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_up')&&q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_up')&&!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='outer_left'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					}
+				]
+			},
+			"connect_down": {
+				"sequence": [
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_down')&&q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='inner_right'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_down')&&q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='inner_left'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_down')&&q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='inner_left'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_down')&&q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='inner_right'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_down')&&q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='inner_left'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_down')&&q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='inner_right'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_down')&&q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='inner_left'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_down')&&q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'inner_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='inner_right'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_down')&&q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='outer_right'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_down')&&q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(0,0,-1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='outer_left'&&query.block_property('better_on_bedrock:direction')==0",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_down')&&q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_west')&&query.block_property('better_on_bedrock:shape')=='outer_right'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_down')&&q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(0,0,1,'custom_stairs_east')&&query.block_property('better_on_bedrock:shape')=='outer_left'&&query.block_property('better_on_bedrock:direction')==1",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_down')&&q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='outer_right'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_down')&&q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(-1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='outer_left'&&query.block_property('better_on_bedrock:direction')==2",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_down')&&q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_right'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_south')&&query.block_property('better_on_bedrock:shape')=='outer_right'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_down')&&q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='straight'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'outer_left'"
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_down')&&!q.block_neighbor_has_any_tag(1,0,0,'custom_stairs_north')&&query.block_property('better_on_bedrock:shape')=='outer_left'&&query.block_property('better_on_bedrock:direction')==3",
+						"set_block_property": {
+							"better_on_bedrock:shape": "'straight'"
+						}
+					}
+				]
+			}
+		}
+	}
+}

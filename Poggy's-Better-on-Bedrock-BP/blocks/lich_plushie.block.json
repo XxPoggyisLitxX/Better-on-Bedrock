@@ -1,0 +1,67 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:lich_plushie",
+			"menu_category": {
+				"category": "construction"
+			},
+			"properties": {
+				"wiki:rotation": [2, 3, 4, 5]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('wiki:rotation') == 2",
+				"components": {
+					"minecraft:rotation": [0, 0, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:rotation') == 3",
+				"components": {
+					"minecraft:rotation": [0, 180, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:rotation') == 4",
+				"components": {
+					"minecraft:rotation": [0, 90, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:rotation') == 5",
+				"components": {
+					"minecraft:rotation": [0, 270, 0]
+				}
+			}
+		],
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "wiki:set_rotation"
+			},
+			"minecraft:collision_box": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 30
+			},
+			"minecraft:geometry": "geometry.lich_plushie",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "lich_plushie",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:map_color": "#ffffff"
+		},
+		"events": {
+			"wiki:set_rotation": {
+				"set_block_property": {
+					"wiki:rotation": "(query.cardinal_facing_2d)"
+				}
+			}
+		}
+	}
+}

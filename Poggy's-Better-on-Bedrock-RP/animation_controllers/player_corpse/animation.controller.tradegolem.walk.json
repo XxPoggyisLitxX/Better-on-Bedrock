@@ -1,0 +1,29 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.tadegolem.walk": {
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {
+                            "walking": "q.modified_move_speed > 0.05"
+                        }
+                    ], "blend_transition":0.2
+                },
+
+                "walking":{
+                    "animations": [
+                        "walk"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.modified_move_speed < 0.05"
+                        }
+                    ],
+                    "blend_transition":0.2
+                }
+            }
+        }
+    }
+}

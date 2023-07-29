@@ -1,0 +1,57 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:plains_tree_feature_rule",
+        "places_feature": "better_on_bedrock:plains_tree_random_feature"
+      },
+      "conditions": {
+        "placement_pass": "surface_pass",
+        "minecraft:biome_filter": [
+          {
+            "all_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "custom_vanilla_forrest"
+              }
+            ],
+            "none_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "birch"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "roofed_forest"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "roofed_forest_mutated"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "birch_forest"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "taiga"
+              }
+            ]
+          }
+        ]
+      },
+      "distribution": {
+        "iterations": 0.50,
+        "coordinate_eval_order": "zxy",
+        "x": 0,
+        "y": "q.heightmap(variable.worldx, variable.worldz)",
+        "z": 0
+      }
+    }
+  }

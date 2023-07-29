@@ -1,0 +1,627 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+      "quest_block":{
+          "textures": {
+            "variations": [
+                        { "path": "textures/blocks/bounty_system/quest_block", "weight": 25 },
+                        { "path": "textures/blocks/bounty_system/quest_block_2", "weight": 25},
+                        { "path": "textures/blocks/bounty_system/quest_block_3", "weight": 25}
+                    ]
+                }
+        },
+        "small_log_not_stripped": {
+    "textures": "textures/blocks/small_log_not_stripped.png"
+  },//tall_lavender
+  "tall_lavender": {
+    "textures": "textures/blocks/lavender_2"
+  },
+"spruce_table_side_2": {
+"textures": "textures/blocks/crafting_table/crafting_table_side_spruce"
+},
+"spruce_table_side": {
+"textures": "textures/blocks/crafting_table/crafting_table_front_spruce"
+},
+"crafting_table": {
+"textures": "textures/blocks/crafting_table_top"
+},
+"planks_crafting": {
+"textures": "textures/blocks/planks_spruce"
+},
+
+"acacia_table_side_2": {
+"textures": "textures/blocks/crafting_table/crafting_table_side_acacia"
+},
+"acacia_table_side": {
+"textures": "textures/blocks/crafting_table/crafting_table_front_acacia"
+},
+"acacia_planks": {
+"textures": "textures/blocks/planks_acacia"
+},
+
+"dark_oak_table_side_2": {
+"textures": "textures/blocks/crafting_table/crafting_table_side_dark"
+},
+"dark_oak_table_side": {
+"textures": "textures/blocks/crafting_table/crafting_table_front_dark"
+},
+"dark_oak_planks": {
+"textures": "textures/blocks/planks_big_oak"
+},
+"lich_plushie": {
+    "textures": "textures/blocks/lich_plushie.png"
+  },
+  "willager_plushie": {
+    "textures": "textures/blocks/willager_plushie.png"
+  },
+  "enchanter_plushie": {
+    "textures": "textures/blocks/enchanter_plushie.png"
+  },
+"birch_table_side_2": {
+"textures": "textures/blocks/crafting_table/crafting_table_side_birch"
+},
+"birch_table_side": {
+"textures": "textures/blocks/crafting_table/crafting_table_front_birch"
+},
+"birch_planks": {
+"textures": "textures/blocks/planks_birch"
+},
+
+"jungle_table_side_2": {
+"textures": "textures/blocks/crafting_table/crafting_table_side_jungle"
+},
+"jungle_table_side": {
+"textures": "textures/blocks/crafting_table/crafting_table_front_jungle"
+},
+"jungle_planks": {
+"textures": "textures/blocks/planks_jungle"
+},
+
+"mangrove_table_side_2": {
+"textures": "textures/blocks/crafting_table/crafting_table_side_mangrove"
+},
+"mangrove_table_side": {
+"textures": "textures/blocks/crafting_table/crafting_table_front_mangrove"
+},
+"mangrove_planks": {
+"textures": "textures/blocks/mangrove_planks"
+},
+
+
+
+
+
+
+
+
+  "cabbage_stage_0":{
+    "textures": "textures/blocks/biome_update/cabbages_stage1"
+  },
+  "cabbage_stage_1":{
+    "textures": "textures/blocks/biome_update/cabbages_stage2"
+  },
+  "cabbage_stage_2":{
+    "textures": "textures/blocks/biome_update/cabbages_stage3"
+  },
+  "cabbage_stage_3":{
+    "textures": "textures/blocks/biome_update/cabbages_stage4"
+  },
+  "cabbage_stage_4":{
+    "textures": "textures/blocks/biome_update/cabbages_stage5"
+  },
+
+  "tall_dead_grass": {
+    "textures": "textures/blocks/dead_grass_2"
+  },
+  "blugrod_tall": {
+    "textures": "textures/blocks/bluegrod_2"
+  },
+
+
+
+  "custom_jukebox_side": {
+    "textures": "textures/blocks/jukebox_side"
+  },
+  "custom_jukebox_top": {
+    "textures": "textures/blocks/jukebox_top"
+  },
+  "small_log_stripped": {
+    "textures": "textures/blocks/small_log.png"
+  },
+  "small_log_birch_not_stripped": {
+    "textures": "textures/blocks/small_log_birch_normal.png"
+  },
+  "small_log_birch_stripped": {
+    "textures": "textures/blocks/small_log_birch.png"
+  },
+  "small_log_spruce_not_stripped": {
+    "textures": "textures/blocks/small_log_spruce_normal.png"
+  },
+  "small_log_spruce_stripped": {
+    "textures": "textures/blocks/small_log_spruce.png"
+  },
+  "small_log_dark_oak_not_stripped": {
+    "textures": "textures/blocks/small_log_dark_oak_normal.png"
+  },
+  "small_log_dark_oak_stripped": {
+    "textures": "textures/blocks/small_log_dark_oak.png"
+  },
+  "small_log_acacia_not_stripped": {
+    "textures": "textures/blocks/small_log_acacia_normal.png"
+  },
+  "small_log_acacia_stripped": {
+    "textures": "textures/blocks/small_log_acacia.png"
+  },
+  "andesite_bricks": {
+    "textures": "textures/blocks/andesite_bricks.png"
+  },
+  "chiseled_polished_andisite": {
+    "textures": "textures/blocks/chiseled_polished_andesite.png"
+  },
+  "mossy_andisite_bricks": {
+    "textures": "textures/blocks/mossy_andesite_bricks.png"
+  },
+  "cracked_andisite_bricks": {
+    "textures": "textures/blocks/cracked_andesite_bricks.png"
+  },
+  "mossy_andisite_slab": {
+    "textures": "textures/blocks/mossy_andesite_bricks.png"
+  },
+  "mossy_andisite_stairs": {
+    "textures": "textures/blocks/mossy_andesite_bricks.png"
+  },
+  "mossy_andisite_slab_double": {
+    "textures": "textures/blocks/mossy_andesite_bricks.png"
+  },
+  "andisite_brick_slab":{
+    "textures": "textures/blocks/andesite_bricks.png"
+  },
+  "andisite_brick_stairs": {
+    "textures": "textures/blocks/andesite_bricks.png"
+  },
+  "andisite_brick_slab_double": {
+    "textures": "textures/blocks/andesite_bricks.png"
+  },
+
+
+
+  "diorite_bricks": {
+    "textures": "textures/blocks/diorite_bricks.png"
+  },
+  "chiseled_polished_diorite": {
+    "textures": "textures/blocks/chiseled_polished_diorite.png"
+  },
+  "mossy_diortie_bricks": {
+    "textures": "textures/blocks/mossy_diorite_bricks.png"
+  },
+  "cracked_diorite_bricks": {
+    "textures": "textures/blocks/cracked_diorite_bricks.png"
+  },
+  "mossy_diortie_slab": {
+    "textures": "textures/blocks/mossy_diorite_bricks.png"
+  },
+  "mossy_diorite_stairs": {
+    "textures": "textures/blocks/mossy_diorite_bricks.png"
+  },
+  "mossy_diortie_slab_double": {
+    "textures": "textures/blocks/mossy_diorite_bricks.png"
+  },
+  "diorite_brick_slab":{
+    "textures": "textures/blocks/diorite_bricks.png"
+  },
+  "diorite_brick_stairs": {
+    "textures": "textures/blocks/diorite_bricks.png"
+  },
+  "diorite_brick_slab_double": {
+    "textures": "textures/blocks/diorite_bricks.png"
+  },
+
+
+
+  "granite_bricks": {
+    "textures": "textures/blocks/granite_bricks.png"
+  },
+  "chiseled_granite_bricks": {
+    "textures": "textures/blocks/chiseled_polished_granite.png"
+  },
+  "mossy_granite_bricks": {
+    "textures": "textures/blocks/mossy_granite_bricks.png"
+  },
+  "cracked_granite_bricks": {
+    "textures": "textures/blocks/cracked_granite_bricks.png"
+  },
+  "mossy_granite_slab": {
+    "textures": "textures/blocks/mossy_granite_bricks.png"
+  },
+  "mossy_granite_stairs": {
+    "textures": "textures/blocks/mossy_granite_bricks.png"
+  },
+  "mossy_granite_slab_double": {
+    "textures": "textures/blocks/mossy_granite_bricks.png"
+  },
+  "granite_brick_slab":{
+    "textures": "textures/blocks/granite_bricks.png"
+  },
+  "granite_brick_stairs": {
+    "textures": "textures/blocks/granite_bricks.png"
+  },
+  "granite_brick_slab_double": {
+    "textures": "textures/blocks/granite_bricks.png"
+  },
+
+  "calcite_bricks":{
+    "textures": "textures/blocks/cracked_polished_calcite_bricks.png"
+  },
+  "cracked_calcite_bricks": {
+    "textures": "textures/blocks/polished_calcite_bricks.png"
+  },
+  "polished_calcite": {
+    "textures": "textures/blocks/polished_calcite.png"
+  },
+
+  "tuff_bricks":{
+    "textures": "textures/blocks/cracked_polished_tuff_bricks.png"
+  },
+  "cracked_tuff_bricks": {
+    "textures": "textures/blocks/polished_tuff_bricks.png"
+  },
+  "polished_tuff": {
+    "textures": "textures/blocks/polished_tuff.png"
+  },
+        "aut_birch_leaves": {
+          "textures": "textures/blocks/biome_update/leaves_birch_aut"
+        },
+        "tin_ore": {
+          "textures": "textures/items/ores/atin_ore"
+        },
+        "alluminum_ore": {
+          "textures": "textures/items/ores/alluminum_ore"
+        },
+        "aut_oak_leaves": {
+          "textures": "textures/blocks/biome_update/leaves_oak_aut"
+        },
+        "aut_tiaga_leaves": {
+          "textures": "textures/blocks/biome_update/leaves_spruce_aut"
+        },
+        "soul_star_block": {
+          "textures": "textures/blocks/soul_star_observer"
+        },
+        "soul_star_block_1": {
+          "textures": "textures/blocks/soul_star_observer_1"
+        },
+        "soul_star_block_2": {
+          "textures": "textures/blocks/soul_star_observer_2"
+        },
+        "soul_star_block_3": {
+          "textures": "textures/blocks/soul_star_observer_3"
+        },
+        "soul_star_block_4": {
+          "textures": "textures/blocks/soul_star_observer_4"
+        },
+        "candle_holder": {
+          "textures": "textures/blocks/hanging_pots/candle_holder.png"
+        },
+        "deco_pot": {
+          "textures": "textures/blocks/hanging_pots/deco_pot.png"
+        },
+        "rose_pot": {
+          "textures": "textures/blocks/hanging_pots/rose_pot.png"
+        },
+        "lilac_pot": {
+          "textures": "textures/blocks/hanging_pots/lilac_pot.png"
+        },
+        "tulip_pot": {
+          "textures": "textures/blocks/hanging_pots/white_tulip_pot.png"
+        },
+        "moss_pot": {
+          "textures": "textures/blocks/hanging_pots/moss_pot.png"
+        },
+        "cornflower_pot": {
+          "textures": "textures/blocks/hanging_pots/cornflower_pot.png"
+        },
+        "glow_pot": {
+          "textures": "textures/blocks/hanging_pots/glow_pot.png"
+        },
+        "oxeye_pot": {
+          "textures": "textures/blocks/hanging_pots/oxeye_pot.png"
+        },
+        "dripstone_stairs": {
+          "textures": "textures/blocks/hanging_pots/polished_dripstone"
+        },
+        "dripstone_mossy": {
+          "textures": "textures/blocks/hanging_pots/mossy_polished_dripstone_bricks"
+        },
+        "anenome": {
+          "textures": "textures/blocks/biome_update/anenome.png"
+        },
+        "lilax_heads": {
+          "textures": "textures/blocks/biome_update/lilax_heads.png"
+        },
+        "hydrangea": {
+          "textures": "textures/blocks/biome_update/hydrangea.png"
+        },
+        "iris": {
+          "textures": "textures/blocks/biome_update/iris.png"
+        },
+        "wildflower": {
+          "textures": "textures/blocks/wildflower.png"
+        },
+        "tiny_sprout": {
+          "textures": "textures/blocks/tiny_sprout.png"
+        },
+        "taller_grass": {
+          "textures": "textures/blocks/taller_grass.png"
+        },
+        "pink_lavender": {
+          "textures": "textures/blocks/pink_lavender.png"
+        },
+        "glow_flower": {
+          "textures": "textures/blocks/glow_flower.png"
+        },
+        "big_sprout": {
+          "textures": "textures/blocks/big_sprout.png"
+        },
+        "wild_flower": {
+          "textures": "textures/blocks/wild_flower.png"
+        },
+        "tall_lavender_top": {
+          "textures": "textures/blocks/tall_lavender_top.png"
+        },
+        "tall_lavender_bottom": {
+          "textures": "textures/blocks/tall_lavender_bottom.png"
+        },
+        "dead_tall_grass_top": {
+          "textures": "textures/blocks/dead_tall_grass_top.png"
+        },
+        "dead_tall_grass": {
+          "textures": "textures/blocks/dead_tall_grass.png"
+        },
+    
+        "bounty_board_used":{
+          "textures": "textures/blocks/bounty_system/bounty_board_used"
+        },
+        "healing_campfire": {
+          "textures":"textures/blocks/misc_blocks/healing_campfire"
+        },
+        "oak_sapling":{
+          "textures": "textures/blocks/sapling_oak"
+        },//birch_sapling
+        "birch_sapling":{
+          "textures": "textures/blocks/sapling_birch"
+        },
+        "willager_hat_trophy":{
+          "textures": "textures/entity/willager"
+        },
+        "enchanted_book_trophy":{
+          "textures": "textures/blocks/trophies/enchanted_book_trophy"
+        },
+        "bounty_board_default":{
+          "textures": "textures/blocks/bounty_system/bounty_board_default"
+        },
+        "silver_ore":{
+          "textures": "textures/blocks/silver_ore"
+        },
+        "tall_end_bloom": {
+          "textures": "textures/blocks/tall_end_bloom.png"
+        },
+        "end_bloom": {
+          "textures": "textures/blocks/end_bloom.png"
+        },
+        "big_sprout_top": {
+          "textures": "textures/blocks/big_sprout_top.png"
+        },
+        "big_sprout_mid": {
+          "textures": "textures/blocks/big_sprout_mid.png"
+        },
+        "big_sprout_base": {
+          "textures": "textures/blocks/big_sprout_base.png"
+        },
+        "end_sprout": {
+          "textures": "textures/blocks/end_sprout.png"
+        },
+        "end_shroom": {
+          "textures": "textures/blocks/end_shroom.png"
+        },
+        "end_nylium_side": {
+          "textures": "textures/blocks/end_nylium_side.png"
+        },
+        "end_nylium_top": {
+          "textures": "textures/blocks/end_nylium_top.png"
+        },
+        "crystal_purple": {
+          "textures": "textures/blocks/pruple_crystal.png"
+        },
+        "crystal_blue": {
+          "textures": "textures/blocks/blue_crystal.png"
+        },
+        "miner_bench":{
+          "textures": "textures/blocks/forge_table/enchant_table"
+        },
+        "miner_bench_up":{
+          "textures": "textures/blocks/forge_table/miner_bench_top"
+        },
+        "miner_bench_bottom":{
+          "textures": "textures/blocks/forge_table/miner_bench_bottom"
+        },
+        "quest_block_top":{
+          "textures": "textures/blocks/bounty_system/quest_block_top"
+        },
+        "forge_table_side":{
+          "textures": "textures/blocks/forge_table/forge_table_side"
+        },
+        "fallen_leave":{
+          "textures": "textures/blocks/fallen_leave/flower"
+        },
+        "forge_table_top":{
+          "textures": "textures/blocks/forge_table/forge_table_top"
+        },
+        "grape_stage_3":{
+          "textures": "textures/blocks/biome_update/grape_stage_3"
+        },
+        "grape_stage_2":{
+          "textures": "textures/blocks/biome_update/grape_stage_2"
+        },
+        "grape_stage_1":{
+          "textures": "textures/blocks/biome_update/grape_stage_1"
+        },
+        "grape_stage_0":{
+          "textures": "textures/blocks/biome_update/grape_stage_0"
+        },
+
+        "blueberry_block_stage_3":{
+          "textures": "textures/blocks/biome_update/blueberry_stage_3"
+        },
+        "blueberry_block_stage_2":{
+          "textures": "textures/blocks/biome_update/blueberry_stage_2"
+        },
+        "blueberry_block_stage_1":{
+          "textures": "textures/blocks/biome_update/blueberry_stage_1"
+        },
+        "blueberry_block_stage_0":{
+          "textures": "textures/blocks/biome_update/blueberry_stage_0"
+        },
+        "healthy_carrot_stage_0":{
+          "textures": "textures/blocks/biome_update/healthy_carrot_stage_0"
+        },
+        "healthy_carrot_stage_1":{
+          "textures": "textures/blocks/biome_update/healthy_carrot_stage_1"
+        },
+        "healthy_carrot_stage_2":{
+          "textures": "textures/blocks/biome_update/healthy_carrot_stage_2"
+        },
+        "healthy_carrot_stage_3":{
+          "textures": "textures/blocks/biome_update/healthy_carrot_stage_3"
+        },
+
+        
+        "wild_carrot":{
+          "textures": "textures/blocks/biome_update/wild_carrot"
+        },
+        "waystone":{
+          "textures": "textures/blocks/waystone/waytone_texture"
+        },
+        "nether_waystone":{
+          "textures": "textures/blocks/waystone/Waystone_texture.png"
+        },
+        "bottom_plate_top":{
+          "textures": "textures/blocks/waystone/waystone_texture"
+        },
+        "gold_bar":{
+          "textures": "textures/blocks/waystone/gold_bar"
+        },
+        "top_plate":{
+          "textures": "textures/blocks/waystone/top_plate"
+        },
+        "aystone_rod":{
+          "textures": "textures/blocks/waystone/aystone_rod"
+        },
+        "aystone_rod_top":{
+          "textures": "textures/blocks/waystone/aystone_rod_top"
+        },
+  
+        "2d_bar":{
+          "textures": "textures/blocks/waystone/2d_bar"
+        },
+        "2d_bar_top":{
+          "textures": "textures/blocks/waystone/2d_bar_top"
+        },
+        "2d_bar_bottom":{
+          "textures": "textures/blocks/waystone/2d_bar_bottom"
+        },
+        "gold_plate":{
+          "textures": "textures/blocks/waystone/gold_plate"
+        },
+        "orb":{
+          "textures": "textures/blocks/waystone/orb"
+        },
+        "better_on_bedrock_eggplant_crop_stage_0":{
+          "textures": "textures/blocks/biome_update/Eggplant_Crop1"
+        },
+        "better_on_bedrock_eggplant_crop_stage_1":{
+          "textures": "textures/blocks/biome_update/Eggplant_Crop2"
+        },
+        "better_on_bedrock_eggplant_crop_stage_2":{
+          "textures": "textures/blocks/biome_update/Eggplant_Crop3"
+        },
+        //dummy_chest_top
+        "dummy_chest_top":{
+          "textures": "textures/blocks/dummy_chest/chest_top"
+        },
+        "dummy_chest_front":{
+          "textures": "textures/blocks/dummy_chest/chest_front"
+        },
+        "dummy_chest_side":{
+          "textures": "textures/blocks/dummy_chest/chest_side"
+        },
+        "stardust_ore":{
+          "textures": "textures/blocks/cave_additions/stardust_ore"
+        },
+        "orange_leaves":{
+          "textures": "textures/blocks/biome_update/orange_leaves"
+        },
+        "peach_leaves":{
+          "textures": "textures/blocks/biome_update/peach_leaves.tga"
+        },
+        "coconut":{
+          "textures": "textures/blocks/biome_update/coconut"
+        },
+        "better_on_bedrock_tomato_crop_stage_0":{
+          "textures": "textures/blocks/biome_update/tomato_stage_1"
+        },
+        "better_on_bedrock_tomato_crop_stage_1":{
+          "textures": "textures/blocks/biome_update/tomato_stage_2"
+        },
+        "better_on_bedrock_tomato_crop_stage_2":{
+          "textures": "textures/blocks/biome_update/tomato_stage_3"
+        },
+        "better_on_bedrock_barley_crop_stage_0":{
+          "textures": "textures/blocks/biome_update/barley_stage_0"
+        },
+        "better_on_bedrock_barley_crop_stage_1":{
+          "textures": "textures/blocks/biome_update/barley_stage_1"
+        },
+        "better_on_bedrock_barley_crop_stage_2":{
+          "textures": "textures/blocks/biome_update/barley_stage_2"
+        },
+        "better_on_bedrock_barley_crop_stage_3":{
+          "textures": "textures/blocks/biome_update/barley_stage_3"
+        },
+        "better_on_bedrock_onion_crop_stage_1":{
+          "textures": "textures/blocks/biome_update/onion_stage_1"
+        },
+        "better_on_bedrock_onion_crop_stage_2":{
+          "textures": "textures/blocks/biome_update/onion_stage_2"
+        },
+        "better_on_bedrock_onion_crop_stage_3":{
+          "textures": "textures/blocks/biome_update/onion_stage_3"
+        },
+        "lush_grass_top": {
+          "textures": "textures/blocks/biome_update/lush_grass_top"
+        },
+        "lush_grass_bottom": {
+          "textures": "textures/blocks/biome_update/lush_grass_bottom"
+        },
+        "bluegrod_bottom": {
+          "textures": "textures/blocks/biome_update/bluegrod_bottom"
+        },
+        "bluegrod_top": {
+          "textures": "textures/blocks/biome_update/bluegrod_top"
+        },
+        "desert_grass": {
+          "textures": "textures/blocks/biome_update/desert_grass"
+        },
+        "better_on_bedrock_onion_crop_stage_4":{
+          "textures": "textures/blocks/biome_update/onion_stage_4"
+        },
+        "coconut_stem":{
+          "textures": "textures/blocks/biome_update/coconut_stem"
+        },
+        "deepslate_stardust_ore":{
+          "textures": "textures/blocks/cave_additions/deepslate_stardust_ore"
+        }
+        }//deepslate_stardust_ore
+        
+}

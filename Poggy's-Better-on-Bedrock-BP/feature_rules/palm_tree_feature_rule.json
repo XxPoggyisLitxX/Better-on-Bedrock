@@ -1,0 +1,62 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:palm_tree_feature_rule",
+        "places_feature": "better_on_bedrock:palm_tree_random_feature"
+      },
+      "conditions": {
+        "placement_pass": "surface_pass",
+        "minecraft:biome_filter": [
+          {
+            "all_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "beach"
+              }
+            ],
+            "none_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "birch"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "birch_forest"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "taiga"
+              }
+            ]
+          }
+        ]
+      },
+      "distribution": {
+        "iterations": 0.6,
+        "scatter_chance": {
+          "numerator": 1,
+				"denominator": 50
+        },
+        "x": {
+          "distribution": "uniform",
+          "extent": [
+            0,
+            15
+          ]
+        },
+        "y": "query.heightmap(v.worldx, v.worldz)",
+        "z": {
+          "distribution": "uniform",
+          "extent": [
+            0,
+            15
+          ]
+        }
+      }
+    }
+  }

@@ -1,0 +1,122 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:thrown_iron_spear",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier":"minecraft:snowball"
+		},
+        "component_groups": {
+            "better_on_bedrock:give": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                    "max_dropped_ticks": 10,
+                    "max_optimized_distance": 100,
+                    "use_motion_prediction_hints": true
+                }
+            },
+            "minecraft:entity_sensor": {
+                "event": "better_on_bedrock:give",
+                "event_filters": {
+                    "all_of": [
+                        {
+                            "subject": "other",
+                            "test": "is_family",
+                            "value": "player"
+                        },
+                        {
+                            "subject": "self",
+                            "test": "on_ground",
+                            "value": true
+                        }
+                    ]
+                },
+                "minimum_count": 1,
+                "relative_range": false,
+                "sensor_range": 0.7
+            },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "cause": "lava",
+                        "damage_per_tick": 4,
+                        "filters": {
+                            "operator": "==",
+                            "subject": "self",
+                            "test": "in_lava",
+                            "value": true
+                        }
+                    }
+                ]
+            },
+            "minecraft:physics": {},
+            "minecraft:projectile": {
+                "anchor": 1,
+                "gravity": 0.05,
+                "hit_sound": "bow.hit",
+                "offset": [
+                    0,
+                    -0.1,
+                    0
+                ],
+                "on_hit": {
+                    "definition_event": {
+                        "event_trigger": {
+                            "event": "example:foo",
+                            "target": "self"
+                        }
+                    },
+                    "impact_damage": {
+                        "damage": 7,
+                        "destroy_on_hit": false,
+                        "knockback": true,
+                        "power_multiplier": 0.97,
+                        "semi_random_diff_damage": false
+                    },
+                    "stick_in_ground": {
+                        "shake_time": 0.35
+                    }
+                },
+                "power": 3,
+                "should_bounce": true,
+                "stop_on_hurt": true
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            }
+        },
+        "events": {
+            "better_on_bedrock:give": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "better_on_bedrock:give"
+                            ]
+                        }
+                    },
+                    {
+                        "randomize": [
+                            {
+                                "run_command": {
+                                    "command": [
+                                        "playsound random.pop @p",
+                                        "tag @p add iron_spear"
+                                    ]
+                                },
+                                "weight": 90
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

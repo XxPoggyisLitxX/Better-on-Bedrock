@@ -1,0 +1,55 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:adventure_hat",
+			"category": "equipment"
+		},
+		"components": {
+			// helmet category
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.helmet"
+			},
+			"minecraft:icon": {
+				"texture": "adventure_hat"
+			},
+			"minecraft:display_name": {
+				"value": "item.better_on_bedrock:adventure_hat"
+			},
+			"minecraft:max_stack_size": 1,
+			// Enchantable Feet
+			"minecraft:enchantable": {
+				"value": 10,
+				"slot": "armor_head"
+			},
+			"minecraft:armor": {
+				"protection": 2
+			},
+			"minecraft:knockback_resistance": {
+				"protection": 0
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "equip",
+					"target": "self"
+				}
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": ["minecraft:leather"],
+						"repair_amount": 50
+					}
+				]
+			},
+			// Feet slot
+			"minecraft:wearable": {
+				"dispensable": true,
+				"slot": "slot.armor.head"
+			},
+			"minecraft:durability": {
+				"max_durability": 100
+			}
+		}
+	}
+}

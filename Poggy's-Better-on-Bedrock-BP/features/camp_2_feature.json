@@ -1,0 +1,14 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+      "description": {
+        "identifier": "pog:camp_2_feature"
+      },
+      "structure_name": "mystructure:campsite_2",
+      "adjustment_radius": 15,
+      "facing_direction": "random",
+      "constraints": {
+        "grounded": {}
+      }
+    }
+  }

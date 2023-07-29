@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.butterfly.default": {
+			"loop": true,
+			"bones": {
+				"bone2": {
+					"rotation": [0, 0, "math.cos(q.anim_time * 1200) * 50"]
+				},
+				"bone3": {
+					"rotation": [0, 0, "- math.cos(q.anim_time * 1200) * 50"]
+				}
+			}
+		}
+	}
+}

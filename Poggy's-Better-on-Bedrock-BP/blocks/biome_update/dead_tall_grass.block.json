@@ -1,0 +1,78 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:custom_tall_plant",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.flower"
+			}
+		},
+				"components": {
+					"minecraft:loot": "loot_tables/blocks/dead_tall_grass.json",
+			"minecraft:collision_box": false,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0
+			},
+			
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0
+			},
+			"minecraft:on_placed": {
+				"event": "poggy:place_top_block",
+				"target": "self"
+			},
+			"minecraft:queued_ticking": {
+				"looping": true,
+				"interval_range": [1, 2],
+				"on_tick": {
+					"event": "air",
+					"target": "block",
+					"condition": "!q.block_neighbor_has_any_tag(0,1,0, 'custom_tall_plant_top')"
+				}
+			},
+			"minecraft:selection_box":{
+				"origin": [
+					-3,
+					0,
+					-3
+				],
+				"size": [
+					6,
+					16,
+					6
+				]
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": ["up"],
+						"block_filter": ["grass", "dirt", "sand"]
+					}
+				]
+			},
+			"minecraft:geometry": "geometry.dead_tall_grass_top",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "dead_tall_grass",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:map_color": "#32a852"
+		},
+		"events": {
+			"air": {
+				"condition": "!q.block_neighbor_has_any_tag(0,1,0, 'glowyflowy')",
+				"run_command": {
+					"command": ["execute unless block ~ ~1 ~ better_on_bedrock:custom_tall_plant_top run setblock ~ ~ ~ air 0 destroy"]
+				  }
+			}, ///execute if block ~ ~1 ~ air run say hello
+			"poggy:place_top_block":{
+				"run_command": {
+					"command": ["execute if block ~ ~1 ~ air run setblock ~ ~1 ~ better_on_bedrock:custom_tall_plant_top"]
+				  }
+			}
+		}
+	}
+}

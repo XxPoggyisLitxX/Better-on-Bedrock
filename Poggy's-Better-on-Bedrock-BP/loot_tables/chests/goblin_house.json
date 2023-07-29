@@ -1,0 +1,70 @@
+{
+  "pools": [
+    {
+      "rolls": 6,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "item",
+          "quality": 5,
+          "name": "minecraft:emerald"
+        },
+        {
+          "type": "item",
+          "quality": 0,
+          "name": "minecraft:apple"
+        },
+        {
+          "type": "item",
+          "quality": 0,
+          "name": "minecraft:wheat_seeds",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "better_on_bedrock:unactivated_default_rune"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_ingot",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 2,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:beef"
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "name": "better_on_bedrock:tomato_seed"
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "quality": 0,
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

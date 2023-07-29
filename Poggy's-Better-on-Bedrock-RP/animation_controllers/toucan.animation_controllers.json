@@ -1,0 +1,23 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.toucan": {
+			"states": {
+				"default": {
+					"animations": ["default"],
+					"transitions": [
+						{"fly": "!q.is_on_ground"}
+					],
+					"blend_transition": 0.2
+				},
+				"fly": {
+					"animations": ["fly"],
+					"transitions": [
+						{"default": "q.is_on_ground"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

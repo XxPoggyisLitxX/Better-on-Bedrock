@@ -1,0 +1,48 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:lich",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/mc_game_mobs/hostile/wretched_wraith"
+			},
+			"animations": {
+				"basic": "controller.animation.lich.all",
+				"default": "animation.lich.default",
+				"attack": "animation.lich.attack_flame",
+				"tp_out": "animation.lich.invis_mode",
+				"fireball": "animation.lich.prepare_fireball"
+			},
+			"scripts": {
+				"animate": [
+					"basic"
+				]
+			},
+			"particle_effects": {
+				"teleportout": "better_on_bedrock:lich_invis_poof",
+				"teleportin": "better_on_bedrock:lich_poof_back",
+				"lich_invis_poof": "better_on_bedrock:lich_invis_poof",
+				"lich_orb_pulse": "better_on_bedrock:lich_orb_pulse",
+				"lich_poof_back": "better_on_bedrock:lich_poof_back"
+			},
+			"sound_effects": {
+				"puke": "lich.puke",
+				"teleportin": "lich.teleportin",
+				"teleportout": "lich.teleportout",
+				"attack_prepare": "lich.attack_prepare",
+				"attack": "lich.attack"
+			},
+			"geometry": {
+				"default": "geometry.lich"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#12b2df",
+				"overlay_color": "#612c59"
+			}
+		}
+	}
+}

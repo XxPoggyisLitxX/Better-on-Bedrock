@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.lone_wizard.general": {
+			"loop": true,
+			"bones": {
+				"arms": {
+					"rotation": [0, 0, 0],
+					"position": [0, -1, -1]
+				}
+			}
+		},
+		"animation.lone_wizard.move": {
+			"loop": true,
+			"anim_time_update": "query.modified_distance_moved",
+			"bones": {
+				"leg0": {
+					"rotation": ["(math.cos(query.anim_time * 38.17) * 40.0) - this", "-this", 0]
+				},
+				"leg1": {
+					"rotation": ["(math.cos(query.anim_time * 38.17 + 180) * 40.0) - this", "-this", 0]
+				}
+			}
+		}
+	}
+}

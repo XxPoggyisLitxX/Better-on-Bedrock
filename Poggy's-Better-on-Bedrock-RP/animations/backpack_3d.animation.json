@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.backpack.hold": {
+			"loop": true,
+			"bones": {
+				"rotator": {
+					"rotation": [0, 0, "query.anim_time * 850"]
+				},
+				"inner_rotor": {
+					"rotation": [0, 0, "query.anim_time * -950"]
+				}
+			}
+		},
+		"animation.backpack.first_person.hold": {
+			"loop": true,
+			"bones": {
+				"backpack": {
+					"rotation": [87.5, 52.5, -7.5],
+					"position": [0, 7, 0]
+				}
+			}
+		}
+	}
+}

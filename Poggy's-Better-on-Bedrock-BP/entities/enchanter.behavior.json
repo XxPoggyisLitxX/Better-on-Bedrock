@@ -1,0 +1,636 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:enchanter",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"basic": "controller.animation.enchanter.sounds"
+			},
+			"scripts": {
+				"animate": [
+					"basic"
+				]
+			}
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:movement": {
+				"value": 0.25
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:navigation.walk": {
+				"avoid_water": true
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"entity_types": [
+				  {
+					"filters": {
+					  "test": "is_family",
+					  "subject": "other",
+					  "value": "player"
+					},
+					"max_dist": 48
+				  }
+				],
+				"must_see": true
+			  },
+
+			  "minecraft:behavior.random_stroll": {
+				"priority": 5,
+				"speed_multiplier": 1.0
+			  },
+			  "minecraft:behavior.random_look_around": {
+				"priority": 6
+			  },
+			  "minecraft:type_family": {
+				"family": [ "enchanter", "monster", "mob" ]
+			  },
+			  "minecraft:experience_reward": {
+				"on_death": 1500
+			  },
+			  "minecraft:loot": {
+				"table": "loot_tables/entities/enchanter.json"
+			  },
+			  "minecraft:collision_box": {
+				"width": 0.5,
+				"height": 1.8
+			  },
+			  "minecraft:attack": {
+				"damage": 6
+			  },
+			  
+			  "minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": true,
+						"damage_multiplier": 1,
+						"on_damage": {
+							"event": "knockback",
+							"target": "self"
+						}
+					}
+				]
+			  },
+			  "minecraft:health": {
+				"value": 369,
+				"max": 369
+			  },
+
+			  "minecraft:variant": {
+				"value": 0
+			},
+			"minecraft:boss": {
+				"hud_range": 55,
+				"name": "§uEnchanter",
+				"should_darken_sky": true
+			},
+			  "minecraft:follow_range": {
+				"value": 48,
+				"max": 48
+			  },
+			  "minecraft:fire_immune": true,
+			  "minecraft:nameable": {
+		
+			  },
+			  
+			  "minecraft:behavior.float": {
+				"priority": 0
+			  },
+			  "minecraft:behavior.hurt_by_target": {
+				"priority": 1
+			  }
+			},
+			"component_groups": {
+				"knockback": {
+					"minecraft:mark_variant": {
+						"value": 1
+					},
+					"minecraft:behavior.knockback_roar": {
+						"attack_time": 0.1,
+						"cooldown_time": 0,
+						"duration": 1,
+						"knockback_damage": 12,
+						"knockback_filters": {
+							"test": "is_family",
+							"subject": "other",
+							"operator": "!=",
+							"value": "enchanter"
+						},
+						"knockback_horizontal_strength": 4,
+						"knockback_range": 4,
+						"knockback_vertical_strength": 4,
+						"track_target": false,
+						"knockback_strength": 4
+					},
+					"minecraft:timer": {
+						"time": 1,
+						"looping": true,
+						"time_down_event": {
+							"event": "end_roar",
+							"target": "self"
+						}
+					}
+				},
+				"expand_attack": {
+					"minecraft:mark_variant": {
+						"value": 0
+					},
+					"minecraft:damage_sensor": {
+						"triggers": [
+							{
+								"cause": "all",
+								"deals_damage": true,
+								"damage_multiplier": 1,
+								"on_damage": {
+									"event": "knockback",
+									"target": "self"
+								}
+							}
+						]
+					  },
+					"minecraft:behavior.summon_entity": {
+						"priority": 2,
+						"summon_choices": [
+							{
+								"min_activation_range": 0,
+								"max_activation_range": 24,
+								"cooldown_time": 32,
+								"weight": 8,
+								"cast_duration": 5,
+								"particle_color": "#FF664D59",
+								"start_sound_event": "cast.spell",
+								"sequence": [
+									{
+										"shape": "circle",
+										"target": "self",
+										"base_delay": 0.1,
+										"num_entities_spawned": 4,
+										"entity_type": "minecraft:evocation_fang",
+										"summon_cap": 4,
+										"summon_cap_radius": 4,
+										"size": 1,
+										"sound_event": "prepare.summon"
+									},
+									{
+										"shape": "circle",
+										"target": "self",
+										"base_delay": 0.1,
+										"num_entities_spawned": 8,
+										"entity_type": "minecraft:evocation_fang",
+										"summon_cap": 8,
+										"summon_cap_radius": 8,
+										"size": 2,
+										"sound_event": "prepare.summon"
+									},
+									{
+										"shape": "circle",
+										"target": "self",
+										"base_delay": 0.1,
+										"num_entities_spawned": 13,
+										"entity_type": "minecraft:evocation_fang",
+										"summon_cap": 13,
+										"summon_cap_radius": 13,
+										"size": 3,
+										"sound_event": "prepare.summon"
+									},
+									{
+										"shape": "circle",
+										"target": "self",
+										"base_delay": 0.1,
+										"num_entities_spawned": 16,
+										"entity_type": "minecraft:evocation_fang",
+										"summon_cap": 16,
+										"summon_cap_radius": 16,
+										"size": 4,
+										"sound_event": "prepare.summon"
+									},
+									{
+										"shape": "circle",
+										"target": "self",
+										"base_delay": 0.1,
+										"num_entities_spawned": 16,
+										"entity_type": "minecraft:evocation_fang",
+										"summon_cap": 16,
+										"summon_cap_radius": 16,
+										"size": 5,
+										"sound_event": "prepare.summon"
+									},
+									{
+										"shape": "circle",
+										"target": "self",
+										"base_delay": 0.1,
+										"num_entities_spawned": 16,
+										"entity_type": "minecraft:evocation_fang",
+										"summon_cap": 16,
+										"summon_cap_radius": 16,
+										"size": 6,
+										"sound_event": "prepare.summon"
+									},
+									{
+										"shape": "circle",
+										"target": "self",
+										"base_delay": 0.1,
+										"num_entities_spawned": 16,
+										"entity_type": "minecraft:evocation_fang",
+										"summon_cap": 16,
+										"summon_cap_radius": 16,
+										"size": 7,
+										"sound_event": "prepare.summon"
+									}
+								]
+							}
+						]
+					},
+					"minecraft:variant": {
+						"value": 0
+					},
+					"minecraft:timer": {
+						"time": 3,
+						"looping": true,
+						"time_down_event": {
+							"event": "noVariant",
+							"target": "self"
+						}
+					}
+				},
+				"default_attack": {
+					"minecraft:mark_variant": {
+						"value": 0
+					},
+					"minecraft:damage_sensor": {
+						"triggers": [
+							{
+								"cause": "all",
+								"deals_damage": true,
+								"damage_multiplier": 1,
+								"on_damage": {
+									"event": "knockback",
+									"target": "self"
+								}
+							}
+						]
+					  },
+					"minecraft:behavior.summon_entity": {
+				"priority": 2,
+				"summon_choices": [
+					{
+						"min_activation_range": 0,
+						"max_activation_range": 24,
+						"cooldown_time": 32,
+						"weight": 8,
+						"cast_duration": 5,
+						"particle_color": "#FF664D59",
+						"start_sound_event": "cast.spell",
+						"sequence": [
+							{
+								"shape": "circle",
+								"target": "self",
+								"base_delay": 1,
+								"num_entities_spawned": 4,
+								"entity_type": "better_on_bedrock:enchanted_book",
+								"summon_cap": 4,
+								"summon_cap_radius": 4,
+								"size": 3,
+								"sound_event": "prepare.summon"
+							}
+						]
+					}
+				]
+			},
+			"minecraft:variant": {
+				"value": 0
+			},
+			"minecraft:timer": {
+				"time": 1,
+				"looping": true,
+				"time_down_event": {
+					"event": "noVariant",
+					"target": "self"
+				}
+			}
+			
+				},
+				"projectile_attack": {
+					"minecraft:variant": {
+				"value": 1
+			},
+			"minecraft:movement": {
+				"value": 0.00
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": true,
+						"damage_multiplier": 1,
+						"on_damage": {
+							"event": "knockback",
+							"target": "self"
+						}
+					}
+				]
+			  },
+					"minecraft:timer": {
+						"time": 4,
+						"looping": true,
+						"time_down_event": {
+							"event": "lightning",
+							"target": "self"
+						}
+					}
+				},
+				"prepare_summon": {
+					"minecraft:variant": {
+				"value": 1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": true,
+						"damage_multiplier": 1,
+						"on_damage": {
+							"event": "knockback",
+							"target": "self"
+						}
+					}
+				]
+			  },
+			"minecraft:movement": {
+				"value": 0.00
+			},
+			"minecraft:mark_variant": {
+				"value": 1
+			},
+					"minecraft:timer": {
+						"time": 4,
+						"looping": true,
+						"time_down_event": {
+							"event": "summon_books",
+							"target": "self"
+						}
+					}
+				},
+				"noVariant": {
+					
+					"minecraft:timer": {
+						"time": 3,
+						"looping": true,
+						"time_down_event": {
+							"event": "switch_mode",
+							"target": "self"
+						}
+					},
+					"minecraft:behavior.move_to_block": {
+						"start_chance": 1,
+						"search_range": 32,
+						"goal_radius": 3,
+						"stay_duration": 4,
+						"target_blocks": [
+							"minecraft:cobblestone"
+						]
+					  },
+					  "minecraft:damage_sensor": {
+						"triggers": [
+							{
+								"cause": "all",
+								"deals_damage": false,
+								"on_damage_sound_event":"break",
+								"on_damage": {
+									"event": "knockback",
+									"target": "self"
+								}
+							}
+						]
+					  },
+					"minecraft:movement": {
+						"value": 0.25
+					},
+					"minecraft:mark_variant": {
+						"value": 1
+					},
+					"minecraft:variant": {
+						"value": 0
+					}
+				}
+			},
+			"events": {
+				"noVariant": {
+					"add": {
+						"component_groups": [
+							"noVariant"
+						]
+					},
+					"remove": {
+						"component_groups": [
+							"knockback",
+							"expand_attack",
+							"default_attack",
+							"projectile_attack",
+							"prepare_summon"
+						]
+					}
+				},
+				"end_roar": {
+					"remove": {
+						"component_groups": [
+							"knockback",
+							"expand_attack",
+							"default_attack",
+							"projectile_attack",
+							"prepare_summon",
+							"noVariant"
+						]
+					},
+					"randomize": [
+						{
+							"add": {
+								"component_groups": [
+									"projectile_attack"
+								]
+							},
+							"remove": {
+								"component_groups": [
+									"default_attack",
+									"knockback",
+									"prepare_summon",
+									"expand_attack",
+									"noVariant"
+								]
+							},
+							"weight": 5
+						},
+						{
+							"add": {
+								"component_groups": [
+									"prepare_summon"
+								]
+							},
+							"remove": {
+								"component_groups": [
+									"projectile_attack",
+									"default_attack",
+									"knockback",
+									"expand_attack",
+									"noVariant"
+								]
+							},
+							"weight": 3
+						},
+						{
+							"add": {
+								"component_groups": [
+									"expand_attack"
+								]
+							},
+							"remove": {
+								"component_groups": [
+									"projectile_attack",
+									"default_attack",
+									"knockback",
+									"default_attack",
+									"noVariant"
+								]
+							},
+							"weight": 9
+						}
+					]
+				},
+				"knockback": {
+					"add": {
+						"component_groups": [
+							"knockback"
+						]
+					}
+				},
+				"expand_atatck": {
+					"add": {
+						"component_groups": [
+							"expand_attack"
+						]
+					}
+				},
+				"summon_books": {
+					"add": {
+						"component_groups": [
+							"default_attack"
+						]
+					},
+					"remove": {
+						"component_groups": [
+							"projectile_attack",
+							"prepare_summon",
+							"noVariant"
+						]
+					}
+				},
+				"lightning":{
+					"remove": {
+						"component_groups": [
+							"projectile_attack",
+							"default_attack",
+							"prepare_summon"
+						]
+					},
+					"add": {
+						"component_groups": [
+							"noVariant"
+						]
+					},
+					"run_command": {
+						"command": ["function enchanter_lighting"]
+					}
+				},
+				"switch_mode":{
+					"randomize": [
+						{
+							"add": {
+								"component_groups": [
+									"projectile_attack"
+								]
+							},
+							"remove": {
+								"component_groups": [
+									"default_attack",
+									"knockback",
+									"prepare_summon",
+									"expand_attack",
+									"noVariant"
+								]
+							},
+							"weight": 5
+						},
+						{
+							"add": {
+								"component_groups": [
+									"prepare_summon"
+								]
+							},
+							"remove": {
+								"component_groups": [
+									"projectile_attack",
+									"default_attack",
+									"knockback",
+									"expand_attack",
+									"noVariant"
+								]
+							},
+							"weight": 3
+						},
+						{
+							"add": {
+								"component_groups": [
+									"expand_attack"
+								]
+							},
+							"remove": {
+								"component_groups": [
+									"projectile_attack",
+									"default_attack",
+									"knockback",
+									"default_attack",
+									"noVariant"
+								]
+							},
+							"weight": 9
+						}
+					]
+				},
+				"minecraft:entity_spawned": {
+					"randomize": [
+						{
+							"add": {
+								"component_groups": [
+									"prepare_summon"
+								]
+							},
+							"weight": 5
+						},
+						{
+							"add": {
+								"component_groups": [
+									"projectile_attack"
+								]
+							},
+							"weight": 5
+						}
+					]
+				}
+			}
+	}
+}

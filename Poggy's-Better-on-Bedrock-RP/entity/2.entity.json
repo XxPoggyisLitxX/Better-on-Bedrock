@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:2",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/2"
+			},
+			"animations": {
+				"basic": "animation.geomancer_bomb.spawn"
+			},
+			"scripts": {
+				"animate": [
+					"basic"
+				]
+			},
+			"geometry": {
+				"default": "geometry.2"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#ab4c0b",
+				"overlay_color": "#a34a1d"
+			}
+		}
+	}
+}

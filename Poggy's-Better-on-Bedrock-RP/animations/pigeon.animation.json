@@ -1,0 +1,54 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pigeon.fly": {
+			"animation_length": 4.41667,
+			"bones": {
+				"Body": {
+					"rotation": [-30, 0, 0]
+				},
+				"Head": {
+					"rotation": [55, 0, 0],
+					"position": [0, -1, 1]
+				},
+				"Right_Wing": {
+					"rotation": [90, -7.5, "90+ math.cos(q.anim_time * 1234) * 25"],
+					"position": [2, 2, -1]
+				},
+				"Left_Wing": {
+					"rotation": [-280, 7.5, "-90 - math.cos(q.anim_time * 1234) * 25"],
+					"position": [-1, 2, -1]
+				},
+				"Tail": {
+					"rotation": [35, 0, 0]
+				},
+				"Right_Leg": {
+					"position": [0, 0.1, 0]
+				},
+				"Left_Leg": {
+					"position": [0, 0.1, 0]
+				}
+			}
+		},
+		"animation.pigeon.default": {
+			"loop": true,
+			"bones": {
+				"Body": {
+					"rotation": [-12.5, 0, 0]
+				},
+				"Head": {
+					"rotation": [20, 0, 0]
+				},
+				"Right_Wing": {
+					"position": [2, 1, -2]
+				},
+				"Left_Wing": {
+					"position": [-2, 1, -2]
+				},
+				"Tail": {
+					"rotation": [37.5, 0, 0]
+				}
+			}
+		}
+	}
+}

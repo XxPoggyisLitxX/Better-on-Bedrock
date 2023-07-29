@@ -1,0 +1,90 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+      "description": {
+        "identifier": "better_on_bedrock:blueberry_worldgen"
+      },
+      "components": {
+        "minecraft:creative_category": {
+          "category": "commands"
+      },
+        "minecraft:loot": "loot_tables/blocks/blueberry.json",
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 0.2
+        },
+        "minecraft:map_color": "#FFFFFF",
+        "minecraft:explosion_resistance": 1.0,
+        "minecraft:block_light_absorption": 0.0,
+        "minecraft:block_light_emission": 0.0,
+  
+        "minecraft:geometry": "geometry.cross_crop",
+        
+        "minecraft:material_instances": {
+          "*": {
+            "texture": "blueberry_block_stage_3",
+            "render_method": "alpha_test"
+          }
+        },
+        "minecraft:pick_collision":{
+          "origin":[
+           -6,
+           0,
+           -6
+          ],
+          "size":[
+           10,
+           9,
+           10
+          ]
+       },
+      
+        "minecraft:entity_collision": false,
+        "minecraft:on_step_on": {
+          "event": "better_on_bedrock:change_property",
+          "target": "self"
+      },
+        "minecraft:on_interact": {
+                  "event": "block_event",
+                  "target": "self"
+              },
+        "minecraft:placement_filter": {
+          "conditions": [
+            {
+              "block_filter": [
+                "dirt",
+                "grass"
+              ],
+              "allowed_faces": [
+                "up"
+              ]
+            }
+          ]
+        }
+      },
+      "events": {
+  
+        "block_event": {
+          "run_command": {
+            "command": [
+  "structure load blueberry_picked ~ ~ ~",
+  "playsound block.sweet_berry_bush.pick @p ~ ~ ~"
+  ]
+          },
+          "spawn_loot": {
+                      "table": "loot_tables/blocks/blueberry.json"
+                  }
+        },
+        "destroy": {
+          "run_command": {
+            "command":["setblock ~ ~-1 ~ air 0 destroy"]
+          }
+        },
+        "place": {
+          "run_command": {
+            "command":["setblock ~ ~1 ~ dirt 0"]
+          }
+        }
+      }
+    }
+  }
+  

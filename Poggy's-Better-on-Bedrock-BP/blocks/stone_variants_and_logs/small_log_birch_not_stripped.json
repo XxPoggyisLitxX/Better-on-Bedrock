@@ -1,0 +1,117 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:small_log_birch_not_stripped",
+			"menu_category": {
+				"category": "construction"
+			},
+			"properties": {
+				"better_on_bedrock:stripped":[
+					"false",
+					"true"
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('better_on_bedrock:stripped') == 'false'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+					"minecraft:on_interact": {
+						"condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:wooden_axe') || q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:stone_axe') || q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:iron_axe') || q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:diamond_axe') || q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:netherite_axe')",
+						"event": "strip_log",
+						"target": "self"
+					},
+					"minecraft:geometry": "geometry.small_log_not_stripped",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "small_log_birch_not_stripped",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:map_color": "#ffffff"
+				}
+			},
+			{
+				"condition": "query.block_property('better_on_bedrock:stripped') == 'true'",
+				"components": {
+					
+					"minecraft:destructible_by_mining": {
+						"seconds_to_destroy": 1
+					},
+					"minecraft:destructible_by_explosion": {
+						"explosion_resistance": 30
+					},
+					"minecraft:geometry": "geometry.small_log_not_stripped",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "small_log_birch_stripped",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:map_color": "#ffffff"
+				}
+			}
+		],
+		"events": {
+			"strip_log": {
+				"set_block_property": {
+					"better_on_bedrock:stripped": "'true'"
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+                "origin": [
+                    -5,
+                    0,
+                    -5
+                ],
+                "size": [
+                    10,
+                    16,
+                    10
+                ]
+            },
+			"tag:wood": {},
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1
+            },
+            "minecraft:selection_box":{
+                "origin": [
+                    -5,
+                    0,
+                    -5
+                ],
+                "size": [
+                    10,
+                    16,
+                    10
+                ]
+            },
+			"minecraft:on_interact": {
+				"condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:wooden_axe') || q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:stone_axe') || q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:iron_axe') || q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:diamond_axe') || q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:netherite_axe')",
+				"event": "strip_log",
+				"target": "self"
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 30
+			},
+			"minecraft:geometry": "geometry.small_log_not_stripped",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "small_log_not_stripped",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:map_color": "#ffffff"
+		}
+	}
+}

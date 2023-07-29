@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+"controller.animation.lich.phase2": {
+			
+    "initial_state":"not_phase_2",
+   "states": {
+       "not_phase_2":{
+           "transitions":[{ "phase_2": "q.health < 75" }]
+         },
+         "phase_2":{
+           "on_entry": [
+            "/event entity @e[type=better_on_bedrock:lich] lich_phase2"
+        
+        ],
+            "transitions": [{"not_phase_2":" q.health > 75"}]
+         }
+   }
+         }
+        }
+    }

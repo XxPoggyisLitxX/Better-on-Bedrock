@@ -1,0 +1,14 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+      "description": {
+        "identifier": "better_on_bedrock:zombie_hut_small"
+      },
+      "structure_name": "mystructure:zombie_hut_small",
+      "adjustment_radius": 15,
+      "facing_direction": "south",
+      "constraints": {
+        "grounded": {}
+      }
+    }
+  }

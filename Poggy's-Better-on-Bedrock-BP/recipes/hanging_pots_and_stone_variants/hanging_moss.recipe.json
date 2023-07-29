@@ -1,0 +1,35 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:hanging_moss"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " # ",
+            "#T#",
+            "/F/"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:string"
+            },
+            "T": {
+                "item": "minecraft:tallgrass",
+                "data": 1
+            },
+            "/": {
+                "item": "minecraft:stick"
+            },
+            "F": {
+                "item": "minecraft:flower_pot"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:moss_pot_item",
+            "count": 1
+        }
+    }
+}

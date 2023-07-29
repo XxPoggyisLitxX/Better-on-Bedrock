@@ -1,0 +1,15 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "better_on_bedrock:nether_biome_features/end_bloom_single_feature"
+		},
+
+		"places_block": "better_on_bedrock:end_bloom",
+
+		"enforce_placement_rules": true,
+		"enforce_survivability_rules": false,
+		"may_replace": ["minecraft:air"]
+	}
+}

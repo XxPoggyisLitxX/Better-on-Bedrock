@@ -1,0 +1,497 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "pog:dungeon_crawl",
+			"is_summonable": true,
+			"is_spawnable": false
+		},
+		"component_groups": {
+			"pog:despawn": {
+				"minecraft:instant_despawn": {
+					"remove_child_entities": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:tick_world": {
+				"never_despawn": true,
+				"radius": 2
+			},
+			"minecraft:timer": {
+				"time_down_event": {
+					"event": "pog:despawn"
+				},
+				"time": 1
+			}
+		},
+		"events": {
+			"pog:despawn": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"scoreboard players add Crypt Counter 1"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"pog:despawn"
+							]
+						}
+					}
+				]
+			},
+			"dtunnel": {
+				"sequence": [
+					{
+						"filters": [
+							{
+								"test": "is_altitude",
+								"operator": ">=",
+								"value": 50
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"structure load \"entrance_tunnel\" ~-2 ~-10 ~",
+										"setblock ~ ~ ~ cobbled_deepslate_wall",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					},
+					{
+						"filters": [
+							{
+								"test": "is_altitude",
+								"operator": "<",
+								"value": 50
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"structure load \"crypt_start\" ~-7 ~-11 ~-5",
+										"setblock ~ ~ ~ cobbled_deepslate_wall",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"south": {
+				"sequence": [
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "==",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"structure load \"s_end\" ~-1 ~ ~-1",
+										"setblock ~ ~ ~ stonebrick",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					},
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "!=",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"scoreboard players operation @s roomCount = \"maxRoomCount\" roomCount",
+										"execute at @s[scores={roomCount=1..}] run function s_generate_room",
+										"execute at @s[scores={roomCount=0}] run structure load \"s_end\" ~-1 ~ ~-1",
+										"setblock ~ ~ ~ stonebrick",
+										"execute at @s[scores={roomCount=1..}] run scoreboard players remove \"maxRoomCount\" roomCount 1",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"north": {
+				"sequence": [
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "==",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"structure load \"n_end\" ~-5 ~ ~0",
+										"setblock ~ ~ ~ stonebrick",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					},
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "!=",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"scoreboard players operation @s roomCount = \"maxRoomCount\" roomCount",
+										"execute at @s[scores={roomCount=1..}] run function n_generate_room",
+										"execute at @s[scores={roomCount=0}] run structure load \"n_end\" ~-5 ~ ~0",
+										"setblock ~ ~ ~ stonebrick",
+										"execute at @s[scores={roomCount=1..}] run scoreboard players remove \"maxRoomCount\" roomCount 1",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"east": {
+				"sequence": [
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "==",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"structure load \"e_end\" ~-1 ~ ~-5",
+										"setblock ~ ~ ~ stonebrick",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					},
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "!=",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"scoreboard players operation @s roomCount = \"maxRoomCount\" roomCount",
+										"execute at @s[scores={roomCount=1..}] run function e_generate_room",
+										"execute at @s[scores={roomCount=0}] run structure load \"e_end\" ~-1 ~ ~-5",
+										"setblock ~ ~ ~ stonebrick",
+										"execute at @s[scores={roomCount=1..}] run scoreboard players remove \"maxRoomCount\" roomCount 1",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"west": {
+				"sequence": [
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "==",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"structure load \"w_end\" ~0 ~ ~-1",
+										"setblock ~ ~ ~ stonebrick",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					},
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "!=",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"scoreboard players operation @s roomCount = \"maxRoomCount\" roomCount",
+										"execute at @s[scores={roomCount=1..}] run function w_generate_room",
+										"execute at @s[scores={roomCount=0}] run structure load \"w_end\" ~0 ~ ~-1",
+										"setblock ~ ~ ~ stonebrick",
+										"execute at @s[scores={roomCount=1..}] run scoreboard players remove \"maxRoomCount\" roomCount 1",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"spawner": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"function spawner",
+								"event entity @s pog:despawn"
+							]
+						}
+					}
+				]
+			},
+			"southhall": {
+				"sequence": [
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "==",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"structure load \"s_end\" ~-1 ~ ~-1",
+										"setblock ~ ~ ~ stonebrick",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					},
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "!=",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"scoreboard players operation @s roomCount = \"maxRoomCount\" roomCount",
+										"execute at @s[scores={roomCount=1..}] run function s_generate_hall",
+										"execute at @s[scores={roomCount=0}] run structure load \"s_end\" ~-1 ~ ~-1",
+										"setblock ~ ~ ~ stonebrick",
+										"execute at @s[scores={roomCount=1..}] run scoreboard players remove \"maxRoomCount\" roomCount 1",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"northhall": {
+				"sequence": [
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "==",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"structure load \"n_end\" ~-5 ~ ~0",
+										"setblock ~ ~ ~ stonebrick",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					},
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "!=",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"scoreboard players operation @s roomCount = \"maxRoomCount\" roomCount",
+										"execute at @s[scores={roomCount=1..}] run function n_generate_hall",
+										"execute at @s[scores={roomCount=0}] run structure load \"n_end\" ~-5 ~ ~0",
+										"setblock ~ ~ ~ stonebrick",
+										"execute at @s[scores={roomCount=1..}] run scoreboard players remove \"maxRoomCount\" roomCount 1",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"easthall": {
+				"sequence": [
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "==",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"structure load \"e_end\" ~-1 ~ ~-5",
+										"setblock ~ ~ ~ stonebrick",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					},
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "!=",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"scoreboard players operation @s roomCount = \"maxRoomCount\" roomCount",
+										"execute at @s[scores={roomCount=1..}] run function e_generate_hall",
+										"execute at @s[scores={roomCount=0}] run structure load \"e_end\" ~-1 ~ ~-5",
+										"setblock ~ ~ ~ stonebrick",
+										"execute at @s[scores={roomCount=1..}] run scoreboard players remove \"maxRoomCount\" roomCount 1",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"westhall": {
+				"sequence": [
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "==",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"structure load \"w_end\" ~0 ~ ~-1",
+										"setblock ~ ~ ~ stonebrick",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					},
+					{
+						"filters": [
+							{
+								"test": "is_biome",
+								"operator": "!=",
+								"value": "ocean"
+							}
+						],
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"scoreboard players operation @s roomCount = \"maxRoomCount\" roomCount",
+										"execute at @s[scores={roomCount=1..}] run function w_generate_hall",
+										"execute at @s[scores={roomCount=0}] run structure load \"w_end\" ~0 ~ ~-1",
+										"setblock ~ ~ ~ stonebrick",
+										"execute at @s[scores={roomCount=1..}] run scoreboard players remove \"maxRoomCount\" roomCount 1",
+										"event entity @s pog:despawn"
+									]
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

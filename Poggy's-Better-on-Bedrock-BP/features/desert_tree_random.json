@@ -1,0 +1,22 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "minecraft:desert_tree_random"
+		},
+		"features": [
+			[
+				"minecraft:desert_tree_1", //Coarse dirt weighs 5
+				2
+			],
+			[
+				"minecraft:desert_tree_2", //Podzol dirt weighs 3
+				2
+			],
+			[
+				"minecraft:desert_tree_3", //Cobblestone weighs 2
+				2
+			]
+		]
+	}
+}

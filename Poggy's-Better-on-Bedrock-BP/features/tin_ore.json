@@ -1,0 +1,16 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "better_on_bedrock:tin_ore"
+		},
+		"count": 4, // Placement attempts
+		"replace_rules": [
+			{
+				// Replace all stone variants (andesite, granite, and diorite) with titanite ore
+				"places_block": "better_on_bedrock:tin_ore",
+				"may_replace": ["minecraft:stone"]
+			}
+		]
+	}
+}

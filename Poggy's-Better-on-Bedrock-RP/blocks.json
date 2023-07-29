@@ -1,0 +1,162 @@
+{
+
+  
+
+
+  "better_on_bedrock:wild_carrot":{
+    "sound": "grass"
+  },
+  "better_on_bedrock:wild_flower":{
+    "sound": "grass"
+  },
+  "better_on_bedrock:wildflower":{
+    "sound": "grass"
+  },
+  "better_on_bedrock:tiny_sprout":{
+    "sound": "grass"
+  },
+  "better_on_bedrock:taller_grass":{
+    "sound": "grass"
+  },
+  "better_on_bedrock:pink_lavender":{
+    "sound": "grass"
+  },
+    "better_on_bedrock:cabbage_crop": {
+      "sound": "grass"
+    },
+    "better_on_bedrock:tall_lavender_bottom" : {
+      "sound": "grass"
+    },
+    "better_on_bedrock:small_log_spruce_not_stripped": {
+      "sound": "wood"
+    },
+    "better_on_bedrock:small_log_acacia_not_stripped": {
+      "sound": "wood"
+    },
+    "better_on_bedrock:small_log_birch_not_stripped": {
+      "sound": "wood"
+    },
+    "better_on_bedrock:small_log_dark_oak_not_stripped":{
+      "sound": "wood"
+    },
+    "better_on_bedrock:small_log_not_stripped": {
+      "sound": "wood"
+    },
+    "better_on_bedrock:tall_lavender_top" : {
+      "sound": "grass"
+    },
+    "better_on_bedrock:dead_tall_grass" : {
+      "sound": "grass"
+    },
+    "better_on_bedrock:dead_tall_bottom" : {
+      "sound": "grass"
+    },
+    "better_on_bedrock:lilax_heads" : {
+      "sound": "grass"
+    },
+    "better_on_bedrock:iris" : {
+      "sound": "grass"
+    },
+    "better_on_bedrock:anenome" : {
+      "sound": "grass"
+    },
+    "better_on_bedrock:hydrangea" : {
+      "sound": "grass"
+    },
+    "better_on_bedrock:desert_grass" : {
+      "sound": "grass"
+    },
+    "better_on_bedrock:lush_grass_top" : {
+      "sound": "grass"
+    },
+    "better_on_bedrock:lush_grass_bottom" : {
+      "sound": "grass"
+    },
+    "better_on_bedrock:bluegrod_top" : {
+      "sound": "grass"
+    },
+     "better_on_bedrock:bluegrod_bottom" : {
+      "sound": "grass"
+    },
+    "better_on_bedrock:cornflower_pot":{
+      "sound": "grass"
+    },
+    "better_on_bedrock:deco_pot":{
+      "sound": "grass"
+    },
+    "better_on_bedrock:glow_pot":{
+      "sound": "grass"
+    },
+    "better_on_bedrock:lilac_pot":{
+      "sound": "grass"
+    },
+    "better_on_bedrock:moss_pot":{
+      "sound": "grass"
+    },
+    "better_on_bedrock:oxeye_pot":{
+      "sound": "grass"
+    },
+    "better_on_bedrock:rose_pot":{
+      "sound": "grass"
+    },
+    "better_on_bedrock:tulip_pot":{
+      "sound": "grass"
+    },
+
+    "better_on_bedrock:healthy_carrot_crop":{
+      "sound": "grass"
+    },
+    "better_on_bedrock:quest_block":{
+      "sound": "wood"
+    },
+      "better_on_bedrock:grape": {
+      "sound": "sweet_berry_bush"
+    },
+      "better_on_bedrock:blueberry_block": {
+      "sound": "sweet_berry_bush"
+    },
+    "better_on_bedrock:blueberry_worldgen": {
+      "sound": "sweet_berry_bush"
+    },
+    "better_on_bedrock:forge_table":{
+        "sound": "wood"
+    },
+    "better_on_bedrock:enchant_bench":{
+        "sound": "wood"
+    },
+    "better_on_bedrock:grape_fully_grown":{
+      "sound": "sweet_berry_bush"
+    },
+    "better_on_bedrock:willager_hat":  {
+      "sound": "cloth"
+    },
+    "better_on_bedrock:waystone":  {
+      "sound": "stone"
+    },
+    "better_on_bedrock:tomato_crop":  {
+      "sound": "grass"
+    },
+    "better_on_bedrock:eggplant_crop":  {
+      "sound": "grass"
+    },
+    "better_on_bedrock:barley_crop":  {
+      "sound": "grass"
+    },
+    "better_on_bedrock:onion_crop":  {
+      "sound": "grass"
+    },
+    "better_on_bedrock:orange_leaves":  {
+      "sound": "grass"
+    },
+     "better_on_bedrock:peach_leaves":  {
+      "sound": "grass"
+    },
+    "better_on_bedrock:coocnut":  {
+      "sound": "wood"
+    },
+    "format_version": [
+      1,
+      1,
+      0
+    ]
+  }

@@ -1,0 +1,31 @@
+scoreboard objectives add rgen dummy rgen
+scoreboard players random @s rgen 66 94
+execute at @s[scores={rgen=66}] run structure load smith_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=67}] run structure load smith_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=68}] run structure load smith_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=69}] run structure load potion_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=70}] run structure load smith_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=71}] run structure load smith_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=72}] run structure load smith_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=73}] run structure load potion_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=74}] run structure load 4_door_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=75}] run structure load 4_door_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=76}] run structure load 4_door_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=77}] run structure load library_roon_e ~1 ~ ~-9
+execute at @s[scores={rgen=78}] run structure load library_roon_e ~1 ~ ~-9
+execute at @s[scores={rgen=79}] run structure load library_roon_e ~1 ~ ~-9
+execute at @s[scores={rgen=80}] run structure load horse_room_e ~1 ~ ~-7
+execute at @s[scores={rgen=81}] run structure load horse_room_e ~1 ~ ~-7
+execute at @s[scores={rgen=82}] run structure load horse_room_e ~1 ~ ~-7
+execute at @s[scores={rgen=83}] run structure load boiler_room_e ~1 ~ ~-7
+execute at @s[scores={rgen=84}] run structure load boiler_room_e ~1 ~ ~-7
+execute at @s[scores={rgen=85}] run structure load boiler_room_e ~1 ~ ~-7
+execute at @s[scores={rgen=86}] run structure load weapon_test_room_e ~1 ~ ~-7
+execute at @s[scores={rgen=87}] run structure load weapon_test_room_e ~1 ~ ~-7
+execute at @s[scores={rgen=88}] run structure load weapon_test_room_e ~1 ~ ~-7
+execute at @s[scores={rgen=89}] run structure load 4_door_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=90}] run structure load 4_door_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=91}] run structure load 4_door_room_e ~1 ~ ~-9
+execute at @s[scores={rgen=92}] run structure load library_roon_e ~1 ~ ~-9
+execute at @s[scores={rgen=93}] run structure load library_roon_e ~1 ~ ~-9
+execute at @s[scores={rgen=94}] run structure load library_roon_e ~1 ~ ~-9

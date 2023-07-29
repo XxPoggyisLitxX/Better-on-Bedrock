@@ -1,0 +1,46 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.2",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "bomb",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "default",
+					"parent": "bomb",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-7, 0, -7],
+							"size": [14, 50, 14],
+							"uv": [0, 0]
+						}
+					]
+				},
+				{
+					"name": "charged",
+					"parent": "bomb",
+					"pivot": [0, 25, 0],
+					"cubes": [
+						{
+							"origin": [-7, 0, -7],
+							"size": [14, 50, 14],
+							"inflate": -0.98,
+							"uv": [72, 0]
+						}
+					]
+				}
+			]
+		}
+	]
+}

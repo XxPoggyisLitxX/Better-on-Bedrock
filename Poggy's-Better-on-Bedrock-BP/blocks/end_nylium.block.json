@@ -1,0 +1,49 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:end_nylium",
+			"menu_category": {
+				"category": "construction"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.4
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:selection_box":true,
+			"minecraft:material_instances": {
+				"up": {
+					"texture": "end_nylium_top",
+					"render_method": "opaque"
+				},
+                "north": {
+					"texture": "end_nylium_top",
+					"render_method": "opaque"
+				},
+                "down": {
+					"texture": "end_nylium_top",
+					"render_method": "opaque"
+				},
+                "east": {
+					"texture": "end_nylium_top",
+					"render_method": "opaque"
+				},
+                "south": {
+					"texture": "end_nylium_top",
+					"render_method": "opaque"
+				},
+                "west": {
+					"texture": "end_nylium_top",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:map_color": "#ffcd17"
+		}
+	}
+}

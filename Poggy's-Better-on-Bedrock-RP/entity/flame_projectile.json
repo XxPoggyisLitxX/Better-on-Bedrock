@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:flame_projectile",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/enchanter"
+			},
+			"geometry": {
+				"default": "geometry.projectile"
+			},
+            "animations": {
+				"basic": "animation.projectile.news"
+			},
+			"scripts": {
+				"animate": [
+					"basic"
+				]
+			},
+			"particle_effects": {
+				"staff_magic": "pog:flame"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#28136d",
+				"overlay_color": "#ee33d5"
+			}
+		}
+	}
+}

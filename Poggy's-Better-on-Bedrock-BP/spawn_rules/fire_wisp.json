@@ -1,0 +1,37 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:spawn_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:fire_wisp",
+        "population_control": "monster"
+      },
+  
+      "conditions": [
+        {
+          "minecraft:spawns_underground": {
+          },
+  
+          "minecraft:difficulty_filter": {
+            "min": "easy",
+            "max": "hard"
+          },
+  
+          "minecraft:weight": {
+            "default": 80
+          },
+          "minecraft:herd": {
+            "min_size": 2,
+            "max_size": 4
+          },
+          "minecraft:density_limit": {
+            "surface": 3,
+            "underground": 4
+          },
+      
+          "minecraft:biome_filter": { 
+            "test": "has_biome_tag", "operator":"==", "value": "nether"
+          }
+        }
+      ]
+    }
+  }

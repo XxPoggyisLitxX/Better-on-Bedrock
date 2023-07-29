@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:wraith",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/wraith"
+			},
+			"geometry": {
+				"default": "geometry.wraith"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#3d3e95",
+				"overlay_color": "#4602c1"
+			}
+		}
+	}
+}

@@ -1,0 +1,154 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:soul_star_block",
+            "properties": {
+                "better_on_bedrock:used":[
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+		},
+		"components": {
+			//Basic components
+            "minecraft:destructible_by_mining": false,
+            "minecraft:collision_box":true,
+            "minecraft:geometry": "geometry.soul_star_observer",
+            "minecraft:on_interact": {
+                "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:soul_star') && q.count <= 4",
+                "event": "remove_item_and_change_property",
+                "target": "self"
+            },
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "soul_star_block",
+					"render_method": "opaque"
+				}
+			}
+		},
+        "permutations": [
+            {
+                "condition": "q.block_property('better_on_bedrock:used') == 0",
+                "components": {
+                    //Basic components
+                    "minecraft:destructible_by_mining": false,
+                    "minecraft:collision_box":true,
+                    "minecraft:geometry": "geometry.soul_star_observer",
+                    "minecraft:on_interact": {
+                        "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:soul_star') && q.count <= 4",
+                        "event": "remove_item_and_change_property",
+                        "target": "self"
+                    },
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "soul_star_block",
+                            "render_method": "opaque"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_property('better_on_bedrock:used') == 1",
+                "components": {
+                    "minecraft:destructible_by_mining": false,
+                    "minecraft:collision_box":true,
+                    "minecraft:geometry": "geometry.soul_star_observer",
+                    "minecraft:on_interact": {
+                        "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:soul_star') && q.count <= 4",
+                        "event": "remove_item_and_change_property",
+                        "target": "self"
+                    },
+                    "minecraft:light_emission": 4,
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "soul_star_block_1",
+                            "render_method": "opaque"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_property('better_on_bedrock:used') == 2",
+                "components": {
+                    "minecraft:destructible_by_mining": false,
+                    "minecraft:collision_box":true,
+                    "minecraft:geometry": "geometry.soul_star_observer",
+                    "minecraft:on_interact": {
+                        "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:soul_star') && q.count <= 4",
+                        "event": "remove_item_and_change_property",
+                        "target": "self"
+                    },
+                    "minecraft:light_emission": 8,
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "soul_star_block_2",
+                            "render_method": "opaque"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_property('better_on_bedrock:used') == 3",
+                "components": {
+                    "minecraft:destructible_by_mining": false,
+                    "minecraft:collision_box":true,
+                    "minecraft:geometry": "geometry.soul_star_observer",
+                    "minecraft:on_interact": {
+                        "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:soul_star') && q.count <= 4",
+                        "event": "spawn_lich",
+                        "target": "self"
+                    },
+                    "minecraft:light_emission": 12,
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "soul_star_block_3",
+                            "render_method": "opaque"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_property('better_on_bedrock:used') == 4",
+                "components": {
+                    "minecraft:destructible_by_mining": false,
+                    "minecraft:collision_box":true,
+                    "minecraft:geometry": "geometry.soul_star_observer",
+                    "minecraft:on_interact": {
+                        "condition": "q.is_item_name_any('slot.weapon.mainhand', 0, 'better_on_bedrock:soul_star') && q.count <= 4",
+                        "event": "spawn_lich",
+                        "target": "self"
+                    },
+                    "minecraft:light_emission": 15,
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "soul_star_block_4",
+                            "render_method": "opaque"
+                        }
+                    }
+                }
+            }
+        ],
+        "events": {
+            "spawn_lich": {
+                "run_command": {
+                    "command": ["summon better_on_bedrock:lich ~ ~ ~", "execute if entity @p[hasitem=[{item=better_on_bedrock:soul_star, location= slot.weapon.mainhand}] ] run clear @p better_on_bedrock:soul_star 0 1"]
+                },
+                "set_block_property": {
+                    "better_on_bedrock:used": "query.block_property('better_on_bedrock:used') + 1"
+                  }
+            },
+            "remove_item_and_change_property": {
+                "run_command": {
+                    "command": ["execute if entity @p[hasitem=[{item=better_on_bedrock:soul_star, location= slot.weapon.mainhand}] ] run clear @p better_on_bedrock:soul_star 0 1"]
+                },
+                "set_block_property": {
+                    "better_on_bedrock:used": "(query.block_property('better_on_bedrock:used') < 4 ) ? query.block_property('better_on_bedrock:used') + 1"
+                  }
+            }
+        }
+	}
+}

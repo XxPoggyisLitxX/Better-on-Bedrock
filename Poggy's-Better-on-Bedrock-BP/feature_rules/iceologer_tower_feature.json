@@ -1,0 +1,48 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "pog:iceologer_tower_feature",
+			"places_feature": "pog:iceologer_towr_features"
+		},
+
+		"conditions": {
+			"placement_pass": "surface_pass",
+
+			"minecraft:biome_filter": [
+				{
+				  "all_of": [
+					{
+					  "any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "frozen"
+						}
+					  ]
+					}
+				  ]
+				}
+			  ]
+		},
+
+		"distribution": {
+			"scatter_chance": {
+				"numerator": 1,
+				"denominator": 5000
+			  },
+			  "iterations": 1,
+
+			"x": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"z": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"y": "query.heightmap(variable.worldx, variable.worldz) + - 1"
+		}
+	}
+}

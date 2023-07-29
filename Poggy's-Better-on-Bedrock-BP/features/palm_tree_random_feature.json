@@ -1,0 +1,18 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "better_on_bedrock:palm_tree_random_feature"
+		},
+		"features": [
+			[
+				"minecraft:palm_tree_variation_2", //Podzol dirt weighs 3
+				5
+			],
+			[
+				"minecraft:palm_tree_variation_3", //Cobblestone weighs 2
+				5
+			]
+		]
+	}
+}

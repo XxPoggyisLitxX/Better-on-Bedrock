@@ -1,0 +1,14 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.backpack.tp":{
+            "loop": true,
+            "animation_length": 0.1,
+            "timeline": {
+                "0.08": [
+                "/execute @e[type=player, hasitem={item=better_on_bedrock:backpack,location=slot.weapon.mainhand}, r=4] ~ ~ ~ teleport @e[type=better_on_bedrock:backpack] @p"
+                ]
+            }
+        }
+    }
+}

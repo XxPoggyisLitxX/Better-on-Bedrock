@@ -1,0 +1,95 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:shockwave",
+            "runtime_identifier": "minecraft:snowball",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+        "component_groups": {
+            "shockwave": {
+                "minecraft:behavior.knockback_roar": {
+                    "attack_time": 0.1,
+                    "cooldown_time": 0,
+                    "duration": 1,
+                    "knockback_damage": 12,
+                    "knockback_filters": {
+                        "test": "is_family",
+                        "subject": "other",
+                        "operator": "!=",
+                        "value": "enchanter"
+                    },
+                    "knockback_horizontal_strength": 4,
+                    "knockback_range": 4,
+                    "knockback_vertical_strength": 4,
+                    "track_target": false,
+                    "knockback_strength": 4
+                }
+            }
+        },
+        "events": {
+            "shockwave":{
+                "add": {
+                    "component_groups": [
+                        "shockwave"
+                    ]
+                }
+            }
+        },
+		"components": {
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 1,
+                "entity_types":[
+                    {
+                        "filters": {
+                            "test": "is_family",
+                            "subject":"other",
+                            "value": "player"
+                        }
+                    }
+                ]
+            },
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+            "minecraft:collision_box": {
+                "width": 0.31,
+                "height": 0.31
+               },
+               "minecraft:projectile": {
+                "on_hit": {
+                    "definition_event": {
+                        "affect_splash_area": true,
+                        "affect_target": true,
+                        "event_trigger": {
+                            "event": "shockwave",
+                            "target": "self"
+                        }
+                    },
+                    "impact_damage": {
+                      "damage": 5,
+                      "knockback": false,
+                      "catch_fire": true,
+                      "semi_random_diff_damage": false
+                    }
+                },
+                "power": 1,
+                "particle": "better_on_bedrock:staff_trail",
+                "gravity": 0.00,
+                "inertia": 1,
+                "liquid_inertia": 1,
+                "splash_range": 4,
+                "uncertainty_base": 0,
+                "uncertainty_multiplier": 0,
+                "anchor": 1,
+                "destroy_on_hurt": false,
+                "offset": [ 0, -0.1, 0 ],
+                "reflect_on_hurt": true,
+                "catch_fire": false
+               }
+            }
+		}
+	}

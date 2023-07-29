@@ -1,0 +1,31 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:quest_scroll"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " C ",
+            "IPI",
+            ""
+        ],
+        "key": {
+            "C": {
+                "item": "minecraft:sugar_cane"
+            },
+            "I": {
+                "item": "minecraft:ink_sac"
+            },
+            "P": {
+                "item": "minecraft:paper"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:bounty_paper_open",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "better_on_bedrock:warped_scatter_feature"
+		},
+
+		"places_feature": "better_on_bedrock:warped_snap",
+
+		"scatter_chance": {
+			"numerator": 2,
+			"denominator": 3
+		},
+		"iterations": 4.5,
+
+		"project_input_to_floor": true,
+		"x": {
+			"distribution": "uniform",
+			"extent": [0, 16]
+		},
+		"z": {
+			"distribution": "uniform",
+			"extent": [0, 16]
+		},
+		"y": 0
+	}
+}

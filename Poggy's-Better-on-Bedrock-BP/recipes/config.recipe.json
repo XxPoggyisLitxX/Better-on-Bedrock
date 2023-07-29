@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "config:config"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " # ",
+            "#i#",
+            " # "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:iron_nugget"
+            },
+            "i": {
+                "item": "minecraft:iron_ingot"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:config",
+            "count": 1
+        }
+    }
+}

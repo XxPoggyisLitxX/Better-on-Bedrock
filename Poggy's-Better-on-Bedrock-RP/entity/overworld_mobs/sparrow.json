@@ -1,0 +1,42 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:sparrow",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+            "animations": {
+                "basic": "controller.animation.sparrow.movements",
+                "walk": "animation.jump_walk",
+                "idle": "animation.sparrow.idle",
+                "fly": "animation.fly"
+            },
+            "scripts": {
+                "animate": [
+                    "basic"
+                ]
+            },
+			"textures": {
+				"default": "textures/entity/sparrow",
+                "two": "textures/entity/sparrow_brown",
+                "three": "textures/entity/sparrow_cyan",
+                "four": "textures/entity/sparrow_default",
+                "five": "textures/entity/sparrow_gold",
+                "six": "textures/entity/sparrow_green",
+                "seven": "textures/entity/sparrow_pink",
+                "eight": "textures/entity/sparrow_purple",
+                "nine": "textures/entity/sparrow_red",
+                "ten": "textures/entity/sparrow_red2"
+			},
+			"geometry": {
+				"default": "geometry.sparrow"
+			},
+			"render_controllers": ["controller.render.sparrow"],
+			"spawn_egg": {
+				"base_color": "#2b58df",
+				"overlay_color": "#1e00ff"
+			}
+		}
+	}
+}

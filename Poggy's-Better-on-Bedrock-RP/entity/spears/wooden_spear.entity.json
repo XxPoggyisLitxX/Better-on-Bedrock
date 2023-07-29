@@ -1,0 +1,26 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "runecraft:thrown_wooden_spear",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/wooden_spear"
+			},
+			 "animations": {
+        "move": "animation.weapon.default_thrown"
+      },
+			      "scripts": {
+        "animate": [
+          "move"
+        ]
+      },
+			"geometry": {
+				"default": "geometry.stone_spear"
+			},
+			"render_controllers": ["controller.render.default"]
+		}
+	}
+}

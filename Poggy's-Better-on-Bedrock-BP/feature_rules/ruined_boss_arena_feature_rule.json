@@ -1,0 +1,63 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:ruined_boss_arena_feature_rule",
+        "places_feature": "better_on_bedrock:ruined_boss_arena"
+      },
+      "conditions": {
+        "placement_pass": "surface_pass",
+        "minecraft:biome_filter": [
+          {
+            "all_of": [
+              {
+                "any_of": [
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "plains"
+                  },
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "taiga"
+                  },
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "swamp"
+                  },
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "flower_forest"
+                  },
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "birch_forest"
+                  },
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "custom_vanilla_forrest"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "distribution": {
+        "scatter_chance": {
+          "numerator": 1,
+          "denominator": 1221
+        },
+        "iterations": 1,
+  
+        "x": 1,
+        "z": 1,
+        "y": "query.heightmap(variable.worldx, variable.worldz)"
+      }
+    }
+  }

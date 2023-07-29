@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:wooden_axe"
+    },
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "XX",
+      "X#",
+      " #"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:stick"
+      },
+      "X": {
+        "item": "minecraft:planks"
+      }
+    },
+    "result": {
+      "item": "better_on_bedrock:wood_axe"
+    }
+  }
+}

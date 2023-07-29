@@ -1,0 +1,15 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_furnace": {
+      "description": {
+      "identifier": "minecraft:furnace_cooked_patty"
+      },
+  
+      
+      "tags": ["furnace", "smoker"],
+      "input": "better_on_bedrock:beef_patty_raw",
+      "output": "better_on_bedrock:beef_patty"
+    }
+    
+  }
+  

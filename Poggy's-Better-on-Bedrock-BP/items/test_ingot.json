@@ -1,0 +1,18 @@
+{
+
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:test_ingot",
+			"category": "none"
+		},
+		"components": {
+            "tag:minecraft:transform_materials":{},
+			"minecraft:max_stack_size": 64,
+			"minecraft:foil": false,
+			"minecraft:icon": {
+				"texture": "test_ingot"
+			}
+		}
+		}
+	}

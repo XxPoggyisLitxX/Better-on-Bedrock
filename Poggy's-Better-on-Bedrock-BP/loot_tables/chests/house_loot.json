@@ -1,0 +1,162 @@
+{
+  "pools": [
+    {
+      "rolls": 6,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:emerald"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:red_mushroom",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "better_on_bedrock:dough",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "better_on_bedrock:cooked_deer_meat",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:black_candle",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:chainmail_chestplate",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "min": 32,
+                "max": 64
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:chainmail_leggings",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "min": 32,
+                "max": 56
+              }
+            },
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "better_on_bedrock:copper_sword",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "better_on_bedrock:copper_pickaxe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "better_on_bedrock:copper_axe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:ghast_tear",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:golden_boots",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "min": 16,
+                "max": 32
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:golden_apple"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_axe",
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.4
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:diamond"
+        },
+        {
+          "type": "item",
+          "name": "better_on_bedrock:common_lootbag"
+        }
+      ]
+    }
+  ]
+}

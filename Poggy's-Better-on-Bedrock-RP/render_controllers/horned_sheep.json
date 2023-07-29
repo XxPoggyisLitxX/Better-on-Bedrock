@@ -1,0 +1,19 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+      "controller.render.horned_sheep": {
+        "arrays": {
+          "geometries": {
+            "Array.geos": [ "Geometry.default", "Geometry.sheared" ]
+          },
+          "textures": {
+            "array.textures": [ "Texture.default", "Texture.sheared" ]
+          }
+        },
+        "geometry": "Array.geos[query.is_sheared]",
+        "materials": [ { "*": "Material.default" } ],
+        "textures": [ "Array.textures[query.is_sheared]" ]
+      }
+    }
+  }
+  

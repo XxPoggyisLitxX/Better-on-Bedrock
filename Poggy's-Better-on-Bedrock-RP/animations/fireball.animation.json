@@ -1,0 +1,49 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.lich.billboard": {
+			"loop": true,
+			"animation_length": 0.29167,
+			"bones": {
+				"body": {
+					"rotation": ["query.camera_rotation(0)", "query.camera_rotation(1)", 0],
+					"position": [0, 0, 0]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "lich_projectile_trail",
+					"locator": "locator"
+				},
+				"0.0417": {
+					"effect": "lich_projectile_trail",
+					"locator": "locator"
+				},
+				"0.0833": {
+					"effect": "lich_projectile_trail",
+					"locator": "locator"
+				},
+				"0.125": {
+					"effect": "lich_projectile_trail",
+					"locator": "locator"
+				},
+				"0.1667": {
+					"effect": "lich_projectile_trail",
+					"locator": "locator"
+				},
+				"0.2083": {
+					"effect": "lich_projectile_trail",
+					"locator": "locator"
+				},
+				"0.25": {
+					"effect": "lich_projectile_trail",
+					"locator": "locator"
+				},
+				"0.2917": {
+					"effect": "lich_projectile_trail",
+					"locator": "locator"
+				}
+			}
+		}
+	}
+}

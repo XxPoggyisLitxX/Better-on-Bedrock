@@ -1,0 +1,154 @@
+{
+    "tiers": [
+       {
+          "total_exp_required": 0,
+          "groups": [
+             {
+                "num_to_select": 5,
+                "trades": [
+                   {
+                      "wants": [
+                         {
+                            "item": "better_on_bedrock:unactivated_default_rune",
+                            "quantity": 1
+                         },
+                         {
+                           "item": "better_on_bedrock:basic_scroll",
+                           "quantity": 1
+                        }
+                      ],
+                      "gives": [
+                         {
+                            "item": "better_on_bedrock:default_rune",
+                            "quantity": 1,
+                            "functions": [
+                               {
+                                  "function": "set_lore",
+                                  "lore": [
+                                     "§r§8Used to buy a staff from the Lonely Wizard."
+                                  ]
+                               }
+                            ]
+                         }
+                      ],
+                      "max_uses": 1,
+                      "reward_exp": true
+                   },
+                   {
+                      "wants": [
+                         {
+                            "item": "better_on_bedrock:unactivated_rune_of_vitality",
+                            "quantity": 1
+                         },
+                         {
+                           "item": "better_on_bedrock:scroll_of_the_village",
+                           "quantity": 1
+                        }
+                      ],
+                      "gives": [
+                         {
+                            "item": "better_on_bedrock:rune_of_vitality",
+                            "quantity": 1,
+                            "functions": [
+                               {
+                                  "function": "set_lore",
+                                  "lore": [
+                                     "Used to buy a staff from the Lonely Wizard."
+                                  ]
+                               }
+                            ]
+                         }
+                      ],
+                      "max_uses": 1,
+                      "reward_exp": true
+                   },
+                   {
+                      "wants": [
+                         {
+                            "item": "better_on_bedrock:unactivated_rune_of_strength",
+                            "quantity": 1
+                         },
+                         {
+                           "item": "better_on_bedrock:scroll_of_the_nether",
+                           "quantity": 1
+                        }
+                      ],
+                      "gives": [
+                         {
+                            "item": "better_on_bedrock:rune_of_strength",
+                            "quantity": 1,
+                            "functions": [
+                               {
+                                  "function": "set_lore",
+                                  "lore": [
+                                     "Used to buy a staff from the Lonely Wizard."
+                                  ]
+                               }
+                            ]
+                         }
+                      ],
+                      "max_uses": 1,
+                      "reward_exp": true
+                   },
+                   {
+                      "wants": [
+                         {
+                            "item": "better_on_bedrock:unactivated_rune_of_the_seas",
+                            "quantity": 1
+                         },
+                         {
+                           "item": "better_on_bedrock:scroll_of_the_king",
+                           "quantity": 1
+                        }
+                      ],
+                      "gives": [
+                         {
+                            "item": "better_on_bedrock:rune_of_the_seas",
+                            "quantity": 1,
+                            "functions": [
+                               {
+                                  "function": "set_lore",
+                                  "lore": [
+                                     "Used to buy a staff from the Lonely Wizard."
+                                  ]
+                               }
+                            ]
+                         }
+                      ],
+                      "max_uses": 1,
+                      "reward_exp": true
+                   },
+                   {
+                     "wants": [
+                        {
+                           "item": "better_on_bedrock:unactivated_rune_of_protection",
+                           "quantity": 1
+                        },
+                        {
+                           "item": "better_on_bedrock:scroll_of_the_plains",
+                           "quantity": 1
+                        }
+                     ],
+                     "gives": [
+                        {
+                           "item": "better_on_bedrock:rune_of_protection",
+                           "quantity": 1,
+                           "functions": [
+                              {
+                                 "function": "set_lore",
+                                 "lore": [
+                                    "Used to buy a staff from the Lonely Wizard."
+                                 ]
+                              }
+                           ]
+                        }
+                     ],
+                     "max_uses": 1,
+                     "reward_exp": true
+                  }
+                ]
+             }
+          ]
+       }
+    ]
+ }

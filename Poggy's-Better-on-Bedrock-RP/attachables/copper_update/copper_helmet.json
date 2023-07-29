@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "better_on_bedrock:copper_helmet",
+			// These 2 are default and are required
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				// This is our CUSTOM armor texture we need to make next
+				"default": "textures/models/armor/custom_main",
+				// This texture doesn't actually exist in our RP
+				// but it will blow up without it so leave it in
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			// We tell it what geometry to use for the chestplate
+			"geometry": {
+				"default": "geometry.player.armor.helmet"
+			},
+			// We tell it to hide the chest layer as we will be showing our armor on top
+			"scripts": {
+				"parent_setup": "variable.chest_layer_visible = 0.0;"
+			},
+			// We tell it what controller to use (default armor one)
+			"render_controllers": ["controller.render.armor"]
+		}
+	}
+}

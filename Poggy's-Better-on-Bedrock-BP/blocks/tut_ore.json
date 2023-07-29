@@ -1,0 +1,20 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "tut:silver_ore"
+		},
+		"components": {
+			//Basic components
+			"minecraft:destroy_time": 10,
+			"minecraft:unit_cube": {},
+            "minecraft:display_name": "Silver Ore",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "silver_ore",
+					"render_method": "opaque"
+				}
+			}
+		}
+	}
+}

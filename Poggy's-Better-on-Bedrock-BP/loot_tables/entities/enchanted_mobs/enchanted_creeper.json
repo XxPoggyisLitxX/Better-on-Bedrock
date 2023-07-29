@@ -1,0 +1,29 @@
+{
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 12
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:firework_rocket",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

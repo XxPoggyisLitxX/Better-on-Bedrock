@@ -1,0 +1,18 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:willager_projecile",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/blocks/dirt"
+			},
+			"geometry": {
+				"default": "geometry.willager_projecile"
+			},
+			"render_controllers": ["controller.render.default"]
+		}
+	}
+}

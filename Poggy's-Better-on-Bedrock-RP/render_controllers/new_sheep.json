@@ -1,0 +1,22 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+      "controller.render.new_sheep": {
+        "arrays": {
+            "geometries": {
+                "Array.geos": [ "Geometry.default", "Geometry.sheared" ]
+              },
+          "textures": {
+            "array.skins": [
+              "Texture.default",
+              "Texture.two"
+            ]
+          }
+        },
+        "geometry": "Array.geos[query.is_sheared]",
+        "materials": [ { "*": "Material.default" } ],
+        "textures": [ "Array.skins[query.variant]" ]
+      }
+    }
+  }
+  

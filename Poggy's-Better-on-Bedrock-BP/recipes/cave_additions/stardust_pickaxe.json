@@ -1,0 +1,27 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:stardust_pickaxe"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "ccc",
+            " s ",
+            " s "
+        ],
+        "key": {
+            "c": {
+                "item": "better_on_bedrock:stardust_ingot"
+            },
+            "s": {
+                "item": "minecraft:stick"
+            }
+        },
+        "result": {
+                "item": "better_on_bedrock:stardust_pickaxe"
+        }
+    }
+}

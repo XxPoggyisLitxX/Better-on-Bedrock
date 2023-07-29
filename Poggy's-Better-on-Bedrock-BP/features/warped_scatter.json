@@ -1,0 +1,27 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "gg:warped_scatter"
+		},
+
+		"places_feature": "gg:warped_ground_feature",
+
+		"iterations": 256,
+
+		"project_input_to_floor": true,
+		"x": {
+			"distribution": "fixed_grid",
+			"extent": [0, 15]
+		},
+		"z": {
+			"distribution": "fixed_grid",
+			"extent": [0, 15]
+		},
+		"y": {
+			"distribution": "uniform",
+			"extent": [16, 100]
+		}
+	}
+}

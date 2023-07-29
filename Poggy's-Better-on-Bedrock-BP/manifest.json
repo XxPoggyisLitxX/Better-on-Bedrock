@@ -1,0 +1,53 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Poggy's Better on Bedrock v1.0.2.5 [BP]",
+        "description": "Overhauling Minecraft with amazing content!",
+        "uuid": "dd44c71b-7ea0-4c11-b633-5963db73d475",
+        "version": [
+            1,
+            0,
+            18
+        ],
+        "min_engine_version": [
+            1,
+            20,
+            10
+        ]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "7ebdfb15-9de3-46d4-84f7-1c8691b5af04",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        },
+        {
+            "type": "script",
+            "language": "javascript",
+            "uuid": "16b646cb-98eb-41b2-a9e0-dd7f088caab4",
+            "entry": "scripts/main.js",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ],
+    "capabilities": [
+        "script_eval"
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.4.0-beta"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "1.2.0-beta"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:iceologer_iceblock",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"base": "animation.iceologer_ice_block"
+			},
+			"scripts": {
+				"animate": [
+					"base"
+				]
+			}
+		},
+		"components": {
+
+			"minecraft:timer": {
+				"time": 1.7,
+				"looping": false,
+				"time_down_event": {
+					"event": "transform",
+					"target": "self"
+				}
+			},
+			
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:push_through": {
+				"value": 1
+			}
+		},
+		"component_groups": {
+			"transform":{
+				"minecraft:transformation": {
+					
+					"into": "better_on_bedrock:iceologer_iceblock_fall"
+				}
+			},
+			"explode": {
+				"minecraft:explode": {
+					"breaks_blocks": false,
+					"causes_fire": false,
+					"fuse_lit": true,
+					"max_resistance": 0,
+					"power": 3
+				}
+			}
+		},
+		"events": {
+			"transform": {
+				"add": {
+					"component_groups": [
+						"transform"
+					]
+				}
+			},
+			"explode": {
+				"add": {
+					"component_groups": [
+						"explode"
+					]
+				}
+			}
+		}
+	}
+}

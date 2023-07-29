@@ -1,0 +1,24 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:stardust_chestplate"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "c c",
+            "ccc",
+            "ccc"
+        ],
+        "key": {
+            "c": {
+                "item": "better_on_bedrock:stardust_ingot"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:stardust_chestplate"
+        }
+    }
+}

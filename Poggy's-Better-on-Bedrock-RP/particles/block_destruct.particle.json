@@ -1,0 +1,52 @@
+
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "minecraft:block_destruct",
+      "basic_render_parameters": {
+        "material": "particles_alpha",
+        "texture": "atlas.terrain"
+      }
+    },
+    "components": {
+      "minecraft:emitter_rate_instant": {
+        "num_particles": "variable.emitter_intensity==1?Math.random(1,2):(variable.emitter_intensity * variable.emitter_intensity * 3)+(variable.emitter_intensity>4?(variable.emitter_intensity-4)*25:0)"
+      },
+      "minecraft:emitter_lifetime_once": {
+        "active_time": 0
+      },
+      "minecraft:emitter_shape_point": {
+        "offset": [ "(variable.particle_random_3>0.5?1:-1)*(variable.emitter_radius<0.2?Math.random(0,variable.emitter_radius):Math.random(-0.2,variable.emitter_radius))", "Math.random(-variable.emitter_radius, variable.emitter_radius)", "(variable.particle_random_3>0.5?1:-1)*(variable.emitter_radius<0.2?Math.random(0,variable.emitter_radius):Math.random(-0.2,variable.emitter_radius))" ],
+        "direction": [ "(variable.particle_random_3>0.5?1:-1)*variable.emitter_radius", "Math.random(-variable.emitter_radius, variable.emitter_radius)", "(variable.particle_random_4>0.5?1:-1)*variable.emitter_radius"]
+      },
+      "minecraft:particle_initial_speed": [ "(variable.particle_random_3>0.5?1:-1)*Math.random(0.5, 2.5) * 0.2 * (variable.emitter_intensity>4?4.5:variable.emitter_intensity)", "variable.emitter_intensity==1?Math.random(1,2):Math.random(0.05, 1) * ((variable.emitter_intensity>4?4.5:variable.emitter_intensity) + Math.random(-0.04, 0.04))", "(variable.particle_random_4>0.5?1:-1)*Math.random(0.5, 2.5) * 0.2 * (variable.emitter_intensity>4?4.5:variable.emitter_intensity)"],
+      "minecraft:particle_lifetime_expression": {
+        "max_lifetime": "variable.emitter_intensity==1?Math.random(0.45, 1.41)*Math.random(0.45, 1.41):(0.2f / (Math.random(0, 0.9) * 0.9f + 0.1f) + 0.1 * (variable.emitter_intensity>4?4.5:variable.emitter_intensity) - 0.5)"
+      },
+      "minecraft:particle_motion_dynamic": {
+        "linear_acceleration": [ 0, -13.6, 0 ],
+        "linear_drag_coefficient": 0.4
+      },
+      "minecraft:particle_motion_collision": {
+        "coefficient_of_restitution": 0.1,
+        "collision_drag": 8,
+        "collision_radius": 0.00
+      },
+      "minecraft:particle_appearance_billboard": {
+        "size": [ "variable.emitter_intensity==1?(variable.particle_random_1*0.03+0.04):((variable.particle_random_1 * 0.09)>0.06?0.06:variable.particle_random_1 * 0.09) + 0.03", "variable.emitter_intensity==1?(variable.particle_random_1*0.03+0.04):((variable.particle_random_1 * 0.09)>0.06?0.06:variable.particle_random_1 * 0.09) + 0.03" ],
+        "facing_camera_mode": "rotate_xyz",
+        "uv": {
+          "texture_width": 1,
+          "texture_height": 1,
+          "uv": [ "variable.emitter_texture_coordinate.u + (variable.emitter_texture_size.u/4) * (variable.particle_random_1*3)", "variable.emitter_texture_coordinate.v + (variable.emitter_texture_size.v/4) * (variable.particle_random_2*3)" ],
+          "uv_size": [ "variable.emitter_texture_size.u/4", "variable.emitter_texture_size.v/4" ]
+        }
+      },
+      "minecraft:particle_appearance_tinting": {
+        "color": [ "variable.color.r * 0.6", "variable.color.g * 0.6", "variable.color.b * 0.6", "variable.color.a==0?1:variable.color.a" ]
+      },
+      "minecraft:particle_appearance_lighting": {}
+    }
+  }
+}

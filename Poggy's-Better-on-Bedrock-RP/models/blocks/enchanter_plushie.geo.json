@@ -1,0 +1,39 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.enchanter_plushie",
+				"texture_width": 96,
+				"texture_height": 96,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"rotation": [0, 180, 0],
+					"pivot": [-0.04922, 7.73592, 2.2083],
+					"cubes": [
+						{"origin": [5, 0, 2], "size": [3, 10, 3], "pivot": [5.5, 11.5, 3.5], "rotation": [-31.847, 18.11498, 17.49222], "uv": [24, 31]},
+						{"origin": [1, 0, -6], "size": [3, 3, 2], "pivot": [2.5, 1.5, 1.5], "rotation": [0, 2.5, 0], "uv": [54, 0]},
+						{"origin": [-4, 0, 1], "size": [8, 3, 4], "inflate": 0.1, "uv": [28, 0]},
+						{"origin": [-4, 12, 0], "size": [8, 9, 6], "uv": [0, 10]},
+						{"origin": [-4, 0, -4], "size": [3, 3, 5], "pivot": [-2.5, 1.5, 1.5], "rotation": [0, 2.5, 0], "uv": [28, 10]},
+						{"origin": [-4, 0, -4], "size": [8, 3, 5], "inflate": 0.1, "pivot": [-2.5, 1.5, 1.5], "rotation": [0, 2.5, 0], "uv": [38, 48]},
+						{"origin": [-4, 0, -6], "size": [3, 3, 2], "pivot": [-2.5, 1.5, 1.5], "rotation": [0, 2.5, 0], "uv": [54, 0]},
+						{"origin": [-4, 0, 1], "size": [8, 12, 4], "uv": [0, 27]},
+						{"origin": [-5, 19, -1], "size": [10, 9, 8], "uv": [0, 79]},
+						{"origin": [1, 0, -4], "size": [3, 3, 5], "pivot": [2.5, 1.5, 1.5], "rotation": [0, 2.5, 0], "uv": [39, 7]},
+						{"origin": [-1, 10, -1], "size": [2, 4, 1], "uv": [0, 0]},
+						{"origin": [-7, 3.6, 3], "size": [3, 10, 3], "pivot": [5.5, 11.5, 3.5], "rotation": [-33.119, -15.4284, -13.0874], "uv": [69, 32]},
+						{"origin": [-1.04922, 7.73592, 1.2083], "size": [2, 2, 2], "uv": [0, 0]},
+						{"origin": [-4.04922, 3.73592, -7.7917], "size": [4, 1, 5], "pivot": [-0.04922, 4.23592, -5.2917], "rotation": [0, 0, 15], "uv": [61, 66]},
+						{"origin": [-0.04922, 3.73592, -7.7917], "size": [4, 1, 5], "pivot": [-0.04922, 4.23592, -5.2917], "rotation": [-0.68239, -0.61986, -9.95383], "uv": [61, 66]}
+					]
+				}
+			]
+		}
+	]
+}

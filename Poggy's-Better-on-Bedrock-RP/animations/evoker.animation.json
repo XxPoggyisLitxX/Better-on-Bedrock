@@ -1,0 +1,48 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.willager.walk": {
+			"loop": true,
+			"bones": {
+				"leg0": {
+					"rotation": ["-math.cos(q.anim_time * 750) * 32", 0, 0]
+				},
+				"leg1": {
+					"rotation": ["math.cos(q.anim_time * 750) * 32", 0, 0]
+				},
+				"rightarm": {
+					"rotation": ["-math.cos(q.anim_time * 750) * 32", 0, 0]
+				},
+				"leftarm": {
+					"rotation": ["math.cos(q.anim_time * 750) * 32", 0, 0]
+				}
+			}
+		},
+		"animation.willager.casting": {
+			"loop": true,
+			"animation_length": 3.58333,
+			"bones": {
+				"arms": {
+					"scale": 0
+				},
+				"leftarm": {
+					"rotation": ["math.cos(query.life_time * 763.4) * 14.3239 - this", "-this", "-135.0 - this"],
+					"position": [-3, 0, 0],
+					"scale": 1
+				},
+				"rightarm": {
+					"rotation": ["math.cos(query.life_time * 763.4) * 14.3239 - this", "-this", "135.0 - this"],
+					"position": [3, 0, 0],
+					"scale": 1
+				},
+				"Cane2": {
+					"rotation": [0, 0, -92.5],
+					"position": [-7, -9, 0]
+				}
+			}
+		},
+		"animation.willager.idle": {
+			"loop": true
+		}
+	}
+}

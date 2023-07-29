@@ -1,0 +1,1290 @@
+{
+
+  "advancement_animation_in":{
+    "anim_type":"offset",
+    "easing":"linear",
+    "duration":1.0,
+    "from":[ "14% + 180px", 0 ],
+    "to":[ 0, 0 ],
+    "next":"@hud.advancement_animation_stay"
+  },
+  "advancement_animation_stay":{
+    "anim_type":"wait",
+    "duration":6.7,
+    "next":"@hud.advancement_animation_out"
+  },
+  "advancement_animation_out":{
+    "anim_type":"offset",
+    "easing":"linear",
+    "duration":1.0,
+    "from":[ 0, 0 ],
+    "to":[ "14% + 180px", 0 ],
+    "destroy_at_end":"hud_actionbar_text"
+  },
+/*
+  "hud_actionbar_text":{
+    "visible":"(($actionbar_text = 'lol') or ($actionbar_text = 'paper') or ($actionbar_text = 'first_steps') or ($actionbar_text = 'full_copper') or ($actionbar_text = 'pig_Quest_complete') or ($actionbar_text = 'hero_Quest_complete') or ($actionbar_text = 'village_Quest_complete') or ($actionbar_text = 'iron_Quest_complete'))"
+  },
+ */
+
+ "anim_actionbar_text_alpha_out": {
+  "anim_type": "alpha",
+  "easing": "in_expo",
+  "duration": 0.14,
+  "from": 1.0,
+  "to": 0,
+  "destroy_at_end": "hud_actionbar_text"
+},
+"anim_actionbar_text_background_alpha_out": {
+  "anim_type": "alpha",
+  "easing": "in_expo",
+  "duration": 0.14,
+  "from": 1,
+  "to": 0,
+  "destroy_at_end": "hud_actionbar_text"
+},
+"auto_save_animation": {
+  "anim_type": "flip_book",
+  "initial_uv": [
+    0,
+    0
+  ],
+  "frame_count": 9,
+  "frame_step": 18,
+  "fps": 10,
+  "reversible": true,
+  "easing": "linear"
+},
+"auto_save": {
+  "type": "image",
+  "layer": 31,
+  "texture": "textures/ui/auto_save",
+  "anchor_from": "top_right",
+  "anchor_to": "top_right",
+  "offset": [
+    -15,
+    15
+  ],
+  "size": [
+    18,
+    30
+  ],
+  "uv_size": [
+    18,
+    30
+  ],
+  "uv": "@auto_save_animation",
+  "disable_anim_fast_forward": true,
+  "bindings": [
+    {
+      "binding_name": "#auto_save_animation_visible",
+      "binding_name_override": "#visible"
+    }
+  ]
+},
+
+ "hud_actionbar_text": {
+    "type": "image",
+    "size": [
+      "100%c + 12px",
+      "100%c + 5px"
+    ],
+    "anchor_from": "top_middle",
+    "offset": [
+      0,
+      "41px"
+    ],
+    "texture": "textures/ui/wawlaBorder",
+    "alpha": 1,
+    "controls": [
+      {
+        "actionbar_message": {
+          "type": "label",
+          "shadow": true,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "color": "$tool_tip_text",
+          "layer": 31,
+          "text": "$actionbar_text",
+          "localize": false,
+          "alpha": "@hud.anim_actionbar_text_alpha_out"
+        }
+      }
+    ]
+  },
+"toasts_factory": {
+  "type": "panel",
+  "factory": {
+    "name": "hud_title_text_factory",
+    "control_ids": {
+      "hud_title_text": "text_panel_toasts@hud.text_panel_toasts"
+    }
+  }
+},
+
+"root_panel": {
+    "modifications": [
+        {
+            "array_name": "controls",
+            "operation": "insert_front",
+            "value": [{
+                "toasts_factory@hud.toasts_factory": {}
+            }]
+        },
+        {
+          "array_name": "controls",
+          "operation": "insert_front",
+          "value": [{
+              "toast_factory@hud.toast_factory": {}
+          }]
+      }
+    ]
+},//hero_Quest_complete
+
+"text_panel_toast_template": {
+  
+  // variables modifying content for each toast
+  "$visible_text|default": "hero_Quest_complete",
+  "$content_text|default": "§eTrouble Maker!",
+  "$advancement_text|default": "§3Quest Complete!",
+  "$advancement_icon|default": "textures/items/iron_ingot",
+  
+  "type":"image",
+  "size": [172, 46],
+  "texture": "textures/ui/achievement_temp",
+  "clips_children":true,
+  "anims": ["@hud.advancement_animation_in"],
+  "anchor_from":"top_right",
+  "anchor_to":"top_right",
+  "layer": 1,
+  "offset":[ 0, 50 ],
+  "visible": "($atext = $visible_text)",
+  "uv_size": [ 163, 32 ],
+  "uv": "$uv|default", 
+  "$uv|default": [ 0, 0 ],
+  "variables": [
+	{
+	  "requires": "($atext = $visible_text)",
+	  "$uv|default": [ 0, 0 ]
+	}
+  ],
+  "controls": [
+	{
+	  "advancement_title": {
+		"type": "label",
+		"color": "$main_header_text_color",
+		"layer": 2,
+    "shadow": true,
+		"offset":[ "16%", -5 ],
+		"text": "$advancement_text",
+		"size": [ "default", 12 ],
+		"max_size": [ "100%", "100%" ],
+		"anchor_from":"left_middle",
+		"anchor_to":"left_middle"
+	  }    
+	},
+	{
+	  "advancement_content_texts":{
+	  "type":"label",
+    "shadow": true,
+	  "anchor_from":"left_middle",
+	  "anchor_to":"left_middle",
+	  "color": "$main_header_text_color",
+	  "text": "$content_text",
+	  "layer":2,
+	  "offset":[ "16%", 5 ]
+	  }
+	},
+	{
+	  "advancement_icon_texture":{
+		"type":"image", 
+		"texture": "$advancement_icon",
+		"layer":3,
+		"anchor_from":"right_middle",
+		"anchor_to":"right_middle",
+		"offset":[ "-86.0%", "-0.7%" ],
+		"size":[ 19, 19 ]
+	  }
+	}
+  ]
+},
+
+"toast_factory": {
+  "type": "panel",
+  "factory": {
+    "name": "hud_title_text_factory",
+    "control_ids": {
+      "hud_title_text": "text_panel_toasts@hud.text_panel_toasts"
+    }
+  }
+},
+//hero_Quest_complete
+
+"text_panel_toasts_template": {
+  
+  // variables modifying content for each toast
+  "$visible_text|default": "hero_Quest_complete",
+  "$content_text|default": "§eTrouble Maker!",
+  "$advancement_text|default": "§3Quest Complete!",
+  "$advancement_icon|default": "textures/items/iron_ingot",
+  
+  "type":"image",
+  "size": [172, 46],
+  "texture": "textures/ui/achievement_temp",
+  "clips_children":true,
+  "anims": ["@hud.advancement_animation_in"],
+  "anchor_from":"top_right",
+  "anchor_to":"top_right",
+  "layer": 1,
+  "offset":[ 0, 50 ],
+  "visible": "($atext = $visible_text)",
+  "uv_size": [ 163, 32 ],
+  "uv": "$uv|default", 
+  "$uv|default": [ 0, 0 ],
+  "variables": [
+	{
+	  "requires": "($atext = $visible_text)",
+	  "$uv|default": [ 0, 0 ]
+	}
+  ],
+  "controls": [
+	{
+	  "advancement_title": {
+		"type": "label",
+		"color": "$main_header_text_color",
+		"layer": 2,
+    "shadow": true,
+		"offset":[ "16%", -5 ],
+		"text": "$advancement_text",
+		"size": [ "default", 12 ],
+		"max_size": [ "100%", "100%" ],
+		"anchor_from":"left_middle",
+		"anchor_to":"left_middle"
+	  }    
+	},
+	{
+	  "advancement_content_texts":{
+	  "type":"label",
+    "shadow": true,
+	  "anchor_from":"left_middle",
+	  "anchor_to":"left_middle",
+	  "color": "$main_header_text_color",
+	  "text": "$content_text",
+	  "layer":2,
+	  "offset":[ "16%", 5 ]
+	  }
+	},
+	{
+	  "advancement_icon_texture":{
+		"type":"image", 
+		"texture": "$advancement_icon",
+		"layer":3,
+		"anchor_from":"right_middle",
+		"anchor_to":"right_middle",
+		"offset":[ "-86.0%", "-0.7%" ],
+		"size":[ 19, 19 ]
+	  }
+	}
+  ]
+},
+"text_panel_toast": {
+  
+  // "global" variables for all toasts
+  "$atext": "$title_text",
+  
+  "type": "panel",
+  "controls": [
+    {
+	  "text_panel_hero_toast@text_panel_toast_template": {
+	    "$visible_text": "day",
+	    "$content_text": "1",
+	    "$advancement_text": "§fDay",
+	    "$advancement_icon": "textures/items/iron_ingot"
+	  }
+	}
+]
+},
+
+"hud_title_text": {
+  "type": "stack_panel",
+  "orientation": "vertical",
+  "offset": [ 0, -19 ],
+  "layer": 1,
+  "visible":"(($title_text = 'lol') or ($title_text = 'paper') or ($title_text = 'first_steps') or ($title_text = 'full_copper') or ($title_text = 'pig_Quest_complete') or ($title_text = 'hero_Quest_complete') or ($title_text = 'village_Quest_complete') or ($title_text = 'iron_Quest_complete'))",
+  "alpha": "@hud.anim_title_text_alpha_in",
+  "propagate_alpha": true,
+  "controls": [
+    {
+      "title_frame": {
+        "type": "panel",
+        "size": [ "100%", "100%cm" ],
+        "controls": [
+          {
+            "title_background": {
+              "type": "image",
+              "size": [ "100%sm + 30px", "100%sm + 6px" ],
+              "texture": "textures/ui/hud_tip_text_background",
+              "alpha": "@hud.anim_title_background_alpha_in"
+            }
+          },
+          {
+            "title": {
+              "type": "label",
+              "anchor_from": "top_middle",
+              "anchor_to": "top_middle",
+              "color": "$title_command_text_color",
+              "text": "#text",
+              "layer": 31,
+              "localize": false,
+              "font_size": "extra_large",
+              "variables": [
+                {
+                  "requires": "(not $title_shadow)",
+                  "$show_shadow": false
+                },
+                {
+                  "requires": "$title_shadow",
+                  "$show_shadow": true
+                }
+              ],
+              "shadow": "$show_shadow",
+              "text_alignment": "center",
+              "offset": [ 0, 6 ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "subtitle_frame": {
+        "type": "panel",
+        "size": [ "100%", "100%cm" ],
+        "controls": [
+          {
+            "subtitle_background": {
+              "type": "image",
+              "size": [ "100%sm + 20px", "100%sm + 5px" ],
+              "offset": [ 0, 16 ],
+              "texture": "textures/ui/hud_tip_text_background",
+              "variables": [
+                {
+                  "requires": "$subtitle_initially_visible",
+                  "$subtitle_bg": "@hud.anim_title_background_alpha_in"
+                },
+                {
+                  "requires": "(not $subtitle_initially_visible)",
+                  "$subtitle_bg": "@hud.anim_subtitle_background_alpha_in"
+                }
+              ],
+              "alpha": "$subtitle_bg"
+            }
+          },
+          {
+            "subtitle": {
+              "type": "label",
+              "anchor_from": "top_middle",
+              "anchor_to": "top_middle",
+              "color": "$title_command_text_color",
+              "text": "#text",
+              "layer": 31,
+              "localize": false,
+              "font_size": "large",
+              "variables": [
+                {
+                  "requires": "$subtitle_initially_visible",
+                  "$anim_type": 1.0
+                },
+                {
+                  "requires": "(not $subtitle_initially_visible)",
+                  "$anim_type": "@hud.anim_subtitle_text_alpha_in"
+                },
+                {
+                  "requires": "(not $title_shadow)",
+                  "$show_shadow": false
+                },
+                {
+                  "requires": "$title_shadow",
+                  "$show_shadow": true
+                }
+              ],
+              "shadow": "$show_shadow",
+              "alpha": "$anim_type",
+              "text_alignment": "center",
+              "offset": [ 1, 19 ],
+              "bindings": [
+                {
+                  "binding_name": "#hud_subtitle_text_string",
+                  "binding_name_override": "#text",
+                  "binding_type": "global"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+},
+
+
+
+
+
+"hud_tip_text": {
+  "type": "image",
+  "size": [ "100%c + 12px", "100%c + 5px" ],
+  "offset": [ 0, -42 ],
+  "texture": "textures/ui/hud_tip_text_background",
+  "alpha": "@hud.anim_item_name_background_alpha_out",
+  "anchor_from": "bottom_middle",
+  "anchor_to": "bottom_middle",
+  "$wait_duration|default": 1,
+  "$destroy_id|default": "popup_tip_text",
+  "controls": [
+    {
+      "item_text_label": {
+        "type": "label",
+        "layer": 31,
+        "color": "$tool_tip_text",
+        "text": "#text",
+        "shadow": true,
+        "alpha": "@hud.anim_item_name_text_alpha_out",
+        "bindings": [
+          {
+            "binding_name": "#tip_text",
+            "binding_name_override": "#text"
+          }
+        ]
+      }
+    }
+  ]
+},
+
+"anim_item_name_text_alpha_in": {
+  "anim_type": "alpha",
+  "duration": 0,
+  "from": 0.0,
+  "to": 1.0,
+  "next": "@hud.anim_item_name_text_alpha_stay"
+},
+
+"anim_item_name_text_alpha_stay": {
+  "anim_type": "wait",
+  "duration": "$wait_duration",
+  "next": "@hud.anim_item_name_text_alpha_out"
+},
+
+"anim_item_name_text_alpha_out": {
+  "anim_type": "alpha",
+  "easing": "in_expo",
+  "destroy_at_end": "$destroy_id",
+  "duration": 2,
+  "from": 1.0,
+  "to": 0
+},
+
+"anim_item_name_background_alpha_in": {
+  "anim_type": "alpha",
+  "duration": 0,
+  "from": 0,
+  "to": 0.6,
+  "next": "@hud.anim_item_name_background_alpha_stay"
+},
+
+"anim_item_name_background_alpha_stay": {
+  "anim_type": "wait",
+  "duration": "$wait_duration",
+  "next": "@hud.anim_item_name_background_alpha_out"
+},
+
+"anim_item_name_background_alpha_out": {
+  "anim_type": "alpha",
+  "easing": "in_expo",
+  "duration": 2,
+  "from": 0.6,
+  "to": 0
+},
+
+"item_name_text_root": {
+  "type": "panel",
+  "size": [ "100%cm", "100%cm" ],
+  "$show_interact_padding|default": false,
+  "$show_survival_padding|default": false,
+
+  "$show_text_background|default": false,
+
+  "$text_color|default": "$tool_tip_text",
+  "$text_binding|default": "#item_text",
+
+  "anchor_from": "bottom_middle",
+  "anchor_to": "bottom_middle",
+  "$wait_duration|default": 1,
+  "$destroy_id|default": "item_name_text",
+  "controls": [
+    {
+      "item_text_aligner": {
+        "type": "stack_panel",
+        "size": [ "100%cm", "100%c" ],
+        "controls": [
+          {
+            "item_text_control": {
+              "type": "panel",
+              "size": [ "100%cm", "100%cm" ],
+              "controls": [
+                {
+                  "item_text_background": {
+                    "ignored": "(not $show_text_background)",
+
+                    "type": "image",
+                    "size": [ "100%sm + 12px", "100%sm + 5px" ],
+                    "texture": "textures/ui/hud_tip_text_background",
+                    "alpha": "@hud.anim_item_name_background_alpha_in"
+                  }
+                },
+                {
+                  "item_text_label": {
+                    "type": "label",
+                    "max_size": [ 200, "default" ],
+                    "text_alignment": "center",
+                    "layer": 31,
+                    "color": "$text_color",
+                    "text": "#text",
+                    "shadow": true,
+                    "alpha": "@hud.anim_item_name_text_alpha_in",
+                    "bindings": [
+                      {
+                        "binding_name": "$text_binding",
+                        "binding_name_override": "#text"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "interact_padding@common.empty_panel": {
+              "visible": "$show_interact_padding",
+              // To not overlap with the interact button
+              // the text needs to move up by 18
+              "size": [ "100%sm", 18 ],
+              "bindings": [
+                {
+                  "binding_name": "#interact_visible",
+                  "binding_name_override": "#visible",
+                  "binding_condition": "always"
+
+                }
+              ]
+            }
+          },
+          {
+            "survival_buffer@common.empty_panel": {
+              "visible": "$show_survival_padding",
+              // Survival HUD has elements above the hot bar
+              // meaning the text needs to move up
+              "size": [ "100%sm", 17 ],
+              "bindings": [
+                {
+                  "binding_name": "#show_survival_ui",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          },
+          {
+            "armor_buffer@common.empty_panel": {
+              "visible": false,
+              // Armor HUD is visible only if player has armor equipped
+              // The text needs to move up a bit further if armor is equipped
+              "size": [ "100%sm", 8 ],
+              "bindings": [
+                {
+                  "binding_name": "#is_in_classic_ui_mode_with_visible_armor",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+},
+
+"text_panel_toasts": {
+  
+  // "global" variables for all toasts
+  "$atext": "$title_text",
+  
+  "type": "panel",
+  "controls": [
+    {
+	  "text_panel_hero_toast@text_panel_toast_template": {
+	    "$visible_text": "hero_Quest_complete",
+	    "$content_text": "§eTrouble Maker!",
+	    "$advancement_text": "§3Quest Complete!",
+	    "$advancement_icon": "textures/items/iron_ingot"
+	  }
+	},
+	{
+	  "text_panel_village_toast@text_panel_toast_template": {
+	    "$visible_text": "village_Quest_complete",
+	    "$content_text": "§eNew Home!",
+	    "$advancement_text": "§3Quest Complete!",
+	    "$advancement_icon": "textures/items/emerald"
+	  }
+	},
+  {
+	  "text_panel_first_steps_toast@text_panel_toast_template": {
+	    "$visible_text": "first_steps",
+	    "$content_text": "Time to explore!",
+	    "$advancement_text": "§eAdvacement Made!",
+	    "$advancement_icon": "textures/items/emerald"
+	  }
+	},
+  {
+	  "text_panel_paper_toast@text_panel_toast_template": {
+	    "$visible_text": "paper",
+	    "$content_text": "Quest Time!",
+	    "$advancement_text": "§eAdvacement Made!",
+	    "$advancement_icon": "textures/items/Quest_paper"
+	  }
+	},
+  {
+	  "text_panel_coal_toast@text_panel_toast_template": {
+	    "$visible_text": "lol",
+	    "$content_text": "§eA new start",
+	    "$advancement_text": "§3Quest Started",
+	    "$advancement_icon": "textures/items/emerald"
+	  }
+	},
+  //questStart
+  //witchcraft_blueQuestStart
+  {
+	  "text_panel_lapis_toast@text_panel_toast_template": {
+	    "$visible_text": "witchcraft_blueQuestStart",
+	    "$content_text": "§eWitchcraft Blue!",
+	    "$advancement_text": "§3Quest Started",
+	    "$advancement_icon": "textures/items/dye_powder_blue"
+	  }
+	},
+  //amethystQuestStart
+  {
+	  "text_panel_amethys_toast@text_panel_toast_template": {
+	    "$visible_text": "amethystQuestStart",
+	    "$content_text": "§eAmethysts!",
+	    "$advancement_text": "§3Quest Started",
+	    "$advancement_icon": "textures/items/amethystr_shard"
+	  }
+	},
+
+  //advancements
+  //stoneage
+  {
+	  "text_panel_stone_toast@text_panel_toast_template": {
+	    "$visible_text": "stone_age",
+	    "$content_text": "Stone Age!",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/items/stone_pickaxe"
+	  }
+	},
+  {
+	  "text_panel_bucket_toast@text_panel_toast_template": {
+	    "$visible_text": "obsidian",
+	    "$content_text": "Ice Bucket Challenge!",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/items/iron_ingot"
+	  }
+	},
+  {
+	  "text_panel_diamond_toast@text_panel_toast_template": {
+	    "$visible_text": "diamonds",
+	    "$content_text": "Diamonds!",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/items/diamond"
+	  }
+	},
+
+  {
+	  "text_panel_eye_toast@text_panel_toast_template": {
+	    "$visible_text": "eye_spy",
+	    "$content_text": "Eye Spy!",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/items/ender_eye"
+	  }
+	},
+  {
+	  "text_panel_iron_toast@text_panel_toast_template": {
+	    "$visible_text": "iron_ingot",
+	    "$content_text": "Aquire Hardware!",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/items/iron_ingot"
+	  }
+	},
+  {
+	  "text_panel_armor_toast@text_panel_toast_template": {
+	    "$visible_text": "iron_chestplate",
+	    "$content_text": "Suit Up!",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/items/iron_chestplate"
+	  }
+	},
+  {
+	  "text_panel_pick_toast@text_panel_toast_template": {
+	    "$visible_text": "iron_pickaxe",
+	    "$content_text": "§5Isn't It Iron Pick!",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/items/iron_pickaxe"
+	  }
+	},
+  {
+	  "text_panel_shield_toast@text_panel_toast_template": {
+	    "$visible_text": "shield",
+	    "$content_text": "§5Protective Stave!",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/ui/shield"
+	  }
+	},
+
+	{
+		"text_panel_obbi_toast@text_panel_toast_template": {
+		  "$visible_text": "obsidian",
+		  "$content_text": "§5Ice Bucket Challenge!",
+		  "$advancement_text": "§eAdvancement Made!",
+		  "$advancement_icon": "textures/blocks/obsidian"
+		}
+	  },
+	  {
+		"text_panel_morediamond_toast@text_panel_toast_template": {
+		  "$visible_text": "diamond",
+		  "$content_text": "§5Diamonds!",
+		  "$advancement_text": "§eAdvancement Made!",
+		  "$advancement_icon": "textures/items/diamond"
+		}
+	  },
+	  {
+		"text_panel_morediamondmore_toast@text_panel_toast_template": {
+		  "$visible_text": "diamond_chestplate",
+		  "$content_text": "§5Cover me with Diamonds!",
+		  "$advancement_text": "§eAdvancement Made!",
+		  "$advancement_icon": "textures/items/diamond_chestplate"
+		}
+	  },
+	  {
+		"text_panel_enchant_toast@text_panel_toast_template": {
+		  "$visible_text": "enchanted_book",
+		  "$content_text": "§5Enchanter!",
+		  "$advancement_text": "§eAdvancement Made!",
+		  "$advancement_icon": "textures/items/paper"
+		}
+	  },
+	  {
+		"text_panel_capple_toast@text_panel_toast_template": {
+		  "$visible_text": "golden_apple",
+		  "$content_text": "§5Zombie Doctor!",
+		  "$advancement_text": "§eAdvancement Made!",
+		  "$advancement_icon": "textures/items/apple"
+		}
+	  },
+	  {
+		"text_panel_ender_toast@text_panel_toast_template": {
+		  "$visible_text": "ender_eye",
+		  "$content_text": "§5Eye Spy!",
+		  "$advancement_text": "§eAdvancement Made!",
+		  "$advancement_icon": "textures/items/ender_eye"
+		}
+	  },
+	  {
+		"text_panel_hon_toast@text_panel_toast_template": {
+		  "$visible_text": "honey_bottle",
+		  "$content_text": "§5Bee Our Guest!",
+		  "$advancement_text": "§eAdvancement Made!",
+		  "$advancement_icon": "textures/items/honey_bottle"
+		}
+	  },
+	  {
+		"text_panel_leadl_toast@text_panel_toast_template": {
+		  "$visible_text": "lead",
+		  "$content_text": "§5BFF!",
+		  "$advancement_text": "§eAdvancement Made!",
+		  "$advancement_icon": "textures/items/lead"
+		}
+	  },
+	  {
+		"text_panel_carrot_toast@text_panel_toast_template": {
+		  "$visible_text": "carrots",
+		  "$content_text": "§5A Seedy Place!!",
+		  "$advancement_text": "§eAdvancement Made!",
+		  "$advancement_icon": "textures/items/carrot"
+		}
+	  },
+
+  {
+	  "text_panel_craftt_toast@text_panel_toast_template": {
+	    "$visible_text": "craftingTable",
+	    "$content_text": "Benchmarking!",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/blocks/crafting_table_side"
+	  }
+	},
+  //bob advancements //craftingTable
+  {
+	  "text_panel_wild_toast@text_panel_toast_template": {
+	    "$visible_text": "wild_carrot",
+	    "$content_text": "§5Don't Wild Carrots",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/items/biome_update/wild_carrot"
+	  }
+	},
+  {
+	  "text_panel_nutt_toast@text_panel_toast_template": {
+	    "$visible_text": "coconut_nut",
+	    "$content_text": "Coconut nut is a giant nut?",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/items/biome_update/Coconut"
+	  }
+	},
+  {
+	  "text_panel_star_toast@text_panel_toast_template": {
+	    "$visible_text": "stardust_ore",
+	    "$content_text": "§5Magic Stones!",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/items/ores/stardust_ingot"
+	  }
+	},
+  {
+	  "text_panel_tears_toast@text_panel_toast_template": {
+	    "$visible_text": "ender_tear",
+	    "$content_text": "§5Sad Days",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/items/waystone/ender_tear"
+	  }
+	},
+  {
+	  "text_panel_ways_toast@text_panel_toast_template": {
+	    "$visible_text": "waystone",
+	    "$content_text": "§eMore Travels!",
+	    "$advancement_text": "§eAdvancement Made!",
+	    "$advancement_icon": "textures/ui/overworld_waystone"
+	  }
+	},
+
+
+
+
+
+  {
+	  "text_panel_copper_toast@text_panel_toast_template": {
+	    "$visible_text": "complete_wood",
+	    "$content_text": "§eA new start",
+	    "$advancement_text": "§3Quest Complete!",
+	    "$advancement_icon": "textures/items/emerald"
+	  }
+	},
+  {
+	  "text_panel_ironBlocks_toast@text_panel_toast_template": {
+	    "$visible_text": "upgrade_start",
+	    "$content_text": "§eTime to upgrade",
+	    "$advancement_text": "§3Quest Started",
+	    "$advancement_icon": "textures/items/stone_pickaxe"
+	  }
+	},
+  {
+	  "text_panel_bacon_toast@text_panel_toast_template": {
+	    "$visible_text": "upgrade_complete",
+	    "$content_text": "§eTime to upgrade",
+	    "$advancement_text": "§3Quest Complete!",
+	    "$advancement_icon": "textures/items/stone_pickaxe"
+	  }
+	},
+  {
+	  "text_panel_wooled_toast@text_panel_toast_template": {
+	    "$visible_text": "wooled_complete",
+	    "$content_text": "§eWooled",
+	    "$advancement_text": "§3Quest Complete!",
+	    "$advancement_icon": "textures/items/bed_white"
+	  }
+	},
+  {
+	  "text_panel_wooled_start_toast@text_panel_toast_template": {
+	    "$visible_text": "wooled_start",
+	    "$content_text": "§eWooled",
+	    "$advancement_text": "§3Quest Started",
+	    "$advancement_icon": "textures/items/bed_white"
+	  }
+	},
+  {
+	  "text_panel_new_journey_toast@text_panel_toast_template": {
+	    "$visible_text": "new_journey",
+	    "$content_text": "§eNew Journey",
+	    "$advancement_text": "§3Started!",
+	    "$advancement_icon": "textures/items/emerald"
+	  }
+	}, //textures/ui/3d_blocks_for_Quest_ui/waystone
+  {
+	  "text_panel_waystone_start_toast@text_panel_toast_template": {
+	    "$visible_text": "waystone_start",
+	    "$content_text": "§eTeleport Stone?",
+	    "$advancement_text": "§3Quest Started",
+	    "$advancement_icon": "textures/ui/3d_blocks_for_Quest_ui/waystone"
+	  }
+	},
+  {
+	  "text_panel_waystone_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "waystone_end",
+	    "$content_text": "§eTeleport Stone?",
+	    "$advancement_text": "§3Quest Complete!",
+	    "$advancement_icon": "textures/ui/3d_blocks_for_Quest_ui/waystone"
+	  }
+	},
+  {
+	  "text_panel_tp_start_toast@text_panel_toast_template": {
+	    "$visible_text": "tp_start",
+	    "$content_text": "§eTeleport To Stone?",
+	    "$advancement_text": "§3Quest Started",
+	    "$advancement_icon": "textures/items/waystone/waypoint_marker"
+	  }
+	},
+  {
+	  "text_panel_tp_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "tp_end",
+	    "$content_text": "§eTeleport To Stone",
+	    "$advancement_text": "§3Quest Complete!",
+	    "$advancement_icon": "textures/items/waystone/waypoint_marker"
+	  }
+	},
+    {
+	  "text_panel_backpack_start_toast@text_panel_toast_template": {
+	    "$visible_text": "backpack_start",
+	    "$content_text": "§eMore Space",
+	    "$advancement_text": "§3Quest Started",
+	    "$advancement_icon": "textures/items/backpack"
+	  }
+	},
+  {
+	  "text_panel_backpack_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "backpack_end",
+	    "$content_text": "§eMore Space?",
+	    "$advancement_text": "§3Quest Complete!",
+	    "$advancement_icon": "textures/items/backpack"
+	  }
+	},
+  {
+	  "text_panel_forge_start_toast@text_panel_toast_template": {
+	    "$visible_text": "forge_start",
+	    "$content_text": "§eForging Time",
+	    "$advancement_text": "§3Quest Started",
+	    "$advancement_icon": "textures/ui/3d_blocks_for_Quest_ui/foge_table"
+	  }
+	},
+  {
+	  "text_panel_forge_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "forge_end",
+	    "$content_text": "§eForging Time",
+	    "$advancement_text": "§3Quest Complete!",
+	    "$advancement_icon": "textures/ui/3d_blocks_for_Quest_ui/foge_table"
+	  }
+	},
+  {
+	  "text_panel_miner_start_toast@text_panel_toast_template": {
+	    "$visible_text": "miner_start",
+	    "$content_text": "§eMiners Dream",
+	    "$advancement_text": "§3Quest Started",
+	    "$advancement_icon": "textures/ui/3d_blocks_for_Quest_ui/enchant_table"
+	  }
+	},
+  {
+	  "text_panel_miners_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "miner_end",
+	    "$content_text": "§eMiners Dream",
+	    "$advancement_text": "§3Quest Complete!",
+	    "$advancement_icon": "textures/ui/3d_blocks_for_Quest_ui/enchant_table"
+	  }
+	},
+
+  ////////////////////////////
+  {
+	  "text_panel_raw_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "ironQuestDone",
+	    "$content_text": "§eMetallis",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/raw_iron"
+	  }
+	},
+  {
+	  "text_panel_rawc_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "coalQuestDone",
+	    "$content_text": "§eLight My Day!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/coal"
+	  }
+	},
+  {
+	  "text_panel_rawl_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "lapisQuestDone",
+	    "$content_text": "§eWitchcraft Blue!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/dye_powder_blue"
+	  }
+	},
+  {
+	  "text_panel_ameth_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "amethystQuestDone",
+	    "$content_text": "§eAmethysts!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/amethyst_shard"
+	  }
+	},
+  {
+	  "text_panel_dias_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "diamondQuestDone",
+	    "$content_text": "§eDiamonds!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/diamond"
+	  }
+	},
+
+  {
+	  "text_panel_sadd_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "enderTearQuestDone",
+	    "$content_text": "§eSad Enderman!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/diamond"
+	  }
+	},
+  {
+	  "text_panel_crolls_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "questScrollQuestDone",
+	    "$content_text": "§eQuest Time!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/Quest_system/Quest_scroll_open"
+	  }
+	},
+  {
+	  "text_panel_crolled_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "questScrollQuestDone",
+	    "$content_text": "§eQuest Time!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/Quest_system/Quest_scroll_open"
+	  }
+	},
+  {
+	  "text_panel_logg_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "logQuestDone",
+	    "$content_text": "§eLog Collector!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/stick"
+	  }
+	},
+  {
+	  "text_panel_orr_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "oreCollectorQuestDone",
+	    "$content_text": "§eOre Collector!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/emerald"
+	  }
+	},
+  {
+	  "text_panel_ker_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "evokerSpellsQuestDone",
+	    "$content_text": "§eEvoker Spells!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/totem"
+	  }
+	},
+  {
+	  "text_panel_slayyy_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "zombieSlayerQuestDone",
+	    "$content_text": "§eZombie Slayer!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/rotten_flesh"
+	  }
+	},
+  {
+	  "text_panel_crept_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "creeperHunterQuestDone",
+	    "$content_text": "§eCreeunter!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/gunpowder"
+	  }
+	},
+  {
+	  "text_panel_sting_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "stringySituationQuestDone",
+	    "$content_text": "§eStringy Situation!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/string"
+	  }
+	},
+  {
+	  "text_panel_sol_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "moreSoulsQuestDone",
+	    "$content_text": "§eMore Souls!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/trophies/soul_star"
+	  }
+	},
+  {
+	  "text_panel_fine_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "thatsFineQuestDone",
+	    "$content_text": "§eThat's Fine!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/blaze_rod"
+	  }
+	},
+  {
+	  "text_panel_frooze_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "snowwhiteQuestDone",
+	    "$content_text": "§eSnowWhite!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/quartz"
+	  }
+	},
+  {
+	  "text_panel_uder_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "netheriteQuestDone",
+	    "$content_text": "§eNether Ite?",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/netherite_ingot"
+	  }
+	},
+  {
+	  "text_panel_plass_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "enderPlayerQuestDone",
+	    "$content_text": "§eEnder Player!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/chorus_fruit"
+	  }
+	},
+  {
+	  "text_panel_bedddd_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "netherBedQuestDone",
+	    "$content_text": "§eNether Bed!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/glowstone_dust"
+	  }
+	},
+  {
+	  "text_panel_cest_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "movableChestQuestDone",
+	    "$content_text": "§eWalking Chest!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/shulker_shell"
+	  }
+	},
+  {
+	  "text_panel_eg_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "dragonEggQuestDone",
+	    "$content_text": "§eDragon Egg!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/glowstone_dust"
+	  }
+	},
+
+  {
+	  "text_panel_pew_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "bowMasterQuestDone",
+	    "$content_text": "§eBow Master!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/arrow"
+	  }
+	},
+  {
+	  "text_panel_helth_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "stayingHealthyQuestDone",
+	    "$content_text": "§eStaying Healthy!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/biome_update/healthy_carrot"
+	  }
+	},
+  {
+	  "text_panel_amsre_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "armoredUpQuestDone",
+	    "$content_text": "§eArmored Up!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/diamond_chestplate"
+	  }
+	},
+  {
+	  "text_panel_het_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "willagerHatQuestDone",
+	    "$content_text": "§eWillager Hat!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/trophies/willager_hat"
+	  }
+	},
+
+  {
+	  "text_panel_gednut_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "aBigNutQuestDone",
+	    "$content_text": "§eA Big Nut!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/biome_update/Opened_Coconut"
+	  }
+	},
+  {
+	  "text_panel_egpla_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "eggsAsPlantsQuestDone",
+	    "$content_text": "§eEggs as Plants!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/biome_update/Eggplant_Item"
+	  }
+	},
+  {
+	  "text_panel_wildes_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "aGoodDietQuestDone",
+	    "$content_text": "§eA Good Diet!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/biome_update/salad"
+	  }
+	},
+  {
+	  "text_panel_errr_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "wildinFoodQuestDone",
+	    "$content_text": "§eWildin' Food!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/biome_update/wild_carrot"
+	  }
+	},
+  {
+	  "text_panel_grer_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "greenHayQuestDone",
+	    "$content_text": "§eGreen Hay!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/biome_update/barley"
+	  }
+	},
+  {
+	  "text_panel_corer_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "cureForTearsQuestDone",
+	    "$content_text": "§eCure For Tears!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/biome_update/baked_onion"
+	  }
+	},
+  {
+	  "text_panel_leg_complete_toast@text_panel_toast_template": {
+	    "$visible_text": "leBaguetteQuestDone",
+	    "$content_text": "§eLe Baguette!",
+	    "$advancement_text": "§5Quest Complete!",
+	    "$advancement_icon": "textures/items/biome_update/baguete"
+	  }
+	},
+
+  //mobs
+  {
+	  "text_panel_willager_beat_toast@text_panel_toast_template": {
+	    "$visible_text": "willager",
+	    "$content_text": "§eDefeated a Willager",
+	    "$advancement_text": "§3Battle Won!",
+	    "$advancement_icon": "textures/ui/3d_blocks_for_Quest_ui/willager"
+	  }
+	}
+  
+  ]//pig_Quest_complete
+}
+
+//coal Quest completed toast
+
+}

@@ -1,0 +1,21 @@
+{
+
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:unkown_book",
+			"category": "commands"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+            "minecraft:foil": true,
+            "minecraft:display_name": {
+                "value": "???\n§7???\n§o???"
+            },
+			"minecraft:hand_equipped": false,
+			"minecraft:icon": {
+				"texture": "enchanted_book"
+			}
+		}
+		}
+	}

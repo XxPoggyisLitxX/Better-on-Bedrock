@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:stronger_string"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#s#",
+            "s#s",
+            "#s#"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:string"
+            },
+            "s": {
+                "item": "better_on_bedrock:deer_hide"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:stronger_string",
+            "count": 3
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:dark_crafting_table"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "##",
+            "##"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:planks",
+                "data": 5
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:dark_oak_crafting_table",
+            "count": 1
+        }
+    }
+}

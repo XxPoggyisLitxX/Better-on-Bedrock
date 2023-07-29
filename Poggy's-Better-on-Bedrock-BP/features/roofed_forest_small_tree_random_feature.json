@@ -1,0 +1,18 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "better_on_bedrock:roofed_forest_small_tree_random_feature"
+		},
+		"features": [
+			[
+				"minecraft:roofed_forest_tree_small_2", //Coarse dirt weighs 5
+				5
+			],
+			[
+				"minecraft:roofed_forest_tree_small_1", //Podzol dirt weighs 3
+				5
+			]
+		]
+	}
+}

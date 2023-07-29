@@ -1,0 +1,137 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.dragon_fly",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0.5, 5, 0],
+					"cubes": [
+						{
+							"origin": [-4, 2, -5],
+							"size": [9, 7, 15],
+							"uv": [0, 0]
+						},
+						{
+							"origin": [-3, 2, 9],
+							"size": [7, 4, 12],
+							"pivot": [0.5, 4, 9],
+							"rotation": [-2.5, 0, 0],
+							"uv": [28, 25]
+						}
+					]
+				},
+				{
+					"name": "bone",
+					"parent": "body",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [2, 3, -14],
+							"size": [5, 4, 4],
+							"uv": [71, 14]
+						},
+						{
+							"origin": [-6, 3, -14],
+							"size": [5, 4, 4],
+							"uv": [48, 12]
+						},
+						{
+							"origin": [-5, 2, -13],
+							"size": [11, 6, 9],
+							"uv": [0, 22]
+						}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [-1, 9, -3],
+					"rotation": [15, -15, 0],
+					"cubes": [
+						{
+							"origin": [-16, 9, -3],
+							"size": [15, 0, 6],
+							"uv": [0, 41]
+						}
+					]
+				},
+				{
+					"name": "rightwing_bone2",
+					"parent": "body",
+					"pivot": [-1, 9, -3],
+					"rotation": [16.93282, 30.8661, 12.84458],
+					"cubes": [
+						{
+							"origin": [-20, 9, 0],
+							"size": [15, 0, 6],
+							"uv": [0, 41]
+						}
+					]
+				},
+				{
+					"name": "leftwing_bone",
+					"parent": "body",
+					"pivot": [2, 9, -3],
+					"rotation": [15, 15, 0],
+					"cubes": [
+						{
+							"origin": [2, 9, -3],
+							"size": [15, 0, 6],
+							"uv": [0, 41]
+						}
+					]
+				},
+				{
+					"name": "leftwing_bone2",
+					"parent": "body",
+					"pivot": [5, 9, 1],
+					"rotation": [16.16015, -26.0728, -11.22518],
+					"cubes": [
+						{
+							"origin": [5, 9, 1],
+							"size": [15, 0, 6],
+							"uv": [0, 41]
+						}
+					]
+				},
+				{
+					"name": "leg1",
+					"parent": "body",
+					"pivot": [2, 2, -2],
+					"cubes": [
+						{
+							"origin": [-3, -11, -4],
+							"size": [0, 14, 11],
+							"pivot": [-3, 2, 1.5],
+							"rotation": [0, 0, 10],
+							"uv": [1, 36]
+						}
+					]
+				},
+				{
+					"name": "leg0",
+					"parent": "body",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [4, -11, -3],
+							"size": [0, 14, 11],
+							"pivot": [4, 2, 2.5],
+							"rotation": [2.53368, 0.29937, -5.32351],
+							"uv": [1, 36]
+						}
+					]
+				}
+			]
+		}
+	]
+}

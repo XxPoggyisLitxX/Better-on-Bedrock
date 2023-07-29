@@ -1,0 +1,60 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:enchanted_book",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+            "minecraft:timer": {
+                "time": 2.1,
+                "looping": true,
+                "time_down_event": {
+                    "event": "despawm",
+                    "target": "self"
+                }
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "cause": "all",
+                        "deals_damage": false
+                    }
+                ]
+            },
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:push_through": {
+				"value": 1
+			}
+		},
+        "component_groups": {
+            "despawn": {
+                "minecraft:instant_despawn": {
+                    "remove_child_entities": false
+                }
+            }
+        },
+        "events": {
+            "despawm": {
+                "add": {
+                    "component_groups": [
+                        "despawn"
+                    ]
+                }
+            },
+            "minecraft:entity_spawned": {
+                "run_command": {
+                    "command": ["summon minecraft:zombie ~ ~ ~ only_enchanted"]
+                }
+            }
+        }
+	}
+}

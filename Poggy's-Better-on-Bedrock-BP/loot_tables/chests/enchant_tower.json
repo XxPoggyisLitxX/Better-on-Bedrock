@@ -1,0 +1,72 @@
+{
+  "pools": [
+    {
+      "rolls": 6,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 3,
+          "quality": 0,
+          "name": "minecraft:emerald"
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "name": "minecraft:lapis_lazuli",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "quality": 1,
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "minecraft:book",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": 5,
+              "treasure": true
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "name": "minecraft:writable_book"
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "name": "minecraft:book",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 5,
+          "name": "minecraft:experience_bottle"
+        }
+      ]
+    }
+  ]
+}

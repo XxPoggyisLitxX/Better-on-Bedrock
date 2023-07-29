@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:poison_ball",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/poison_ball"
+			},
+			"geometry": {
+				"default": "geometry.poison_ball"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#5f8986",
+				"overlay_color": "#0f4301"
+			}
+		}
+	}
+}

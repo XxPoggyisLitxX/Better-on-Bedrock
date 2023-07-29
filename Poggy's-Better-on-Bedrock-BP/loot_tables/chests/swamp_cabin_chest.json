@@ -1,0 +1,278 @@
+{
+    "pools": [
+      {
+        "rolls": {
+          "min": 5,
+          "max": 8
+        },
+        "entries": [
+          {
+            "type": "item",
+            "weight": 5,
+            "name": "minecraft:porkchop",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 6,
+            "name": "better_on_bedrock:cabbage_seed",
+             "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ]
+          }, 
+          {
+            "type": "item",
+            "weight": 6,
+            "name": "better_on_bedrock:berry_pie_slice",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 3,
+            "name": "better_on_bedrock:barley_seed"
+          },
+          {
+            "type": "item",
+            "weight": 3,
+            "name": "better_on_bedrock:tomato_seed"
+          }, 
+          {
+            "type": "item",
+            "weight": 7,
+            "name": "better_on_bedrock:onion_seed",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 7,
+            "name": "better_on_bedrock:tomato_seed",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 7,
+            "name": "better_on_bedrock:eggplant_seed",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 10,
+            "name": "minecraft:beef",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 5
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 5,
+            "name": "minecraft:wheat",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 15,
+            "name": "minecraft:bread",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 15,
+            "name": "minecraft:salmon",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 5,
+            "name": "minecraft:apple"
+          },
+          {
+            "type": "item",
+            "weight": 5,
+            "name": "minecraft:mutton"
+          },
+          {
+            "type": "item",
+            "weight": 5,
+            "name": "minecraft:beetroot_seeds",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 3,
+                  "max": 5
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 10,
+            "name": "minecraft:water_bucket",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "type": "minecraft:binomial",
+                  "n": 1,
+                  "p": 1
+                }
+              },
+              {
+                "function": "set_data"
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 6,
+            "name": "minecraft:potato",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 5,
+            "quality": 1,
+            "name": "minecraft:wheat_seeds",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 3,
+                  "max": 6
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 9,
+            "name": "minecraft:cooked_beef",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 9,
+            "name": "minecraft:cooked_porkchop",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 9,
+            "name": "minecraft:cooked_mutton",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

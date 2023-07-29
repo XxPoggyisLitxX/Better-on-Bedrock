@@ -1,0 +1,29 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+      "controller.render.zombie": {
+        "arrays": {
+            "geometries": {
+                "array.geos": [
+                    "Geometry.frozen",
+                    "Geometry.jungle",
+                    "Geometry.default"
+                ]
+            },
+            "textures": {
+                "array.skins": [
+                    "Texture.one",
+                    "Texture.two",
+                    "Texture.default"
+                ]        
+            }
+        },
+
+        "geometry": "Array.geos[query.variant]",
+        "materials": [ { "*": "Material.default" } ],
+        "textures": [ "Array.skins[query.variant]" ]
+      }
+    }
+  }
+  
+  

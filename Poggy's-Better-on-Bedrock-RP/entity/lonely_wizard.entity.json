@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:lonely_wizard",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/lonely_wizard"
+			},
+			"geometry": {
+				"default": "geometry.lonely_wizard"
+			},
+			"animations": {
+				"basic": "controller.animation.lone_wizard.controller",
+				"idle": "animation.lone_wizard.general",
+				"move": "animation.lone_wizard.move"
+			},
+			"scripts": {
+				"animate": [
+					"basic"
+				]
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#550cac",
+				"overlay_color": "#93e5c8"
+			}
+		}
+	}
+}

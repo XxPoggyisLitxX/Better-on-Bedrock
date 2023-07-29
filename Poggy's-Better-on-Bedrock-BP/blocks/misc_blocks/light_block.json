@@ -1,0 +1,43 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:light_blocked",
+			"menu_category": {
+				"category": "construction",
+				"is_hidden_in_commands": false
+			},
+			"is_experimental": true
+		},
+		"components": {
+            "minecraft:destructible_by_mining":false,
+            "minecraft:destructible_by_explosion":false,
+            "minecraft:light_emission": 15,
+            "minecraft:queued_ticking": {
+                "looping": true,
+                "interval_range": [0.1, 1],
+                "on_tick": {
+                    "event": "better_on_bedrock:destroy_light",
+                    "target": "block"
+                }
+            },
+            "minecraft:geometry": "geometry.dynamic_light_block",
+            "minecraft:collision_box":false,
+            "minecraft:selection_box":false,
+            "minecraft:display_name": "tile.better_on_bedrock:stardust_ore",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "deepslate_stardust_ore",
+					"render_method": "opaque"
+				}
+			}
+		},
+        "events": {
+            "better_on_bedrock:destroy_light": {
+                "run_command": {
+                    "command": ["setblock ~ ~ ~ air 0"]
+                }
+            }
+        }
+	}
+}

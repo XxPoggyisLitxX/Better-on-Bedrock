@@ -1,0 +1,32 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.sparrow.movements": {
+			"states": {
+				"default": {
+					"animations": ["idle"],
+					"transitions": [
+						{"walk": "q.modified_move_speed >= 0.05 && q.is_on_ground"},
+						{"fly": "!q.is_on_ground && q.modified_move_speed >= 0.05"}
+					],
+					"blend_transition": 0.2
+				},
+				"walk": {
+					"animations": ["walk"],
+					"transitions": [
+						{"fly": "!q.is_on_ground && q.modified_move_speed >= 0.05"},
+						{"default": "q.is_on_ground && q.modified_move_speed <= 0.05"}
+					],
+					"blend_transition": 0.2
+				},
+				"fly": {
+					"animations": ["fly"],
+					"transitions": [
+						{"default": "q.is_on_ground && q.modified_move_speed <= 0.05"},
+						{"walk": "q.is_on_ground && q.modified_move_speed >= 0.05"}
+					]
+				}
+			}
+		}
+	}
+}

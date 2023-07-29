@@ -1,0 +1,79 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.player_enchanted.third_person": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(query.player_level > 10) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(query.player_level > 10) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 0.5,
+            "ignore_lighting": true
+        },
+        "controller.render.player_enchanted.first_person": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": false
+                },
+                {
+                    "rightArm": "query.get_equipped_item_name(0, 1) == ''"
+                },
+                {
+                    "rightSleeve": "query.get_equipped_item_name(0, 1) == ''"
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(query.player_level > 10) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(query.player_level > 10) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 0.5,
+            "ignore_lighting": true
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "better_on_bedrock:birch_tree_random_feature"
+		},
+		"features": [
+			[
+				"minecraft:birch_tree_variation_1", //Coarse dirt weighs 5
+				2
+			],
+			[
+				"minecraft:birch_tree_variation_2", //Podzol dirt weighs 3
+				2
+			],
+			[
+				"minecraft:birch_tree_variation_3", //Cobblestone weighs 2
+				2
+			],
+			[
+				"minecraft:birch_tree_new_1", //Cobblestone weighs 2
+				13
+			],
+			[
+				"minecraft:birch_tree_new_2", //Cobblestone weighs 2
+				13
+			],
+			[
+				"minecraft:birch_tree_new_3", //Cobblestone weighs 2
+				13
+			],
+			[
+				"minecraft:birch_tree_new_4", //Cobblestone weighs 2
+				13
+			],
+			[
+				"minecraft:birch_tree_new_5", //Cobblestone weighs 2
+				13
+			],
+			[
+				"minecraft:birch_tree_bee",
+				1.3
+			]
+		]
+	}
+}

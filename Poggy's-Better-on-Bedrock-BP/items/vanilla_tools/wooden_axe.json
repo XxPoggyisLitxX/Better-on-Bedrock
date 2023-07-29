@@ -1,0 +1,1135 @@
+{
+    "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "better_on_bedrock:wood_axe",
+      "category": "equipment"
+    },
+    "components": {
+      "tag:minecraft:is_axe": {},
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:icon": {
+        "texture": "wood_axe"
+      },
+      "minecraft:creative_category":{
+        "parent": "itemGroup.name.axe"
+      },
+      "minecraft:durability": {
+        "max_durability": 60,
+        "damage_chance": {
+          "min": 5,
+          "max": 10
+        }
+      },
+      "minecraft:display_name": {
+        "value": "Wooden Axe"
+    },
+      "minecraft:damage": 5,
+      "minecraft:enchantable": {
+        "value": 10,
+        "slot": "axe"
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": [
+              "minecraft:planks",
+              "minecraft:stick"
+            ],
+            "repair_amount": "query.max_durability"
+          }
+        ]
+      },
+      "minecraft:weapon": {
+        "on_hurt_entity": {
+          "event": "dmg"
+        },
+        "on_not_hurt_entity": {
+          "event": "dmg"
+        },
+        "on_hit_block": {
+          "event": "dmg"
+        }
+      },
+      "minecraft:digger": {
+        "destroy_speeds": [
+            {
+                "block": "nether_wart_block",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_stem",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_stem",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "stripped_crimson_stem",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "stripped_warped_stem",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_hyphae",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_hyphae",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "stripped_crimson_hyphae",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "stripped_warped_hyphae",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "soul_torch",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_standing_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_standing_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_wall_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_wall_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_door",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_door",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_planks",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_planks",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_trapdoor",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_trapdoor",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_fence",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_fence",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_fence_gate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_fence_gate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_double_slab",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_slab",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_double_slab",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_slab",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_stairs",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_stairs",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_button",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_button",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crimson_pressure_plate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "warped_pressure_plate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "soul_campfire",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_log",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "stripped_mangrove_log",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_planks",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_button",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_stairs",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_slab",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_pressure_plate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_fence",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_fence_gate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_door",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_standing_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_wall_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_trapdoor",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_wood",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "stripped_mangrove_wood",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_double_slab",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "planks",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "log",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "stripped_oak_log",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "stripped_birch_log",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "stripped_dark_oak_log",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "stripped_acacia_log",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "stripped_jungle_log",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "stripped_spruce_log",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "noteblock",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "jukebox",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "bed",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "bookshelf",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "torch",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "oak_stairs",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "chest",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "crafting_table",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "standing_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "wooden_door",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "ladder",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "wall_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "wooden_pressure_plate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "acacia_pressure_plate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "birch_pressure_plate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "dark_oak_pressure_plate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "jungle_pressure_plate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "spruce_pressure_plate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "unlit_redstone_torch",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "redstone_torch",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "fence",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "pumpkin",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "carved_pumpkin",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "lit_pumpkin",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "trapdoor",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "acacia_trapdoor",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "birch_trapdoor",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "dark_oak_trapdoor",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "jungle_trapdoor",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "spruce_trapdoor",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "brown_mushroom_block",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "red_mushroom_block",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "melon_block",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "pumpkin_stem",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "melon_stem",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "fence_gate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "cocoa",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "spruce_stairs",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "birch_stairs",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "jungle_stairs",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "wooden_button",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "acacia_button",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "birch_button",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "dark_oak_button",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "jungle_button",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "spruce_button",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "trapped_chest",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "daylight_detector",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "double_wooden_slab",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "wooden_slab",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "log2",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "acacia_stairs",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "dark_oak_stairs",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "daylight_detector_inverted",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "spruce_fence_gate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "birch_fence_gate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "jungle_fence_gate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "dark_oak_fence_gate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "acacia_fence_gate",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "spruce_door",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "birch_door",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "jungle_door",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "acacia_door",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "dark_oak_door",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "standing_banner",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "wall_banner",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "bamboo",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "bamboo_sapling",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "scaffolding",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "spruce_wall_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "spruce_standing_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "birch_wall_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "birch_standing_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "jungle_wall_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "jungle_standing_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "acacia_wall_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "acacia_standing_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "darkoak_wall_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "darkoak_standing_sign",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "barrel",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "smithing_table",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "cartography_table",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "fletching_table",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "campfire",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "loom",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "lectern",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "wood",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "composter",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "chorus_flower",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "chorus_plant",
+                "speed": 2,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            }
+        ],
+        "on_dig": {
+            "event": "dmg"
+        }
+    }
+    },
+    "events": {
+      "dmg": {
+        "damage": {
+          "type": "none",
+          "amount": 1,
+          "target": "self"
+        }
+      },
+      "on_tool_used": {
+        "damage": {
+          "type": "none",
+          "amount": 1,
+          "target": "self"
+        },
+        "run_command": {
+          "command": [
+            "playsound use.wood @p"
+          ]
+        }
+      },
+      "gen:damage": {
+        "damage": {
+          "type": "none",
+          "amount": 1,
+          "target": "self"
+        }
+      }
+    }
+  }
+}

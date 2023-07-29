@@ -1,0 +1,25 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:scatter_feature": {
+      "description": {
+        "identifier": "pa:pog_berry_scatter_feature"
+      },
+      "places_feature": "better_on_bedrock:berry",
+      "iterations": "v.type = math.random_integer(0, 2); return 16;",
+      "x": {
+        "distribution": "gaussian",
+        "extent": [
+          0,
+          15
+        ]
+      },
+      "y": 0,
+      "z": {
+        "distribution": "gaussian",
+        "extent": [
+          0,
+          15
+        ]
+      }
+    }
+  }

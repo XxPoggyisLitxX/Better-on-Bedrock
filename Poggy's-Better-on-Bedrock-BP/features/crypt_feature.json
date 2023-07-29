@@ -1,0 +1,15 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "pog:crypt_feature"
+		},
+		"structure_name": "mystructure:crypt_entrance",
+		"facing_direction": "south",
+		"adjustment_radius": 8,
+		"constraints": {
+			"unburied": {},
+			"grounded": {}
+		}
+	}
+}

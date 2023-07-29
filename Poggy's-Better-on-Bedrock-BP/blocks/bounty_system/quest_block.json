@@ -1,0 +1,184 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+      "description": {
+        "identifier": "better_on_bedrock:quest_block",
+        "properties": {
+          "better_on_bedrock:interact":[
+            "default",
+            "used"
+          ],
+          "better_on_bedrock:rotations":[
+            "north", 
+            "east",
+            "south",
+            "west"
+          ]
+        }
+      },
+      "components": {
+        "minecraft:on_interact": {
+          "condition": "q.scoreboard('quest') == 1",
+          "event": "Note"
+          
+        },
+        "minecraft:creative_category": {
+          "category": "construction",
+          "group": "construction"
+      },
+        "minecraft:breathability": "air",
+        "minecraft:destructible_by_mining": false,
+        "minecraft:map_color": "#a53a3a",
+        "minecraft:explosion_resistance": 1.0,
+        "minecraft:block_light_absorption": 0.0,
+        "minecraft:collision_box":{
+          "origin":[
+            -8,
+            0,
+            -2
+           ],
+           "size":[
+            16,
+            16,
+            4
+           ]
+        },
+        "minecraft:selection_box":{
+          "origin":[
+            -8,
+            0,
+            -2
+           ],
+           "size":[
+            16,
+            16,
+            4
+           ]
+        },
+        "minecraft:geometry": "geometry.bounty_board",
+        "minecraft:block_light_emission": 0.0,
+        "minecraft:material_instances": {
+          "*": {
+            "texture": "bounty_board_default",
+            "render_method": "alpha_test"
+          }
+        }
+      },
+      "permutations": [
+        {
+          "condition": "query.block_property('better_on_bedrock:interact') == 'default'",
+          "components": {
+            "minecraft:breathability": "air",
+            "minecraft:collision_box":{
+              "origin":[
+                -8,
+                0,
+                -2
+               ],
+               "size":[
+                16,
+                16,
+                4
+               ]
+            },
+            "minecraft:selection_box":{
+              "origin":[
+                -8,
+                0,
+                -2
+               ],
+               "size":[
+                16,
+                16,
+                4
+               ]
+            },
+            "minecraft:destructible_by_mining": false,
+            "minecraft:map_color": "#FFFFFF",
+            "minecraft:explosion_resistance": 1.0,
+            "minecraft:block_light_absorption": 0.0,
+            "minecraft:block_light_emission": 0.0,
+      "minecraft:on_interact": {
+        "condition": "q.scoreboard('quest') == 0",
+        "event": "item"
+        
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "bounty_board_default",
+          "render_method": "alpha_test"
+        }
+      }
+          }
+        },
+        {
+          "condition": "query.block_property('better_on_bedrock:interact') == 'used'",
+          "components": {
+            "minecraft:breathability": "air",
+            "minecraft:destructible_by_mining": false,
+            "minecraft:map_color": "#FFFFFF",
+            "minecraft:explosion_resistance": 1.0,
+            "minecraft:block_light_absorption": 0.0,
+            "minecraft:block_light_emission": 0.0,
+            "minecraft:collision_box":{
+              "origin":[
+                -8,
+                0,
+                -2
+               ],
+               "size":[
+                16,
+                16,
+                4
+               ]
+            },
+            "minecraft:selection_box":{
+              "origin":[
+                -8,
+                0,
+                -2
+               ],
+               "size":[
+                16,
+                16,
+                4
+               ]
+            },
+            "minecraft:on_interact": {
+        "condition": "q.scoreboard('quest') == 1",
+        "event": "Note"
+        
+      },
+            "minecraft:material_instances": {
+              "*": {
+                "texture": "bounty_board_used",
+                "render_method": "alpha_test"
+              }
+            }
+          }
+        }
+      ],
+      "events": {
+        "Note": {
+          "run_command":{
+            "command": ["title @p title §", "title @p subtitle §cYou already have a scroll"]
+          }
+        },
+        "item": {
+          "spawn_loot": {
+            "table": "loot_tables/blocks/paper.json"
+          },
+          "play_sound": {
+            "sound": "mob.horse.leather"
+          },
+          "set_block_property": {
+            "better_on_bedrock:interact": "'used'"
+          },
+          "run_command":{
+            "command": ["function run_tags"]
+          }
+          }
+        
+      }
+    }
+  }

@@ -1,0 +1,53 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:coconut",
+			"is_experimental": true
+		},
+		"components": {
+            "minecraft:destructible_by_mining":{
+                "seconds_to_destroy": 1
+            },
+
+            "minecraft:loot": "loot_tables/blocks/coconut_nut.json",
+			//Basic components
+			"minecraft:geometry": "geometry.coconut",
+            "minecraft:display_name": "Coconut",
+			"minecraft:selection_box":{
+				"origin": [
+					-4,
+					0,
+					-4
+				  ],
+				  "size": [
+					8,
+					8,
+					8
+				  ]
+			},
+			"minecraft:collision_box":{
+				"origin": [
+					-4,
+					0,
+					-4
+				  ],
+				  "size": [
+					8,
+					8,
+					8
+				  ]
+			},
+			"minecraft:material_instances": {
+				"coconut": {
+					"texture": "coconut",
+					"render_method": "alpha_test"
+				},
+				"coconut_stem": {
+					"texture": "coconut_stem",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

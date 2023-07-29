@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+"controller.animation.poggy.copper": {
+			
+    "initial_state":"copper_done",
+   "states": {
+       "copper_done":{
+           "transitions":[{ "copper": "q.scoreboard('copper') == 1" }]
+         },
+         "copper":{
+             "animations": ["copper_anim"],
+           "on_entry":[
+            "/title @p actionbar Find Copper"
+            ],
+            "transitions": [{"copper_done":"q.scoreboard('copper') == 0"}]
+         }
+   }
+         }
+        }
+    }

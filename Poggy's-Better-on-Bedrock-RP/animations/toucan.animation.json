@@ -1,0 +1,51 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.toucan.fly": {
+			"loop": true,
+			"bones": {
+				"Body": {
+					"rotation": [-27.5, 0, 0]
+				},
+				"Tail": {
+					"rotation": [60, 0, 0]
+				},
+				"Right_Wing": {
+					"rotation": [-62.5, -5, "90 - math.cos(q.anim_time * 1234) * 32"],
+					"position": [0, 0, 2]
+				},
+				"Left_Wing": {
+					"rotation": [-62.5, 5, "-90+ math.cos(q.anim_time * 1234) * 32"],
+					"position": [0, 0, 2]
+				},
+				"Head": {
+					"rotation": [50, 0, 0],
+					"position": [0, -1, -1]
+				},
+				"Right_Leg": {
+					"position": [0, 0.1, 0]
+				},
+				"Left_Leg": {
+					"position": [0, 0.1, 0]
+				}
+			}
+		},
+		"animation.toucan.default": {
+			"loop": true,
+			"bones": {
+				"Body": {
+					"rotation": [-17.5, 0, 0]
+				},
+				"Tail": {
+					"rotation": [42.5, 0, 0]
+				},
+				"Left_Wing": {
+					"position": [0, -1, 0]
+				},
+				"Head": {
+					"rotation": [15, 0, 0]
+				}
+			}
+		}
+	}
+}

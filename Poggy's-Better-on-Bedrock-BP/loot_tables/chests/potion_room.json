@@ -1,0 +1,89 @@
+{
+  "pools": [
+    {
+      "rolls": 7,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_data",
+              "data": 7
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_data",
+              "data": 13
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_data",
+              "data": 5
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_data",
+              "data": 23
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 7,
+          "name": "minecraft:fermented_spider_eye"
+        },
+        {
+          "type": "item",
+          "weight": 7,
+          "name": "minecraft:rabbit_foot"
+        },
+        {
+          "type": "item",
+          "weight": 7,
+          "name": "minecraft:glowstone_dust"
+        },
+        {
+          "type": "item",
+          "weight": 7,
+          "name": "minecraft:nether_wart"
+        },
+        {
+          "type": "item",
+          "weight": 7,
+          "name": "minecraft:pufferfish"
+        },
+        {
+          "type": "item",
+          "weight": 7,
+          "name": "minecraft:magma_cream",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

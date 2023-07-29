@@ -1,0 +1,41 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:enchanter",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_enchant"
+			},
+			"textures": {
+				"default": "textures/entity/enchanter",
+				"enchanted": "textures/misc/enchanted_entity_glint_white"
+			},
+			"geometry": {
+				"default": "geometry.enchanter"
+			},
+			"animations": {
+				"basic": "controller.animation.enchanter.moves",
+				"attack": "animation.enchanter.attack",
+				"idle": "animation.enchanter.idle",
+				"walk": "animation.enchanter.walk",
+				"enchant": "animation.enchanter.enchant"
+			},
+			"scripts": {
+				"animate": [
+					"basic"
+				]
+			},
+			"render_controllers": [{
+				"controller.render.default": "!q.is_on_ground  || q.is_on_ground || q.mark_variant == 0 || q.mark_variant == 1"
+			},
+			{
+				"controller.render.enchanter": "q.mark_variant == 1"
+			}],
+			"spawn_egg": {
+				"base_color": "#919191",
+				"overlay_color": "#ef3478"
+			}
+		}
+	}
+}

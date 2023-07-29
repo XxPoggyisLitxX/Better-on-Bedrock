@@ -1,0 +1,42 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.raccoon": {
+			"states": {
+				"default": {
+					"animations": ["idle"],
+					"transitions": [
+						{"walking": "q.modified_move_speed > 0.05"},
+						{"digging": "q.is_sleeping == true"},
+						{"dig": "q.variant == 9"}
+					],
+					"blend_transition": 0.2
+				},
+				"walking": {
+					"animations": ["walk"],
+					"transitions": [
+						{"default": "q.modified_move_speed < 0.05"},
+						{"digging": "q.is_sleeping == true"},
+						{"dig": "q.variant == 9"}
+					],
+					"blend_transition": 0.2
+				},
+				"digging": {
+					"animations": ["lay"],
+					"transitions": [
+						{"default": "q.is_sleeping == false"},
+						{"dig": "query.variant == 9"}
+					],
+					"blend_transition": 0.2
+				},
+				"dig": {
+					"animations": ["dig", "dirt"],
+					"transitions": [
+						{"default": "q.variant == 8"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

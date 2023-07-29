@@ -1,0 +1,82 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.raccoon",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"held_item": [-2, 4.3, -12]
+					}
+				},
+				{
+					"name": "Body",
+					"pivot": [0, 6, 0],
+					"cubes": [
+						{"origin": [-4, 4, -7], "size": [8, 6, 14], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "RightFntLeg",
+					"parent": "Body",
+					"pivot": [-1, 4, -5],
+					"cubes": [
+						{"origin": [-3.8, 0, -6], "size": [3, 4, 2], "uv": [34, 21]}
+					]
+				},
+				{
+					"name": "LeftFntLeg",
+					"parent": "Body",
+					"pivot": [1, 4, -5],
+					"cubes": [
+						{"origin": [0.8, 0, -6], "size": [3, 4, 2], "uv": [31, 29]}
+					]
+				},
+				{
+					"name": "RightBckLeg",
+					"parent": "Body",
+					"pivot": [-3, 4, 5],
+					"cubes": [
+						{"origin": [-4, 0, 3], "size": [3, 4, 3], "uv": [21, 21]}
+					]
+				},
+				{
+					"name": "LeftBckLeg",
+					"parent": "Body",
+					"pivot": [3, 4, 5],
+					"cubes": [
+						{"origin": [1, 0, 3], "size": [3, 4, 3], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Tail",
+					"parent": "Body",
+					"pivot": [0, 7, 7],
+					"cubes": [
+						{"origin": [-2.5, 4, 7], "size": [5, 5, 10], "uv": [0, 21]}
+					]
+				},
+				{
+					"name": "Head",
+					"parent": "Body",
+					"pivot": [0, 6, -7],
+					"cubes": [
+						{"origin": [-3.5, 3.5, -12], "size": [7, 6, 5], "uv": [31, 0]},
+						{"origin": [-1.5, 3.5, -14], "size": [3, 2, 2], "uv": [0, 8]},
+						{"origin": [-3, 9, -8], "size": [2, 2, 1], "uv": [0, 25]},
+						{"origin": [1, 9, -8], "size": [2, 2, 1], "uv": [0, 21]}
+					]
+				}
+			]
+		}
+	]
+}

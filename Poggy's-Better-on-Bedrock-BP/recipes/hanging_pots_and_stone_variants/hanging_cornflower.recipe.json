@@ -1,0 +1,35 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:hanging_cornflower"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " # ",
+            "#R#",
+            "/F/"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:string"
+            },
+            "R": {
+                "item": "minecraft:red_flower",
+                "data": 9
+            },
+            "/": {
+                "item": "minecraft:stick"
+            },
+            "F": {
+                "item": "minecraft:flower_pot"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:cornflower_pot_item",
+            "count": 1
+        }
+    }
+}

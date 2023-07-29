@@ -1,0 +1,113 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.illusioner.new": {
+			"loop": true,
+			"bones": {
+				"arms": {
+					"rotation": [-45, 0, 0]
+				},
+				"rightArm": {
+					"position": [5, 0, 0]
+				},
+				"leftArm": {
+					"position": [-4, 0, 0]
+				}
+			}
+		},
+		"animation.illusioner.new2": {
+			"loop": true,
+			"bones": {
+				"arms": {
+					"scale": 0
+				},
+				"rightArm": {
+					"rotation": [-84.92327, -9.96156, -0.88045]
+				},
+				"leftArm": {
+					"rotation": [-77.31336, 9.76061, 2.18558]
+				},
+				"leg0": {
+					"rotation": ["math.cos(q.anim_time * 750) * 32", 0, 0]
+				},
+				"leg1": {
+					"rotation": ["-math.cos(q.anim_time * 750) * 32", 0, 0]
+				}
+			}
+		},
+		"animation.illusioner.new3": {
+			"loop": true,
+			"bones": {
+				"arms": {
+					"rotation": [-40, 0, 0]
+				},
+				"rightArm": {
+					"position": [5, 0, 0]
+				},
+				"leftArm": {
+					"position": [-5, 0, 0]
+				},
+				"leg0": {
+					"rotation": ["math.cos(q.anim_time * 750) * 32", 0, 0]
+				},
+				"leg1": {
+					"rotation": ["-math.cos(q.anim_time * 750) * 32", 0, 0]
+				}
+			}
+		},
+		"animation.illusioner.idle": {
+			"loop": true,
+			"bones": {
+				"arms": {
+					"rotation": [-45, 0, 0]
+				},
+				"rightArm": {
+					"position": [5, 0, 0]
+				},
+				"leftArm": {
+					"position": [-4, 0, 0]
+				}
+			}
+		},
+		"animation.illusioner.bow": {
+			"loop": true,
+			"bones": {
+				"arms": {
+					"scale": 0
+				},
+				"rightArm": {
+					"rotation": [-84.92327, -9.96156, -0.88045]
+				},
+				"leftArm": {
+					"rotation": [-77.31336, 9.76061, 2.18558]
+				},
+				"leg0": {
+					"rotation": ["math.cos(q.anim_time * 750) * 32", 0, 0]
+				},
+				"leg1": {
+					"rotation": ["-math.cos(q.anim_time * 750) * 32", 0, 0]
+				}
+			}
+		},
+		"animation.illusioner.walk": {
+			"loop": true,
+			"bones": {
+				"arms": {
+					"rotation": [-40, 0, 0]
+				},
+				"rightArm": {
+					"position": [5, 0, 0]
+				},
+				"leftArm": {
+					"position": [-5, 0, 0]
+				},
+				"leg0": {
+					"rotation": ["math.cos(q.anim_time * 750) * 32", 0, 0]
+				},
+				"leg1": {
+					"rotation": ["-math.cos(q.anim_time * 750) * 32", 0, 0]
+				}
+			}
+		}
+	}
+}

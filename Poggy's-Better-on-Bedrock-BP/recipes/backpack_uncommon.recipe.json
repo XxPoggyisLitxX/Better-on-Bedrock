@@ -1,0 +1,30 @@
+{
+	"format_version": "1.17.41",
+	
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "better_on_bedrock:sweet_grape_pie"
+		},
+		"group": "foods",
+		"tags": ["crafting_table"],
+		
+		"ingredients": [
+			{
+				"item": "minecraft:sweet_berries"
+			},
+            {
+				"item": "minecraft:sugar"
+			},
+            {
+				"item": "minecraft:red_mushroom"
+			},
+			{
+				"item": "better_on_bedrock:dough"
+			}
+		],
+		"result": {
+			"item": "better_on_bedrock:berry_pie",
+			"count": 1
+		}
+	}
+}

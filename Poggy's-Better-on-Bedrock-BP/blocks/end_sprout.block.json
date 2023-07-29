@@ -1,0 +1,36 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:end_sprout"
+		},
+		"components": {
+			"minecraft:collision_box": false,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": ["up"],
+						"block_filter": [
+							"better_on_bedrock:end_nylium"
+						]
+					}
+				]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 30
+			},
+			"minecraft:geometry": "geometry.end_sprout",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "end_sprout",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:light_emission": 6,
+			"minecraft:map_color": "#ffffff"
+		}
+	}
+}

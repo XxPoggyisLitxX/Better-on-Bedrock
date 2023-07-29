@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "minecraft:ender_eye"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "priority": 24,
+    "ingredients": [
+      {
+        "item": "minecraft:ender_pearl"
+      },
+      {
+        "item": "better_on_bedrock:willager_eye"
+      },
+      {
+        "item": "better_on_bedrock:lich_eye"
+      },
+      {
+        "item": "better_on_bedrock:enchanter_eye"
+      }
+    ],
+    "result": {
+      "item": "minecraft:ender_eye",
+      "count": 12
+    }
+  }
+}

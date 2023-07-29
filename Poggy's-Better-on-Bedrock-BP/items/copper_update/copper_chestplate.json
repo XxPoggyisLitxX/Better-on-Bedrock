@@ -1,0 +1,68 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:copper_chestplate",
+			// Notice we give it the equipment category
+			"category": "equipment"
+		},
+		"components": {
+			// Make sure it appears within the chestplate category
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.chestplate"
+			},
+			// The icon we want to use in our INVENTORY
+			"minecraft:icon": {
+				"texture": "copper_chestplate"
+			},
+			// We give it a name
+			"minecraft:display_name": {
+				"value": "item.better_on_bedrock:copper_chestplate"
+			},
+			// We dont want it to stack
+			"minecraft:max_stack_size": 1,
+			// We make sure it can only receive enchantments for chest pieces
+			"minecraft:enchantable": {
+				"value": 10,
+				"slot": "armor_torso"
+			},
+			// This tells it how much protection it should give
+			"minecraft:armor": {
+				"protection": 5
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "equip",
+					"target": "self"
+				}
+			},
+			// We want it to be repairable, and what to use to repair it
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": ["minecraft:copper_ingot"],
+						"repair_amount": 50
+					}
+				]
+			},
+			// Mark it as a wearable and that it goes in the chest slot
+			"minecraft:wearable": {
+				"dispensable": true,
+				"slot": "slot.armor.chest"
+			},
+			// Provide its durability
+			"minecraft:durability": {
+				"max_durability": 200
+			}
+		},
+		"events": {
+			"equip":{
+				"run_command": {
+					"command": [
+						"playsound armor.equip_iron @p"
+					]
+				}
+			}
+		}
+	}
+}

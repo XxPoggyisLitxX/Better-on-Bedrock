@@ -1,0 +1,52 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:healing_campfire",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.oreBlocks",
+				"is_hidden_in_commands": false
+			},
+			"is_experimental": true
+		},
+		"components": {
+            "minecraft:destructible_by_mining":{
+                "seconds_to_destroy": 1
+            },
+            "minecraft:queued_ticking": {
+                "looping": true,
+                "interval_range": [20, 20],
+                "on_tick": {
+                    "event": "set_particles_and_effect",
+                    "target": "block"
+                }
+            },
+            "minecraft:light_emission": 15,
+			"minecraft:geometry": "geometry.healing_campfire",
+            "minecraft:display_name": "tile.better_on_bedrock:healing_campfire",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "healing_campfire",
+					"render_method": "alpha_test"
+				}
+			}
+		},
+        "events": {
+            "set_particles_and_effect": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": ["particle minecraft:campfire_smoke_particle ~ ~0.5 ~"]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": ["execute @p[r=3] ~ ~ ~ effect @p[r=3] regeneration 3 1"]
+                        }
+                    }
+                ]
+            }
+        }
+	}
+}

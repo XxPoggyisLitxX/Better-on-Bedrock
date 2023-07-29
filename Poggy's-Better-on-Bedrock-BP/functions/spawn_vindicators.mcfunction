@@ -1,0 +1,2 @@
+summon vindicator ~ ~ ~
+setblock ~ ~ ~ air

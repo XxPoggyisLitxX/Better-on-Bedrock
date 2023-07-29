@@ -1,0 +1,35 @@
+
+{
+    "format_version": "1.13.0",
+    
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "better_on_bedrock:wild_carrot_patch_rule",
+            "places_feature": "better_on_bedrock:wild_carrot_scatter_feature"
+        },
+        
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": {
+                "test": "has_biome_tag",
+                "value": "plains"
+            }
+        },
+        
+        "distribution": {
+            "iterations": 0.5,
+            
+            "x": {
+                "distribution": "gaussian",
+                
+                "extent": [0, 6]
+            },
+            "z": {
+                "distribution": "gaussian",
+                
+                "extent": [0, 6]
+            },
+            "y": "query.heightmap(v.worldx, v.worldz)"
+        }
+    }
+}

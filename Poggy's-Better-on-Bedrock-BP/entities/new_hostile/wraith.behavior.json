@@ -1,0 +1,60 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:wraith",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:movement": {
+				"value": 0.25
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:navigation.walk": {
+				"avoid_water": true
+			},
+			"minecraft:attack": {
+				"damage": 3,
+				"effect_name": "poison",
+				"effect_duration": 5
+			},
+			"minecraft:behavior.melee_attack": {
+				"melee_fov": 90,
+				"track_target": false,
+				"random_stop_interval": 0,
+				"reach_multiplier": 2,
+				"attack_once": false,
+				"require_complete_path": false,
+				"cooldown_time": 0
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"entity_types":[
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "player"
+						}
+					}
+				]
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 3,
+				"speed_multiplier": 0.8
+			}
+		}
+	}
+}

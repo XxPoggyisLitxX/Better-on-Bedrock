@@ -1,0 +1,27 @@
+{
+	"pools": [
+        {
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "better_on_bedrock:lush_grass_item",
+					"weight": 100,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 1
+							}
+						}
+					]
+				}
+
+			]
+
+		}
+
+	]
+
+}

@@ -1,0 +1,18 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "better_on_bedrock:wild_carrot_scatter_feature"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "better_on_bedrock:pog_berry_scatter_feature",
+				"condition": "query.noise(v.type == 3) < 0"
+			}
+		],
+
+		"early_out_scheme": "placement_success"
+	}
+}

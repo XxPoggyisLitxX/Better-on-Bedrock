@@ -1,0 +1,39 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:shield",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+		"minecraft:collision_box": {
+            "height": 2,
+            "width": 1
+        },
+        "minecraft:custom_hit_test": {
+            "hitboxes": [
+                {
+                    "width": 1,
+                    "height": 2,
+                    "pivot": [
+                        0,
+                        1,
+                        0
+                    ]
+                }
+            ]
+        },
+        
+        "minecraft:damage_sensor": {
+            "triggers": [
+                {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            ]
+        }
+		}
+	}
+}

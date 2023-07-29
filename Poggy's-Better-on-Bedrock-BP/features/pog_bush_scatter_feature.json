@@ -1,0 +1,25 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "pa:pog_bush_scatter_feature"
+    },
+    "places_feature": "pa:pog_bush_feature",
+    "iterations": 1,
+    "x": {
+      "distribution": "gaussian",
+      "extent": [
+        0,
+        15
+      ]
+    },
+    "y": 0,
+    "z": {
+      "distribution": "gaussian",
+      "extent": [
+        0,
+        15
+      ]
+    }
+  }
+}

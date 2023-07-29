@@ -1,0 +1,206 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.4",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-16, 16, -0.203],
+							"size": [32, 16, 16],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [32, 16]
+								},
+								"east": {
+									"uv": [48, 0],
+									"uv_size": [16, 16]
+								},
+								"south": {
+									"uv": [32, 0],
+									"uv_size": [32, 16]
+								},
+								"west": {
+									"uv": [16, 0],
+									"uv_size": [16, 16]
+								},
+								"up": {
+									"uv": [0, 32],
+									"uv_size": [32, 16]
+								},
+								"down": {
+									"uv": [48, 32],
+									"uv_size": [-32, -16]
+								}
+							}
+						},
+						{
+							"origin": [-16, 24, -8.203],
+							"size": [16, 8, 8],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 8]
+								},
+								"east": {
+									"uv": [56, 0],
+									"uv_size": [8, 8]
+								},
+								"south": {
+									"uv": [16, 0],
+									"uv_size": [16, 8]
+								},
+								"west": {
+									"uv": [56, 0],
+									"uv_size": [8, 8]
+								},
+								"up": {
+									"uv": [0, 56],
+									"uv_size": [16, -8]
+								},
+								"down": {
+									"uv": [16, 0],
+									"uv_size": [16, 0]
+								}
+							}
+						},
+						{
+							"origin": [-16, 16, -16.203],
+							"size": [16, 8, 16],
+							"uv": {
+								"north": {
+									"uv": [16, 10],
+									"uv_size": [-16, 8]
+								},
+								"east": {
+									"uv": [48, 8],
+									"uv_size": [16, 8]
+								},
+								"south": {
+									"uv": [16, 0],
+									"uv_size": [16, 8]
+								},
+								"west": {
+									"uv": [48, 8],
+									"uv_size": [16, 8]
+								},
+								"up": {
+									"uv": [0, 64],
+									"uv_size": [16, -16]
+								},
+								"down": {
+									"uv": [16, 0],
+									"uv_size": [16, 0]
+								}
+							}
+						},
+						{
+							"origin": [0, 16, -16.203],
+							"size": [16, 8, 16],
+							"uv": {
+								"north": {
+									"uv": [32, 8],
+									"uv_size": [-16, 8]
+								},
+								"east": {
+									"uv": [0, 16],
+									"uv_size": [16, 8]
+								},
+								"south": {
+									"uv": [48, 16],
+									"uv_size": [16, 8]
+								},
+								"west": {
+									"uv": [46, 9],
+									"uv_size": [-16, 8]
+								},
+								"up": {
+									"uv": [32, 64],
+									"uv_size": [-16, -16]
+								},
+								"down": {
+									"uv": [64, 32],
+									"uv_size": [-16, -16]
+								}
+							}
+						},
+						{
+							"origin": [-16, 8, -16.203],
+							"size": [16, 8, 16],
+							"uv": {
+								"north": {
+									"uv": [32, 16],
+									"uv_size": [-16, 8]
+								},
+								"east": {
+									"uv": [48, 16],
+									"uv_size": [16, 8]
+								},
+								"south": {
+									"uv": [50, 17],
+									"uv_size": [16, 8]
+								},
+								"west": {
+									"uv": [48, 16],
+									"uv_size": [16, 8]
+								},
+								"up": {
+									"uv": [17, 0],
+									"uv_size": [16, 17]
+								},
+								"down": {
+									"uv": [46, 32],
+									"uv_size": [-16, -17]
+								}
+							}
+						},
+						{
+							"origin": [-16, 8, -0.203],
+							"size": [16, 8, 16],
+							"uv": {
+								"north": {
+									"uv": [16, 16],
+									"uv_size": [16, 8]
+								},
+								"east": {
+									"uv": [0, 16],
+									"uv_size": [16, 8]
+								},
+								"south": {
+									"uv": [48, 16],
+									"uv_size": [16, 8]
+								},
+								"west": {
+									"uv": [16, 16],
+									"uv_size": [16, 8]
+								},
+								"up": {
+									"uv": [16, 0],
+									"uv_size": [16, 16]
+								},
+								"down": {
+									"uv": [46, 32],
+									"uv_size": [-16, -16]
+								}
+							}
+						}
+					],
+					"locators": {
+						"dust": [0, 0, 0]
+					}
+				}
+			]
+		}
+	]
+}

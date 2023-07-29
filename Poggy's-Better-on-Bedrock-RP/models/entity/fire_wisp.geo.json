@@ -1,0 +1,69 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.fire_wisp",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "Body",
+					"pivot": [0, 12, 0],
+					"cubes": [
+						{
+							"origin": [-4, 12, -4],
+							"size": [8, 9, 8],
+							"uv": [0, 0]
+						},
+						{
+							"origin": [-4, 13, -4],
+							"size": [8, 4, 8],
+							"inflate": 0.5,
+							"uv": [25, 10]
+						},
+						{
+							"origin": [-4, 14, -5],
+							"size": [8, 3, 0],
+							"uv": [25, 0]
+						},
+						{
+							"origin": [-4, 12, -4],
+							"size": [8, 8, 8],
+							"inflate": -0.5,
+							"uv": [0, 18]
+						}
+					]
+				},
+				{
+					"name": "Arm",
+					"parent": "Body",
+					"pivot": [-2.525, 12, -4],
+					"cubes": [
+						{
+							"origin": [-3.5, 10.5, -4.2],
+							"size": [2, 2, 2],
+							"uv": [33, 23]
+						}
+					]
+				},
+				{
+					"name": "Arm2",
+					"parent": "Body",
+					"pivot": [2, 12, -4],
+					"cubes": [
+						{
+							"origin": [1.5, 10.5, -4.2],
+							"size": [2, 2, 2],
+							"uv": [33, 4]
+						}
+					]
+				}
+			]
+		}
+	]
+}

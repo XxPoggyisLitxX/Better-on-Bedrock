@@ -1,0 +1,31 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.illusioner.new": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": ["idle"],
+					"transitions": [
+						{"walking": "q.ground_speed > 1.0 && !q.is_charging"},
+						{"bow": "q.is_charging"}
+					]
+				},
+				"walking": {
+					"animations": ["walk"],
+					"transitions": [
+						{"idle": "q.ground_speed < 0.5 && !q.is_charging"},
+						{"bow": "q.is_charging"}
+					]
+				},
+				"bow": {
+					"animations": ["bow"],
+					"transitions": [
+						{"idle": "!q.is_charging && q.modified_move_speed <= 0.05"},
+						{"walking": "!q.is_charging && q.modified_move_speed >= 0.05"}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,298 @@
+{
+    "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "better_on_bedrock:stardust_hoe",
+      "category": "equipment"
+    },
+    "components": {
+      "tag:minecraft:is_hoe": {},
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:icon": {
+        "texture": "stardust_hoe"
+      },
+      "minecraft:creative_category":{
+        "parent": "itemGroup.name.hoe"
+      },
+      "minecraft:durability": {
+        "max_durability": 750,
+        "damage_chance": {
+          "min": 5,
+          "max": 10
+        }
+      },
+      "minecraft:display_name": {
+        "value": "item.better_on_bedrock:stardust_hoe"
+    },
+      "minecraft:damage": 6,
+      "minecraft:enchantable": {
+        "value": 10,
+        "slot": "axe"
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": [
+              "minecraft:diamond",
+              "minecraft:stick"
+            ],
+            "repair_amount": "query.max_durability"
+          }
+        ]
+      },
+      "minecraft:weapon": {
+        "on_hurt_entity": {
+          "event": "dmg"
+        },
+        "on_not_hurt_entity": {
+          "event": "dmg"
+        },
+        "on_hit_block": {
+          "event": "dmg"
+        }
+      },
+      "minecraft:digger": {
+        "destroy_speeds": [
+            {
+                "block": "warped_wart_block",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "shroomlight",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "weeping_vines",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "twisting_vines",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "big_dripleaf",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "small_dripleaf_block",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "azalea_leaves",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "azalea_leaves_flowered",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "azalea",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "flowering_azalea",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "cave_vines",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "cave_vines_body_with_berries",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "cave_vines_head_with_berries",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "moss_block",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "moss_carpet",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "sculk_sensor",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "sculk",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "sculk_vein",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "sculk_catalyst",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "sculk_shrieker",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "cactus",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "sweet_berry_bush",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "dried_kelp_block",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "glow_lichen",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "hay_block",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "leaves",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "leaves2",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "mangrove_leaves",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "sponge",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+            {
+                "block": "target",
+                "speed": 10,
+                "on_dig": {
+                    "event": "dmg"
+                }
+            }
+        ],
+        "on_dig": {
+            "event": "dmg"
+        }
+    }
+    },
+    "events": {
+      "dmg": {
+        "damage": {
+          "type": "none",
+          "amount": 1,
+          "target": "self"
+        }
+      },
+      "on_tool_used": {
+        "swing": {},
+        "damage": {
+          "type": "none",
+          "amount": 1,
+          "target": "self"
+        }
+      },
+      "gen:damage": {
+        "damage": {
+          "type": "none",
+          "amount": 1,
+          "target": "self"
+        }
+      }
+    }
+  }
+}

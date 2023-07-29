@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "better_on_bedrock:backpack"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "h#d",
+      "#c#",
+      "d#h"
+    ],
+    "key": {
+      "c": {
+        "item": "minecraft:chest"
+      },
+      "d": {
+        "item": "minecraft:copper_ingot"
+      },
+      "g": {
+        "item": "better_on_bedrock:deer_hide"
+      },
+      "#": {
+          "item": "better_on_bedrock:stronger_string"
+        }
+    },
+    "result": {
+      "item": "better_on_bedrock:backpack"
+    }
+  }
+}

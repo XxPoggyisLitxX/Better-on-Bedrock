@@ -1,0 +1,65 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "better_on_bedrock:diamond_spear"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        /*"pattern": [
+            "BMD",
+            "TSE",
+            " O "
+        ],*/
+        "ingredients":[{
+            "item": "better_on_bedrock:barley_straw"
+        },
+        {
+            "item": "minecraft:red_mushroom"
+        },
+        {
+            "item": "better_on_bedrock:baked_onion"
+        },
+        {
+            "item": "minecraft:sugar"
+        },
+        {
+            "item": "better_on_bedrock:tomato_seed"
+        },
+        {
+            "item": "better_on_bedrock:baked_eggplant"
+        },
+        {
+            "item": "minecraft:bowl"
+        }
+    ],
+        /*"key": {
+            "B": {
+                "item": "better_on_bedrock:barley_straw"
+            },
+            "M": {
+                "item": "minecraft:red_mushroom"
+            },
+            "D": {
+                "item": "better_on_bedrock:baked_onion"
+            },
+            "S": {
+                "item": "minecraft:sugar"
+            },
+            "T": {
+                "item": "better_on_bedrock:tomato_seed"
+            },
+            "E": {
+                "item": "better_on_bedrock:baked_eggplant"
+            },
+            "O": {
+                "item": "minecraft:bowl"
+            }
+        },*/
+        "result": {
+            "item": "better_on_bedrock:barley_soup",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:test_piglin",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/test_piglin"
+			},
+			"geometry": {
+				"default": "geometry.test_piglin"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#109902",
+				"overlay_color": "#0f6076"
+			}
+		}
+	}
+}

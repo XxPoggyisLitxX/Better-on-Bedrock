@@ -1,0 +1,21 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "better_on_bedrock:stonecutter_chiseled_polished_diorite"
+        },
+        "tags": [
+            "stonecutter"
+        ],
+        "priority": 0,
+        "ingredients": [
+            {
+                "item": "better_on_bedrock:diorite_bricks"
+            }
+        ],
+        "result": {
+            "item": "better_on_bedrock:chiseled_polished_diorite",
+            "count": 1
+        }
+    }
+}

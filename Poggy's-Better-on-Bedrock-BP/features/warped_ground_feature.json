@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "gg:warped_ground_feature"
+		},
+
+		"places_block": "better_on_bedrock:end_nylium",
+		"may_replace": [
+			"minecraft:netherrack"
+		],
+
+		"enforce_placement_rules": false,
+		"enforce_survivability_rules": false
+	}
+}

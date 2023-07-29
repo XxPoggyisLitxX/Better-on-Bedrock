@@ -1,0 +1,57 @@
+{
+
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:staff_of_vitality",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+            "minecraft:hand_equipped": true,
+			"minecraft:foil": true,
+			"minecraft:icon": {
+				"texture": "staff_of_vitality"
+			},
+            "minecraft:on_use": {
+                "on_use": {
+                    "event": "better_on_bedrock:give_effect",
+                    "target": "self"
+                }
+            },
+            "minecraft:durability": {
+                "max_durability": 50,
+                "damage_chance": {
+                    "min": 0,
+                    "max": 1
+                }
+            },
+            "minecraft:cooldown": {
+                "category": "staff",
+                "duration": 12
+            }
+		},
+        "events": {
+            "better_on_bedrock:give_effect": {
+               
+                  "sequence": [
+                    {
+                        "swing": {}
+                    },
+                    {
+                        "run_command": {
+                            "command": ["function frozen"]
+                        }
+                    },
+                    {
+                        "damage": {
+                            "type": "none",
+                            "amount": 1,
+                            "target": "self"
+                          }
+                    }//better_on_bedrock:flame_projectile
+                ]
+            }
+        }
+		}
+	}

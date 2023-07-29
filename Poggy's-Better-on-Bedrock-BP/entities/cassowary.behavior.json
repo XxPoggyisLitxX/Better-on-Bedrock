@@ -1,0 +1,67 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:cassowary",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:movement": {
+				"value": 0.25
+			},
+			"minecraft:attack_damage": {
+				"value": 4
+			},
+			"minecraft:behavior.delayed_attack": {
+				"attack_duration": 0.4,
+				"attack_once": false,
+				
+				"reach_multiplier": 2,
+				"speed_multiplier": 1,
+				"require_complete_path": true,
+				"cooldown_time": 0.0,
+				"priority": 3
+			},
+			"minecraft:attack": {
+				"damage": 4
+			},
+			"minecraft:behavior.melee_attack": {
+				"melee_fov": 90,
+				"track_target": true,
+				"priority": 3,
+				"cooldown_time": 0
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 3,
+				"entity_types":{
+					"filters": {
+						"test": "is_family",
+						"subject": "other",
+						"value": "player"
+					}
+				}
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:navigation.walk": {
+				"avoid_water": true
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 3,
+				"speed_multiplier": 0.8
+			}
+		}
+	}
+}

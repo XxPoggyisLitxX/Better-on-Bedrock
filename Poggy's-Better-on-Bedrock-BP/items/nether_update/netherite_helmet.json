@@ -1,0 +1,56 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:netherite_helmet",
+			"category": "equipment"
+		},
+		"components": {
+			// Helmet category
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.helmet"
+			},
+			"minecraft:icon": {
+				"texture": "netherite_gold_helmet"
+			},
+			"minecraft:display_name": {
+				"value": "item.better_on_bedrock:netherite_helmet"
+			},
+			"minecraft:max_stack_size": 1,
+			// Helm enchantment slot
+			"minecraft:enchantable": {
+				"value": 10,
+				"slot": "armor_head"
+			},
+			"minecraft:armor": {
+				"protection": 3,
+				"texture_type": "none"
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": ["minecraft:copper_ingot"],
+						"repair_amount": 50
+					}
+				]
+			},
+			// Wearable head slot
+			"minecraft:wearable": {
+				"dispensable": true,
+				"slot": "slot.armor.head"
+			},
+			"minecraft:durability": {
+				"max_durability": 407
+			}
+		},
+		"events": {
+			"equip":{
+				"run_command": {
+					"command": [
+						"playsound armor.equip_iron @p"
+					]
+				}
+			}
+		}
+	}
+}

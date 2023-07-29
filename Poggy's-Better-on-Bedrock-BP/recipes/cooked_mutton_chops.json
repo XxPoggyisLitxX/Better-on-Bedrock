@@ -1,0 +1,15 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_furnace": {
+      "description": {
+      "identifier": "minecraft:cooked_mutton_chops"
+      },
+  
+      
+      "tags": ["furnace", "smoker"],
+      "input": "better_on_bedrock:raw_mutton_chops",
+      "output": "better_on_bedrock:cooked_mutton_chops"
+    }
+    
+  }
+  

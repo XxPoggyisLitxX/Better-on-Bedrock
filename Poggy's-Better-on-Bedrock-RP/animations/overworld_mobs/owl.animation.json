@@ -1,0 +1,33 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.owl.idle": {
+			"loop": true,
+			"bones": {
+				"rightwing": {
+					"rotation": ["-math.cos(q.anim_time * 100) * 2", 0, 0]
+				},
+				"leftwing": {
+					"rotation": ["math.cos(q.anim_time * 100) * 2", 0, 0]
+				}
+			}
+		},
+		"animation.owl.fly": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [15, 0, 0]
+				},
+				"head": {
+					"rotation": [-17.5, 0, 0]
+				},
+				"rightwing": {
+					"rotation": [0, 0, "57.5-math.sin(q.anim_time * 750) * 50"]
+				},
+				"leftwing": {
+					"rotation": [0, 0, "-57.5+math.sin(q.anim_time * 750) * 50"]
+				}
+			}
+		}
+	}
+}

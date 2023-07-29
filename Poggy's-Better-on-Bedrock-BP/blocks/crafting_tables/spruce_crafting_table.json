@@ -1,0 +1,63 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_on_bedrock:spruce_crafting_table",
+			"is_experimental": true
+		},
+		"components": {
+            "minecraft:crafting_table": {
+                "crafting_tags": ["crafting_table"],
+                "table_name": "Crafting Table"
+            },
+			//Basic components
+			"minecraft:destructible_by_mining":{
+				"seconds_to_destroy": 2
+			},
+            "minecraft:unit_cube": {},
+            "tag:wood": {},
+			"minecraft:selection_box":{
+				"origin":[
+				   -8,
+				   0,
+				   -8
+				],
+				"size":[
+				   16,
+				   16,
+				   16
+				]
+			 },
+			        "minecraft:creative_category": {
+          "category": "construction",
+          "group": "construction"
+      },
+			"minecraft:material_instances": {
+                "north":{
+                    "texture": "spruce_table_side",
+					"render_method": "alpha_test"
+                },
+				"east":{
+                    "texture": "spruce_table_side_2",
+					"render_method": "alpha_test"
+                },
+                "south":{
+                    "texture": "spruce_table_side",
+					"render_method": "alpha_test"
+                },
+                "west":{
+                    "texture": "spruce_table_side_2",
+					"render_method": "alpha_test"
+                },
+                "up":{
+                    "texture": "crafting_table",
+					"render_method": "alpha_test"
+                },
+                "down":{
+                    "texture": "planks_crafting",
+					"render_method": "alpha_test"
+                }
+			}
+		}
+	}
+}

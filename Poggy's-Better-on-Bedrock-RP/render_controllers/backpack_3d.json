@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.backpack": {
+			"textures": [
+				"Texture.backpack" //Texture you defined in the 'textures' object in player.entity.json
+			],
+			"geometry": "Geometry.backpack", //Geometry you defined in the 'geometries' object in player.entity.json
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_on_bedrock:open_uncommon_lootbag",
+			"category": "commands"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": false,
+			"minecraft:icon": {
+				"texture": "open_uncommon_lootbag"
+			}
+		},
+        "events": {
+			"example:transform_event": {
+				"swing": {}
+			}
+		}
+		}
+	}

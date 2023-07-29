@@ -1,0 +1,16 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "pog:deer_campfire"
+        },
+        "tags": [
+            "campfire",
+            "soul_campfire"
+        ],
+        "input": {
+            "item": "better_on_bedrock:raw_deer_meat"
+        },
+        "output": "better_on_bedrock:cooked_deer_meat"
+    }
+}

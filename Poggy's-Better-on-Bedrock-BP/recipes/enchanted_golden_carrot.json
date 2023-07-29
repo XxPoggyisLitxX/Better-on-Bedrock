@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_on_bedrock:enchanted_golden_carrot"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "#G#",
+            "###"
+        ],
+        "key": {
+            "G": {
+                "item": "minecraft:carrot"
+            },
+            "#": {
+                "item": "minecraft:gold_block"
+            }
+        },
+        "result": {
+            "item": "better_on_bedrock:enchanted_golden_carrot",
+            "count": 1
+        }
+    }
+}

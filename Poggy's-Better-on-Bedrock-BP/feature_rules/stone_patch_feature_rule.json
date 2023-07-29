@@ -1,0 +1,43 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+      "description": {
+        "identifier": "better_on_bedrock:stone_patch_feature_rule",
+        "places_feature": "better_on_bedrock:stone_patch_random_feature"
+      },
+      "conditions": {
+        "placement_pass": "surface_pass",
+        "minecraft:biome_filter": [
+          {
+            "any_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "plains"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "birch"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "forest"
+              }
+            ]
+          }
+        ]
+      },
+      "distribution": {
+        "scatter_chance": {
+          "numerator": 1,
+          "denominator": 25
+        },
+        "iterations": 1,
+        "x": 15,
+        "y": "query.heightmap(variable.worldx, variable.worldz) + 1",
+        "z": 15
+      }
+    }
+  }

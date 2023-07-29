@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:wand_iceologer_iceblock",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/4"
+			},
+			"geometry": {
+				"default": "geometry.4"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#a188c3",
+				"overlay_color": "#a48fb7"
+			}
+		}
+	}
+}

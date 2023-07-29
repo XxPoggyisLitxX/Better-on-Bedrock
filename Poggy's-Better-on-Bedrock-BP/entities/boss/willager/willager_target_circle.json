@@ -1,0 +1,62 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "better_on_bedrock:willager_target_circle",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:health": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:scale": {
+				"value": 1.5
+			},
+			"minecraft:timer": {
+				"time": 2,
+				"looping": false,
+				"time_down_event": {
+					"event": "better_on_bedrock:target",
+					"target": "self"
+				}
+			},
+			"minecraft:push_through": {
+				"value": 1
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {
+					"remove_child_entities": false
+				}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"run_command": {
+					"command": ["teleport @e[type=better_on_bedrock:willager_target_circle] @p"]
+				}
+			},
+			"better_on_bedrock:target":{
+				"run_command": {
+					"command": ["summon lightning_bolt ~ ~ ~"]
+				},
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

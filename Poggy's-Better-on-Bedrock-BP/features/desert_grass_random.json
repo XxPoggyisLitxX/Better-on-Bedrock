@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "minecraft:desert_grass_random"
+		},
+		"features": [
+			[
+				"minecraft:desert_grass_2", //Podzol dirt weighs 3
+				2
+			]
+		]
+	}
+}

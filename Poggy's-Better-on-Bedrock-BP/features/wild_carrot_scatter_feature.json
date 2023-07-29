@@ -1,0 +1,25 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:scatter_feature": {
+      "description": {
+        "identifier": "better_on_bedrock:wild_carrot_scatter_feature"
+      },
+      "places_feature": "better_on_bedrock:wild_carrot_sinlge_block",
+      "iterations": "v.type = math.random_integer(2, 5); return 5;",
+      "x": {
+        "distribution": "gaussian",
+        "extent": [
+          0,
+          15
+        ]
+      },
+      "y": 0,
+      "z": {
+        "distribution": "gaussian",
+        "extent": [
+          0,
+          15
+        ]
+      }
+    }
+  }

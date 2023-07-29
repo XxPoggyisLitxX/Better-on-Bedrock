@@ -1,0 +1,23 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "better_on_bedrock:mossy_granite_bricks"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "result": {
+            "item": "better_on_bedrock:mossy_granite_bricks",
+            "count": 1
+        },
+        "ingredients": [
+            {
+                "item": "better_on_bedrock:granite_bricks"
+            },
+            {
+                "item": "minecraft:vine"
+            }
+        ]
+    }
+}

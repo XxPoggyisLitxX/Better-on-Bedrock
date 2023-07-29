@@ -1,0 +1,657 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.enchant": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "overlay_color": {
+                "r": "(Math.sin(query.life_time * 500.0) + 1.0) * 0.5 * 0.25",
+                "g": 0.0,
+                "b": "(Math.sin(query.life_time * 500.0 + 240.0) + 1.0) * 1.0",
+                "a": 1.0
+            },
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_chicken": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 6) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 6) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_creeper": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_pig": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_rabbit": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 6) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 6) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_skeleton": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 3) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 3) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_vindicator": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_zombie": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 4) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 4) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_spider": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_drowned": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_husk": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_enderman": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_elder_gaurdian": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_evoker": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_golem": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_phantom": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_pillager": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+        "controller.render.enchanted_slime": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        },
+         "controller.render.enchanter": {
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "*": true
+                }
+            ],
+            "materials": [
+                {
+                    "*": "Material.enchanted"
+                }
+            ],
+            "textures": [
+                "Texture.enchanted"
+            ],
+            "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "uv_anim": {
+                "offset": [
+                    "(q.mark_variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * -0.02 : 0.0",
+                    "(q.mark_variant == 1) ? (Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.03 : 0.0"
+                ],
+                "scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "light_color_multiplier": 1,
+            "ignore_lighting": true
+        }
+    }
+}

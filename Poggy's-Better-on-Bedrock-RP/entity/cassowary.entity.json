@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "better_on_bedrock:cassowary",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/cassowary"
+			},
+			"geometry": {
+				"default": "geometry.cassowary"
+			},
+			"animations": {
+				"basic": "controller.animation.deluxe_cassowary.base",
+				"walk": "animation.deluxe_cassowary.walk",
+				"idle": "animation.deluxe_cassowary.new",
+				"attack": "animation.deluxe_cassowary.attack"
+			},
+			"scripts": {
+				"animate": [
+					"basic"
+				]
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#4c4cad",
+				"overlay_color": "#339af6"
+			}
+		}
+	}
+}

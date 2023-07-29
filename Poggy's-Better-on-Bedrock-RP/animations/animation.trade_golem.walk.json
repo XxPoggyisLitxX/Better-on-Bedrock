@@ -1,0 +1,41 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.trade_golem.walk": {
+			"loop": true,
+			"anim_time_update": "query.modified_distance_moved",
+			"bones": {
+				"root": {
+					"rotation": [0, 0, "math.Cos((query.anim_time * 150) - 50) * 4"]
+				},
+				"body": {
+					"position": [0, "math.Cos((query.anim_time * 150) + 1) * 0.1", 0]
+				},
+				"leftArm": {
+					"rotation": ["-math.Cos(query.anim_time * 150) * 30", 0, 0]
+				},
+				"head": {
+					"rotation": [0, 0, "math.Cos((query.anim_time * 150) - 50) * 4"]
+				},
+				"leftEar": {
+					"rotation": ["-math.Cos((query.anim_time * 300) - 10) * 5", 0, 0]
+				},
+				"nose": {
+					"rotation": ["math.Cos(query.anim_time * 300) * 4", 0, "math.Cos((query.anim_time * 150) - 25) * 4"]
+				},
+				"leftLeg": {
+					"rotation": ["-math.Cos(query.anim_time * 150) * 30", 0, 0]
+				},
+				"rightLeg": {
+					"rotation": ["math.Cos(query.anim_time * 150) * 30", 0, 0]
+				},
+				"rightArm": {
+					"rotation": ["math.Cos(query.anim_time * 150) * 30", 0, 0]
+				},
+				"rightEar": {
+					"rotation": ["math.Cos((query.anim_time * 300) - 10) * 5", 0, 0]
+				}
+			}
+		}
+	}
+}
