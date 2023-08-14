@@ -311,7 +311,7 @@
                   }
                 },
                 {
-                  "weight": 5000,
+                  "weight": 8000,
                   "add": {
                     "component_groups": [
                         "skin_2",

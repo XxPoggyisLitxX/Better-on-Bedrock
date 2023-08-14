@@ -51,7 +51,7 @@
       "distribution": {
         "scatter_chance": {
           "numerator": 1,
-          "denominator": 1221
+          "denominator": 4221
         },
         "iterations": 1,
   

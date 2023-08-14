@@ -333,7 +333,7 @@
                   }
                 },
                 {
-                  "weight": 5000,
+                  "weight": 8000,
                   "add": {
                     "component_groups": [
                       "minecraft:sheep_black"
@@ -341,7 +341,7 @@
                   }
                 },
                 {
-                  "weight": 5000,
+                  "weight": 8000,
                   "add": {
                     "component_groups": [
                       "minecraft:sheep_light_gray"
@@ -349,7 +349,7 @@
                   }
                 },
                 {
-                  "weight": 5000,
+                  "weight": 8000,
                   "add": {
                     "component_groups": [
                       "minecraft:sheep_gray"

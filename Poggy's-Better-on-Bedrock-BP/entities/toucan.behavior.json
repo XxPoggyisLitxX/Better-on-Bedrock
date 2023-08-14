@@ -26,7 +26,7 @@
 		"max": 10
 	  },
 	  "minecraft:loot": {
-		"table": "loot_tables/entities/enchanted_mobs/enchanted_chicken.json"
+		"table": "loot_tables/entities/chicken.json"
 	  },
 	  
 			"minecraft:flying_speed": {
