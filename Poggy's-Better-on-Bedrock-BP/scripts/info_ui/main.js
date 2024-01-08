@@ -298,7 +298,7 @@ export const isInRange = ( getHeadLocation, targetLocation ) => {
     );
 };
 
-const Hearts = { heart: "", halfHeart: "", emptyHeart: "" };
+const Hearts = { heart: "！", halfHeart: "＂", emptyHeart: "＃" };
 export const healthToText = ( currentHealth, maxHealth ) => {
     if (!maxHealth) return;
     if (maxHealth <= 40) {
